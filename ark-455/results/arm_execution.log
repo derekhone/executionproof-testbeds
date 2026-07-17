@@ -1,0 +1,91 @@
+=== ARK-455 ARM EXECUTION ===
+Timestamp: 2026-07-17T07:39:12.929602+00:00
+
+✅ Kill-gate passed (100.0% concordance)
+
+=== ARM 1: ACCEPT-original ===
+Seed: 14765063482399896113102459857538596476567225321804152895953692625324846013686
+Generated 100 records (tampering: none)
+Running V2 (Python)... 100 ACCEPT, 0 REJECT (rate: 1.00 / 0.00)
+Running V1 (JavaScript)... 100 ACCEPT, 0 REJECT (rate: 1.00 / 0.00)
+V1-V2 concordance: 100/100 (100.0%)
+
+=== ARM 2: REJECT-decision ===
+Seed: 53649924700517655969477855498480438966184546838892460775800092670456530693851
+Generated 100 records (tampering: decision)
+Running V2 (Python)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+Running V1 (JavaScript)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+V1-V2 concordance: 100/100 (100.0%)
+
+=== ARM 3: REJECT-timestamp ===
+Seed: 95281196127973224411528483407942970234041450513117588496950828588468975369821
+Generated 100 records (tampering: timestamp)
+Running V2 (Python)... 100 ACCEPT, 0 REJECT (rate: 1.00 / 0.00)
+Running V1 (JavaScript)... 100 ACCEPT, 0 REJECT (rate: 1.00 / 0.00)
+V1-V2 concordance: 100/100 (100.0%)
+
+=== ARM 4: REJECT-payload_hash ===
+Seed: 62667684056206718594863691367644524647344715063266969595124653585157140240076
+Generated 100 records (tampering: payload_hash)
+Running V2 (Python)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+Running V1 (JavaScript)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+V1-V2 concordance: 100/100 (100.0%)
+
+=== ARM 5: REJECT-evidence_refs ===
+Seed: 38553135840744438292069928154878193766837733272840007114576012301793129485596
+Generated 100 records (tampering: evidence_references)
+Running V2 (Python)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+Running V1 (JavaScript)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+V1-V2 concordance: 100/100 (100.0%)
+
+=== ARM 6: REJECT-actor ===
+Seed: 94559973647726584619708459910684613617861970795279265377843435230387493895423
+Generated 100 records (tampering: actor)
+Running V2 (Python)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+Running V1 (JavaScript)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+V1-V2 concordance: 100/100 (100.0%)
+
+=== ARM 7: REJECT-outcome ===
+Seed: 32267938810670961969250881397615468455435782630162867266342290763315545234644
+Generated 100 records (tampering: execution_outcome)
+Running V2 (Python)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+Running V1 (JavaScript)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+V1-V2 concordance: 100/100 (100.0%)
+
+=== ARM 8: REJECT-review_path ===
+Seed: 98545497790108823910906904485833927484472587104508024203743371093745815127121
+Generated 100 records (tampering: review_path)
+Running V2 (Python)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+Running V1 (JavaScript)... 0 ACCEPT, 100 REJECT (rate: 0.00 / 1.00)
+V1-V2 concordance: 100/100 (100.0%)
+
+=== OVERALL METRICS ===
+
+C1 — V_accept_original (Arm 1):
+  V1: 1.0000
+  V2: 1.0000
+  Worst case: 1.0000 (threshold: ≥0.95) ✅
+
+C2 — V_reject per tampering target (Arms 2-8):
+  Arm 2 (decision            ): V1=1.0000, V2=1.0000, worst=1.0000 ✅
+  Arm 3 (timestamp           ): V1=0.0000, V2=0.0000, worst=0.0000 ❌
+  Arm 4 (payload_hash        ): V1=1.0000, V2=1.0000, worst=1.0000 ✅
+  Arm 5 (evidence_references ): V1=1.0000, V2=1.0000, worst=1.0000 ✅
+  Arm 6 (actor               ): V1=1.0000, V2=1.0000, worst=1.0000 ✅
+  Arm 7 (execution_outcome   ): V1=1.0000, V2=1.0000, worst=1.0000 ✅
+  Arm 8 (review_path         ): V1=1.0000, V2=1.0000, worst=1.0000 ✅
+
+  V_reject_min: 0.0000 (threshold: ≥0.95) ❌
+
+C3 — V_margin:
+  V_reject_min - (1 - V_accept_original)
+  = 0.0000 - 0.0000
+  = 0.0000 (threshold: ≥0.85) ❌
+
+=== VERDICT ===
+❌ FAIL
+  C1 (V_accept_original ≥ 0.95): ✅ PASS
+  C2 (V_reject_min ≥ 0.95):      ❌ FAIL
+  C3 (V_margin ≥ 0.85):          ❌ FAIL
+
+✅ Results saved to results/overall_results.json
