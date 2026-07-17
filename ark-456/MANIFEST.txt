@@ -15,4 +15,14 @@ SHA-256 hashes (ARK-456 locked files):
   run_killgate.py:                             a050514e8201daae16d31e83d60c9d880f3b8ca75055e595c8dbb57b10ee5bf7
   run_arms.py:                                 42b74f00faccd64df5c8bad8c1a5a61d8992b8de879fee10e94f6ddbd5930213
 
-OUTCOME (filled after execution): <PENDING — to be filled after run_arms.py completes>
+OUTCOME (filled after execution):
+  VERDICT: PASS  (lock commit 94b6320; executed 2026-07-17T21:15:36Z UTC)
+  Primary metrics:
+    g_allow_baseline (arm 1 ALLOW)      = 1.0000  (C1 ≥ 0.95: PASS)
+    g_deny_degraded_min (arms 2-8 DENY) = 1.0000  (C2 ≥ 0.95: PASS)
+    g_margin                            = 0.9500  (C3 ≥ 0.90: PASS)
+  Dual-guard concordance: 800/800 = 100.00%
+  Kill-gate: PASS (88/88 concordance; all 88 dependency-loss-effective)
+  Dependency-loss effectiveness gate: PASS on all 8 arms (800/800 scenarios effective)
+  Healthy system allows valid requests (100%); degraded system refuses to operate (100%).
+  The recorded verdict stands as executed.

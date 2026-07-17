@@ -1,0 +1,88 @@
+{
+  "run_start_time": "2026-07-17T21:15:36.516514Z",
+  "run_end_time": "2026-07-17T21:15:36.850123Z",
+  "arms_executed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "primary_metrics": {
+    "g_allow_baseline": 1.0,
+    "g_deny_degraded_min": 1.0,
+    "g_margin": 0.95
+  },
+  "criteria": {
+    "c1_allow_baseline_pass": true,
+    "c2_deny_degraded_pass": true,
+    "c3_margin_pass": true
+  },
+  "overall_concordance": {
+    "agreements": 800,
+    "total": 800,
+    "percentage": 100.0
+  },
+  "verdict": "PASS",
+  "per_arm_summary": {
+    "arm_1": {
+      "label": "BASELINE-healthy",
+      "expected": "ALLOW",
+      "allow_rate": 1.0,
+      "hold_rate": 0.0,
+      "deny_rate": 0.0
+    },
+    "arm_2": {
+      "label": "IDENTITY-provider-unavailable",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_3": {
+      "label": "POLICY-registry-unavailable",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_4": {
+      "label": "EVIDENCE-schema-corrupted",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_5": {
+      "label": "CLOCK-source-unreachable",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_6": {
+      "label": "SIGNATURE-key-missing",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_7": {
+      "label": "AUDIT-store-unreachable",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_8": {
+      "label": "MULTIPLE-deps-degraded",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    }
+  }
+}
