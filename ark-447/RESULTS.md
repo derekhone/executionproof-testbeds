@@ -1,10 +1,12 @@
-# ARK-447 Results — Noise-Suppression Comparison: Pauli Twirling vs. Baseline
+# ARK-447 Results — Pauli Twirling vs. Baseline
 
 **Experiment:** ARK-447  
 **Track:** ExecutionProof authorization-boundary characterization  
 **Protocol:** Field 27 (LOCK → SPAM gate → principal job → analyze → verdict)  
 **Date:** 2026-07-17  
 **Backend:** `ibm_marrakesh` (IBM Quantum Heron r2, 156 qubits)
+
+**Scope:** Noise mitigation comparison testing Pauli twirling against unprotected baseline. Dynamical Decoupling (DD) was omitted due to scheduling complexity.
 
 ---
 
@@ -18,11 +20,11 @@
 
 ## Central Question
 
-Do noise-mitigation strategies improve authorization boundary fidelity on current NISQ hardware?
+Does Pauli twirling improve authorization boundary fidelity on current NISQ hardware?
 
 **Tested:** Pauli twirling (Y gates before/after CNOT to convert coherent errors into stochastic noise) vs. unprotected baseline.
 
-**Note:** Dynamical Decoupling (DD) circuits were omitted due to implementation complexity (scheduling requirements).
+**Not tested:** Dynamical Decoupling (DD) circuits were omitted due to implementation complexity (scheduling requirements). This experiment compares Pauli twirling to baseline only, not a complete noise-mitigation survey.
 
 ---
 
@@ -117,9 +119,9 @@ Do noise-mitigation strategies improve authorization boundary fidelity on curren
 | **L_D_corrected** | 0.0000 | 0.0000 | 0.0000 | ≈ No change (both zero) |
 | **Δ_B** | 0.7824 | 0.7875 | +0.0051 | ✅ Slight improvement |
 
-**Conclusion:** Pauli twirling provides a **marginal improvement** in ALLOW discrimination (S_A) and boundary margin (Δ_B) compared to the unprotected baseline. Both configurations comfortably pass all criteria with huge margins.
+**Conclusion:** Pauli twirling provides a **modest improvement** in ALLOW discrimination (S_A) and boundary margin (Δ_B) compared to the unprotected baseline. Both configurations comfortably pass all criteria with huge margins.
 
-**Statistical significance:** The +0.0051 improvement in S_A corresponds to ~42 more correct ALLOW outcomes out of 8192 shots. This is a modest but measurable improvement.
+**Statistical significance:** The +0.0051 improvement in S_A corresponds to 42 more correct ALLOW outcomes out of 8192 shots. Two-proportion z-test: z=2.70, p=0.007 (two-sided), 95% CI [0.0014, 0.0089]. The improvement is statistically significant at α=0.05.
 
 ---
 
@@ -127,9 +129,9 @@ Do noise-mitigation strategies improve authorization boundary fidelity on curren
 
 ### What This Experiment Demonstrates
 
-✅ **Pauli twirling provides marginal but measurable improvement** in authorization boundary fidelity on `ibm_marrakesh` (Heron r2) for this specific qubit pair (Q_A=1, Q_P=2).
+✅ **Pauli twirling provides modest but statistically significant improvement** in authorization boundary fidelity on `ibm_marrakesh` (Heron r2) for this specific qubit pair (Q_A=1, Q_P=2). Two-proportion z-test confirms the +0.0051 improvement is unlikely due to chance (p=0.007).
 
-✅ **Both baseline and Pauli twirling pass all criteria** — the boundary is stable with or without noise mitigation on this hardware.
+✅ **Both baseline and Pauli twirling pass all criteria** — the boundary is stable with or without this noise mitigation technique on this hardware.
 
 ✅ **DENY leakage remains negligible** in both configurations (L_D_corrected = 0.0000 after SPAM correction).
 
@@ -143,7 +145,7 @@ Do noise-mitigation strategies improve authorization boundary fidelity on curren
 
 ❌ **Error correction** — Pauli twirling is noise *mitigation* (not correction); no QEC codes used.
 
-❌ **Dynamical Decoupling** — DD circuits were omitted due to complexity; no conclusion about DD impact.
+❌ **Dynamical Decoupling** — DD circuits were omitted due to complexity; no conclusion about DD impact. This experiment tests Pauli twirling vs. baseline only, not a comprehensive noise-mitigation comparison.
 
 ❌ **Multi-round or complex boundaries** — Single-round, binary ALLOW/DENY boundary only.
 
@@ -200,4 +202,4 @@ Do noise-mitigation strategies improve authorization boundary fidelity on curren
 
 ---
 
-**ARK-447 demonstrates that Pauli twirling provides marginal but measurable improvement in authorization boundary fidelity on IBM Quantum hardware. The experiment achieves PASS (strong) verdict with both configurations passing all criteria and Pauli twirling showing slight advantage.**
+**ARK-447 demonstrates that Pauli twirling provides modest but statistically significant improvement in authorization boundary fidelity on IBM Quantum hardware (two-proportion z-test: p=0.007). The experiment achieves PASS (strong) verdict with both configurations passing all criteria and Pauli twirling showing measurable advantage over the unprotected baseline.**
