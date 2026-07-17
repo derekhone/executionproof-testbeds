@@ -1,0 +1,129 @@
+ARK-449 MANIFEST — Version 1.1
+==============================================================
+This MANIFEST is committed and SHA-256-hashed before any hardware
+job is submitted. Commit timestamps prove the ordering.
+Lock this file, push it, and tag ark-449-v1.1-lock before
+submitting the SPAM gate job.
+
+v1.1 PRE-DATA CORRECTION (no hardware data was ever read under v1.0):
+  1. ALLOW execution gate H -> X. v1.0 put the payload in a 50/50
+     superposition (P(Q_P=1) ~ 0.50), which could never meet C1
+     (S_A_min >= 0.90) — a guaranteed FAIL by construction. Corrected
+     to drive the payload to |1> so ALLOW retention can pass.
+  2. Payload-bit parser split()[-1] -> split()[0]. Registers are
+     (c_auth, c_state, c_pay); Qiskit prints them reverse order, so
+     c_pay is the leftmost field. v1.0 read c_auth (always 1).
+  Also fixed a latent NameError (SHOTS_PRINCIPAL) and a summary-print
+  formatting crash in the analysis script.
+  Post-correction noiseless dry-run + full analysis: VERDICT = PASS,
+  ALLOW = 1.0000, all seven DENY arms = 0.0000, Delta_B = 1.00.
+  No criteria, hypotheses, arms, or thresholds were changed.
+  See ARK_449_preregistration.md top notice for full disclosure.
+==============================================================
+
+Experiment:      ARK-449 — State Changes After Verification
+Series:          ExecutionProof ARK Authorization-Boundary Track
+Company:         Remnant Fieldworks Inc.
+Repository:      https://github.com/derekhone/executionproof-testbeds
+Folder:          ark-449/
+
+Lock timestamp (UTC, YYYY-MM-DDTHH:MM:SSZ):
+    2026-07-17T05:18:28Z
+
+Backend target:
+    ibm_marrakesh (156-qubit Heron r2)
+
+--------------------------------------------------------------
+SHA-256 Hashes
+(computed 2026-07-17 from the files as written at draft time;
+re-verify before lock if any file was edited after this date)
+--------------------------------------------------------------
+
+ARK_449_preregistration.md:
+    13f88f305de5690e6e1e8c1cece861f9b4d7a1afc424e16ef3893bc4ececf411
+
+circuits/ark_449_circuit.py:
+    4c3f413567441585a15170ffdedc2ea7645ce85c0c1be98662b87cde1c842448
+
+circuits/ark_449_analysis.py:
+    f7f35d463ba3c761f53fb7824aa34862cbdb0e1dc468dd92375d76e483e78d91
+
+README.md:
+    0f8a7bae0d1798394990298191a12eddd4b9bab088b7068ef1b20a5a2fb83185
+
+--------------------------------------------------------------
+MANIFEST Self-Hash
+(hash of this file after all above hashes are confirmed and
+the lock timestamp is filled — compute last, before committing)
+--------------------------------------------------------------
+
+MANIFEST.txt SHA-256:
+    2c7cc2d44a5491b6b21e0ac529ed796c83f7abc1e63657e3034c4652b856ab10
+
+--------------------------------------------------------------
+Git Provenance (fill after push)
+--------------------------------------------------------------
+
+Committed to branch:
+    execute/ark-449
+
+Commit SHA (ark-449-v1.1-lock):
+    [FILL AFTER PUSH]
+
+Tag:
+    ark-449-v1.1-lock
+
+--------------------------------------------------------------
+Execution Log (fill in strict sequence, before reading results)
+--------------------------------------------------------------
+
+Qubit selection committed at:
+    [FILL — UTC timestamp of selected_qubits.json commit]
+
+SPAM gate job ID:
+    [FILL BEFORE READING ANY RESULTS]
+
+SPAM gate job ID committed at:
+    [FILL — UTC timestamp of execution_log.json commit]
+
+Principal job ID:
+    [FILL BEFORE READING SPAM RESULTS]
+
+Principal job ID committed at:
+    [FILL — UTC timestamp of execution_log.json update commit]
+
+--------------------------------------------------------------
+Result Tag (fill at conclusion)
+--------------------------------------------------------------
+
+Tag:
+    ark-449-v1.1
+
+Verdict:
+    [FILL AT CONCLUSION — PASS | FAIL | ABORTED AT SPAM GATE]
+
+Zenodo DOI:
+    [FILL AT PUBLICATION]
+
+--------------------------------------------------------------
+LOCK RULES (absolute — no exceptions after MANIFEST commit)
+--------------------------------------------------------------
+
+1. No criterion changes, loosening, or additions after MANIFEST commit.
+2. No arm additions or removals after MANIFEST commit.
+3. No rescue-after-failure: if SPAM gate fails, the experiment aborts.
+   The principal job results are NOT read.
+4. No post-hoc subgroup selection: if any DENY arm fails,
+   VERDICT = FAIL — not "partial pass excluding arm N."
+5. SPAM_P is a gate diagnostic only — never subtracted from L_D.
+   (ARK-447 v1.1 correction; fixed in preregistration Section 11.2.)
+6. Qubit pair is fixed at SPAM gate submission.
+7. Analysis code (ark_449_analysis.py) is committed at lock and runs
+   unmodified on hardware data.
+
+Pre-data technical corrections (hardware error, zero-count job,
+transpilation fault discovered before any results are read):
+    → document as a pre-data correction note, following ARK-444 precedent.
+
+Post-data corrections (any change after results are read):
+    → full explicit disclosure and new tag, following ARK-447 v1.0→v1.1 precedent.

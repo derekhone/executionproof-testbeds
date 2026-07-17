@@ -1,0 +1,49 @@
+======================================================================
+ARK-449 — State Changes After Verification
+ExecutionProof ARK Series — Remnant Fieldworks Inc.
+======================================================================
+
+[OK] MANIFEST found: /home/ubuntu/executionproof-testbeds/ark-449/MANIFEST.txt
+
+[ARK-449] Connecting to IBM Quantum…
+qiskit_runtime_service.__init__:WARNING:2026-07-17 05:29:01,975: Instance was not set at service instantiation. Free and trial plan instances will be prioritized. Based on the following filters: (tags: None, region: us-east, eu-de), and available plans: (open), the available account instances are: open-instance. If you need a specific instance set it explicitly either by using a saved account with a saved default instance or passing it in directly to QiskitRuntimeService(). Alternatively, pass instance='auto' or save it to your account for auto-selection without warning.
+qiskit_runtime_service.backends:WARNING:2026-07-17 05:29:01,976: Using instance: open-instance, plan: open
+[ARK-449] Connected to: ibm_marrakesh
+
+[ARK-449] Selecting qubit pair…
+  Q_A = 1  (RE = 0.0022)
+  Q_P = 2  (RE = 0.0032)
+  sum_RE = 0.0054
+  Constraint met: True
+[ARK-449] Qubit selection written to /home/ubuntu/executionproof-testbeds/ark-449/results/selected_qubits.json
+[ARK-449] *** Commit this file before submitting the SPAM gate ***
+
+[ARK-449] Building SPAM gate circuits…
+[ARK-449] Building 9 principal arm circuits…
+
+[ARK-449] Transpiling circuits to ibm_marrakesh…
+  SPAM circuits transpiled: 2
+  Principal circuits transpiled: 9
+
+[ARK-449] Submitting SPAM gate job…
+[ARK-449] SPAM gate submitted — job ID: d9crr82neu4c739mcsd0
+[ARK-449] Waiting for results…
+[ARK-449] SPAM job ID written to /home/ubuntu/executionproof-testbeds/ark-449/results/execution_log.json
+[ARK-449] *** Commit execution_log.json now, before reading SPAM results ***
+
+[ARK-449] Submitting principal job (9 arms × 8192 shots)…
+[ARK-449] principal submitted — job ID: d9crvbhhtsac739c6a70
+[ARK-449] Waiting for results…
+[ARK-449] Principal job ID written to /home/ubuntu/executionproof-testbeds/ark-449/results/execution_log.json
+[ARK-449] *** Commit execution_log.json now, before reading any results ***
+
+[ARK-449] Evaluating SPAM gate…
+  SPAM_A = 0.0156  (≤ 0.02: ✅)
+  SPAM_P = 0.0146  (≤ 0.02: ✅)
+  Gate passed: True
+
+[ARK-449] SPAM gate passed. Reading principal results…
+[ARK-449] Raw results written to /home/ubuntu/executionproof-testbeds/ark-449/results/raw_results.json
+[ARK-449] Run ark_449_analysis.py to compute verdict.
+
+[ARK-449] Execution complete.
