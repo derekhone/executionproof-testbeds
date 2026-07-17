@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ARK-450 Substitution Attack Scenario Schema",
+  "description": "Schema for action substitution attack test scenarios",
+  "type": "object",
+  "required": [
+    "scenario_id",
+    "approved_action",
+    "executed_action",
+    "substitution_type",
+    "arm_id"
+  ],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "description": "Unique identifier for this scenario",
+      "pattern": "^sub_[0-9]+_arm[1-8]_[a-z0-9]+$"
+    },
+    "approved_action": {
+      "type": "object",
+      "description": "The action that received authorization",
+      "required": [
+        "operation",
+        "principal",
+        "target",
+        "amount_usd",
+        "resource_type",
+        "metadata"
+      ],
+      "properties": {
+        "operation": {
+          "type": "string",
+          "description": "Operation type",
+          "enum": [
+            "transfer",
+            "read",
+            "write",
+            "delete",
+            "approve",
+            "deploy",
+            "execute",
+            "access"
+          ]
+        },
+        "principal": {
+          "type": "string",
+          "description": "Agent or user identifier"
+        },
+        "target": {
+          "type": "string",
+          "description": "Target resource or destination"
+        },
+        "amount_usd": {
+          "type": "number",
+          "description": "Monetary value for financial operations (0 for non-financial)",
+          "minimum": 0
+        },
+        "resource_type": {
+          "type": "string",
+          "description": "Type of resource being accessed",
+          "enum": [
+            "file",
+            "account",
+            "token",
+            "database",
+            "api",
+            "contract",
+            "service"
+          ]
+        },
+        "metadata": {
+          "type": "object",
+          "description": "Contextual metadata",
+          "required": [
+            "timestamp",
+            "context",
+            "source"
+          ],
+          "properties": {
+            "timestamp": {
+              "type": "string",
+              "description": "ISO-8601 timestamp"
+            },
+            "context": {
+              "type": "string",
+              "description": "Additional context or purpose"
+            },
+            "source": {
+              "type": "string",
+              "description": "Origin or requesting system"
+            }
+          }
+        }
+      }
+    },
+    "executed_action": {
+      "type": "object",
+      "description": "The action being attempted at execution time (may differ from approved)",
+      "required": [
+        "operation",
+        "principal",
+        "target",
+        "amount_usd",
+        "resource_type",
+        "metadata"
+      ],
+      "properties": {
+        "operation": {
+          "type": "string",
+          "enum": [
+            "transfer",
+            "read",
+            "write",
+            "delete",
+            "approve",
+            "deploy",
+            "execute",
+            "access"
+          ]
+        },
+        "principal": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "amount_usd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "resource_type": {
+          "type": "string",
+          "enum": [
+            "file",
+            "account",
+            "token",
+            "database",
+            "api",
+            "contract",
+            "service"
+          ]
+        },
+        "metadata": {
+          "type": "object",
+          "required": [
+            "timestamp",
+            "context",
+            "source"
+          ],
+          "properties": {
+            "timestamp": {
+              "type": "string"
+            },
+            "context": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "substitution_type": {
+      "type": "string",
+      "description": "Type of substitution being tested",
+      "enum": [
+        "none",
+        "destination",
+        "amount",
+        "identity",
+        "tool",
+        "partial_path",
+        "hash_collision",
+        "metadata"
+      ]
+    },
+    "arm_id": {
+      "type": "integer",
+      "description": "Experimental arm (1-8)",
+      "minimum": 1,
+      "maximum": 8
+    }
+  }
+}
