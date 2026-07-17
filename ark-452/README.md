@@ -1,7 +1,10 @@
 # ARK-452 — Multi-Step Workflow With One Invalid Step
 **ExecutionProof ARK Authorization-Boundary Track**  
 **Remnant Fieldworks Inc.**  
-**Status:** 🔒 LOCKED AND READY FOR EXECUTION — no hardware job submitted yet.
+**Status:** ✅ COMPLETE — PASS (executed on IBM Quantum `ibm_marrakesh`, 2026-07-17)
+
+**Result (raw-primary):** S_A_min = 0.9392 (≥ 0.90) · L_D_max = 0.0017 (≤ 0.02) · Δ_B = 0.9375 (≥ 0.70) · SPAM_P = 0.0073 (≤ 0.02).
+All seven DENY arms fail closed (0.0006–0.0017); both attack arms (blanket-auth #7, skip-approval #9) blocked; re-authorized workflow (#8) executes. Jobs: SPAM `d9cspi4inv1c73ao83ng`, principal `d9cspicjeosc73fgnti0`. See `RESULTS.md`.
 
 ---
 
@@ -101,5 +104,6 @@ SPAM gate passes.
 3. `python3 circuits/ark_452_analysis.py` — computes the raw-primary verdict and writes
    `results/proofrecord.json`.
 
-> **Budget note:** ARK-452 has not been submitted to hardware. IBM QPU budget is tight;
-> the package is locked and ready so execution can proceed the moment budget is confirmed.
+> **Execution note:** ARK-452 was executed on `ibm_marrakesh` on 2026-07-17 and **PASSED**
+> (see `RESULTS.md`). QPU consumed ≈ 24 s. The lock tag `ark-452-v1.0-lock` is the
+> preregistration anchor; the result tag `ark-452-v1.0` marks the executed outcome.

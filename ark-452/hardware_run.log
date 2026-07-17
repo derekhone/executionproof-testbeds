@@ -1,0 +1,43 @@
+======================================================================
+ARK-452 HARDWARE RUN — Multi-Step Workflow With One Invalid Step
+Strict submit -> commit -> retrieve sequence (prereg Section 8.1)
+======================================================================
+[OK] Lock MANIFEST present: /home/ubuntu/executionproof-testbeds/ark-452/MANIFEST.txt
+
+[1] Connecting to IBM Quantum…
+qiskit_runtime_service.__init__:WARNING:2026-07-17 06:33:42,492: Instance was not set at service instantiation. Free and trial plan instances will be prioritized. Based on the following filters: (tags: None, region: us-east, eu-de), and available plans: (open), the available account instances are: open-instance. If you need a specific instance set it explicitly either by using a saved account with a saved default instance or passing it in directly to QiskitRuntimeService(). Alternatively, pass instance='auto' or save it to your account for auto-selection without warning.
+qiskit_runtime_service.backends:WARNING:2026-07-17 06:33:42,492: Using instance: open-instance, plan: open
+    Backend: ibm_marrakesh
+
+[2] Selecting payload qubit Q_P (lowest readout error)…
+    Q_P = 1  RE = 0.0022  constraint_met = True
+[execute/ark-452 824702f] ARK-452 exec: qubit selection (Q_P) committed before SPAM submission
+ 1 file changed, 8 insertions(+)
+ create mode 100644 ark-452/results/selected_qubit.json
+[COMMIT] 824702f3  ARK-452 exec: qubit selection (Q_P) committed before SPAM submission
+
+[3] Building + transpiling circuits…
+    SPAM transpiled: 1   Principal transpiled: 9
+
+[4] Submitting SPAM gate job (async)…
+    SPAM job ID: d9cspi4inv1c73ao83ng
+[5] Submitting principal job (async, before reading SPAM)…
+    Principal job ID: d9cspicjeosc73fgnti0
+[execute/ark-452 ec3e205] ARK-452 exec: SPAM + principal job IDs committed BEFORE reading any results
+ 1 file changed, 10 insertions(+)
+ create mode 100644 ark-452/results/execution_log.json
+[COMMIT] ec3e205e  ARK-452 exec: SPAM + principal job IDs committed BEFORE reading any results
+
+[6] Retrieving SPAM results + evaluating gate…
+    SPAM_P = 0.0073  (PASS)  gate_passed=True
+
+[7] SPAM gate PASSED — reading principal results…
+[execute/ark-452 25bd2ce] ARK-452 exec: SPAM PASS + principal raw results committed
+ 2 files changed, 166 insertions(+)
+ create mode 100644 ark-452/results/raw_results.json
+ create mode 100644 ark-452/results/spam_results.json
+[COMMIT] 25bd2cee  ARK-452 exec: SPAM PASS + principal raw results committed
+    Raw results written: /home/ubuntu/executionproof-testbeds/ark-452/results/raw_results.json
+
+[8] Run ark_452_analysis.py to compute the verdict.
+[DONE] Hardware run complete.
