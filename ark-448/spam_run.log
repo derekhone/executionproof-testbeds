@@ -1,0 +1,20 @@
+qiskit_runtime_service._discover_account:WARNING:2026-07-17 04:04:20,433: Loading account with the given token. A saved account will not be used.
+Creating SPAM circuits for Q_A=1, Q_P=2 on ibm_marrakesh...
+
+Transpiling SPAM circuits...
+Submitting SPAM job to ibm_marrakesh (2048 shots)...
+SPAM job submitted: d9cqji4inv1c73ao54eg
+   Waiting for completion...
+
+=== SPAM Results ===
+SPAM_A: {'1': 2027, '0': 21}  error(|1>->'0'): 0.0103
+SPAM_P: {'0': 979, '1': 1069}  P('1'||+>): 0.5220
+
+=== SPAM Gate ===
+SPAM_A <= 0.02: True (0.0103)
+SPAM_P dev <= 0.02: False (0.0220)
+Gate PASSED: False
+
+SPAM results saved to spam_results.json
+
+SPAM gate FAILED. Do not proceed with principal job.
