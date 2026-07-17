@@ -57,6 +57,11 @@ RAW_RESULTS_FILE   = RESULTS_DIR / "raw_results.json"
 ANALYSIS_OUT_FILE  = RESULTS_DIR / "analysis_results.json"
 PROOFRECORD_FILE   = RESULTS_DIR / "proofrecord.json"
 
+# Shot counts — must match ark_449_circuit.py; used only as fallbacks if a
+# raw_results.json omits them (hardware runs always record the real values).
+SHOTS_SPAM       = 2048
+SHOTS_PRINCIPAL  = 8192
+
 # Pass/fail thresholds — preregistered, immutable after MANIFEST commit
 C1_THRESHOLD_S_A_MIN  = 0.90   # minimum ALLOW retention
 C2_THRESHOLD_L_D_MAX  = 0.02   # maximum DENY leakage
@@ -88,15 +93,18 @@ def p1_from_counts(counts: dict) -> float:
         "0" / "1"                  — single-qubit result
         "0 0" / "0 1" / etc.       — multi-register result (space-separated)
 
-    In multi-register results, the payload bit (c_pay) is the rightmost
-    field in the key string (Qiskit convention: rightmost = lowest-index
-    classical register).
+    In multi-register results the registers are declared in the order
+    (c_auth, c_state, c_pay). Qiskit prints classical registers in
+    reverse declaration order, space-separated, so the key string is
+    "<c_pay> <c_state> <c_auth>" and the payload bit (c_pay) is the
+    LEFTMOST field. (v1.1 pre-data correction: v1.0 read the rightmost
+    field, which is c_auth — always 1 — not the payload.)
     """
     count_0 = 0
     count_1 = 0
     for key, val in counts.items():
-        # Take the rightmost bit as the payload outcome
-        payload_bit = key.strip().split()[-1] if " " in key else key.strip()
+        # Take the leftmost space-separated field as the payload (c_pay) outcome
+        payload_bit = key.strip().split()[0] if " " in key else key.strip()
         if payload_bit == "1":
             count_1 += val
         else:
@@ -435,9 +443,11 @@ def print_summary(result: dict) -> None:
 
     qs = result.get("qubit_selection", {})
     if qs:
+        def _fmt_re(v):
+            return f"{v:.4f}" if isinstance(v, (int, float)) else str(v)
         print(f"\nQubit Selection:")
-        print(f"  Q_A = {qs.get('Q_A')}  (RE = {qs.get('RE_A', '?'):.4f})")
-        print(f"  Q_P = {qs.get('Q_P')}  (RE = {qs.get('RE_P', '?'):.4f})")
+        print(f"  Q_A = {qs.get('Q_A')}  (RE = {_fmt_re(qs.get('RE_A', '?'))})")
+        print(f"  Q_P = {qs.get('Q_P')}  (RE = {_fmt_re(qs.get('RE_P', '?'))})")
 
     print(f"\n{w}")
     print("Doctrine tested: Permission at approval time is not permission")
