@@ -1,0 +1,90 @@
+{
+  "run_start_time": "2026-07-17T20:04:21.917235Z",
+  "run_end_time": "2026-07-17T20:04:22.388366Z",
+  "arms_executed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "primary_metrics": {
+    "g_allow_valid_min": 1.0,
+    "g_deny_revoked_min": 1.0,
+    "g_hold_inflight_min": 1.0,
+    "g_margin": 0.95
+  },
+  "criteria": {
+    "c1_allow_valid_pass": true,
+    "c2_deny_revoked_pass": true,
+    "c3_hold_inflight_pass": true,
+    "c4_margin_pass": true
+  },
+  "overall_concordance": {
+    "agreements": 800,
+    "total": 800,
+    "percentage": 100.0
+  },
+  "verdict": "PASS",
+  "per_arm_summary": {
+    "arm_1": {
+      "label": "VALID-throughout",
+      "expected": "ALLOW",
+      "allow_rate": 1.0,
+      "hold_rate": 0.0,
+      "deny_rate": 0.0
+    },
+    "arm_2": {
+      "label": "REVOKED-before-bind",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_3": {
+      "label": "REVOKED-after-decision-before-contact",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_4": {
+      "label": "REVOKED-during-multistep",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_5": {
+      "label": "IN-FLIGHT-at-contact",
+      "expected": "HOLD",
+      "allow_rate": 0.0,
+      "hold_rate": 1.0,
+      "deny_rate": 0.0
+    },
+    "arm_6": {
+      "label": "REVOKED-then-REAUTHORIZED",
+      "expected": "ALLOW",
+      "allow_rate": 1.0,
+      "hold_rate": 0.0,
+      "deny_rate": 0.0
+    },
+    "arm_7": {
+      "label": "IN-FLIGHT-boundary",
+      "expected": "HOLD",
+      "allow_rate": 0.0,
+      "hold_rate": 1.0,
+      "deny_rate": 0.0
+    },
+    "arm_8": {
+      "label": "REVOKED-after-execution",
+      "expected": "ALLOW",
+      "allow_rate": 1.0,
+      "hold_rate": 0.0,
+      "deny_rate": 0.0
+    }
+  }
+}
