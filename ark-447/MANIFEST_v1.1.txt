@@ -1,0 +1,24 @@
+# ARK-447 v1.1 Manifest (post-correction)
+#
+# The original MANIFEST.txt records the LOCK state (commit c2466ff, tag
+# ark-447-v1.0-lock) BEFORE hardware execution. This v1.1 manifest records the
+# code hashes AFTER the post-execution correction described in RESULTS.md and
+# the erratum in ARK_447_preregistration.md.
+#
+# Change vs. LOCK: ark_447_analysis.py was modified to remove an invalid SPAM
+# correction (it no longer subtracts SPAM_P from DENY leakage; DENY leakage is
+# reported RAW, SPAM_P is a gating diagnostic only). All other LOCKed code files
+# are unchanged from the LOCK manifest.
+#
+# Added file: statistical_significance_test.py (two-proportion z-test for the
+# ALLOW improvement; not part of the LOCK).
+
+46430f45dba59546b80d192302aa89c8ba079ad0f7445be65e43c8c394738b81  ark_447_analysis.py
+db0d7415e1d32907f83cac7a1d597e6b4f687bd6f4e187d89c0612d6b228d3d9  statistical_significance_test.py
+
+# Unchanged from LOCK (MANIFEST.txt):
+d36e5daad49b0bccc6a879ee6e8b30101a6abb69fef6290c4cbfa178068d0b06  ark_447_circuits.py
+9d1bbd117ea6afa3ed7e13b097e4ac95c5fe60eeb54288f07526a612f6be41fe  ark_447_retrieve.py
+801a1cba94b7ae5b6da02755a3cd77fc96c515c7773dd006672c598ae6fc5105  ark_447_select_qubits.py
+f779532e55e43702d2dc09be9a460ecc2033c3ee5a638b69a1977d44f2748e70  ark_447_spam_job.py
+8f3b2e02407d0830db15e4157faf358c503c632445d1da6db266387e377afa53  ark_447_submit_ibm.py
