@@ -1,6 +1,6 @@
 # ARK-451 — Authority Revocation During Execution
 
-**Status:** LOCKED → (pending execution)
+**Status:** EXECUTED → **VERDICT: PASS** (all 4 criteria met; 800/800 dual-monitor concordance)
 **Substrate:** Classical software (no quantum hardware, no cryptography)
 **Monitors:** Dual independent — V1 (JavaScript), V2 (Python)
 **Series:** ExecutionProof authorization-boundary corpus (enterprise-failure-mode phase)
