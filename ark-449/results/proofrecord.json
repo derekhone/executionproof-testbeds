@@ -25,7 +25,7 @@
       "constraint_met": true,
       "calibration_ts": "2026-07-17 03:13:32+00:00"
     },
-    "analysis_timestamp": "2026-07-17T05:46:02.697354Z"
+    "analysis_timestamp": "2026-07-17T06:02:34.254396Z"
   },
   "spam_gate": {
     "SPAM_A": 0.015625,
@@ -47,17 +47,17 @@
   "verdict": "PASS",
   "verdict_emoji": "\u2705",
   "primary_metrics": {
-    "S_A_arm1": 0.994834,
-    "S_A_arm8": 0.996598,
-    "S_A_min": 0.994834,
+    "S_A_arm1": 0.97937,
+    "S_A_arm8": 0.981079,
+    "S_A_min": 0.97937,
     "L_D_max": 0.001099,
     "L_D_max_arm": 2,
-    "Delta_B": 0.993735
+    "Delta_B": 0.978271
   },
   "secondary_metrics": {
     "S_A_per_allow_arm": {
-      "8": 0.996598,
-      "1": 0.994834
+      "8": 0.981079,
+      "1": 0.97937
     },
     "L_D_per_deny_arm": {
       "2": 0.001099,
@@ -107,7 +107,13 @@
       }
     },
     "h2b_reauth_restores": true,
-    "h2c_replay_fails_closed": true
+    "h2c_replay_fails_closed": true,
+    "spam_corrected_ALLOW_descriptive": {
+      "note": "SECONDARY / DESCRIPTIVE ONLY \u2014 not used for the verdict. These are the legacy v1.1 SPAM-corrected ALLOW values, computed as (p1_raw - SPAM_A)/(1 - 2*SPAM_A). The correction applies the AUTHORIZER readout error (SPAM_A) to the PAYLOAD outcome and lacks a full payload-readout-assignment model, so it is retained for transparency only. Primary S_A metrics above are RAW.",
+      "SPAM_A_used": 0.015625,
+      "S_A_arm1_spam_corrected": 0.994834,
+      "S_A_arm8_spam_corrected": 0.996598
+    }
   },
   "criteria": {
     "C1_S_A_min_pass": true,
@@ -131,8 +137,9 @@
       "c_state": 1,
       "scenario": "No change \u2014 state valid at T1 and remains valid at T3",
       "p1_raw": 0.97937,
-      "p1_final": 0.994834,
-      "spam_correction": true
+      "p1_final": 0.97937,
+      "spam_correction": false,
+      "p1_spam_corrected_secondary": 0.994834
     },
     "2": {
       "arm": 2,
@@ -141,7 +148,8 @@
       "scenario": "Authority revoked between approval (T1) and execution (T3)",
       "p1_raw": 0.001099,
       "p1_final": 0.001099,
-      "spam_correction": false
+      "spam_correction": false,
+      "p1_spam_corrected_secondary": null
     },
     "3": {
       "arm": 3,
@@ -150,7 +158,8 @@
       "scenario": "Policy version updated; action now inadmissible under new policy",
       "p1_raw": 0.001099,
       "p1_final": 0.001099,
-      "spam_correction": false
+      "spam_correction": false,
+      "p1_spam_corrected_secondary": null
     },
     "4": {
       "arm": 4,
@@ -159,7 +168,8 @@
       "scenario": "Account balance fell below required threshold after approval",
       "p1_raw": 0.000366,
       "p1_final": 0.000366,
-      "spam_correction": false
+      "spam_correction": false,
+      "p1_spam_corrected_secondary": null
     },
     "5": {
       "arm": 5,
@@ -168,7 +178,8 @@
       "scenario": "Risk score crossed enforcement limit after approval",
       "p1_raw": 0.000732,
       "p1_final": 0.000732,
-      "spam_correction": false
+      "spam_correction": false,
+      "p1_spam_corrected_secondary": null
     },
     "6": {
       "arm": 6,
@@ -177,7 +188,8 @@
       "scenario": "Destination entity blocked or sanctioned after approval",
       "p1_raw": 0.000244,
       "p1_final": 0.000244,
-      "spam_correction": false
+      "spam_correction": false,
+      "p1_spam_corrected_secondary": null
     },
     "7": {
       "arm": 7,
@@ -186,7 +198,8 @@
       "scenario": "Supporting evidence expired after approval was granted",
       "p1_raw": 0.000977,
       "p1_final": 0.000977,
-      "spam_correction": false
+      "spam_correction": false,
+      "p1_spam_corrected_secondary": null
     },
     "8": {
       "arm": 8,
@@ -194,8 +207,9 @@
       "c_state": 1,
       "scenario": "New decision issued against re-assessed admissible state",
       "p1_raw": 0.981079,
-      "p1_final": 0.996598,
-      "spam_correction": true
+      "p1_final": 0.981079,
+      "spam_correction": false,
+      "p1_spam_corrected_secondary": 0.996598
     },
     "9": {
       "arm": 9,
@@ -204,7 +218,8 @@
       "scenario": "Old ProofRecord presented without re-verification; state changed",
       "p1_raw": 0.000244,
       "p1_final": 0.000244,
-      "spam_correction": false
+      "spam_correction": false,
+      "p1_spam_corrected_secondary": null
     }
   },
   "honest_caveats": [
@@ -227,8 +242,10 @@
       "ARK-453 (conflicting evidence)"
     ]
   },
+  "analysis_version": "v1.2",
+  "analysis_correction_notice": "v1.2 (post-data, fully disclosed per ARK-447 precedent): RAW payload P(Q_P=1) is the PRIMARY S_A metric. The v1.1 SPAM-corrected ALLOW values (0.9948 / 0.9966) applied the authorizer readout error (SPAM_A) to the payload outcome and are demoted to secondary/descriptive only, pending a full payload-readout-assignment model. Raw data and verdict are unchanged: PASS by a wide margin (raw S_A_min=0.9794, L_D_max=0.0011, Delta_B=0.9783).",
   "zenodo_doi": "10.5281/zenodo.21406037",
-  "manifest_sha256": null,
   "zenodo_concept_doi": "10.5281/zenodo.21398675",
-  "zenodo_url": "https://zenodo.org/record/21406037"
+  "zenodo_url": "https://zenodo.org/record/21406037",
+  "manifest_sha256": "baf7d0898071f712274ab2d9ebe018c476d9735b04a6c7d33cea2398d996deec"
 }

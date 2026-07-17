@@ -21,9 +21,30 @@ This script must be committed at lock time (included in MANIFEST SHA-256).
 No changes to metric definitions, thresholds, verdict logic, or SPAM
 correction rules are permitted after the MANIFEST is committed.
 
-Analysis Rules (preregistration Section 11)
---------------------------------------------
-1. S_A computed on ALLOW arms (Arms 1 and 8): P(Q_P=1), SPAM_A-corrected.
+POST-DATA ANALYSIS CORRECTION (v1.2) — read this
+-------------------------------------------------
+This script was revised AFTER data was read, under full explicit disclosure
+(ARK-447 v1.0→v1.1 precedent). The raw counts, job IDs, and hardware data are
+UNCHANGED. Only the choice of which metric is PRIMARY changed:
+
+  • v1.1 reported SPAM-corrected ALLOW retention as the primary S_A. That
+    correction divided the payload P(Q_P=1) by (1 − 2·SPAM_A), i.e. it applied
+    the AUTHORIZER qubit's readout error (SPAM_A) to the PAYLOAD qubit outcome.
+    The quantity being measured for ALLOW retention is the PAYLOAD bit, so
+    SPAM_A is not the correct characterization for it. A defensible correction
+    would require a full payload-readout-assignment model, which we do not have.
+
+  • v1.2 therefore makes the RAW payload P(Q_P=1) the PRIMARY S_A metric and
+    demotes the SPAM-corrected values to a clearly-labelled SECONDARY,
+    descriptive-only role. The verdict is UNCHANGED (raw still passes every
+    preregistered criterion by a wide margin):
+        raw S_A_min = 0.9794 (≥ 0.90), raw L_D_max = 0.0011 (≤ 0.02),
+        raw Δ_B ≈ 0.9783 (≥ 0.70).
+
+Analysis Rules (preregistration Section 11, as corrected in v1.2)
+------------------------------------------------------------------
+1. S_A computed on ALLOW arms (Arms 1 and 8): P(Q_P=1), RAW (primary).
+   SPAM-corrected values are retained as a secondary descriptive metric only.
 2. L_D computed on DENY arms (Arms 2–7 and 9): P(Q_P=1), RAW — NOT corrected
    by SPAM_P. SPAM_P is a gating diagnostic only. (ARK-447 v1.1 correction,
    fixed in preregistration.)
@@ -45,8 +66,23 @@ C4: SPAM gate passed (evaluated before this script runs; encoded in raw_results.
 
 import json
 import sys
+import hashlib
 import datetime
 from pathlib import Path
+
+
+def _manifest_sha256():
+    """
+    Return the SHA-256 hex digest of ../MANIFEST.txt, or None if it is absent.
+    Used to stamp the ProofRecord with the integrity hash of the locked MANIFEST.
+    """
+    manifest_path = Path(__file__).parent.parent / "MANIFEST.txt"
+    if not manifest_path.exists():
+        return None
+    h = hashlib.sha256()
+    with open(manifest_path, "rb") as f:
+        h.update(f.read())
+    return h.hexdigest()
 
 # ---------------------------------------------------------------------------
 # 0. Configuration — all thresholds fixed at preregistration lock
@@ -204,12 +240,18 @@ def analyse(raw: dict) -> dict:
         counts   = arm_data["counts"]
         p1_raw   = p1_from_counts(counts)
 
+        # v1.2 correction: RAW payload P(Q_P=1) is PRIMARY for all arms.
+        # For ALLOW arms we ALSO record the (legacy v1.1) SPAM-corrected value
+        # as a SECONDARY, descriptive-only figure. It is NOT used for the
+        # verdict because the correction applies the authorizer SPAM (SPAM_A)
+        # to the payload outcome — see the post-data correction notice at top.
+        p1_final = p1_raw
         if arm_num in ALLOW_ARMS:
-            p1_final = apply_spam_correction(p1_raw, spam_a_val)
-            correction_applied = spam_a_val > 0.01
+            p1_spam_corrected_secondary = round(
+                apply_spam_correction(p1_raw, spam_a_val), 6
+            )
         else:
-            p1_final = p1_raw          # DENY arms: RAW, no correction
-            correction_applied = False
+            p1_spam_corrected_secondary = None
 
         arm_metrics[arm_num] = {
             "arm":                arm_num,
@@ -217,8 +259,9 @@ def analyse(raw: dict) -> dict:
             "c_state":            arm_data["c_state"],
             "scenario":           arm_data["scenario"],
             "p1_raw":             round(p1_raw,   6),
-            "p1_final":           round(p1_final, 6),
-            "spam_correction":    correction_applied,
+            "p1_final":           round(p1_final, 6),   # == p1_raw in v1.2 (primary)
+            "spam_correction":    False,                # not applied to primary in v1.2
+            "p1_spam_corrected_secondary": p1_spam_corrected_secondary,
         }
 
     # ------------------------------------------------------------------
@@ -327,6 +370,19 @@ def analyse(raw: dict) -> dict:
             "h2a_universality":   {str(k): v for k, v in h2a_per_arm.items()},
             "h2b_reauth_restores": h2b_pass,
             "h2c_replay_fails_closed": h2c_pass,
+            "spam_corrected_ALLOW_descriptive": {
+                "note": (
+                    "SECONDARY / DESCRIPTIVE ONLY — not used for the verdict. "
+                    "These are the legacy v1.1 SPAM-corrected ALLOW values, computed "
+                    "as (p1_raw - SPAM_A)/(1 - 2*SPAM_A). The correction applies the "
+                    "AUTHORIZER readout error (SPAM_A) to the PAYLOAD outcome and lacks "
+                    "a full payload-readout-assignment model, so it is retained for "
+                    "transparency only. Primary S_A metrics above are RAW."
+                ),
+                "SPAM_A_used": spam_a_val,
+                "S_A_arm1_spam_corrected": arm_metrics[1]["p1_spam_corrected_secondary"] if 1 in arm_metrics else None,
+                "S_A_arm8_spam_corrected": arm_metrics[8]["p1_spam_corrected_secondary"] if 8 in arm_metrics else None,
+            },
         },
 
         "criteria": {
@@ -389,7 +445,9 @@ def print_summary(result: dict) -> None:
     pm = result.get("primary_metrics", {})
     cr = result.get("criteria", {})
 
-    print(f"\nPrimary Metrics:")
+    sm = result.get("secondary_metrics", {})
+
+    print(f"\nPrimary Metrics (RAW payload P(Q_P=1) — v1.2):")
     print(f"  S_A (arm 1 — ALLOW-unchanged): {pm.get('S_A_arm1', '?'):.4f}")
     print(f"  S_A (arm 8 — ALLOW-reauth):    {pm.get('S_A_arm8', '?'):.4f}")
     print(f"  S_A_min:  {fmt_criterion(pm.get('S_A_min', 0), C1_THRESHOLD_S_A_MIN, 'ge')}")
@@ -397,7 +455,12 @@ def print_summary(result: dict) -> None:
           f"  (arm {pm.get('L_D_max_arm', '?')})")
     print(f"  Δ_B:      {fmt_criterion(pm.get('Delta_B', 0), C3_THRESHOLD_DELTA_B, 'ge')}")
 
-    sm = result.get("secondary_metrics", {})
+    sc = sm.get("spam_corrected_ALLOW_descriptive", {})
+    if sc:
+        print(f"\n  [secondary/descriptive only — NOT used for verdict]")
+        print(f"  SPAM-corrected S_A (arm 1): {sc.get('S_A_arm1_spam_corrected', '?')}")
+        print(f"  SPAM-corrected S_A (arm 8): {sc.get('S_A_arm8_spam_corrected', '?')}")
+        print(f"  (applies authorizer SPAM_A to payload — see notice)")
 
     print(f"\nDENY Leakage Per Arm (H2a — universality):")
     h2a = sm.get("h2a_universality", {})
@@ -531,8 +594,22 @@ def write_proofrecord(result: dict, path: Path) -> None:
                         "ARK-453 (conflicting evidence)"],
         },
 
-        "zenodo_doi":    None,   # filled at Zenodo publication
-        "manifest_sha256": None, # filled at lock time from MANIFEST.txt
+        "analysis_version": "v1.2",
+        "analysis_correction_notice": (
+            "v1.2 (post-data, fully disclosed per ARK-447 precedent): RAW payload "
+            "P(Q_P=1) is the PRIMARY S_A metric. The v1.1 SPAM-corrected ALLOW values "
+            "(0.9948 / 0.9966) applied the authorizer readout error (SPAM_A) to the "
+            "payload outcome and are demoted to secondary/descriptive only, pending a "
+            "full payload-readout-assignment model. Raw data and verdict are unchanged: "
+            "PASS by a wide margin (raw S_A_min=0.9794, L_D_max=0.0011, Delta_B=0.9783)."
+        ),
+
+        # Archival identifiers (Zenodo) — stamped at publication.
+        "zenodo_doi":         "10.5281/zenodo.21406037",
+        "zenodo_concept_doi": "10.5281/zenodo.21398675",
+        "zenodo_url":         "https://zenodo.org/record/21406037",
+        # MANIFEST integrity — SHA-256 of ../MANIFEST.txt, computed at write time.
+        "manifest_sha256":    _manifest_sha256(),
     }
 
     with open(path, "w") as f:

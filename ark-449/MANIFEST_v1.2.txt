@@ -1,0 +1,72 @@
+================================================================
+ARK-449 MANIFEST — v1.2 (POST-DATA CORRECTION ADDENDUM)
+Remnant Fieldworks Inc. — ExecutionProof ARK Series
+================================================================
+
+This addendum supplements (does NOT replace) the original locked
+MANIFEST.txt (v1.1 lock, self-hash 2c7cc2d44a5491b6b21e0ac529ed796c83f7abc1e63657e3034c4652b856ab10).
+The v1.1 MANIFEST remains the immutable preregistration-lock anchor
+and is preserved unchanged as the honest record.
+
+Addendum timestamp (UTC): 2026-07-17T06:07:54Z
+Backend of record:        ibm_marrakesh (156-qubit Heron r2)
+
+----------------------------------------------------------------
+WHY THIS ADDENDUM EXISTS
+----------------------------------------------------------------
+Three post-lock changes are disclosed here, following the ARK-447
+v1.0->v1.1 full-disclosure precedent. The raw hardware counts, job
+IDs, SPAM gate, and the PASS verdict are UNCHANGED by all of them.
+
+1. POST-DATA ANALYSIS CORRECTION (v1.2) — circuits/ark_449_analysis.py
+   The v1.1 analysis reported SPAM-corrected ALLOW retention as the
+   PRIMARY S_A. That correction divided the payload P(Q_P=1) by
+   (1 - 2*SPAM_A), i.e. it applied the AUTHORIZER qubit readout error
+   (SPAM_A) to the PAYLOAD outcome. Because the ALLOW quantity is the
+   payload bit, that correction lacks a valid payload-readout-assignment
+   model. v1.2 makes the RAW payload P(Q_P=1) the PRIMARY S_A metric and
+   demotes the SPAM-corrected values to secondary/descriptive only.
+   Verdict unchanged (raw): S_A_min=0.9794, L_D_max=0.0011, Delta_B=0.9783.
+
+2. ADMINISTRATIVE LABEL FIXES — ARK_449_preregistration.md
+   Residual "ark-449-v1.0-lock" / "Version 1.0" label references (in the
+   lock-instruction, strict-execution-sequence, and MANIFEST-placeholder
+   sections) were corrected to v1.1 to match the actually-executed lock.
+   No hypotheses, arms, criteria, thresholds, or metric definitions were
+   changed.
+
+3. HARDWARE-SUBMISSION API FIXES — circuits/ark_449_circuit.py
+   Pre-data fixes required to run on current qiskit-ibm-runtime:
+   SamplerV2 'backend=' -> 'mode=', removal of the unsupported context
+   manager, and circuit-width-aware transpile layout. These were applied
+   before any results were read.
+
+----------------------------------------------------------------
+CURRENT (POST-CORRECTION) SHA-256 HASHES
+----------------------------------------------------------------
+ARK_449_preregistration.md:
+    06e9e820222a56651aa8f968f85b242d98ec63363a5dc6412f008a94fd05f880
+    (includes v1.2 post-data analysis correction notice)
+    (v1.1 lock hash was: 13f88f305de5690e6e1e8c1cece861f9b4d7a1afc424e16ef3893bc4ececf411)
+
+circuits/ark_449_circuit.py:
+    942685651d08310b17928a06a3022d7caecc28f25de24dfc7151d8c5799e4636
+    (v1.1 lock hash was: 4c3f413567441585a15170ffdedc2ea7645ce85c0c1be98662b87cde1c842448)
+
+circuits/ark_449_analysis.py:
+    6a9e6a78db340ed9df4f2d298cad44e04ac9028e859fdf57961f67e021f06745
+    (v1.1 lock hash was: f7f35d463ba3c761f53fb7824aa34862cbdb0e1dc468dd92375d76e483e78d91)
+
+README.md:
+    779b1128ac3d64f3007d70b34b84ad5bc5f73afab7b68743063fd1ada713f198
+    (v1.1 lock hash was: 0f8a7bae0d1798394990298191a12eddd4b9bab088b7068ef1b20a5a2fb83185)
+
+----------------------------------------------------------------
+ARCHIVAL
+----------------------------------------------------------------
+Zenodo DOI (this version):  10.5281/zenodo.21406037
+Zenodo concept DOI:         10.5281/zenodo.21398675
+PR #5 merge SHA:            beb1ca9
+Tags:                       ark-449-v1.0-lock, ark-449-v1.1-lock,
+                            ark-449-v1.1, ark-449-v1.2
+================================================================
