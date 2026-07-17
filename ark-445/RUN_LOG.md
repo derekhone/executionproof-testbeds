@@ -57,4 +57,13 @@ Each step below writes files + a git commit; commit timestamps prove ordering (F
 
 ## Step 8-11 — Retrieval / analysis / results
 
-- _(pending)_
+- **Step 8 (retrieval):** Principal job `d9codk9htsac739c1dug` completed with status DONE. Raw per-arm counts (9 arms × 8192 shots) retrieved and committed to `raw_results.json` before analysis.
+- **Step 9 (analysis):** SPAM-corrected discrimination computed per arm. Results:
+  - ALLOW arms: arm1=0.9805, arm5=0.9771, arm7=0.9626 → **S_A_min=0.9626** (criterion ≥0.90 ✅)
+  - HOLD arms: arm3(|+⟩)=0.4946, arm4(|−⟩)=0.4918 → both ∈ [0.40,0.60] ✅; I_H=0.0028 symmetric ✅
+  - DENY arms: arm2=0.0029, arm6=0.0018, arm8=0.0011 (all corrected, ≤0.02 ✅)
+  - **arm9 confusion/replay (mid-circuit reset+re-prepare): L_conf_corrected=0.0289 > 0.02 DENY ceiling ❌**
+  - Δ_H (ALLOW−HOLD separation) = 0.4629 (criterion ≥0.30 ✅)
+  - SPAM gate: SPAM_A=0.0007, SPAM_P=0.0011, drift=0.0004 — all PASS
+- **Step 10 (verdict):** **VERDICT = FAIL.** 4 of 5 quantitative criteria met. Single failing criterion: arm9 reset-based confusion/replay leaked 0.0289 (> 0.02), consistent with mid-circuit reset infidelity on the principal qubit. Core tri-state discrimination (ALLOW/HOLD/DENY) is strong (Δ_H=0.463). **No post-data rescue applied — honest FAIL reported per protocol.**
+- **Step 11 (results):** `proofrecord.json`, `plots/arm_results.png`, `plots/tristate_discrimination.png`, and `RESULTS.md` (+ .docx/.pdf) generated and committed.
