@@ -1,0 +1,50 @@
+{
+  "experiment_id": "ARK-445b",
+  "principal_job_id": "d9couv9htsac739c230g",
+  "backend": "ibm_marrakesh",
+  "instance": "open-instance",
+  "initial_layout": [
+    2,
+    1
+  ],
+  "layout_order": "[Q_A, Q_P]",
+  "shots_per_arm": 8192,
+  "arm_order": [
+    "arm1_allow_standard",
+    "arm2_deny_standard",
+    "arm3_hold_plus",
+    "arm4_hold_minus",
+    "arm5_allow_alt",
+    "arm6_deny_alt",
+    "arm7_allow_reverified",
+    "arm8_deny_expired",
+    "arm9_spam_idle"
+  ],
+  "arm_class": {
+    "arm1_allow_standard": "allow",
+    "arm2_deny_standard": "deny",
+    "arm3_hold_plus": "hold",
+    "arm4_hold_minus": "hold",
+    "arm5_allow_alt": "allow",
+    "arm6_deny_alt": "deny",
+    "arm7_allow_reverified": "allow",
+    "arm8_deny_expired": "deny",
+    "arm9_spam_idle": "idle_spam"
+  },
+  "arm_expect": {
+    "arm1_allow_standard": "ALLOW",
+    "arm2_deny_standard": "DENY",
+    "arm3_hold_plus": "HOLD",
+    "arm4_hold_minus": "HOLD",
+    "arm5_allow_alt": "ALLOW",
+    "arm6_deny_alt": "DENY",
+    "arm7_allow_reverified": "ALLOW",
+    "arm8_deny_expired": "DENY",
+    "arm9_spam_idle": "SPAM"
+  },
+  "optimization_level": 3,
+  "seed_transpiler": 445,
+  "dynamical_decoupling": false,
+  "submitted_utc": "2026-07-17T02:12:12.144504+00:00",
+  "spam_job_id": "d9counkinv1c73ao2vng"
+}
