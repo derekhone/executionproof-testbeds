@@ -24,12 +24,19 @@ def compute_prob(counts, outcome, shots=8192):
     """Compute probability of a specific outcome."""
     return counts.get(outcome, 0) / shots
 
-def analyze_configuration(config_name, allow_arm, deny_arm, raw_results, spam_p_prob):
+def analyze_configuration(config_name, allow_arm, deny_arm, raw_results):
     """
     Analyze a single configuration (baseline or twirling).
-    
+
+    NOTE on SPAM: The SPAM_P calibration circuit prepares |+> and measures
+    ~50/50. That ~0.5 outcome is the EXPECTED physical behavior of a
+    superposition, NOT a spurious readout-excitation baseline. It must NOT
+    be subtracted from DENY leakage. SPAM_P is used only as a GATING
+    condition (confirming the payload readout axis behaves as expected).
+    DENY leakage is therefore reported and evaluated as RAW leakage.
+
     Returns:
-        dict with S_A, L_D_raw, L_D_corrected, Delta_B, and pass/fail status
+        dict with S_A, L_D_raw, Delta_B, and pass/fail status
     """
     allow_counts = raw_results[allow_arm]
     deny_counts = raw_results[deny_arm]
@@ -42,17 +49,14 @@ def analyze_configuration(config_name, allow_arm, deny_arm, raw_results, spam_p_
     deny_total = sum(deny_counts.values())
     deny_payload_1 = sum(count for outcome, count in deny_counts.items() if outcome[-1] == '1')
     L_D_raw = deny_payload_1 / deny_total
-    
-    # SPAM correction
-    L_D_corrected = max(0.0, L_D_raw - spam_p_prob)
-    
-    # Boundary margin
-    Delta_B = S_A - L_D_corrected - 0.20
-    
+
+    # Boundary margin (uses RAW DENY leakage — no invalid SPAM subtraction)
+    Delta_B = S_A - L_D_raw - 0.20
+
     # Check criteria
     criteria = {
         'S_A >= 0.90': S_A >= 0.90,
-        'L_D_corrected <= 0.02': L_D_corrected <= 0.02,
+        'L_D_raw <= 0.02': L_D_raw <= 0.02,
         'Delta_B >= 0.00': Delta_B >= 0.00
     }
     
@@ -64,7 +68,6 @@ def analyze_configuration(config_name, allow_arm, deny_arm, raw_results, spam_p_
         'deny_arm': deny_arm,
         'S_A': S_A,
         'L_D_raw': L_D_raw,
-        'L_D_corrected': L_D_corrected,
         'Delta_B': Delta_B,
         'criteria': criteria,
         'verdict': 'PASS' if all_passed else 'FAIL'
@@ -74,14 +77,16 @@ def main():
     # Load data
     raw, spam, meta, qubits = load_results()
     
-    # Extract SPAM_P probability (for correction)
+    # SPAM_P is a GATING diagnostic only (|+> should read ~0.5). It is NOT
+    # a correction term and is NOT subtracted from DENY leakage.
     spam_p_prob = spam['SPAM_P']['prob_1']
-    
+
     print("=== ARK-447 Analysis ===\n")
     print(f"Backend: {meta['backend']}")
     print(f"Q_A = {qubits['Q_A']}, Q_P = {qubits['Q_P']}")
-    print(f"SPAM_P (prob '1' | |+⟩): {spam_p_prob:.4f}\n")
-    print(f"Note: DD circuits omitted; comparing baseline vs. Pauli twirling only.\n")
+    print(f"SPAM_P (prob '1' | |+⟩): {spam_p_prob:.4f} — GATING diagnostic only, ~0.5 expected (NOT subtracted)\n")
+    print(f"Note: DD circuits omitted; comparing baseline vs. Pauli twirling only.")
+    print(f"Note: DENY leakage reported as RAW (no invalid SPAM subtraction).\n")
     
     # Analyze each configuration
     configs = {}
@@ -90,16 +95,14 @@ def main():
         'Baseline',
         'arm1_ALLOW_baseline',
         'arm2_DENY_baseline',
-        raw,
-        spam_p_prob
+        raw
     )
     
     configs['twirling'] = analyze_configuration(
         'Pauli Twirling',
         'arm3_ALLOW_twirl',
         'arm4_DENY_twirl',
-        raw,
-        spam_p_prob
+        raw
     )
     
     # Print results
@@ -107,8 +110,7 @@ def main():
     for key, cfg in configs.items():
         print(f"**{cfg['config_name']}**")
         print(f"   S_A = {cfg['S_A']:.4f} (≥0.90: {cfg['criteria']['S_A >= 0.90']})")
-        print(f"   L_D_raw = {cfg['L_D_raw']:.4f}")
-        print(f"   L_D_corrected = {cfg['L_D_corrected']:.4f} (≤0.02: {cfg['criteria']['L_D_corrected <= 0.02']})")
+        print(f"   L_D_raw = {cfg['L_D_raw']:.4f} (≤0.02: {cfg['criteria']['L_D_raw <= 0.02']})")
         print(f"   Delta_B = {cfg['Delta_B']:.4f} (≥0.00: {cfg['criteria']['Delta_B >= 0.00']})")
         print(f"   VERDICT: {cfg['verdict']}\n")
     
@@ -119,7 +121,7 @@ def main():
     if baseline_pass and twirl_pass:
         # Check for improvement
         twirl_improvement = (configs['twirling']['S_A'] > configs['baseline']['S_A'] or
-                             configs['twirling']['L_D_corrected'] < configs['baseline']['L_D_corrected'])
+                             configs['twirling']['L_D_raw'] < configs['baseline']['L_D_raw'])
         
         if twirl_improvement:
             overall_verdict = 'PASS (strong)'
@@ -144,8 +146,13 @@ def main():
     # Create proofrecord
     proofrecord = {
         'experiment': 'ARK-447',
-        'title': 'Noise-Suppression Comparison: Pauli Twirling vs. Baseline',
+        'title': 'Pauli Twirling vs. Baseline',
         'note': 'DD circuits omitted due to scheduling complexity',
+        'spam_methodology_note': (
+            'SPAM_P (|+> -> ~0.5) is used ONLY as a gating diagnostic, NOT as a '
+            'correction term. DENY leakage is reported as RAW; the earlier '
+            'subtraction of SPAM_P from DENY leakage was invalid and has been removed.'
+        ),
         'backend': meta['backend'],
         'qubits': {
             'Q_A': qubits['Q_A'],
@@ -158,6 +165,7 @@ def main():
             'job_id': spam['job_id'],
             'SPAM_A_error': spam['SPAM_A']['error'],
             'SPAM_P_prob_1': spam['SPAM_P']['prob_1'],
+            'SPAM_P_role': 'gating diagnostic only (|+> ~0.5 expected); NOT a correction term',
             'gate_passed': spam['gate_passed']
         },
         'principal_job': {
@@ -178,7 +186,8 @@ def main():
             'Not a cryptographic security validation.',
             'Pauli twirling is noise mitigation (not correction); no QEC used.',
             'Single-round binary boundary only.',
-            'DD circuits omitted due to implementation complexity.'
+            'DD circuits omitted due to implementation complexity.',
+            'DENY leakage reported as RAW; SPAM_P is a gating diagnostic, not a correction term.'
         ]
     }
     
