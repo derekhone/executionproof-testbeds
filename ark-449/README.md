@@ -3,7 +3,7 @@
 **Remnant Fieldworks Inc.**  
 **Status:** ✅ COMPLETE — PASS (executed on IBM Quantum `ibm_marrakesh`, 2026-07-17)
 
-**DOI:** [10.5281/zenodo.21406037](https://doi.org/10.5281/zenodo.21406037) · Concept DOI: [10.5281/zenodo.21398675](https://doi.org/10.5281/zenodo.21398675)
+**DOI:** [10.5281/zenodo.21406335](https://doi.org/10.5281/zenodo.21406335) (v1.2 corrected) · Concept DOI: [10.5281/zenodo.21398675](https://doi.org/10.5281/zenodo.21398675)
 
 **Result (primary — raw payload P(Q_P=1), analysis v1.2):**
 S_A_min = 0.9794 (≥ 0.90) · L_D_max = 0.0011 (≤ 0.02) · Δ_B ≈ 0.9783 (≥ 0.70) · SPAM gate PASSED.
