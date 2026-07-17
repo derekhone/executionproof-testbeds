@@ -1,0 +1,89 @@
+{
+  "run_start_time": "2026-07-17T18:04:50.268672Z",
+  "run_end_time": "2026-07-17T18:05:39.138979Z",
+  "ttl_seconds": 300,
+  "killgate_verdict": "PASS",
+  "arms_executed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "primary_metrics": {
+    "v_accept_original": 1.0,
+    "v_reject_min": 1.0,
+    "v_margin": 1.0
+  },
+  "criteria": {
+    "c1_v_accept_pass": true,
+    "c2_v_reject_pass": true,
+    "c3_v_margin_pass": true
+  },
+  "overall_concordance": {
+    "agreements": 900,
+    "total": 900,
+    "percentage": 100.0
+  },
+  "verdict": "PASS",
+  "per_arm_summary": {
+    "arm_1": {
+      "label": "ACCEPT-original",
+      "mode": null,
+      "v_reject_worst": null,
+      "v_accept_worst": 1.0
+    },
+    "arm_2": {
+      "label": "REJECT-decision",
+      "mode": "post_sign",
+      "v_reject_worst": 1.0,
+      "v_accept_worst": null
+    },
+    "arm_3": {
+      "label": "REJECT-timestamp-postsign",
+      "mode": "post_sign",
+      "v_reject_worst": 1.0,
+      "v_accept_worst": null
+    },
+    "arm_4": {
+      "label": "REJECT-payload_hash",
+      "mode": "post_sign",
+      "v_reject_worst": 1.0,
+      "v_accept_worst": null
+    },
+    "arm_5": {
+      "label": "REJECT-evidence_refs",
+      "mode": "post_sign",
+      "v_reject_worst": 1.0,
+      "v_accept_worst": null
+    },
+    "arm_6": {
+      "label": "REJECT-actor",
+      "mode": "post_sign",
+      "v_reject_worst": 1.0,
+      "v_accept_worst": null
+    },
+    "arm_7": {
+      "label": "REJECT-outcome",
+      "mode": "post_sign",
+      "v_reject_worst": 1.0,
+      "v_accept_worst": null
+    },
+    "arm_8": {
+      "label": "REJECT-review_path",
+      "mode": "post_sign",
+      "v_reject_worst": 1.0,
+      "v_accept_worst": null
+    },
+    "arm_9": {
+      "label": "REJECT-timestamp-presign-expired",
+      "mode": "pre_sign_expired",
+      "v_reject_worst": 1.0,
+      "v_accept_worst": null
+    }
+  }
+}

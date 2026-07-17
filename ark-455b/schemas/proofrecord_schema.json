@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://remnantfieldworks.com/schemas/proofrecord/v1.1",
+  "title": "ProofRecord",
+  "description": "ExecutionProof authorization decision record with Ed25519 signature and validity-window semantics (ARK-455b)",
+  "type": "object",
+  "required": [
+    "decision",
+    "timestamp",
+    "payload_hash",
+    "evidence_references",
+    "actor",
+    "execution_outcome",
+    "review_path"
+  ],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": ["ALLOW", "DENY", "HOLD"],
+      "description": "Authorization decision outcome"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|\\+00:00)$",
+      "description": "RFC 3339 UTC timestamp of decision issuance. MUST carry an explicit UTC designator ('Z' or '+00:00'). This field is part of the JCS-canonicalized, Ed25519-signed payload AND is subject to a validity-window check at verification time (see notes.validity_window)."
+    },
+    "payload_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA-256 hash of the governed payload (64-character hex string)"
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1,
+      "description": "Array of URIs referencing supporting evidence for the decision"
+    },
+    "actor": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identity string of the decision-making authority or agent"
+    },
+    "execution_outcome": {
+      "type": "string",
+      "enum": ["executed", "blocked", "held"],
+      "description": "Actual execution result following the decision"
+    },
+    "review_path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Audit trail identifier for record review and compliance tracking"
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{128}$",
+      "description": "Ed25519 signature (128-character hex string, 64 bytes). Present in signed records, absent during signing."
+    }
+  },
+  "additionalProperties": false,
+  "notes": {
+    "canonicalization": "RFC 8785 (JSON Canonicalization Scheme, JCS) before signing",
+    "signature_algorithm": "Ed25519 over the canonical byte representation of the 7 signed fields",
+    "verification": "TWO gates, both required to ACCEPT. Gate A: remove signature field, canonicalize remaining 7 fields via JCS, verify Ed25519 signature against canonical bytes. Gate B: parse the signature-verified timestamp as RFC 3339 UTC, compute age = verification_time - timestamp, REJECT if age < 0 (future) or age > ttl_seconds (expired).",
+    "validity_window": "A ProofRecord is valid only within [issuance_time, issuance_time + ttl_seconds]. Default ttl_seconds = 300. The timestamp is inside the signed payload, so a genuine post-signing edit breaks the signature (Gate A). A timestamp placed out of window BEFORE signing yields a valid signature but MUST still be rejected by Gate B. Expiry semantics follow ARK-442.",
+    "change_from_v1.0": "ARK-455 (schema v1.0) verified signature only. ARK-455b (schema v1.1) adds the mandatory validity-window gate and requires an explicit UTC designator on the timestamp."
+  }
+}
