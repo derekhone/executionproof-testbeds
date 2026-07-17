@@ -1,7 +1,13 @@
 # ARK-449 — State Changes After Verification
 **ExecutionProof ARK Authorization-Boundary Track**  
 **Remnant Fieldworks Inc.**  
-**Status:** PRE-EXECUTION — awaiting IBM budget refresh and lock
+**Status:** ✅ COMPLETE — PASS (executed on IBM Quantum `ibm_marrakesh`, 2026-07-17)
+
+**DOI:** [10.5281/zenodo.21406037](https://doi.org/10.5281/zenodo.21406037) · Concept DOI: [10.5281/zenodo.21398675](https://doi.org/10.5281/zenodo.21398675)
+
+**Result:** S_A_min = 0.9948 (≥ 0.90) · L_D_max = 0.0011 (≤ 0.02) · Δ_B = 0.9937 (≥ 0.70) · SPAM gate PASSED.
+All seven DENY state-change scenarios confirmed. Re-auth restores execution; replay with changed state fails closed.
+Jobs: SPAM `d9crr82neu4c739mcsd0`, principal `d9crvbhhtsac739c6a70`.
 
 ---
 
