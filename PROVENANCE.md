@@ -60,8 +60,9 @@ preregistration timeline.
 ## 3. Zenodo
 
 The dataset DOI **10.5281/zenodo.21398676** covers the ARK authorization-boundary series. Its repository
-reference and related identifiers are being updated to point at this repository as the canonical code/data
-home for the track. The Phase 1 physics DOI (10.5281/zenodo.21246246) is unaffected.
+reference and related identifiers are being updated to point at this repository
+(`https://github.com/derekhone/executionproof-testbeds`) as the canonical code/data home for the track.
+The Phase 1 physics DOI (10.5281/zenodo.21246246) is unaffected.
 
 ---
 

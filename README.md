@@ -1,14 +1,14 @@
-# ARK Authorization-Boundary Testbeds
+# ExecutionProof Testbeds
 
-**Track:** Verify-Before-Execute (VBE) authorization-boundary characterization on IBM Quantum hardware
+**Product:** ExecutionProof™ — *"If it cannot be verified, it cannot execute."*
+**Track:** ARK authorization-boundary series — Verify-Before-Execute (VBE) characterization on IBM Quantum hardware
 **Maintainer:** Derek Hone — Remnant Fieldworks Inc.
-**Product context:** ExecutionProof™ — *"If it cannot be verified, it cannot execute."*
 
 ---
 
 ## What this repository is
 
-This repository holds the **ARK authorization-boundary experiment series** — a set of preregistered,
+This repository (`executionproof-testbeds`) holds the **ARK authorization-boundary experiment series** — a set of preregistered,
 hardware-executed metrological tests of a verify-then-execute (VBE) authorization boundary on IBM
 Quantum superconducting devices. Each experiment asks a narrow, falsifiable question about whether an
 authorization decision can be reliably enforced at the moment of execution, and each is published with
