@@ -1,6 +1,16 @@
 # ARK-455 — ProofRecord Verification After Tampering
 
-**Status:** LOCKED → Execution in progress
+> ## ⚠️ CORRECTION / ERRATUM v1.1 (2026-07-17)
+> A post-publication source audit resolved the ambiguity flagged in the
+> Conclusion below. The Arm-3 (timestamp) FAIL was caused by a **test-harness
+> no-op** — the timestamp "tamper" `(microsecond + 1000000) % 1000000` never
+> changed the record, so both verifiers correctly accepted unaltered inputs. It
+> is **not** a verifier defect and **not** a signed-payload/spec gap: the
+> timestamp *is* in the JCS-signed form and both verifiers *do* check it.
+> **The FAIL verdict stands as recorded; only its root cause is reclassified.**
+> See [`CORRECTION.md`](./CORRECTION.md). Follow-up: [`../ark-455b/`](../ark-455b/).
+
+**Status:** LOCKED → Executed (FAIL, v1.0) → Corrected (v1.1 erratum)
 
 **Question:** Can an independent verifier detect every tampering attempt in a ProofRecord and reject altered records while accepting the original?
 
