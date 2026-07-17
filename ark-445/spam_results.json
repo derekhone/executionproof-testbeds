@@ -1,0 +1,44 @@
+{
+  "experiment_id": "ARK-445",
+  "job_type": "in_situ_spam_killgate_arm10",
+  "backend": "ibm_marrakesh",
+  "instance": "open-instance",
+  "physical_qubits": {
+    "Q_A": 2,
+    "Q_P": 1
+  },
+  "shots": 8192,
+  "spam_ceiling": 0.02,
+  "drift_ceiling": 0.005,
+  "spam_job_id": "d9coda9htsac739c1djg",
+  "submitted_utc": "2026-07-17T01:34:31.734497+00:00",
+  "completed_utc": "2026-07-17T01:34:47.577426+00:00",
+  "SPAM_A": 0.000732421875,
+  "SPAM_P": 0.0010986328125,
+  "SPAM_drift": 0.0003662109375,
+  "qubit_metrics": {
+    "Q_A": {
+      "physical": 2,
+      "spam_baseline": 0.000732421875,
+      "passes_ceiling": true,
+      "counts": {
+        "0": 8186,
+        "1": 6
+      },
+      "total": 8192
+    },
+    "Q_P": {
+      "physical": 1,
+      "spam_baseline": 0.0010986328125,
+      "passes_ceiling": true,
+      "counts": {
+        "0": 8183,
+        "1": 9
+      },
+      "total": 8192
+    }
+  },
+  "spam_gate_passed": true,
+  "drift_ok": true,
+  "kill_condition": "SPAM_A > 0.02 OR SPAM_P > 0.02 => KILL (INDETERMINATE); principal job MUST NOT be submitted."
+}
