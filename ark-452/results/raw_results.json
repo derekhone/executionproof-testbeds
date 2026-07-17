@@ -1,0 +1,155 @@
+{
+  "experiment": "ARK-452",
+  "backend": "ibm_marrakesh",
+  "spam_job_id": "d9cspi4inv1c73ao83ng",
+  "principal_job_id": "d9cspicjeosc73fgnti0",
+  "shots_spam": 2048,
+  "shots_principal": 8192,
+  "spam_gate": {
+    "SPAM_P": 0.007324,
+    "SPAM_P_pass": true,
+    "gate_passed": true,
+    "threshold": 0.02,
+    "shots": 2048,
+    "raw_spam_p": {
+      "0": 1039,
+      "1": 1009
+    }
+  },
+  "qubit_selection": {
+    "Q_P": 1,
+    "RE_P": 0.002197,
+    "RE_threshold": 0.02,
+    "constraint_met": true,
+    "calibration_ts": "2026-07-17 05:54:26+00:00",
+    "selection_committed_at": "2026-07-17T06:33:43Z"
+  },
+  "arms": {
+    "arm01": {
+      "arm": 1,
+      "label": "ALLOW-complete",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 1,
+      "c_s4": 1,
+      "c_exec": 1,
+      "scenario": "All steps valid; full workflow authorized",
+      "counts": {
+        "1": 7696,
+        "0": 496
+      }
+    },
+    "arm02": {
+      "arm": 2,
+      "label": "DENY-s1-invalid",
+      "c_s1": 0,
+      "c_s2": 1,
+      "c_s3": 1,
+      "c_s4": 1,
+      "c_exec": 0,
+      "scenario": "Read-data step inadmissible; rest valid",
+      "counts": {
+        "0": 8179,
+        "1": 13
+      }
+    },
+    "arm03": {
+      "arm": 3,
+      "label": "DENY-s2-invalid",
+      "c_s1": 1,
+      "c_s2": 0,
+      "c_s3": 1,
+      "c_s4": 1,
+      "c_exec": 0,
+      "scenario": "Calculation step inadmissible; rest valid",
+      "counts": {
+        "0": 8179,
+        "1": 13
+      }
+    },
+    "arm04": {
+      "arm": 4,
+      "label": "DENY-s3-invalid",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 0,
+      "c_s4": 1,
+      "c_exec": 0,
+      "scenario": "Approval step inadmissible; execution step otherwise valid",
+      "counts": {
+        "0": 8187,
+        "1": 5
+      }
+    },
+    "arm05": {
+      "arm": 5,
+      "label": "DENY-s4-invalid",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 1,
+      "c_s4": 0,
+      "c_exec": 0,
+      "scenario": "Execution step itself inadmissible; all prior steps valid",
+      "counts": {
+        "0": 8178,
+        "1": 14
+      }
+    },
+    "arm06": {
+      "arm": 6,
+      "label": "DENY-s2s3-both",
+      "c_s1": 1,
+      "c_s2": 0,
+      "c_s3": 0,
+      "c_s4": 1,
+      "c_exec": 0,
+      "scenario": "Two middle steps invalid; execution step authorization valid",
+      "counts": {
+        "0": 8182,
+        "1": 10
+      }
+    },
+    "arm07": {
+      "arm": 7,
+      "label": "DENY-blanket-attempt",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 1,
+      "c_s4": 0,
+      "c_exec": 0,
+      "scenario": "Three valid prior steps; execution step not independently authorized",
+      "counts": {
+        "0": 8178,
+        "1": 14
+      }
+    },
+    "arm08": {
+      "arm": 8,
+      "label": "ALLOW-reauth-complete",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 1,
+      "c_s4": 1,
+      "c_exec": 1,
+      "scenario": "Full re-authorization after prior workflow block",
+      "counts": {
+        "0": 498,
+        "1": 7694
+      }
+    },
+    "arm09": {
+      "arm": 9,
+      "label": "DENY-skip-approval",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 0,
+      "c_s4": 0,
+      "c_exec": 0,
+      "scenario": "Approval and execution steps both absent; data and calculation valid",
+      "counts": {
+        "0": 8179,
+        "1": 13
+      }
+    }
+  }
+}
