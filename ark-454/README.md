@@ -1,6 +1,6 @@
 # ARK-454 — Self-Approval and Circular Delegation Must Fail Closed
 
-**Status:** LOCKED → executed (see `RESULTS.md` for the recorded verdict)
+**Status:** LOCKED → executed → **VERDICT: PASS** (see `RESULTS.md`)
 **Substrate:** Classical software (no QPU, no cryptography)
 **Guards:** Dual independent — V1 (JavaScript), V2 (Python)
 **Series:** ExecutionProof authorization-boundary corpus (enterprise-failure-mode phase)
