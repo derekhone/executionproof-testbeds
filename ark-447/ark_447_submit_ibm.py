@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ARK-447 Principal Job Submission
-Submits the 6 ARK-447 circuits to IBM Quantum.
+Submits the 4 ARK-447 circuits to IBM Quantum (baseline + twirling).
 """
 import json
 import sys
@@ -41,10 +41,9 @@ def main():
     # Create circuits
     circuits_dict = create_circuits()
     
-    # Convert to list (ordered)
+    # Convert to list (ordered) - only 4 circuits now
     circuit_names = ['arm1_ALLOW_baseline', 'arm2_DENY_baseline',
-                     'arm3_ALLOW_DD', 'arm4_DENY_DD',
-                     'arm5_ALLOW_twirl', 'arm6_DENY_twirl']
+                     'arm3_ALLOW_twirl', 'arm4_DENY_twirl']
     circuits = [circuits_dict[name] for name in circuit_names]
     
     # Get backend
@@ -52,7 +51,7 @@ def main():
     service = QiskitRuntimeService(channel='ibm_quantum_platform', token=token, instance='open-instance')
     backend = service.backend(backend_name)
     
-    # Transpile circuits (DD circuits are already transpiled, but re-transpiling is safe)
+    # Transpile circuits
     print(f"\nTranspiling circuits to {backend_name}...")
     pm = generate_preset_pass_manager(backend=backend, optimization_level=1)
     circuits_transpiled = [pm.run(qc) for qc in circuits]
@@ -76,7 +75,8 @@ def main():
         'circuit_names': circuit_names,
         'shots_per_circuit': 8192,
         'Q_A': qubit_sel['Q_A'],
-        'Q_P': qubit_sel['Q_P']
+        'Q_P': qubit_sel['Q_P'],
+        'note': 'Testing baseline vs. Pauli twirling (DD omitted)'
     }
     
     with open('principal_job_id.txt', 'w') as f:

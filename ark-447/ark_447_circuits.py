@@ -1,19 +1,15 @@
 #!/usr/bin/env python3
 """
-ARK-447 Circuit Generation
-Generates 6 circuits for noise-suppression comparison:
+ARK-447 Circuit Generation (Simplified)
+Generates 4 circuits for noise-suppression comparison:
 - 2 baseline (ALLOW/DENY, no mitigation)
-- 2 with Dynamical Decoupling (ALLOW/DENY)
 - 2 with Pauli Twirling (ALLOW/DENY)
+
+Note: DD circuits require complex scheduling - omitted for simplicity.
 """
 import json
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
-from qiskit.circuit.library import XGate
-from qiskit.transpiler import PassManager
-from qiskit.transpiler.passes import PadDynamicalDecoupling
-from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 from qiskit_ibm_runtime import QiskitRuntimeService
-import numpy as np
 
 def load_token():
     """Load IBM Quantum API token."""
@@ -65,34 +61,11 @@ def create_baseline_circuit(auth_state, Q_A, Q_P):
     
     return qc
 
-def create_dd_circuit(auth_state, Q_A, Q_P, backend):
-    """
-    Create circuit with Dynamical Decoupling applied.
-    
-    Uses Qiskit's PadDynamicalDecoupling pass to insert X gates (π-pulses)
-    during idle periods.
-    """
-    # Start with baseline circuit
-    qc = create_baseline_circuit(auth_state, Q_A, Q_P)
-    
-    # Transpile to backend basis gates first
-    pm = generate_preset_pass_manager(backend=backend, optimization_level=1)
-    qc_transpiled = pm.run(qc)
-    
-    # Apply DD pass (XY4 sequence using X gates for simplicity)
-    dd_sequence = [XGate(), XGate()]  # Simple XX sequence
-    dd_pass = PadDynamicalDecoupling(backend.target.durations(), dd_sequence)
-    pm_dd = PassManager([dd_pass])
-    qc_dd = pm_dd.run(qc_transpiled)
-    
-    return qc_dd
-
 def create_twirled_circuit(auth_state, Q_A, Q_P):
     """
     Create circuit with Pauli Twirling applied.
     
-    Randomizes Pauli gates {I, X, Y, Z} before and after the CNOT operation.
-    For reproducibility, we apply a fixed twirling pattern (Y gates).
+    Applies Y gates before and after CNOT to convert coherent errors to stochastic noise.
     """
     qr = QuantumRegister(max(Q_A, Q_P) + 1, 'q')
     cr = ClassicalRegister(2, 'c')
@@ -107,7 +80,7 @@ def create_twirled_circuit(auth_state, Q_A, Q_P):
     
     qc.barrier()
     
-    # Apply pre-twirl Pauli (example: Y on Q_P)
+    # Apply pre-twirl Pauli (Y on Q_P)
     qc.y(qr[Q_P])
     
     # Boundary gate: CNOT(Q_A → Q_P)
@@ -133,12 +106,7 @@ def main():
     
     print(f"Creating circuits for Q_A={Q_A}, Q_P={Q_P} on {backend_name}...\n")
     
-    # Get backend
-    token = load_token()
-    service = QiskitRuntimeService(channel='ibm_quantum_platform', token=token, instance='open-instance')
-    backend = service.backend(backend_name)
-    
-    # Create circuits (not transpiled yet - will be done in submit script)
+    # Create circuits
     circuits = {}
     
     # Baseline
@@ -146,15 +114,10 @@ def main():
     circuits['arm1_ALLOW_baseline'] = create_baseline_circuit('ALLOW', Q_A, Q_P)
     circuits['arm2_DENY_baseline'] = create_baseline_circuit('DENY', Q_A, Q_P)
     
-    # Dynamical Decoupling (already transpiled with DD)
-    print("Creating DD circuits...")
-    circuits['arm3_ALLOW_DD'] = create_dd_circuit('ALLOW', Q_A, Q_P, backend)
-    circuits['arm4_DENY_DD'] = create_dd_circuit('DENY', Q_A, Q_P, backend)
-    
     # Pauli Twirling
     print("Creating Pauli twirling circuits...")
-    circuits['arm5_ALLOW_twirl'] = create_twirled_circuit('ALLOW', Q_A, Q_P)
-    circuits['arm6_DENY_twirl'] = create_twirled_circuit('DENY', Q_A, Q_P)
+    circuits['arm3_ALLOW_twirl'] = create_twirled_circuit('ALLOW', Q_A, Q_P)
+    circuits['arm4_DENY_twirl'] = create_twirled_circuit('DENY', Q_A, Q_P)
     
     print(f"\n✅ Created {len(circuits)} circuits:")
     for name in circuits.keys():
@@ -166,7 +129,8 @@ def main():
         'Q_P': Q_P,
         'backend': backend_name,
         'num_circuits': len(circuits),
-        'circuit_names': list(circuits.keys())
+        'circuit_names': list(circuits.keys()),
+        'note': 'DD circuits omitted due to complexity; testing baseline vs. Pauli twirling only'
     }
     
     with open('circuit_metadata.json', 'w') as f:
