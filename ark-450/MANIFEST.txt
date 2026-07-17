@@ -1,0 +1,42 @@
+ARK-450 MANIFEST — Locked File Hashes (SHA-256)
+===============================================
+
+Experiment: ARK-450 Verified Action Substitution Attack
+Lock Date: 2026-07-17
+Commit: (to be added at lock commit)
+
+This manifest locks the experimental design and implementation BEFORE execution.
+No modifications to locked files are permitted after this commit.
+
+LOCKED FILES (preregistration):
+--------------------------------
+PREREGISTRATION.md: 9f5bfd288ab81f982247db57e7e04fb406c41b97afff2018b10793e666727c24
+schemas/substitution_scenario_schema.json: a55f8506b7e366abd7de7703dbda43d3100bf3f30923ba529764f8c9af005316
+generator/scenario_generator.py: 377aa6296be73d114702ac02b8efb2054454e020bd9abb683a400e923866dc86
+verifiers/v1_guard.js: 40e281b5b113fd3d6b1e0ad37e87d8fc4d1d1fc22c4a515853f40c0d0ceef206
+verifiers/v2_guard.py: 221a226147d7404fbd6ed10ad1a6aadf1bbe0506720d0b6b7b9168b2730db669
+run_killgate.py: 0e1367f7e161072cea131a1165a7c499be8c1375eec0233a8fd9dd64a565a97f
+run_arms.py: ce9a95696a1e6551560d38b6d3c520bbb4c36205b6244894aff0b2cc56a2fd10
+
+DECISION PROCEDURE:
+-------------------
+Authorization for action A can ONLY be used to execute action A.
+If approved_action === executed_action (exact equality in ALL fields) → ALLOW
+If ANY field differs → DENY (fail-closed against substitution)
+
+SUCCESS CRITERIA (preregistered thresholds):
+---------------------------------------------
+C1: g_allow_exact_min ≥ 0.95 (exact matches must be allowed)
+C2: g_deny_substitution_min ≥ 0.95 (substitutions must be denied)
+C3: g_margin ≥ 0.90 (separation between exact and substituted)
+
+Verdict: PASS if ALL criteria met
+
+EFFECTIVENESS GATE:
+-------------------
+Kill-gate calibration with substitution-effectiveness oracle MUST pass
+before full execution. If any arm fails oracle, ABORT.
+
+OUTCOME:
+--------
+(to be filled post-execution)
