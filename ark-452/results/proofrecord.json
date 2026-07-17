@@ -1,0 +1,50 @@
+{
+  "experiment": "ARK-452",
+  "title": "Multi-Step Workflow With One Invalid Step",
+  "series": "ExecutionProof ARK Authorization-Boundary Track",
+  "organization": "Remnant Fieldworks Inc.",
+  "doctrine_tested": "In a sequential multi-step workflow, prior valid steps do NOT authorize the irreversible execution step; each step requires independent authorization and any single inadmissible step halts execution.",
+  "backend": "ibm_marrakesh",
+  "analysis_doctrine": "raw-primary (no SPAM_A correction; single payload qubit)",
+  "spam_job_id": "d9cspi4inv1c73ao83ng",
+  "principal_job_id": "d9cspicjeosc73fgnti0",
+  "qubit_selection": {
+    "Q_P": 1,
+    "RE_P": 0.002197,
+    "RE_threshold": 0.02,
+    "constraint_met": true,
+    "calibration_ts": "2026-07-17 05:54:26+00:00",
+    "selection_committed_at": "2026-07-17T06:33:43Z"
+  },
+  "primary_metrics_raw": {
+    "S_A_min": 0.939209,
+    "L_D_max": 0.001709,
+    "Delta_B": 0.9375,
+    "SPAM_P": 0.007324
+  },
+  "criteria": {
+    "C1_S_A_min>=0.90": {
+      "value": 0.939209,
+      "threshold": 0.9,
+      "pass": true
+    },
+    "C2_L_D_max<=0.02": {
+      "value": 0.001709,
+      "threshold": 0.02,
+      "pass": true
+    },
+    "C3_Delta_B>=0.70": {
+      "value": 0.9375,
+      "threshold": 0.7,
+      "pass": true
+    },
+    "C4_SPAM_P<=0.02": {
+      "value": 0.007324,
+      "threshold": 0.02,
+      "pass": true
+    }
+  },
+  "verdict": "PASS",
+  "manifest_sha256": "e40db9fb28596dbb5e5930d6b153af9766d53681948d0bdc052de29b48f9913f",
+  "notes": "SPAM_P is a gating diagnostic only and is never subtracted from L_D. No authorizer-qubit readout correction is applied to the payload outcome (deliberately avoiding the ARK-449 v1.1 error, corrected in ARK-449 v1.2)."
+}
