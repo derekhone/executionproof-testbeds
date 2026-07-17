@@ -23,6 +23,17 @@ program. The **ARK authorization-boundary** experiments (ARK-441, ARK-446, ARK-4
 are product-track work and were separated into this dedicated repository so the Phase 1 record stays
 clean and unambiguous for review.
 
+**This separation was the documented intent from the beginning.** The original `ark-441/INDEPENDENCE_NOTICE.md`
+(committed at ARK-441 lock time, and preserved in this repository) states explicitly:
+
+> "ARK-441 is **NOT part of the UIP (Universal Inheritance Principle) Phase 1 or Phase 2 program** ...
+> It is committed to `derekhone/uip-phase1-testbeds` under the isolated `ark-441/` folder solely so Derek
+> can review all hardware testbeds in one place ... they do **not** share a research program, hypotheses,
+> claims, or conclusions."
+
+Relocating the ARK track into this dedicated repository fulfills that original stated intent, rather than
+changing it.
+
 **Note on naming:** the `ARK-` prefix is shared with an unrelated physics experiment, `ARK-DM-1`
 (a preregistered galaxy-rotation-curve / dark-matter test inspired by the UIP/Ark library). `ARK-DM-1`
 is **physics lineage** and does **not** belong to this authorization-boundary track; it is not included here.
