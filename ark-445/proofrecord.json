@@ -1,0 +1,273 @@
+{
+  "experiment_id": "ARK-445",
+  "title": "Tri-State Authorization Discrimination (ALLOW / HOLD / DENY)",
+  "central_question": "Can the verify-then-execute authorization boundary discriminate ALLOW, HOLD and DENY (not just binary ALLOW/DENY), with margin Delta_H >= 0.30?",
+  "backend": "ibm_marrakesh",
+  "instance": "open-instance",
+  "qubits": {
+    "Q_A": 2,
+    "Q_P": 1
+  },
+  "shots_per_arm": 8192,
+  "arm_order": [
+    "arm1_allow_standard",
+    "arm2_deny_standard",
+    "arm3_hold_plus",
+    "arm4_hold_minus",
+    "arm5_allow_alt",
+    "arm6_deny_alt",
+    "arm7_allow_reverified",
+    "arm8_deny_expired",
+    "arm9_confusion_replay"
+  ],
+  "arm_class": {
+    "arm1_allow_standard": "allow",
+    "arm2_deny_standard": "deny",
+    "arm3_hold_plus": "hold",
+    "arm4_hold_minus": "hold",
+    "arm5_allow_alt": "allow",
+    "arm6_deny_alt": "deny",
+    "arm7_allow_reverified": "allow",
+    "arm8_deny_expired": "deny",
+    "arm9_confusion_replay": "deny"
+  },
+  "arm_expect": {
+    "arm1_allow_standard": "ALLOW",
+    "arm2_deny_standard": "DENY",
+    "arm3_hold_plus": "HOLD",
+    "arm4_hold_minus": "HOLD",
+    "arm5_allow_alt": "ALLOW",
+    "arm6_deny_alt": "DENY",
+    "arm7_allow_reverified": "ALLOW",
+    "arm8_deny_expired": "DENY",
+    "arm9_confusion_replay": "DENY"
+  },
+  "job_ids": {
+    "spam_job": "d9coda9htsac739c1djg",
+    "principal_job": "d9codk9htsac739c1dug"
+  },
+  "raw_results_hash": "728b5c3d3fc54522bfbedc45b5fb86b893bd2722b376f1de74b67cae5812e6fd",
+  "spam_results_hash": "09214b32e9547e91300c7b1371bbe7d4309f37ba44f92990e3eba05d6cfc19fe",
+  "metrics": {
+    "S_A": {
+      "value": 0.98046875,
+      "ci95": [
+        0.98046875,
+        0.9772390938281539,
+        0.983247990256048
+      ],
+      "ci99": [
+        0.98046875,
+        0.976123787277545,
+        0.9840359533275731
+      ],
+      "ci95_lower": 0.9772390938281539,
+      "class": "ALLOW"
+    },
+    "S_A_alt": {
+      "value": 0.97705078125,
+      "ci95": [
+        0.97705078125,
+        0.9735775566859619,
+        0.9800767940765027
+      ],
+      "ci99": [
+        0.97705078125,
+        0.972387127708978,
+        0.9809422082373638
+      ],
+      "ci95_lower": 0.9735775566859619,
+      "class": "ALLOW"
+    },
+    "S_A_rev": {
+      "value": 0.962646484375,
+      "ci95": [
+        0.962646484375,
+        0.9583184788049371,
+        0.9665407815302064
+      ],
+      "ci99": [
+        0.962646484375,
+        0.9568642637000583,
+        0.9676797954700121
+      ],
+      "ci95_lower": 0.9583184788049371,
+      "class": "ALLOW"
+    },
+    "L_D": {
+      "value": 0.0040283203125,
+      "ci95": [
+        0.0040283203125,
+        0.0028698906056476834,
+        0.005651699172270914
+      ],
+      "ci99": [
+        0.0040283203125,
+        0.0025835531824351205,
+        0.006275942224426093
+      ],
+      "corrected": 0.0029296875,
+      "corrected_upper95": 0.004553066359770914,
+      "class": "DENY"
+    },
+    "L_D_alt": {
+      "value": 0.0029296875,
+      "ci95": [
+        0.0029296875,
+        0.0019695801076096034,
+        0.004355773959750606
+      ],
+      "ci99": [
+        0.0029296875,
+        0.0017426239085411304,
+        0.004921384286570574
+      ],
+      "corrected": 0.0018310546875,
+      "corrected_upper95": 0.0032571411472506057,
+      "class": "DENY"
+    },
+    "L_D_exp": {
+      "value": 0.002197265625,
+      "ci95": [
+        0.002197265625,
+        0.0013903601929367558,
+        0.003470836734051194
+      ],
+      "ci99": [
+        0.002197265625,
+        0.001208470464075765,
+        0.003991879589869601
+      ],
+      "corrected": 0.0010986328125,
+      "corrected_upper95": 0.002372203921551194,
+      "class": "DENY"
+    },
+    "L_conf": {
+      "value": 0.030029296875,
+      "ci95": [
+        0.030029296875,
+        0.026548051129970048,
+        0.03395111713116375
+      ],
+      "ci99": [
+        0.030029296875,
+        0.0255393808786842,
+        0.035279978539582035
+      ],
+      "corrected": 0.0289306640625,
+      "corrected_upper95": 0.03285248431866375,
+      "class": "DENY"
+    },
+    "H_plus": {
+      "value": 0.49462890625,
+      "ci95": [
+        0.49462890625,
+        0.4838070134093433,
+        0.5054558342279268
+      ],
+      "ci99": [
+        0.49462890625,
+        0.4804093096861957,
+        0.5088571972785845
+      ],
+      "class": "HOLD"
+    },
+    "H_minus": {
+      "value": 0.4918212890625,
+      "ci95": [
+        0.4918212890625,
+        0.481001535542695,
+        0.5026487097231481
+      ],
+      "ci99": [
+        0.4918212890625,
+        0.47760504643895096,
+        0.5060507709846916
+      ],
+      "class": "HOLD"
+    },
+    "S_A_min": {
+      "value": 0.962646484375,
+      "definition": "min over ALLOW arms"
+    },
+    "L_D_max": {
+      "value": 0.0289306640625,
+      "definition": "max corrected over DENY arms"
+    },
+    "H_min": {
+      "value": 0.4918212890625,
+      "definition": "min over HOLD arms"
+    },
+    "H_max": {
+      "value": 0.49462890625,
+      "definition": "max over HOLD arms"
+    },
+    "Delta_H": {
+      "value": 0.462890625,
+      "definition": "min(S_A_min - H_max, H_min - L_D_max)"
+    },
+    "I_H": {
+      "value": 0.0028076171875,
+      "definition": "|H_plus - H_minus| (HOLD symmetry)"
+    },
+    "SPAM_A": {
+      "value": 0.000732421875
+    },
+    "SPAM_P": {
+      "value": 0.0010986328125
+    },
+    "SPAM_drift": {
+      "value": 0.0003662109375
+    }
+  },
+  "secondary_hypotheses": {
+    "H2a_hold_basis_symmetry": {
+      "H_plus": 0.49462890625,
+      "H_minus": 0.4918212890625,
+      "I_H": 0.0028076171875,
+      "overlap_95CI": true,
+      "note": "HOLD |+> and |-> yield statistically comparable P(execute) (basis-independent ambiguity encoding)."
+    },
+    "H2b_reverification_escape": {
+      "S_A_rev": 0.962646484375,
+      "meets_floor": true,
+      "note": "Reverified ALLOW (1us delay) maintains >= 0.90 -> HOLD is not a decoherence artifact."
+    },
+    "H2c_confusion_falls_to_deny": {
+      "L_conf": 0.030029296875,
+      "L_conf_corrected": 0.0289306640625,
+      "denies": false,
+      "note": "Tampered/replayed authorization collapses to DENY (<= 0.02), not HOLD."
+    },
+    "H2d_spam_drift_bound": {
+      "SPAM_A": 0.000732421875,
+      "SPAM_P": 0.0010986328125,
+      "SPAM_drift": 0.0003662109375,
+      "drift_ok": true
+    }
+  },
+  "insitu_spam": {
+    "SPAM_A": 0.000732421875,
+    "SPAM_P": 0.0010986328125,
+    "SPAM_drift": 0.0003662109375,
+    "gate_passed": true,
+    "drift_ok": true
+  },
+  "decision_outcome": "FAIL",
+  "status": "FAIL",
+  "rationale": "Tri-state discrimination failed with in-situ SPAM within ceiling: L_conf_corrected=0.0289 > 0.02",
+  "raw_vs_mitigated": "Primary endpoint = RAW counts. DENY arms SPAM-corrected (L - SPAM_P); ALLOW/HOLD reported raw (Field 9).",
+  "preregistered_pass": {
+    "allow_min": 0.9,
+    "deny_leak_corrected_max": 0.02,
+    "hold_range": [
+      0.4,
+      0.6
+    ],
+    "Delta_H_min": 0.3,
+    "spam_ceiling": 0.02,
+    "drift_ceiling": 0.005
+  },
+  "interpretation": "Metrological characterization of a tri-state authorization rule on this hardware: whether ALLOW (A=|1>), DENY (A=|0>) and HOLD (A=|+>/|->) map to separable payload-execution probabilities with margin Delta_H >= 0.30. HOLD ~ 0.5 arises from textbook measurement-induced collapse of a superposed authorizer, NOT new physics and NOT a cryptographic guarantee. The committed authorization bit is a hardware abstraction of an approval decision. Findings apply only to the selected qubits on this backend at this calibration.",
+  "timestamp": "2026-07-17T01:36:17.900293+00:00"
+}
