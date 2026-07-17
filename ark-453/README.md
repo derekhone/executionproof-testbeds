@@ -1,6 +1,6 @@
 # ARK-453 — Conflicting Evidence Must HOLD
 
-**Status:** LOCKED → awaiting execution  
+**Status:** LOCKED → executed → **VERDICT: PASS** (see `RESULTS.md`)  
 **Substrate:** Classical software (no quantum hardware, no cryptography)  
 **Resolvers:** Dual independent — V1 (JavaScript), V2 (Python)  
 **Series:** ExecutionProof authorization-boundary corpus (enterprise-failure-mode phase)
