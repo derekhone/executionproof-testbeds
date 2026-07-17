@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/derekhone/executionproof-testbeds/ark-454/schemas/decision_scenario_schema.json",
+  "title": "ARK-454 Decision Scenario",
+  "description": "A modeled authorization decision scenario for testing separation-of-duties: self-approval, controlled-identity, shared-controller, delegation-to-self, circular delegation, inherited self-initiated workflow authority, and unverifiable independence. Classical software; no cryptography, no QPU.",
+  "type": "object",
+  "required": [
+    "scenario_id",
+    "action",
+    "requester",
+    "approver",
+    "delegation_chain",
+    "identities",
+    "authority_source",
+    "parent_workflow",
+    "arm",
+    "arm_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "description": "Unique scenario identifier."
+    },
+    "action": {
+      "type": "object",
+      "required": ["type", "amount_usd", "resource"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Action class, e.g. payment, config_change, key_rotation, data_export."
+        },
+        "amount_usd": {
+          "type": "number",
+          "description": "Notional value of the action in USD (modeling only)."
+        },
+        "resource": {
+          "type": "string",
+          "description": "Target resource identifier."
+        }
+      }
+    },
+    "requester": {
+      "type": "string",
+      "description": "Principal id of the party proposing the action."
+    },
+    "approver": {
+      "type": "string",
+      "description": "Principal id of the party whose approval is claimed."
+    },
+    "delegation_chain": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Ordered principal ids from a root authority down to the approver. May be empty (approver has direct standing authority)."
+    },
+    "identities": {
+      "type": "object",
+      "description": "Map of principal_id to its identity record.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["controller"],
+        "additionalProperties": false,
+        "properties": {
+          "controller": {
+            "description": "Controlling principal id, or null (independent principal, no controller), or the literal string UNKNOWN (controller cannot be determined; independence unverifiable).",
+            "anyOf": [
+              { "type": "string" },
+              { "type": "null" }
+            ]
+          }
+        }
+      }
+    },
+    "authority_source": {
+      "type": "string",
+      "enum": ["independent", "parent_workflow"],
+      "description": "Where the approver's authority originates."
+    },
+    "parent_workflow": {
+      "description": "Parent workflow context, or null.",
+      "anyOf": [
+        {
+          "type": "object",
+          "required": ["initiator", "confers_authority"],
+          "additionalProperties": false,
+          "properties": {
+            "initiator": { "type": "string" },
+            "confers_authority": { "type": "boolean" }
+          }
+        },
+        { "type": "null" }
+      ]
+    },
+    "arm": {
+      "type": "integer",
+      "description": "Arm number (1-8)."
+    },
+    "arm_label": {
+      "type": "string",
+      "description": "Human-readable arm label."
+    }
+  }
+}

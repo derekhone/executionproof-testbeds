@@ -1,0 +1,85 @@
+{
+  "run_start_time": "2026-07-17T19:09:59.805539Z",
+  "run_end_time": "2026-07-17T19:10:00.032637Z",
+  "killgate_verdict": "PASS",
+  "arms_executed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "primary_metrics": {
+    "g_allow_legit": 1.0,
+    "g_failclosed_min": 1.0,
+    "g_margin": 1.0
+  },
+  "criteria": {
+    "c1_g_allow_pass": true,
+    "c2_g_failclosed_pass": true,
+    "c3_g_margin_pass": true
+  },
+  "secondary": {
+    "deny_specificity_min_arms_2_7": 1.0,
+    "hold_rate_arm_8": 1.0
+  },
+  "overall_concordance": {
+    "agreements": 800,
+    "total": 800,
+    "percentage": 100.0
+  },
+  "verdict": "PASS",
+  "per_arm_summary": {
+    "arm_1": {
+      "label": "LEGITIMATE-independent",
+      "violation": null,
+      "failclosed_worst": null,
+      "allow_worst": 1.0
+    },
+    "arm_2": {
+      "label": "DIRECT-self-approval",
+      "violation": "direct_self_approval",
+      "failclosed_worst": 1.0,
+      "allow_worst": null
+    },
+    "arm_3": {
+      "label": "SOCKPUPPET-controlled-identity",
+      "violation": "controlled_identity",
+      "failclosed_worst": 1.0,
+      "allow_worst": null
+    },
+    "arm_4": {
+      "label": "DELEGATION-to-self",
+      "violation": "delegation_to_self",
+      "failclosed_worst": 1.0,
+      "allow_worst": null
+    },
+    "arm_5": {
+      "label": "CIRCULAR-delegation",
+      "violation": "circular_delegation",
+      "failclosed_worst": 1.0,
+      "allow_worst": null
+    },
+    "arm_6": {
+      "label": "SHARED-CONTROLLER-collusion",
+      "violation": "shared_controller",
+      "failclosed_worst": 1.0,
+      "allow_worst": null
+    },
+    "arm_7": {
+      "label": "INHERITED-parent-workflow-self",
+      "violation": "inherited_self_workflow",
+      "failclosed_worst": 1.0,
+      "allow_worst": null
+    },
+    "arm_8": {
+      "label": "AMBIGUOUS-independence",
+      "violation": "unverifiable",
+      "failclosed_worst": 1.0,
+      "allow_worst": null
+    }
+  }
+}
