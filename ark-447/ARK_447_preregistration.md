@@ -10,6 +10,17 @@
 
 ---
 
+> ## ⚠️ POST-HOC ERRATUM (added 2026-07-17, after execution) — do not remove
+>
+> This document is preserved **as originally LOCKed** (tag `ark-447-v1.0-lock`, commit `c2466ff`) for provenance. Two items in this preregistration were found to be methodologically flawed and were **corrected in the executed analysis and in `RESULTS.md` (tag `ark-447-v1.1`)**. The original text below is left unchanged; this banner records the corrections:
+>
+> 1. **Invalid SPAM correction (§4.1).** The preregistered DENY criterion defined `L_D_corrected = max(0, L_D_raw − SPAM_P)`. This is **not a valid readout-error correction.** `SPAM_P` is the probability that a prepared |+⟩ superposition reads '1' (≈0.5 by design — its *expected physical behavior*), not a spurious-excitation baseline. Subtracting ≈0.4944 from the raw DENY leakage (≈0.0013) forces every DENY result to zero and artificially inflates the boundary margin. **As executed, DENY leakage is reported RAW** (no subtraction); `SPAM_P` is retained only as a **gating diagnostic** confirming the payload readout axis behaves as expected. Both configurations pass the 0.02 DENY ceiling by enormous margins on raw leakage.
+> 2. **Scope reduced to Pauli twirling vs. baseline.** Dynamical Decoupling was **omitted** during execution due to scheduling complexity, so the study is a Pauli-twirling-vs-baseline comparison (4 circuits), not a three-configuration DD/twirling survey. See `RESULTS.md`.
+>
+> Corrected headline numbers: Baseline S_A=0.9824, L_D_raw=0.0013, Δ_B=0.7811 (PASS); Pauli twirling S_A=0.9875, L_D_raw=0.0012, Δ_B=0.7863 (PASS). ALLOW improvement +0.0051 is statistically significant (two-proportion z=2.70, p=0.007).
+
+---
+
 ## 1. Central Question
 
 **Do noise-mitigation strategies improve authorization boundary fidelity on current NISQ hardware?**

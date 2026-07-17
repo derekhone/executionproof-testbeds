@@ -1,9 +1,11 @@
-# ARK-447 — Noise-Suppression Comparison
+# ARK-447 — Pauli Twirling vs. Baseline
 
-**Experiment:** Dynamical Decoupling and Pauli Twirling impact on authorization boundaries  
+**Experiment:** Pauli twirling impact on authorization boundaries (vs. unprotected baseline)  
 **Track:** ExecutionProof authorization-boundary characterization  
-**Status:** STAGED (not yet executed)  
+**Status:** EXECUTED (see `RESULTS.md`)  
 **Protocol:** Field 27 (LOCK → SPAM gate → principal job → analyze → verdict)
+
+> **⚠️ As-executed note (read `RESULTS.md` for final numbers).** This README preserves the *originally staged* 3-configuration / 6-circuit design for provenance. The experiment was **executed as Pauli twirling vs. baseline only (4 circuits)** — Dynamical Decoupling was omitted due to scheduling complexity. Additionally, DENY leakage is reported as **raw** (no SPAM subtraction); the SPAM_P |+⟩ measurement is a gating diagnostic, not a correction term. Final tag: **`ark-447-v1.1`** (supersedes `ark-447-v1.0`, which contained an invalid SPAM correction).
 
 ---
 
@@ -37,8 +39,8 @@ Do noise-mitigation strategies (**Dynamical Decoupling** or **Pauli Twirling**) 
 Each configuration is evaluated independently:
 
 1. **S_A ≥ 0.90** (ALLOW discrimination)
-2. **L_D_corrected ≤ 0.02** (DENY leakage, SPAM-corrected)
-3. **Δ_B ≥ 0.00** (boundary margin: S_A − L_D − 0.20)
+2. **L_D_raw ≤ 0.02** (DENY leakage, raw — no SPAM subtraction; see as-executed note)
+3. **Δ_B ≥ 0.00** (boundary margin: S_A − L_D_raw − 0.20)
 
 **PASS:** All three criteria met  
 **FAIL:** Any criterion violated
@@ -87,9 +89,9 @@ Each configuration is evaluated independently:
 
 ## Interpretation Boundaries
 
-✅ Tests noise-mitigation impact on a binary ALLOW/DENY boundary  
-✅ Comparative fidelity across three configurations  
-✅ SPAM-corrected metrics for honest leakage assessment  
+✅ Tests Pauli twirling impact on a binary ALLOW/DENY boundary (vs. baseline)  
+✅ Comparative ALLOW fidelity with a two-proportion significance test  
+✅ Raw DENY leakage reported honestly (SPAM used only as a gating diagnostic)  
 
 ❌ NOT a cryptographic security validation  
 ❌ NOT generalizable beyond this specific backend/qubits/calibration  

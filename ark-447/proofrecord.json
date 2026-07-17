@@ -1,7 +1,8 @@
 {
   "experiment": "ARK-447",
-  "title": "Noise-Suppression Comparison: Pauli Twirling vs. Baseline",
+  "title": "Pauli Twirling vs. Baseline",
   "note": "DD circuits omitted due to scheduling complexity",
+  "spam_methodology_note": "SPAM_P (|+> -> ~0.5) is used ONLY as a gating diagnostic, NOT as a correction term. DENY leakage is reported as RAW; the earlier subtraction of SPAM_P from DENY leakage was invalid and has been removed.",
   "backend": "ibm_marrakesh",
   "qubits": {
     "Q_A": 1,
@@ -14,6 +15,7 @@
     "job_id": "d9cpfoineu4c739m9ek0",
     "SPAM_A_error": 0.0133056640625,
     "SPAM_P_prob_1": 0.494384765625,
+    "SPAM_P_role": "gating diagnostic only (|+> ~0.5 expected); NOT a correction term",
     "gate_passed": true
   },
   "principal_job": {
@@ -28,11 +30,10 @@
       "deny_arm": "arm2_DENY_baseline",
       "S_A": 0.982421875,
       "L_D_raw": 0.0013427734375,
-      "L_D_corrected": 0.0,
-      "Delta_B": 0.782421875,
+      "Delta_B": 0.7810791015625,
       "criteria": {
         "S_A >= 0.90": true,
-        "L_D_corrected <= 0.02": true,
+        "L_D_raw <= 0.02": true,
         "Delta_B >= 0.00": true
       },
       "verdict": "PASS"
@@ -43,11 +44,10 @@
       "deny_arm": "arm4_DENY_twirl",
       "S_A": 0.987548828125,
       "L_D_raw": 0.001220703125,
-      "L_D_corrected": 0.0,
-      "Delta_B": 0.787548828125,
+      "Delta_B": 0.786328125,
       "criteria": {
         "S_A >= 0.90": true,
-        "L_D_corrected <= 0.02": true,
+        "L_D_raw <= 0.02": true,
         "Delta_B >= 0.00": true
       },
       "verdict": "PASS"
@@ -56,7 +56,7 @@
   "verdict": {
     "overall": "PASS (strong)",
     "reason": "Both configs pass; Pauli twirling shows improvement over baseline.",
-    "timestamp_utc": "2026-07-17T02:52:22.542573+00:00"
+    "timestamp_utc": "2026-07-17T03:12:20.359151+00:00"
   },
   "protocol": "Field 27 (LOCK \u2192 SPAM gate \u2192 principal job \u2192 analyze \u2192 verdict)",
   "preregistration": "ARK_447_preregistration.md (modified: DD omitted)",
@@ -65,6 +65,7 @@
     "Not a cryptographic security validation.",
     "Pauli twirling is noise mitigation (not correction); no QEC used.",
     "Single-round binary boundary only.",
-    "DD circuits omitted due to implementation complexity."
+    "DD circuits omitted due to implementation complexity.",
+    "DENY leakage reported as RAW; SPAM_P is a gating diagnostic, not a correction term."
   ]
 }

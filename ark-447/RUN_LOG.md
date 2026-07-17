@@ -85,19 +85,21 @@
 
 **Baseline:**
 - S_A = 0.9824 (≥0.90 ✓)
-- L_D_corrected = 0.0000 (≤0.02 ✓)
-- Delta_B = 0.7824 (≥0.00 ✓)
+- L_D_raw = 0.0013 (≤0.02 ✓, no SPAM subtraction)
+- Delta_B = 0.7811 (≥0.00 ✓)
 - VERDICT: PASS
 
 **Pauli Twirling:**
 - S_A = 0.9875 (≥0.90 ✓)
-- L_D_corrected = 0.0000 (≤0.02 ✓)
-- Delta_B = 0.7875 (≥0.00 ✓)
+- L_D_raw = 0.0012 (≤0.02 ✓, no SPAM subtraction)
+- Delta_B = 0.7863 (≥0.00 ✓)
 - VERDICT: PASS
 
-**Overall:** PASS (strong) — Both pass; Pauli twirling shows improvement (+0.0051 in S_A)
+**Overall:** PASS (strong) — Both pass; Pauli twirling shows a modest, statistically significant improvement in ALLOW fidelity (+0.0051 in S_A; two-proportion z=2.70, p=0.007)
 
 **File:** `proofrecord.json`
+
+> **Correction note (v1.1):** Values above are the corrected v1.1 numbers. The v1.0 analysis reported `L_D_corrected = 0.0000` and `Delta_B = 0.7824 / 0.7875` by invalidly subtracting SPAM_P (0.4944) from DENY leakage. SPAM_P is the expected ~0.5 readout of a |+⟩ superposition (a gating diagnostic), not a spurious-excitation baseline, so it must not be subtracted. DENY leakage is now reported as raw and margins recomputed accordingly. Verdict (PASS for both) is unchanged.
 
 ---
 
