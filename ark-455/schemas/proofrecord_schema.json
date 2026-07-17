@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://remnantfieldworks.com/schemas/proofrecord/v1.0",
+  "title": "ProofRecord",
+  "description": "ExecutionProof authorization decision record with Ed25519 signature",
+  "type": "object",
+  "required": [
+    "decision",
+    "timestamp",
+    "payload_hash",
+    "evidence_references",
+    "actor",
+    "execution_outcome",
+    "review_path"
+  ],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": ["ALLOW", "DENY", "HOLD"],
+      "description": "Authorization decision outcome"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp of decision issuance"
+    },
+    "payload_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA-256 hash of the governed payload (64-character hex string)"
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1,
+      "description": "Array of URIs referencing supporting evidence for the decision"
+    },
+    "actor": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identity string of the decision-making authority or agent"
+    },
+    "execution_outcome": {
+      "type": "string",
+      "enum": ["executed", "blocked", "held"],
+      "description": "Actual execution result following the decision"
+    },
+    "review_path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Audit trail identifier for record review and compliance tracking"
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{128}$",
+      "description": "Ed25519 signature (128-character hex string, 64 bytes). Present in signed records, absent during signing."
+    }
+  },
+  "additionalProperties": false,
+  "notes": {
+    "canonicalization": "RFC 8785 (JSON Canonicalization Scheme, JCS) before signing",
+    "signature_algorithm": "Ed25519 over the canonical byte representation",
+    "verification": "Remove signature field, canonicalize remaining 7 fields via JCS, verify signature against canonical bytes"
+  }
+}
