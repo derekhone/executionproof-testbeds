@@ -141,7 +141,7 @@ def main():
     
     # Get backend
     token = load_token()
-    service = QiskitRuntimeService(channel='ibm_quantum', token=token)
+    service = QiskitRuntimeService(channel='ibm_quantum_platform', token=token, instance='open-instance')
     backend = service.backend(backend_name)
     
     # Create circuits
