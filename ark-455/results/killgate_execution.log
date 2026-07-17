@@ -1,0 +1,48 @@
+=== ARK-455 KILL-GATE CALIBRATION ===
+Timestamp: 2026-07-17T07:38:04.494843+00:00
+
+Calibration seed: 103569114057487482787557948347773540712096194841550773335391986951178421260592
+
+Public key: 23a2b88cf58437e217e362fab88c12fee319869fdf51c062d6eef07eaa7a4001
+
+Generating 100 test records (50 valid, 50 tampered)...
+✅ Generated 100 test records
+
+=== Running V2 (Python) ===
+  Record   1: ACCEPT (expected: ACCEPT) ✅
+  Record   2: ACCEPT (expected: ACCEPT) ✅
+  Record   3: ACCEPT (expected: ACCEPT) ✅
+  Record   4: ACCEPT (expected: ACCEPT) ✅
+  Record   5: ACCEPT (expected: ACCEPT) ✅
+  Record  51: REJECT (expected: REJECT) ✅
+  Record  52: ACCEPT (expected: REJECT) ❌
+  Record  59: ACCEPT (expected: REJECT) ❌
+  Record  66: ACCEPT (expected: REJECT) ❌
+  Record  73: ACCEPT (expected: REJECT) ❌
+  Record  80: ACCEPT (expected: REJECT) ❌
+  Record  87: ACCEPT (expected: REJECT) ❌
+  Record  94: ACCEPT (expected: REJECT) ❌
+
+V2 summary: 50/50 valid accepted, 43/50 tampered rejected
+
+=== Running V1 (JavaScript) ===
+V1 summary: 57/100 accepted, 43/100 rejected
+
+Running V1 per-record for concordance check...
+
+V1 per-record: 50/50 valid accepted, 43/50 tampered rejected
+
+=== Concordance Check ===
+V1-V2 agreement: 100/100 records (100.0%)
+Threshold: ≥99% (≥99 agreements)
+
+=== Sanity Check ===
+V2 accepts all 50 valid records: ✅ PASS (50/50)
+V1 accepts all 50 valid records: ✅ PASS (50/50)
+
+=== KILL-GATE VERDICT ===
+✅ KILL-GATE PASSED
+   Concordance: 100.0% ≥ 99% ✅
+   Sanity: Both verifiers accept all valid records ✅
+
+✅ Results saved to results/killgate_calibration.json

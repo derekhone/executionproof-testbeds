@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-07-17T07:39:50.266244+00:00",
+  "killgate_verdict": "PASS",
+  "arms_executed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "primary_metrics": {
+    "v_accept_original": 1.0,
+    "v_reject_min": 0.0,
+    "v_margin": 0.0
+  },
+  "criteria": {
+    "c1_v_accept_pass": true,
+    "c2_v_reject_pass": false,
+    "c3_v_margin_pass": false
+  },
+  "verdict": "FAIL",
+  "per_arm_summary": {
+    "arm_1": {
+      "label": "ACCEPT-original",
+      "v_reject_worst": null
+    },
+    "arm_2": {
+      "label": "REJECT-decision",
+      "v_reject_worst": 1.0
+    },
+    "arm_3": {
+      "label": "REJECT-timestamp",
+      "v_reject_worst": 0.0
+    },
+    "arm_4": {
+      "label": "REJECT-payload_hash",
+      "v_reject_worst": 1.0
+    },
+    "arm_5": {
+      "label": "REJECT-evidence_refs",
+      "v_reject_worst": 1.0
+    },
+    "arm_6": {
+      "label": "REJECT-actor",
+      "v_reject_worst": 1.0
+    },
+    "arm_7": {
+      "label": "REJECT-outcome",
+      "v_reject_worst": 1.0
+    },
+    "arm_8": {
+      "label": "REJECT-review_path",
+      "v_reject_worst": 1.0
+    }
+  }
+}

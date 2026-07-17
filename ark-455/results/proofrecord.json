@@ -1,0 +1,56 @@
+{
+  "experiment": "ARK-455",
+  "doctrine_tested": "An independent verifier can detect every tampering attempt and reject altered records",
+  "verdict": "FAIL",
+  "timestamp_lock": "2026-07-17T07:36:00Z",
+  "timestamp_execution": "2026-07-17T07:39:12Z",
+  "substrate": "classical software (local)",
+  "verifiers": {
+    "V1": "JavaScript/Node.js",
+    "V2": "Python"
+  },
+  "kill_gate": {
+    "concordance_pct": 100.0,
+    "sanity_valid_accept_pct": 100.0,
+    "passed": true
+  },
+  "primary_metrics": {
+    "v_accept_original": 1.0000,
+    "v_reject_min": 0.0000,
+    "v_margin": 0.0000
+  },
+  "secondary_metrics": {
+    "v_reject_per_arm": {
+      "arm_2_decision": 1.0000,
+      "arm_3_timestamp": 0.0000,
+      "arm_4_payload_hash": 1.0000,
+      "arm_5_evidence_refs": 1.0000,
+      "arm_6_actor": 1.0000,
+      "arm_7_outcome": 1.0000,
+      "arm_8_review_path": 1.0000
+    },
+    "concordance_per_arm": {
+      "arm_1": 100.0,
+      "arm_2": 100.0,
+      "arm_3": 100.0,
+      "arm_4": 100.0,
+      "arm_5": 100.0,
+      "arm_6": 100.0,
+      "arm_7": 100.0,
+      "arm_8": 100.0
+    }
+  },
+  "criteria": {
+    "c1_v_accept_pass": true,
+    "c2_v_reject_pass": false,
+    "c3_v_margin_pass": false
+  },
+  "hypotheses": {
+    "h1_primary": false,
+    "h2a_universality": false,
+    "h2b_dual_verifier_agreement": true,
+    "h2c_signature_binding": false
+  },
+  "manifest_sha256": "315f78c509128ff14250550471d26533b7aca48f7f6c8e601918bd4eb2cf3bf9",
+  "zenodo_doi": "[TO BE ASSIGNED]"
+}

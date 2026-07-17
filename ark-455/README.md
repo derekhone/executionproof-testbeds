@@ -44,11 +44,11 @@ This is the first ARK experiment to validate the **commercial ProofRecord artifa
 
 ## Execution Notes
 
-**Kill-gate calibration:** [TO BE FILLED]
+**Kill-gate calibration:** ✅ PASSED (100% V1-V2 concordance, both verifiers accepted all 50 valid records)
 
-**Arms executed:** [TO BE FILLED]
+**Arms executed:** All 8 arms (100 records each, 800 total records)
 
-**Verdict:** [TO BE FILLED]
+**Verdict:** ❌ **FAIL** — Timestamp field tampering (Arm 3) was NOT detected by either verifier (0% rejection rate). Six other tampering targets detected with 100% reliability.
 
 ---
 
