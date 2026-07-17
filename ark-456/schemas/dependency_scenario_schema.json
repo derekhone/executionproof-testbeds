@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DependencyLossScenario",
+  "description": "ARK-456 scenario: authorization request under degraded dependency conditions",
+  "type": "object",
+  "required": ["scenario_id", "arm", "authorization_request", "dependency_state"],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^ARK456-ARM[1-8]-[0-9]{3}$"
+    },
+    "arm": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "authorization_request": {
+      "type": "object",
+      "required": ["action", "subject", "resource", "context"],
+      "properties": {
+        "action": {
+          "type": "string",
+          "enum": ["transfer", "approve", "delegate", "execute"]
+        },
+        "subject": {
+          "type": "string"
+        },
+        "resource": {
+          "type": "string"
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "amount": {"type": "number"},
+            "destination": {"type": "string"},
+            "meta": {"type": "object"}
+          }
+        }
+      }
+    },
+    "dependency_state": {
+      "type": "object",
+      "required": [
+        "identity_provider",
+        "policy_registry",
+        "evidence_schema",
+        "clock_source",
+        "signature_key",
+        "audit_store"
+      ],
+      "properties": {
+        "identity_provider": {
+          "type": "string",
+          "enum": ["available", "unavailable", "corrupted"]
+        },
+        "policy_registry": {
+          "type": "string",
+          "enum": ["available", "unavailable", "corrupted"]
+        },
+        "evidence_schema": {
+          "type": "string",
+          "enum": ["available", "unavailable", "corrupted"]
+        },
+        "clock_source": {
+          "type": "string",
+          "enum": ["available", "unavailable", "corrupted"]
+        },
+        "signature_key": {
+          "type": "string",
+          "enum": ["available", "unavailable", "corrupted"]
+        },
+        "audit_store": {
+          "type": "string",
+          "enum": ["available", "unavailable", "corrupted"]
+        }
+      }
+    }
+  }
+}
