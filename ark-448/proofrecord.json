@@ -1,0 +1,51 @@
+{
+  "experiment": "ARK-448",
+  "title": "Dynamical Decoupling vs. Baseline Under an Idle Window",
+  "protocol": "Field 27 (LOCK -> SPAM gate -> principal job -> analyze -> verdict)",
+  "outcome": "ABORTED_AT_SPAM_GATE",
+  "outcome_class": "honest gate-stop",
+  "author": "Derek Hone (Remnant Fieldworks Inc.)",
+  "date": "2026-07-17",
+  "lock_commit": "e947b1c",
+  "lock_tag": "ark-448-v1.0-lock",
+  "backend": "ibm_marrakesh",
+  "qubits": {
+    "Q_A": 1,
+    "Q_P": 2,
+    "Q_A_readout_error": 0.002197265625,
+    "Q_P_readout_error": 0.003173828125,
+    "sum_readout_error": 0.00537109375,
+    "note": "Same series-consistent pair as ARK-447; lowest connected-pair readout-error sum."
+  },
+  "spam_gate": {
+    "job_id": "d9cqji4inv1c73ao54eg",
+    "shots_per_circuit": 2048,
+    "SPAM_A_error": 0.01025390625,
+    "SPAM_A_threshold": 0.02,
+    "SPAM_A_passed": true,
+    "SPAM_P_prob_1": 0.52197265625,
+    "SPAM_P_deviation_from_0.5": 0.02197265625,
+    "SPAM_P_threshold": 0.02,
+    "SPAM_P_passed": false,
+    "SPAM_P_role": "gating diagnostic only (|+> ~0.5 expected); NEVER subtracted from DENY leakage",
+    "gate_passed": false
+  },
+  "principal_job": {
+    "status": "NOT RUN",
+    "reason": "SPAM gate failed; per LOCKED preregistration the principal job is only executed after the SPAM gate passes. Execution halted."
+  },
+  "verdict": "NO VERDICT — experiment aborted at the SPAM gate before any DD-vs-baseline data was obtained.",
+  "gate_stop_explanation": {
+    "failing_metric": "SPAM_P (payload readout symmetry)",
+    "measured_deviation": 0.02197265625,
+    "allowed_deviation": 0.02,
+    "margin_of_failure": 0.00197265625,
+    "shots": 2048,
+    "approx_binomial_sigma_at_p0.5": 0.011048543456,
+    "deviation_in_sigma": "approximately 2.0 sigma",
+    "interpretation": "The payload qubit's |+> readout symmetry drifted 0.022 from the ideal 0.5, exceeding the preregistered +/-0.02 tolerance by 0.002 (~2 sigma at 2048 shots). This is consistent with a marginal statistical fluctuation and/or minor readout drift on the calibration snapshot used. The LOCKED preregistration does NOT permit re-running the gate, loosening the threshold, or proceeding on a failed gate. Execution was halted honestly.",
+    "no_fabrication_statement": "No principal-job data exists for ARK-448. No DD-vs-baseline result is claimed. This record documents a preregistered gate abort, not a scientific result about dynamical decoupling."
+  },
+  "budget_note": "IBM open-plan budget was conserved: the principal job was never submitted, preserving remaining seconds for future runs.",
+  "calibration_snapshot": "calibration_snapshot_ibm_marrakesh_20260717.json"
+}
