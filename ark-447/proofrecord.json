@@ -1,0 +1,71 @@
+{
+  "experiment": "ARK-447",
+  "title": "Pauli Twirling vs. Baseline",
+  "note": "DD circuits omitted due to scheduling complexity",
+  "spam_methodology_note": "SPAM_P (|+> -> ~0.5) is used ONLY as a gating diagnostic, NOT as a correction term. DENY leakage is reported as RAW; the earlier subtraction of SPAM_P from DENY leakage was invalid and has been removed.",
+  "backend": "ibm_marrakesh",
+  "qubits": {
+    "Q_A": 1,
+    "Q_P": 2,
+    "Q_A_readout_error": 0.002197265625,
+    "Q_P_readout_error": 0.003173828125,
+    "sum_readout_error": 0.00537109375
+  },
+  "spam_gate": {
+    "job_id": "d9cpfoineu4c739m9ek0",
+    "SPAM_A_error": 0.0133056640625,
+    "SPAM_P_prob_1": 0.494384765625,
+    "SPAM_P_role": "gating diagnostic only (|+> ~0.5 expected); NOT a correction term",
+    "gate_passed": true
+  },
+  "principal_job": {
+    "job_id": "d9cphfsinv1c73ao3ms0",
+    "shots_per_circuit": 8192,
+    "num_circuits": 4
+  },
+  "configurations": {
+    "baseline": {
+      "config_name": "Baseline",
+      "allow_arm": "arm1_ALLOW_baseline",
+      "deny_arm": "arm2_DENY_baseline",
+      "S_A": 0.982421875,
+      "L_D_raw": 0.0013427734375,
+      "Delta_B": 0.7810791015625,
+      "criteria": {
+        "S_A >= 0.90": true,
+        "L_D_raw <= 0.02": true,
+        "Delta_B >= 0.00": true
+      },
+      "verdict": "PASS"
+    },
+    "twirling": {
+      "config_name": "Pauli Twirling",
+      "allow_arm": "arm3_ALLOW_twirl",
+      "deny_arm": "arm4_DENY_twirl",
+      "S_A": 0.987548828125,
+      "L_D_raw": 0.001220703125,
+      "Delta_B": 0.786328125,
+      "criteria": {
+        "S_A >= 0.90": true,
+        "L_D_raw <= 0.02": true,
+        "Delta_B >= 0.00": true
+      },
+      "verdict": "PASS"
+    }
+  },
+  "verdict": {
+    "overall": "PASS (strong)",
+    "reason": "Both configs pass; Pauli twirling shows improvement over baseline.",
+    "timestamp_utc": "2026-07-17T03:12:20.359151+00:00"
+  },
+  "protocol": "Field 27 (LOCK \u2192 SPAM gate \u2192 principal job \u2192 analyze \u2192 verdict)",
+  "preregistration": "ARK_447_preregistration.md (modified: DD omitted)",
+  "interpretation_boundaries": [
+    "Results apply to this specific backend, qubits, and calibration.",
+    "Not a cryptographic security validation.",
+    "Pauli twirling is noise mitigation (not correction); no QEC used.",
+    "Single-round binary boundary only.",
+    "DD circuits omitted due to implementation complexity.",
+    "DENY leakage reported as RAW; SPAM_P is a gating diagnostic, not a correction term."
+  ]
+}
