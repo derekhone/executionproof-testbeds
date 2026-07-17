@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RevocationScenario",
+  "description": "ARK-451 authority-revocation scenario schema — authorization lifecycle with a revocation timeline and optional re-authorization",
+  "type": "object",
+  "required": [
+    "scenario_id",
+    "arm",
+    "requester_id",
+    "action_type",
+    "resource",
+    "t_decision",
+    "t_bind",
+    "t_execution",
+    "multistep",
+    "revocation",
+    "reauthorization"
+  ],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "description": "Unique identifier for this scenario (e.g., arm-1-001)"
+    },
+    "arm": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8,
+      "description": "Arm number (1-8)"
+    },
+    "requester_id": {
+      "type": "string",
+      "description": "Identifier of the entity whose authority is under test (e.g., UUID)"
+    },
+    "action_type": {
+      "type": "string",
+      "enum": ["transfer", "approve", "execute", "delegate", "revoke"],
+      "description": "Type of action being authorized"
+    },
+    "resource": {
+      "type": "string",
+      "description": "Target resource identifier"
+    },
+    "t_decision": {
+      "type": "number",
+      "description": "Time (seconds, monotonic) the authorization decision was made"
+    },
+    "t_bind": {
+      "type": "number",
+      "description": "Time the ProofRecord was bound (t_decision <= t_bind <= t_execution)"
+    },
+    "t_execution": {
+      "type": "number",
+      "description": "Time the action contacts the resource (moment of execution)"
+    },
+    "multistep": {
+      "type": "boolean",
+      "description": "Whether this is a multi-step workflow whose irreversible step occurs at t_execution"
+    },
+    "revocation": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "required": ["t_revoke", "propagation_delay"],
+          "properties": {
+            "t_revoke": {
+              "type": "number",
+              "description": "Time the revocation event was issued"
+            },
+            "propagation_delay": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Seconds until the revocation is fully propagated/effective"
+            },
+            "reason": {
+              "type": "string",
+              "description": "Optional revocation reason (e.g., credential_compromise, termination)"
+            }
+          },
+          "additionalProperties": false
+        }
+      ],
+      "description": "Revocation event, or null if authority is never revoked"
+    },
+    "reauthorization": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "required": ["t_reauth", "valid"],
+          "properties": {
+            "t_reauth": {
+              "type": "number",
+              "description": "Time a new authorization decision was issued after the revocation"
+            },
+            "valid": {
+              "type": "boolean",
+              "description": "Whether the re-authorization is itself a valid, independent decision"
+            }
+          },
+          "additionalProperties": false
+        }
+      ],
+      "description": "Re-authorization event, or null if none"
+    }
+  },
+  "additionalProperties": false
+}

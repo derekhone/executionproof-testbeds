@@ -1,0 +1,29 @@
+ARK-451 — MANIFEST (SHA-256 of locked files)
+Authority Revocation During Execution
+Lock timestamp (UTC): 2026-07-17T20:00:44Z
+Substrate: classical software (no quantum hardware, no cryptography)
+
+These hashes are committed BEFORE any scenario is generated or evaluated (LOCK).
+Results are produced only after this commit. The recorded verdict stands as executed.
+
+SHA-256 hashes (ARK-451 locked files):
+  PREREGISTRATION.md:                          25cef3b20e37f996aa7b1eb09c6361da352d34de5d1e9b467f2149c33d22fead
+  schemas/revocation_scenario_schema.json:     436ef619d40916d73a2fb9d260af193676de2479c903081dacd5709764603423
+  verifiers/v1_monitor.js:                     159e4ffacab6e20bfdc7d25e5212736225d1785966623e298cfa1b8e4e0620db
+  verifiers/v2_monitor.py:                     32666e55890acb889521b3d50224df2e105d14041ab6993e32c4b0de6bdb1476
+  generator/scenario_generator.py:             9b2fb6068de11a98c94bdaf53338e14b307db6b782885a4ee3fb7c15f34f9ebd
+  run_killgate.py:                             10f0a7bd5b57ef8fd45d883f1271056431c7a0bbf610c7200d3b6badc9711341
+  run_arms.py:                                 040f171d7b29bb0477ae1acf3755f30493cd77de5c4ce08e8a333793bf08f414
+
+Lock note (pre-execution harness correction):
+  Before any experimental arm was generated or evaluated, a print-formatting
+  syntax error in run_arms.py (an f-string expression containing a backslash,
+  invalid on Python < 3.12) was corrected. The fix moves two decorative Unicode
+  glyphs out of an f-string expression into a helper; console output is
+  identical. NO change was made to the decision procedure, pass criteria,
+  thresholds, generator seeds, or the revocation-timing effectiveness oracle.
+  The lock was re-committed with the corrected harness; results/ contained no
+  arm outcomes at that time (only kill-gate calibration output). The run_arms.py
+  hash above reflects the corrected file.
+
+OUTCOME (filled after execution): <PENDING — to be filled after run_arms.py completes>
