@@ -11,7 +11,7 @@ def load_token():
     """Load IBM Quantum API token."""
     with open('/home/ubuntu/.config/abacusai_auth_secrets.json', 'r') as f:
         secrets = json.load(f)
-    return secrets['ibmquantum']['secrets']['access_token']['value']
+    return secrets['ibm quantum']['secrets']['api_token']['value']
 
 def main():
     # Load job ID
