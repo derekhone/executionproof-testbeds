@@ -1,0 +1,199 @@
+{
+  "experiment": "ARK-452",
+  "title": "Multi-Step Workflow With One Invalid Step",
+  "analysis_doctrine": "raw-primary (no SPAM_A; single payload qubit)",
+  "spam_job_id": "d9cspi4inv1c73ao83ng",
+  "principal_job_id": "d9cspicjeosc73fgnti0",
+  "qubit_selection": {
+    "Q_P": 1,
+    "RE_P": 0.002197,
+    "RE_threshold": 0.02,
+    "constraint_met": true,
+    "calibration_ts": "2026-07-17 05:54:26+00:00",
+    "selection_committed_at": "2026-07-17T06:33:43Z"
+  },
+  "spam_gate": {
+    "SPAM_P": 0.007324,
+    "SPAM_P_pass": true,
+    "gate_passed": true,
+    "threshold": 0.02,
+    "shots": 2048,
+    "raw_spam_p": {
+      "0": 1039,
+      "1": 1009
+    }
+  },
+  "per_arm": {
+    "1": {
+      "arm": 1,
+      "label": "ALLOW-complete",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 1,
+      "c_s4": 1,
+      "c_exec": 1,
+      "scenario": "All steps valid; full workflow authorized",
+      "P_Q_P_1_raw": 0.939453,
+      "role": "ALLOW"
+    },
+    "2": {
+      "arm": 2,
+      "label": "DENY-s1-invalid",
+      "c_s1": 0,
+      "c_s2": 1,
+      "c_s3": 1,
+      "c_s4": 1,
+      "c_exec": 0,
+      "scenario": "Read-data step inadmissible; rest valid",
+      "P_Q_P_1_raw": 0.001587,
+      "role": "DENY"
+    },
+    "3": {
+      "arm": 3,
+      "label": "DENY-s2-invalid",
+      "c_s1": 1,
+      "c_s2": 0,
+      "c_s3": 1,
+      "c_s4": 1,
+      "c_exec": 0,
+      "scenario": "Calculation step inadmissible; rest valid",
+      "P_Q_P_1_raw": 0.001587,
+      "role": "DENY"
+    },
+    "4": {
+      "arm": 4,
+      "label": "DENY-s3-invalid",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 0,
+      "c_s4": 1,
+      "c_exec": 0,
+      "scenario": "Approval step inadmissible; execution step otherwise valid",
+      "P_Q_P_1_raw": 0.00061,
+      "role": "DENY"
+    },
+    "5": {
+      "arm": 5,
+      "label": "DENY-s4-invalid",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 1,
+      "c_s4": 0,
+      "c_exec": 0,
+      "scenario": "Execution step itself inadmissible; all prior steps valid",
+      "P_Q_P_1_raw": 0.001709,
+      "role": "DENY"
+    },
+    "6": {
+      "arm": 6,
+      "label": "DENY-s2s3-both",
+      "c_s1": 1,
+      "c_s2": 0,
+      "c_s3": 0,
+      "c_s4": 1,
+      "c_exec": 0,
+      "scenario": "Two middle steps invalid; execution step authorization valid",
+      "P_Q_P_1_raw": 0.001221,
+      "role": "DENY"
+    },
+    "7": {
+      "arm": 7,
+      "label": "DENY-blanket-attempt",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 1,
+      "c_s4": 0,
+      "c_exec": 0,
+      "scenario": "Three valid prior steps; execution step not independently authorized",
+      "P_Q_P_1_raw": 0.001709,
+      "role": "DENY"
+    },
+    "8": {
+      "arm": 8,
+      "label": "ALLOW-reauth-complete",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 1,
+      "c_s4": 1,
+      "c_exec": 1,
+      "scenario": "Full re-authorization after prior workflow block",
+      "P_Q_P_1_raw": 0.939209,
+      "role": "ALLOW"
+    },
+    "9": {
+      "arm": 9,
+      "label": "DENY-skip-approval",
+      "c_s1": 1,
+      "c_s2": 1,
+      "c_s3": 0,
+      "c_s4": 0,
+      "c_exec": 0,
+      "scenario": "Approval and execution steps both absent; data and calculation valid",
+      "P_Q_P_1_raw": 0.001587,
+      "role": "DENY"
+    }
+  },
+  "primary_metrics": {
+    "S_A_min": 0.939209,
+    "L_D_max": 0.001709,
+    "Delta_B": 0.9375,
+    "SPAM_P": 0.007324,
+    "S_A_per_allow_arm": {
+      "arm01": 0.939453,
+      "arm08": 0.939209
+    },
+    "L_D_max_arm": "arm05"
+  },
+  "criteria": {
+    "C1_S_A_min>=0.90": {
+      "value": 0.939209,
+      "threshold": 0.9,
+      "pass": true
+    },
+    "C2_L_D_max<=0.02": {
+      "value": 0.001709,
+      "threshold": 0.02,
+      "pass": true
+    },
+    "C3_Delta_B>=0.70": {
+      "value": 0.9375,
+      "threshold": 0.7,
+      "pass": true
+    },
+    "C4_SPAM_P<=0.02": {
+      "value": 0.007324,
+      "threshold": 0.02,
+      "pass": true
+    }
+  },
+  "secondary_metrics": {
+    "S_A_per_arm": {
+      "arm01": 0.939453,
+      "arm08": 0.939209
+    },
+    "L_D_per_arm": {
+      "arm02": 0.001587,
+      "arm03": 0.001587,
+      "arm04": 0.00061,
+      "arm05": 0.001709,
+      "arm06": 0.001221,
+      "arm07": 0.001709,
+      "arm09": 0.001587
+    },
+    "L_D_blanket_arm7": 0.001709,
+    "L_D_skip_approval_arm9_vs_s3only_arm4": {
+      "arm9_skip_approval_and_exec": 0.001587,
+      "arm4_approval_only_invalid": 0.00061
+    },
+    "H2b_no_inherited_authorization": {
+      "arm5_s4_invalid": 0.001709,
+      "arm7_blanket_attempt": 0.001709,
+      "note": "Three valid prior steps do not authorize step 4; both must fail closed."
+    },
+    "H2c_reauth_restores_execution": {
+      "arm1_baseline": 0.939453,
+      "arm8_reauth": 0.939209
+    }
+  },
+  "verdict": "PASS"
+}
