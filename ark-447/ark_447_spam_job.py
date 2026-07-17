@@ -6,6 +6,7 @@ Submits SPAM characterization circuits as a gating condition.
 import json
 import sys
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
+from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
 
 def load_token():
@@ -60,11 +61,16 @@ def main():
     service = QiskitRuntimeService(channel='ibm_quantum_platform', token=token, instance='open-instance')
     backend = service.backend(backend_name)
     
-    print(f"\nSubmitting SPAM job to {backend_name}...")
+    print(f"\nTranspiling SPAM circuits...")
+    pm = generate_preset_pass_manager(backend=backend, optimization_level=1)
+    spam_a_transpiled = pm.run(spam_circuits['SPAM_A'])
+    spam_p_transpiled = pm.run(spam_circuits['SPAM_P'])
+    
+    print(f"Submitting SPAM job to {backend_name}...")
     
     # Submit job
     sampler = Sampler(backend)
-    job = sampler.run([spam_circuits['SPAM_A'], spam_circuits['SPAM_P']], shots=8192)
+    job = sampler.run([spam_a_transpiled, spam_p_transpiled], shots=8192)
     
     job_id = job.job_id()
     print(f"✅ SPAM job submitted: {job_id}")
@@ -81,28 +87,21 @@ def main():
     # SPAM_A: prepared |1⟩, expect outcome '1'
     spam_a_error = spam_a_counts.get('0', 0) / 8192
     
-    # SPAM_P: prepared |+⟩, expect 50/50 split, but we check for outcome '1' (should be ~0.5)
-    # For SPAM baseline, we care about the deviation from expected
+    # SPAM_P: prepared |+⟩, expect 50/50 split
     spam_p_1_prob = spam_p_counts.get('1', 0) / 8192
-    spam_p_error = abs(spam_p_1_prob - 0.5)  # Deviation from 0.5
-    
-    # Actually, for consistency with other ARK experiments, SPAM_P error is defined as
-    # the probability of outcome '1' when prepared in |+⟩ (which should be 0.5 in ideal case)
-    # But for SPAM *correction* we use the raw probability
-    spam_p_raw = spam_p_1_prob
     
     print(f"\n=== SPAM Results ===")
     print(f"SPAM_A: {spam_a_counts}")
     print(f"   Error (prob of '0' when prepared |1⟩): {spam_a_error:.4f}")
     print(f"SPAM_P: {spam_p_counts}")
-    print(f"   Prob('1' | |+⟩): {spam_p_raw:.4f}")
+    print(f"   Prob('1' | |+⟩): {spam_p_1_prob:.4f}")
     
     # Gate condition: both SPAM errors ≤ 0.02
-    gate_passed = (spam_a_error <= 0.02 and abs(spam_p_raw - 0.5) <= 0.02)
+    gate_passed = (spam_a_error <= 0.02 and abs(spam_p_1_prob - 0.5) <= 0.02)
     
     print(f"\n=== SPAM Gate ===")
     print(f"SPAM_A ≤ 0.02: {spam_a_error <= 0.02} ({spam_a_error:.4f})")
-    print(f"SPAM_P deviation ≤ 0.02: {abs(spam_p_raw - 0.5) <= 0.02} ({abs(spam_p_raw - 0.5):.4f})")
+    print(f"SPAM_P deviation ≤ 0.02: {abs(spam_p_1_prob - 0.5) <= 0.02} ({abs(spam_p_1_prob - 0.5):.4f})")
     print(f"Gate PASSED: {gate_passed}")
     
     # Save results
@@ -118,8 +117,8 @@ def main():
         },
         'SPAM_P': {
             'counts': spam_p_counts,
-            'prob_1': spam_p_raw,
-            'deviation_from_0.5': abs(spam_p_raw - 0.5)
+            'prob_1': spam_p_1_prob,
+            'deviation_from_0.5': abs(spam_p_1_prob - 0.5)
         },
         'gate_passed': gate_passed
     }

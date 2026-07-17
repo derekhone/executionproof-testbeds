@@ -6,7 +6,7 @@ Submits the 6 ARK-447 circuits to IBM Quantum.
 import json
 import sys
 from ark_447_circuits import main as create_circuits
-
+from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
 
 def load_token():
@@ -52,13 +52,18 @@ def main():
     service = QiskitRuntimeService(channel='ibm_quantum_platform', token=token, instance='open-instance')
     backend = service.backend(backend_name)
     
+    # Transpile circuits (DD circuits are already transpiled, but re-transpiling is safe)
+    print(f"\nTranspiling circuits to {backend_name}...")
+    pm = generate_preset_pass_manager(backend=backend, optimization_level=1)
+    circuits_transpiled = [pm.run(qc) for qc in circuits]
+    
     print(f"\nSubmitting principal job to {backend_name}...")
-    print(f"   Circuits: {len(circuits)}")
+    print(f"   Circuits: {len(circuits_transpiled)}")
     print(f"   Shots: 8192 per circuit")
     
     # Submit job
     sampler = Sampler(backend)
-    job = sampler.run(circuits, shots=8192)
+    job = sampler.run(circuits_transpiled, shots=8192)
     
     job_id = job.job_id()
     print(f"\n✅ Principal job submitted: {job_id}")

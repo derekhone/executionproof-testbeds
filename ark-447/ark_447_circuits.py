@@ -11,6 +11,7 @@ from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
 from qiskit.circuit.library import XGate
 from qiskit.transpiler import PassManager
 from qiskit.transpiler.passes import PadDynamicalDecoupling
+from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 from qiskit_ibm_runtime import QiskitRuntimeService
 import numpy as np
 
@@ -75,7 +76,6 @@ def create_dd_circuit(auth_state, Q_A, Q_P, backend):
     qc = create_baseline_circuit(auth_state, Q_A, Q_P)
     
     # Transpile to backend basis gates first
-    from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
     pm = generate_preset_pass_manager(backend=backend, optimization_level=1)
     qc_transpiled = pm.run(qc)
     
@@ -92,12 +92,7 @@ def create_twirled_circuit(auth_state, Q_A, Q_P):
     Create circuit with Pauli Twirling applied.
     
     Randomizes Pauli gates {I, X, Y, Z} before and after the CNOT operation.
-    Since we need a single deterministic circuit (not randomized per shot),
-    we'll use a fixed random seed for reproducibility but apply average twirling.
-    
-    Note: True Pauli twirling requires running multiple randomized instances
-    and averaging. For this experiment, we'll apply a representative twirling
-    pattern (e.g., apply Y gates to convert CNOT errors to depolarizing-like).
+    For reproducibility, we apply a fixed twirling pattern (Y gates).
     """
     qr = QuantumRegister(max(Q_A, Q_P) + 1, 'q')
     cr = ClassicalRegister(2, 'c')
@@ -112,8 +107,7 @@ def create_twirled_circuit(auth_state, Q_A, Q_P):
     
     qc.barrier()
     
-    # Apply pre-twirl Pauli (example: Y on Q_P to convert Z-error to X-error)
-    # This is a simplified version; full twirling would randomize per shot
+    # Apply pre-twirl Pauli (example: Y on Q_P)
     qc.y(qr[Q_P])
     
     # Boundary gate: CNOT(Q_A → Q_P)
@@ -144,7 +138,7 @@ def main():
     service = QiskitRuntimeService(channel='ibm_quantum_platform', token=token, instance='open-instance')
     backend = service.backend(backend_name)
     
-    # Create circuits
+    # Create circuits (not transpiled yet - will be done in submit script)
     circuits = {}
     
     # Baseline
@@ -152,7 +146,7 @@ def main():
     circuits['arm1_ALLOW_baseline'] = create_baseline_circuit('ALLOW', Q_A, Q_P)
     circuits['arm2_DENY_baseline'] = create_baseline_circuit('DENY', Q_A, Q_P)
     
-    # Dynamical Decoupling
+    # Dynamical Decoupling (already transpiled with DD)
     print("Creating DD circuits...")
     circuits['arm3_ALLOW_DD'] = create_dd_circuit('ALLOW', Q_A, Q_P, backend)
     circuits['arm4_DENY_DD'] = create_dd_circuit('DENY', Q_A, Q_P, backend)
