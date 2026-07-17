@@ -315,17 +315,32 @@ def transpile_circuits(circuits_to_transpile: list, backend, qubit_layout: dict)
     qubit layout. Uses optimization_level=3 for best fidelity.
 
     qubit_layout: {"Q_A": int, "Q_P": int}  — physical qubit indices
+    
+    Detects circuit width and uses the appropriate subset:
+      1-qubit (SPAM) → [Q_A] for auth register, [Q_P] for pay register
+      2-qubit (principal) → [Q_A, Q_P]
     """
-    pm = generate_preset_pass_manager(
-        optimization_level=3,
-        backend=backend,
-        initial_layout=[qubit_layout["Q_A"], qubit_layout["Q_P"]],
-    )
-
     transpiled = []
     for c in circuits_to_transpile:
+        # Determine layout based on circuit width
+        if c.num_qubits == 1:
+            # Single-qubit: SPAM_A uses Q_A, SPAM_P uses Q_P
+            reg_name = c.qregs[0].name if c.qregs else "q"
+            layout = [qubit_layout["Q_A"]] if "auth" in reg_name else [qubit_layout["Q_P"]]
+        elif c.num_qubits == 2:
+            # Two-qubit: principal arms use (Q_A, Q_P)
+            layout = [qubit_layout["Q_A"], qubit_layout["Q_P"]]
+        else:
+            raise ValueError(f"Unexpected circuit width: {c.num_qubits}")
+        
+        pm = generate_preset_pass_manager(
+            optimization_level=3,
+            backend=backend,
+            initial_layout=layout,
+        )
         tc = pm.run(c)
         transpiled.append(tc)
+    
     return transpiled
 
 
@@ -492,10 +507,10 @@ def main():
     # *** Record job ID BEFORE reading any results ***
     # ------------------------------------------------------------------
     print("\n[ARK-449] Submitting SPAM gate job…")
-    with Sampler(backend=backend) as sampler:
-        spam_job_id, spam_counts_list = submit_and_collect(
-            sampler, spam_transpiled, SHOTS_SPAM, "SPAM gate"
-        )
+    sampler = Sampler(mode=backend)
+    spam_job_id, spam_counts_list = submit_and_collect(
+        sampler, spam_transpiled, SHOTS_SPAM, "SPAM gate"
+    )
 
     # Write job ID to execution log immediately — before reading results
     exec_log = {
@@ -515,10 +530,10 @@ def main():
     # results are read.
     # ------------------------------------------------------------------
     print("\n[ARK-449] Submitting principal job (9 arms × 8192 shots)…")
-    with Sampler(backend=backend) as sampler:
-        principal_job_id, principal_counts_list = submit_and_collect(
-            sampler, principal_transpiled, SHOTS_PRINCIPAL, "principal"
-        )
+    sampler = Sampler(mode=backend)
+    principal_job_id, principal_counts_list = submit_and_collect(
+        sampler, principal_transpiled, SHOTS_PRINCIPAL, "principal"
+    )
 
     # Update execution log with principal job ID
     exec_log["principal_job_id"] = principal_job_id
