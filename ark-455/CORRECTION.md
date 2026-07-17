@@ -81,6 +81,12 @@ verifier response to a *non*-tampered input.
      tamper provably alters the record — so a no-op can never again masquerade as a
      detection failure.
 
+  **ARK-455b outcome (2026-07-17): PASS.** With the corrected mutation, Arm 3
+  (timestamp) is now detected at **100%** by both verifiers, empirically confirming
+  this erratum's root-cause finding. The new pre-signing expired-timestamp arm is
+  also rejected at 100% via the validity-window gate, and V1–V2 concordance is
+  100% across all 900 records. See `../ark-455b/RESULTS.md`.
+
 ---
 
 ## Discipline note

@@ -1,6 +1,6 @@
 # ARK-455b — ProofRecord Verification After Tampering (Corrected Retest + Validity Window)
 
-**Status:** LOCKED → (execution pending)
+**Status:** LOCKED → Executed → ✅ **PASS** (see [`RESULTS.md`](./RESULTS.md))
 
 **Question:** Can dual independent verifiers reject *every* tampered ProofRecord **and** every out-of-window (expired) record, while accepting only genuine, in-window originals?
 
