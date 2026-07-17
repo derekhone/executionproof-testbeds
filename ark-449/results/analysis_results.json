@@ -1,0 +1,197 @@
+{
+  "experiment": "ARK-449",
+  "doctrine_tested": "Permission at approval time is not permission at execution time.",
+  "verdict": "PASS",
+  "analysis_timestamp": "2026-07-17T05:46:02.697354Z",
+  "spam_gate": {
+    "SPAM_A": 0.015625,
+    "SPAM_P": 0.014648,
+    "SPAM_A_pass": true,
+    "SPAM_P_pass": true,
+    "gate_passed": true,
+    "threshold": 0.02,
+    "shots": 2048,
+    "raw_spam_a": {
+      "1": 2016,
+      "0": 32
+    },
+    "raw_spam_p": {
+      "0": 994,
+      "1": 1054
+    }
+  },
+  "qubit_selection": {
+    "Q_A": 1,
+    "Q_P": 2,
+    "RE_A": 0.002197,
+    "RE_P": 0.003174,
+    "sum_RE": 0.005371,
+    "RE_threshold": 0.02,
+    "constraint_met": true,
+    "calibration_ts": "2026-07-17 03:13:32+00:00"
+  },
+  "shots_principal": 8192,
+  "spam_job_id": "d9crr82neu4c739mcsd0",
+  "principal_job_id": "d9crvbhhtsac739c6a70",
+  "primary_metrics": {
+    "S_A_arm1": 0.994834,
+    "S_A_arm8": 0.996598,
+    "S_A_min": 0.994834,
+    "L_D_max": 0.001099,
+    "L_D_max_arm": 2,
+    "Delta_B": 0.993735
+  },
+  "secondary_metrics": {
+    "S_A_per_allow_arm": {
+      "8": 0.996598,
+      "1": 0.994834
+    },
+    "L_D_per_deny_arm": {
+      "2": 0.001099,
+      "3": 0.001099,
+      "4": 0.000366,
+      "5": 0.000732,
+      "6": 0.000244,
+      "7": 0.000977,
+      "9": 0.000244
+    },
+    "L_replay_arm9": 0.000244,
+    "h2a_universality": {
+      "2": {
+        "L_D": 0.001099,
+        "pass": true,
+        "scenario": "Authority revoked between approval (T1) and execution (T3)"
+      },
+      "3": {
+        "L_D": 0.001099,
+        "pass": true,
+        "scenario": "Policy version updated; action now inadmissible under new policy"
+      },
+      "4": {
+        "L_D": 0.000366,
+        "pass": true,
+        "scenario": "Account balance fell below required threshold after approval"
+      },
+      "5": {
+        "L_D": 0.000732,
+        "pass": true,
+        "scenario": "Risk score crossed enforcement limit after approval"
+      },
+      "6": {
+        "L_D": 0.000244,
+        "pass": true,
+        "scenario": "Destination entity blocked or sanctioned after approval"
+      },
+      "7": {
+        "L_D": 0.000977,
+        "pass": true,
+        "scenario": "Supporting evidence expired after approval was granted"
+      },
+      "9": {
+        "L_D": 0.000244,
+        "pass": true,
+        "scenario": "Old ProofRecord presented without re-verification; state changed"
+      }
+    },
+    "h2b_reauth_restores": true,
+    "h2c_replay_fails_closed": true
+  },
+  "criteria": {
+    "C1_S_A_min_pass": true,
+    "C2_L_D_max_pass": true,
+    "C3_Delta_B_pass": true,
+    "C4_SPAM_pass": true,
+    "all_pass": true
+  },
+  "hypothesis_outcomes": {
+    "H1_primary": true,
+    "H2a_universality": true,
+    "H2b_reauth": true,
+    "H2c_replay": true,
+    "H2d_separation": true
+  },
+  "fail_reasons": [],
+  "arm_metrics": {
+    "1": {
+      "arm": 1,
+      "label": "ALLOW-unchanged",
+      "c_state": 1,
+      "scenario": "No change \u2014 state valid at T1 and remains valid at T3",
+      "p1_raw": 0.97937,
+      "p1_final": 0.994834,
+      "spam_correction": true
+    },
+    "2": {
+      "arm": 2,
+      "label": "DENY-revoked",
+      "c_state": 0,
+      "scenario": "Authority revoked between approval (T1) and execution (T3)",
+      "p1_raw": 0.001099,
+      "p1_final": 0.001099,
+      "spam_correction": false
+    },
+    "3": {
+      "arm": 3,
+      "label": "DENY-policy",
+      "c_state": 0,
+      "scenario": "Policy version updated; action now inadmissible under new policy",
+      "p1_raw": 0.001099,
+      "p1_final": 0.001099,
+      "spam_correction": false
+    },
+    "4": {
+      "arm": 4,
+      "label": "DENY-balance",
+      "c_state": 0,
+      "scenario": "Account balance fell below required threshold after approval",
+      "p1_raw": 0.000366,
+      "p1_final": 0.000366,
+      "spam_correction": false
+    },
+    "5": {
+      "arm": 5,
+      "label": "DENY-risk",
+      "c_state": 0,
+      "scenario": "Risk score crossed enforcement limit after approval",
+      "p1_raw": 0.000732,
+      "p1_final": 0.000732,
+      "spam_correction": false
+    },
+    "6": {
+      "arm": 6,
+      "label": "DENY-destination",
+      "c_state": 0,
+      "scenario": "Destination entity blocked or sanctioned after approval",
+      "p1_raw": 0.000244,
+      "p1_final": 0.000244,
+      "spam_correction": false
+    },
+    "7": {
+      "arm": 7,
+      "label": "DENY-expiry",
+      "c_state": 0,
+      "scenario": "Supporting evidence expired after approval was granted",
+      "p1_raw": 0.000977,
+      "p1_final": 0.000977,
+      "spam_correction": false
+    },
+    "8": {
+      "arm": 8,
+      "label": "ALLOW-reauth",
+      "c_state": 1,
+      "scenario": "New decision issued against re-assessed admissible state",
+      "p1_raw": 0.981079,
+      "p1_final": 0.996598,
+      "spam_correction": true
+    },
+    "9": {
+      "arm": 9,
+      "label": "DENY-replay",
+      "c_state": 0,
+      "scenario": "Old ProofRecord presented without re-verification; state changed",
+      "p1_raw": 0.000244,
+      "p1_final": 0.000244,
+      "spam_correction": false
+    }
+  }
+}
