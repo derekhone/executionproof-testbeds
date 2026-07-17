@@ -1,0 +1,114 @@
+ARK-449 MANIFEST — Version 1.0
+==============================================================
+This MANIFEST is committed and SHA-256-hashed before any hardware
+job is submitted. Commit timestamps prove the ordering.
+Lock this file, push it, and tag ark-449-v1.0-lock before
+submitting the SPAM gate job.
+==============================================================
+
+Experiment:      ARK-449 — State Changes After Verification
+Series:          ExecutionProof ARK Authorization-Boundary Track
+Company:         Remnant Fieldworks Inc.
+Repository:      https://github.com/derekhone/executionproof-testbeds
+Folder:          ark-449/
+
+Lock timestamp (UTC, YYYY-MM-DDTHH:MM:SSZ):
+    [FILL AT LOCK — set to the moment you push this commit]
+
+Backend target:
+    ibm_marrakesh (156-qubit Heron r2)
+
+--------------------------------------------------------------
+SHA-256 Hashes
+(computed 2026-07-17 from the files as written at draft time;
+re-verify before lock if any file was edited after this date)
+--------------------------------------------------------------
+
+ARK_449_preregistration.md:
+    b89aaf63daf7a0ed70011eaa70e9a6c7fb68ab0b2efe0a8e42f87847e5ebc6b5
+
+circuits/ark_449_circuit.py:
+    60ebd5e0a6fad2a7ebf2878aea60916686506d7b3e46a6a6d1de0c2b9bc9910c
+
+circuits/ark_449_analysis.py:
+    2fb2f14766b7a86860ef69718457b1ff2edf4ac6bef53cfb12da2de643e06183
+
+README.md:
+    0f8a7bae0d1798394990298191a12eddd4b9bab088b7068ef1b20a5a2fb83185
+
+--------------------------------------------------------------
+MANIFEST Self-Hash
+(hash of this file after all above hashes are confirmed and
+the lock timestamp is filled — compute last, before committing)
+--------------------------------------------------------------
+
+MANIFEST.txt SHA-256:
+    [COMPUTE LAST — sha256sum MANIFEST.txt after filling lock timestamp]
+
+--------------------------------------------------------------
+Git Provenance (fill after push)
+--------------------------------------------------------------
+
+Committed to branch:
+    execute/ark-449
+
+Commit SHA (ark-449-v1.0-lock):
+    [FILL AFTER PUSH]
+
+Tag:
+    ark-449-v1.0-lock
+
+--------------------------------------------------------------
+Execution Log (fill in strict sequence, before reading results)
+--------------------------------------------------------------
+
+Qubit selection committed at:
+    [FILL — UTC timestamp of selected_qubits.json commit]
+
+SPAM gate job ID:
+    [FILL BEFORE READING ANY RESULTS]
+
+SPAM gate job ID committed at:
+    [FILL — UTC timestamp of execution_log.json commit]
+
+Principal job ID:
+    [FILL BEFORE READING SPAM RESULTS]
+
+Principal job ID committed at:
+    [FILL — UTC timestamp of execution_log.json update commit]
+
+--------------------------------------------------------------
+Result Tag (fill at conclusion)
+--------------------------------------------------------------
+
+Tag:
+    ark-449-v1.0
+
+Verdict:
+    [FILL AT CONCLUSION — PASS | FAIL | ABORTED AT SPAM GATE]
+
+Zenodo DOI:
+    [FILL AT PUBLICATION]
+
+--------------------------------------------------------------
+LOCK RULES (absolute — no exceptions after MANIFEST commit)
+--------------------------------------------------------------
+
+1. No criterion changes, loosening, or additions after MANIFEST commit.
+2. No arm additions or removals after MANIFEST commit.
+3. No rescue-after-failure: if SPAM gate fails, the experiment aborts.
+   The principal job results are NOT read.
+4. No post-hoc subgroup selection: if any DENY arm fails,
+   VERDICT = FAIL — not "partial pass excluding arm N."
+5. SPAM_P is a gate diagnostic only — never subtracted from L_D.
+   (ARK-447 v1.1 correction; fixed in preregistration Section 11.2.)
+6. Qubit pair is fixed at SPAM gate submission.
+7. Analysis code (ark_449_analysis.py) is committed at lock and runs
+   unmodified on hardware data.
+
+Pre-data technical corrections (hardware error, zero-count job,
+transpilation fault discovered before any results are read):
+    → document as a pre-data correction note, following ARK-444 precedent.
+
+Post-data corrections (any change after results are read):
+    → full explicit disclosure and new tag, following ARK-447 v1.0→v1.1 precedent.
