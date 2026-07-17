@@ -3,7 +3,7 @@ ARK-450 MANIFEST — Locked File Hashes (SHA-256)
 
 Experiment: ARK-450 Verified Action Substitution Attack
 Lock Date: 2026-07-17
-Commit: (to be added at lock commit)
+Commit: cf65692
 
 This manifest locks the experimental design and implementation BEFORE execution.
 No modifications to locked files are permitted after this commit.
@@ -39,4 +39,34 @@ before full execution. If any arm fails oracle, ABORT.
 
 OUTCOME:
 --------
-(to be filled post-execution)
+Execution Date: 2026-07-17
+Kill-Gate: PASS (88/88 effectiveness, 88/88 concordance)
+Full Execution: 800 scenarios (8 arms × 100)
+
+Primary Metrics:
+  C1 (g_allow_exact_min): 1.0000 ✅ PASS (threshold ≥ 0.95)
+  C2 (g_deny_substitution_min): 1.0000 ✅ PASS (threshold ≥ 0.95)
+  C3 (g_margin): 1.0000 ✅ PASS (threshold ≥ 0.90)
+
+Secondary Metrics:
+  Total concordance: 800/800 (1.0000) - V1-V2 perfect agreement
+  Total effectiveness: 800/800 (1.0000) - All scenarios valid
+
+Per-Arm Results:
+  Arm 1 (baseline exact): 100% ALLOW (100/100)
+  Arm 2 (destination): 100% DENY (100/100)
+  Arm 3 (amount): 100% DENY (100/100)
+  Arm 4 (identity): 100% DENY (100/100)
+  Arm 5 (tool/resource): 100% DENY (100/100)
+  Arm 6 (partial path): 100% DENY (100/100)
+  Arm 7 (metadata): 100% DENY (100/100)
+  Arm 8 (hash collision): 100% DENY (100/100)
+
+VERDICT: ✅ PASS
+
+Key Finding: Zero authorization detachment failures. Authorization for 
+action A cannot be used for action B - perfect action binding across all 
+7 substitution attack vectors.
+
+Locked file integrity: All 7 locked files verified byte-identical (SHA-256).
+No post-lock modifications detected.

@@ -1,6 +1,6 @@
 # ARK-450: Verified Action Substitution Attack
 
-**Status:** PENDING EXECUTION  
+**Status:** ✅ COMPLETE — PASS  
 **Type:** Classical/Software (no QPU)  
 **Question:** Can authorization be detached from the exact governed action?
 
@@ -81,4 +81,12 @@ python3 run_arms.py
 
 ## Verdict
 
-*To be determined after execution*
+✅ **PASS** (Execution: 2026-07-17)
+
+- **C1 (g_allow_exact_min):** 1.0000 (threshold ≥ 0.95) ✅
+- **C2 (g_deny_substitution_min):** 1.0000 (threshold ≥ 0.95) ✅
+- **C3 (g_margin):** 1.0000 (threshold ≥ 0.90) ✅
+
+**Key Finding:** Zero authorization detachment failures across 800 decisions. Authorization for action A cannot be used for action B — perfect action binding demonstrated across all 7 substitution attack vectors.
+
+See `RESULTS.md` for detailed analysis.
