@@ -211,9 +211,7 @@ def main():
     # H2b: reverified ALLOW maintains >= 0.90.
     s_a_rev = allow_raw["S_A_rev"]
     reverify_ok = s_a_rev >= PASS_S_ALLOW
-    # H2c: confusion/replay collapses to DENY (corrected <= 0.02).
-    l_conf_corr = deny_corrected["L_conf"]
-    confusion_denies = l_conf_corr <= PASS_LEAK_CORR
+    # H2c: confusion/replay — omitted in ARK-445b (arm9 removed to isolate reset infidelity)
 
     def mk(arm, metric):
         return {"value": p(arm), "ci95": ci95[arm], "ci99": ci99[arm]}
@@ -251,8 +249,11 @@ def main():
                     "decoherence artifact.",
         },
         "H2c_confusion_falls_to_deny": {
-            "L_conf": deny_raw["L_conf"],             "denies": bool(confusion_denies),
-            "note": "Tampered/replayed authorization collapses to DENY (<= 0.02), not HOLD.",
+            "status": "N/A",
+            "note": "Omitted in ARK-445b. Arm9 (reset-based confusion/replay) was removed "
+                    "to isolate whether ARK-445's leak came from mid-circuit reset infidelity "
+                    "rather than the tri-state boundary. This arm tested reset mechanism, not "
+                    "true anti-replay logic.",
         },
         "H2d_spam_drift_bound": {
             "SPAM_A": SPAM_A, "SPAM_P": SPAM_P, "SPAM_drift": SPAM_drift,
