@@ -5,9 +5,26 @@
 
 **DOI:** [10.5281/zenodo.21406037](https://doi.org/10.5281/zenodo.21406037) · Concept DOI: [10.5281/zenodo.21398675](https://doi.org/10.5281/zenodo.21398675)
 
-**Result:** S_A_min = 0.9948 (≥ 0.90) · L_D_max = 0.0011 (≤ 0.02) · Δ_B = 0.9937 (≥ 0.70) · SPAM gate PASSED.
+**Result (primary — raw payload P(Q_P=1), analysis v1.2):**
+S_A_min = 0.9794 (≥ 0.90) · L_D_max = 0.0011 (≤ 0.02) · Δ_B ≈ 0.9783 (≥ 0.70) · SPAM gate PASSED.
+Raw ALLOW: Arm 1 = 0.9794, Arm 8 = 0.9811. Raw DENY leakage across the seven scenarios: 0.0002–0.0011.
 All seven DENY state-change scenarios confirmed. Re-auth restores execution; replay with changed state fails closed.
 Jobs: SPAM `d9crr82neu4c739mcsd0`, principal `d9crvbhhtsac739c6a70`.
+
+> *Secondary (descriptive only):* SPAM-corrected ALLOW values were 0.9948 / 0.9966. That correction applied the
+> **authorizer** qubit readout error (SPAM_A) to the **payload** outcome, so it is retained for transparency only and
+> is **not** used for the verdict pending a full payload-readout-assignment model (analysis v1.2 correction, post-data,
+> fully disclosed). The raw values pass every preregistered criterion by a wide margin, so the verdict is unchanged.
+
+### Interpretation boundary (what ARK-449 does and does not establish)
+
+ARK-449 demonstrated that a preregistered execution-control boundary enforced **current-state admissibility** across
+seven semantically distinct state-change scenarios encoded through the **same deterministic classical control logic**.
+The `c_state` bit was a deterministic classical constant assigned per arm — ARK-449 did **not** observe seven different
+live external state systems changing over time, and the seven DENY arms were hardware-equivalent at the circuit level.
+It validates the **boundary logic**, not live distributed-state propagation, race conditions, registry synchronization,
+or real APIs. Correct framing: *"an intact prior authorization fails closed when current state is inadmissible, while
+fresh authorization against admissible state restores execution."*
 
 ---
 
@@ -110,7 +127,7 @@ scripts at execution time.
 
 ```
 Step 1  Compute SHA-256 hashes of preregistration + circuit files
-        → fill MANIFEST.txt → commit → push → tag ark-449-v1.0-lock
+        → fill MANIFEST.txt → commit → push → tag ark-449-v1.1-lock
         *** NO CHANGES AFTER THIS POINT ***
 
 Step 2  Run qubit selection (built into ark_449_circuit.py)
@@ -127,7 +144,7 @@ Step 4  Submit principal job (9 arms)
 
 Step 5  Read SPAM gate results → evaluate gate
         If SPAM gate FAILED:
-            → record abort → stop → tag ark-449-v1.0 → merge PR
+            → record abort → stop → tag ark-449-v1.1 → merge PR
         If SPAM gate PASSED:
             → continue to Step 6
 
@@ -139,7 +156,7 @@ Step 7  Run ark_449_analysis.py
         → proofrecord.json written
         → verdict printed to stdout
 
-Step 8  Commit all results → push → tag ark-449-v1.0 → open PR → merge
+Step 8  Commit all results → push → tag ark-449-v1.1 → open PR → merge
         → update Zenodo
 ```
 

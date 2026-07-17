@@ -13,6 +13,8 @@
 >
 > Post-correction noiseless dry-run: ALLOW arms = 1.0000, all seven DENY arms = 0.0000, Δ_B = 1.00, SPAM gate passed. No criteria, hypotheses, arms, or thresholds were changed. This is a technical correction to make the circuit and parser faithfully implement the already-locked criteria.
 
+> **v1.2 POST-DATA ANALYSIS CORRECTION NOTICE (analysis-only; no re-run).** After the hardware data was read and the v1.1 result published, an internal peer review identified that the SPAM-corrected ALLOW values applied the **authorizer-qubit** readout error (SPAM_A) to the **payload** outcome, which lacks a same-qubit readout-assignment justification. Per the corrected doctrine, **raw payload retention is now the primary metric** (Arm 1 = 0.9794, Arm 8 = 0.9811; S_A_min = 0.9794 ≥ 0.90; L_D_max = 0.0011; raw Δ_B = 0.9783). SPAM-corrected values are retained only as **secondary/descriptive** context. **The verdict is unchanged: PASS on raw values.** This affects the analysis script and reports only — no hardware job, circuit, criterion, or threshold was changed. See `MANIFEST_v1.2.txt` for the full change record and current file hashes.
+
 **Prepared for:** Derek Hone, Remnant Fieldworks Inc.  
 **Date drafted:** 2026-07-17  
 **Lock date:** To be set at moment of hardware submission  
@@ -26,7 +28,7 @@ Before any hardware job is submitted, the following steps must be completed in s
 1. Finalize this document. No further changes after step 2.
 2. Compute SHA-256 hash of this file and all circuit code files.
 3. Commit the MANIFEST (see Section 16) to `executionproof-testbeds`.
-4. Push and tag the commit `ark-449-v1.0-lock`.
+4. Push and tag the commit `ark-449-v1.1-lock`.
 5. Submit the SPAM gate job. Record the job ID in the execution log **before any results are read**.
 6. Submit the principal job. Record the job ID in the execution log **before reading SPAM results**.
 7. Read results only after both job IDs are committed.
@@ -242,7 +244,7 @@ All steps must be executed in order. Commit timestamps must prove the ordering.
 
 ```
 1. Commit MANIFEST (SHA-256 hashes of this document + all circuit files)
-   → push → tag ark-449-v1.0-lock
+   → push → tag ark-449-v1.1-lock
 
 2. Run qubit selection per Section 7
    → record Q_A, Q_P, readout errors in execution log
@@ -446,7 +448,7 @@ ARK-449 would be the first experiment in the corpus to directly validate the tem
 Compute and fill at lock time, immediately before hardware submission. Do not fill in advance.
 
 ```
-ARK-449 MANIFEST — Version 1.0
+ARK-449 MANIFEST — Version 1.1
 Lock timestamp:  [FILL AT LOCK — UTC, format YYYY-MM-DDTHH:MM:SSZ]
 Backend target:  ibm_marrakesh (156-qubit Heron r2)
 
@@ -460,7 +462,7 @@ MANIFEST SHA-256 (of this file after all hashes filled):
 
 Committed to:    executionproof-testbeds
 Branch:          ark-449/execute (or main, per repository convention)
-Tag:             ark-449-v1.0-lock
+Tag:             ark-449-v1.1-lock
 Commit SHA:      [FILL AFTER PUSH]
 
 SPAM job ID:     [FILL BEFORE READING ANY RESULTS]
