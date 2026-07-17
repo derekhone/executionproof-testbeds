@@ -1,0 +1,34 @@
+qiskit_runtime_service.__init__:WARNING:2026-07-17 05:24:06,221: Instance was not set at service instantiation. Free and trial plan instances will be prioritized. Based on the following filters: (tags: None, region: us-east, eu-de), and available plans: (open), the available account instances are: open-instance. If you need a specific instance set it explicitly either by using a saved account with a saved default instance or passing it in directly to QiskitRuntimeService(). Alternatively, pass instance='auto' or save it to your account for auto-selection without warning.
+qiskit_runtime_service.backends:WARNING:2026-07-17 05:24:06,221: Using instance: open-instance, plan: open
+======================================================================
+ARK-449 — State Changes After Verification
+ExecutionProof ARK Series — Remnant Fieldworks Inc.
+======================================================================
+
+[OK] MANIFEST found: /home/ubuntu/executionproof-testbeds/ark-449/MANIFEST.txt
+
+[ARK-449] Connecting to IBM Quantum…
+[ARK-449] Connected to: ibm_marrakesh
+
+[ARK-449] Selecting qubit pair…
+  Q_A = 1  (RE = 0.0022)
+  Q_P = 2  (RE = 0.0032)
+  sum_RE = 0.0054
+  Constraint met: True
+[ARK-449] Qubit selection written to /home/ubuntu/executionproof-testbeds/ark-449/results/selected_qubits.json
+[ARK-449] *** Commit this file before submitting the SPAM gate ***
+
+[ARK-449] Building SPAM gate circuits…
+[ARK-449] Building 9 principal arm circuits…
+
+[ARK-449] Transpiling circuits to ibm_marrakesh…
+  SPAM circuits transpiled: 2
+  Principal circuits transpiled: 9
+
+[ARK-449] Submitting SPAM gate job…
+Traceback (most recent call last):
+  File "/home/ubuntu/executionproof-testbeds/ark-449/circuits/ark_449_circuit.py", line 698, in <module>
+    main()
+  File "/home/ubuntu/executionproof-testbeds/ark-449/circuits/ark_449_circuit.py", line 510, in main
+    with Sampler(mode=backend) as sampler:
+TypeError: 'SamplerV2' object does not support the context manager protocol
