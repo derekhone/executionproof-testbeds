@@ -5,6 +5,7 @@ Retrieves results from the principal job.
 """
 import json
 import sys
+import time
 from qiskit_ibm_runtime import QiskitRuntimeService
 
 def load_token():
@@ -35,12 +36,14 @@ def main():
     status = job.status()
     print(f"Job status: {status}")
     
-    if status.name != 'DONE':
+    if status != 'DONE':
         print(f"❌ Job not complete yet. Current status: {status}")
-        return 1
+        print(f"   Waiting for job to complete...")
+        result = job.result()  # This will block until job completes
+    else:
+        result = job.result()
     
-    # Get results
-    result = job.result()
+    print(f"✅ Job completed!")
     
     # Load circuit names
     with open('principal_job_meta.json', 'r') as f:
