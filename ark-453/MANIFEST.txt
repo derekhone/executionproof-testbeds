@@ -1,0 +1,18 @@
+ARK-453 — MANIFEST (SHA-256 of locked files)
+Conflicting Evidence Must HOLD
+Lock timestamp (UTC): 2026-07-17T19:36:48Z
+Substrate: classical software (no quantum hardware, no cryptography)
+
+These hashes are committed BEFORE any scenario is generated or evaluated (LOCK).
+Results are produced only after this commit. The recorded verdict stands as executed.
+
+SHA-256 hashes (ARK-453 locked files):
+  PREREGISTRATION.md:                        528e2dc4057b1ca2788e1a9da3c1c88c3f40ed8c47093f362f4f8a5a289a823d
+  schemas/evidence_scenario_schema.json:     ef5315bf67fdf2844cac5b6a3a920853b64989324e18a5ee47fcd344f7de8aee
+  verifiers/v1_resolver.js:                  ea28afa89853cb024035ccaadb40470b9f054f65fef06500677ecbff2c7838ed
+  verifiers/v2_resolver.py:                  266585c27d0f3f2ae14e5a8b0cc339fa8045bb39d0c782703302d333302131f2
+  generator/scenario_generator.py:           ab82095e89b549585ac9b1923ff70b07c232ffbdab87ce1941655127e7efdc44
+  run_killgate.py:                           2ccd805021b714105041396e3623bc1e73e7580a6260ba1caa88fb213001ff9a
+  run_arms.py:                               bc3d893f3fcf69acff4ef688465248e90a12bd8434d920ae14150adc8419394e
+
+OUTCOME (filled after execution): PASS — C1 (g_allow_consensus)=1.0000, C2 (g_hold_conflict_min)=1.0000, C3 (g_margin)=0.9500; V1-V2 concordance 100% (800/800); kill-gate PASS; lock 697754f. Verdict stands as executed.
