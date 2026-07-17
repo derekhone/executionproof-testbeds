@@ -64,7 +64,7 @@ DENY_ARMS = {
     "arm2_deny_standard": "L_D",
     "arm6_deny_alt": "L_D_alt",
     "arm8_deny_expired": "L_D_exp",
-    "}
+}
 HOLD_ARMS = {
     "arm3_hold_plus": "H_plus",
     "arm4_hold_minus": "H_minus",
