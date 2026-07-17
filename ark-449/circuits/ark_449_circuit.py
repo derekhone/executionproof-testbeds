@@ -15,13 +15,13 @@ hardware job is submitted. Do not modify after the MANIFEST is committed.
 Circuit Architecture
 --------------------
 Q_A  — Authorizer qubit. Encodes authorization decision at T1.
-Q_P  — Payload qubit. H gate applied iff c_exec = 1.
+Q_P  — Payload qubit. X gate applied to drive |1⟩ iff c_exec = 1 (v1.1; was H in v1.0).
 
 All conditioning is classical feedforward:
     c_auth  ← measure(Q_A)
     c_state ← arm-specific constant (0 = inadmissible, 1 = admissible)
     c_exec  ← c_auth AND c_state  [classical AND]
-    if c_exec == 1: apply H to Q_P
+    if c_exec == 1: apply X to Q_P (drive to |1⟩)
 
 Nine arms, 8192 shots each. SPAM gate: 2048 shots.
 
@@ -134,7 +134,7 @@ def build_arm_circuit(arm_num: int, c_state: int, label: str) -> QuantumCircuit:
 
         Step 3 — Re-verification gate:
             c_exec ← c_auth AND c_state
-            Implemented as: if c_auth == 1 AND c_state == 1 → apply H to Q_P
+            Implemented as: if c_auth == 1 AND c_state == 1 → apply X to Q_P (drive payload to |1⟩)
 
         Step 4 — Measurement:
             Measure Q_P
@@ -189,16 +189,20 @@ def build_arm_circuit(arm_num: int, c_state: int, label: str) -> QuantumCircuit:
     # Step 3 + 4: Conditional execution
     # if c_auth == 1 (authorized at T1):
     #     if c_state == 1 (state admissible at T3):
-    #         apply H to Q_P   (execute)
+    #         apply X to Q_P   (execute → |1⟩)
     # measure Q_P
     # ------------------------------------------------------------------
 
     if c_state == 1:
         # ALLOW arm: c_state = 1 → execute if authorized
-        # Use classical bit conditioning on c_auth
+        # Use classical bit conditioning on c_auth.
+        # Execution drives the payload to |1⟩ (X gate), giving P(Q_P=1) ≈ 1.0
+        # so that ALLOW retention S_A can meet the C1 threshold (≥ 0.90).
+        # (v1.1 pre-data correction: v1.0 used H, which put the payload in a
+        #  50/50 superposition and made C1 impossible to satisfy by construction.)
         with qc.if_test((cr_auth, 1)):
-            qc.h(qr_pay[0])
-    # c_state = 0: no H ever applied — execution gate blocked
+            qc.x(qr_pay[0])
+    # c_state = 0: no execution gate ever applied — execution blocked
     # Q_P remains in |0⟩ regardless of c_auth
 
     qc.measure(qr_pay[0], cr_pay[0])
@@ -344,8 +348,8 @@ def submit_and_collect(sampler: Sampler, circuits: list, shots: int,
 
     counts_list = []
     for pub_result in result:
-        # Extract the payload bit (c_pay) — the rightmost classical register
-        # in the principal circuits; for SPAM circuits, the single register.
+        # Extract the payload bit (c_pay) by register NAME (order-independent)
+        # for principal circuits; for SPAM circuits, the single register.
         bit_array = pub_result.data
         # Get the first classical register that is not the ancilla registers
         # In SamplerV2, access via data attributes matching register names
@@ -655,7 +659,9 @@ def dry_run():
         counts = result.get_counts()
         # Extract payload bit
         total = sum(counts.values())
-        c1 = sum(v for k, v in counts.items() if k.split()[-1] == "1")
+        # Payload (c_pay) is the leftmost space-separated field; registers are
+        # (c_auth, c_state, c_pay) and Qiskit prints them reverse-declaration order.
+        c1 = sum(v for k, v in counts.items() if k.split()[0] == "1")
         p1 = c1 / total
         expected = "≥ 0.90" if arm_def["c_state"] == 1 else "≈ 0.00"
         status = "✅" if (

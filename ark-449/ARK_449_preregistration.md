@@ -2,10 +2,17 @@
 # State Changes After Verification
 
 **Series:** ExecutionProof ARK Authorization-Boundary Track  
-**Version:** v1.0-draft → to be locked as `v1.0` immediately before hardware submission  
+**Version:** v1.1 → locked as `ark-449-v1.1-lock` immediately before hardware submission  
 **Repository:** https://github.com/derekhone/executionproof-testbeds  
 **Folder:** `ark-449/`  
-**Target tags:** `ark-449-v1.0-lock` (preregistration LOCK) → `ark-449-v1.0` (execution result)  
+**Target tags:** `ark-449-v1.1-lock` (preregistration LOCK) → `ark-449-v1.1` (execution result)  
+
+> **v1.1 PRE-DATA CORRECTION NOTICE.** This version supersedes the v1.0 lock **before any hardware data was read** (no principal or SPAM job was ever submitted under v1.0). Two construction defects, caught by the mandatory noiseless dry-run, are corrected here per the ARK-444 pre-data-correction precedent:
+> 1. **ALLOW execution gate `H` → `X`.** v1.0 applied a Hadamard on execution, putting the payload in a 50/50 superposition (P(Q_P=1) ≈ 0.50). Criterion C1 requires S_A_min ≥ 0.90, so v1.0 was a **guaranteed FAIL by construction**. The execution gate now drives the payload to |1⟩ via `X`, giving P(Q_P=1) ≈ 1.00 on a clean device, consistent with the ALLOW/DENY semantics used throughout the corpus and with §14 point 6.
+> 2. **Payload-bit parsing `split()[-1]` → `split()[0]`.** Registers are declared (c_auth, c_state, c_pay); Qiskit prints them reverse-declaration order as "c_pay c_state c_auth", so the payload is the leftmost field. v1.0 read the rightmost field (c_auth, always 1). Both the analysis script and the dry-run are corrected.
+>
+> Post-correction noiseless dry-run: ALLOW arms = 1.0000, all seven DENY arms = 0.0000, Δ_B = 1.00, SPAM gate passed. No criteria, hypotheses, arms, or thresholds were changed. This is a technical correction to make the circuit and parser faithfully implement the already-locked criteria.
+
 **Prepared for:** Derek Hone, Remnant Fieldworks Inc.  
 **Date drafted:** 2026-07-17  
 **Lock date:** To be set at moment of hardware submission  
@@ -106,7 +113,7 @@ H1 is confirmed if and only if **all four primary pass criteria** in Section 9 a
 ### 4.1 Qubits
 
 - **Q_A** — Authorizer qubit. Encodes the authorization decision at T₁.
-- **Q_P** — Payload qubit. Execution target. The H gate is applied if and only if c_exec = 1.
+- **Q_P** — Payload qubit. Execution target. An `X` gate drives it to |1⟩ if and only if c_exec = 1. *(v1.1: v1.0 specified an `H` gate here — see the pre-data correction notice at the top.)*
 
 Two qubits total. No inter-qubit two-qubit gates required. All conditioning is classical feedforward, consistent with ARK-443 and ARK-445b precedent.
 
@@ -131,7 +138,7 @@ Step 3 — Re-verification gate:
 
 Step 4 — Execution:
     If c_exec == 1:
-        Apply H gate to Q_P        [execution — payload enters superposition]
+        Apply X gate to Q_P        [execution — payload driven to |1⟩]
     Else:
         Q_P remains in |0⟩         [no execution]
 
@@ -143,7 +150,7 @@ Step 5 — Measurement:
 
 | Q_P Measurement Outcome | Interpretation |
 |---|---|
-| P(Q_P = 1) ≈ 0.50 | ALLOW — execution gate applied; payload in superposition |
+| P(Q_P = 1) ≈ 1.00 | ALLOW — execution gate applied; payload driven to |1⟩ |
 | P(Q_P = 1) ≈ 0.00 | DENY — execution gate not applied; payload in ground state |
 
 - **ALLOW retention:** S_A = P(Q_P = 1) for ALLOW arms. Target: ≥ 0.90
