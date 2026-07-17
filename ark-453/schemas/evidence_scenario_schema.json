@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EvidenceScenario",
+  "description": "ARK-453 evidence scenario schema — 6 independent evidence sources with ALLOW/DENY/UNKNOWN signals",
+  "type": "object",
+  "required": [
+    "scenario_id",
+    "arm",
+    "requester_id",
+    "action_type",
+    "resource",
+    "timestamp_utc",
+    "evidence_sources"
+  ],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "description": "Unique identifier for this scenario (e.g., arm-1-001)"
+    },
+    "arm": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8,
+      "description": "Arm number (1–8)"
+    },
+    "requester_id": {
+      "type": "string",
+      "description": "Identifier of the entity requesting authorization (e.g., UUID)"
+    },
+    "action_type": {
+      "type": "string",
+      "enum": ["transfer", "approve", "execute", "delegate", "revoke"],
+      "description": "Type of action being authorized"
+    },
+    "resource": {
+      "type": "string",
+      "description": "Target resource identifier"
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Scenario timestamp in ISO 8601 UTC format"
+    },
+    "evidence_sources": {
+      "type": "object",
+      "required": [
+        "identity",
+        "policy",
+        "risk",
+        "approval",
+        "registry",
+        "temporal"
+      ],
+      "properties": {
+        "identity": {
+          "$ref": "#/definitions/EvidenceSource"
+        },
+        "policy": {
+          "$ref": "#/definitions/EvidenceSource"
+        },
+        "risk": {
+          "$ref": "#/definitions/EvidenceSource"
+        },
+        "approval": {
+          "$ref": "#/definitions/EvidenceSource"
+        },
+        "registry": {
+          "$ref": "#/definitions/EvidenceSource"
+        },
+        "temporal": {
+          "$ref": "#/definitions/EvidenceSource"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Six independent evidence sources"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "EvidenceSource": {
+      "type": "object",
+      "required": ["signal"],
+      "properties": {
+        "signal": {
+          "type": "string",
+          "enum": ["ALLOW_SIGNAL", "DENY_SIGNAL", "UNKNOWN"],
+          "description": "The signal emitted by this evidence source"
+        },
+        "metadata": {
+          "type": "object",
+          "description": "Optional source-specific metadata (provider name, version, score, etc.)",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

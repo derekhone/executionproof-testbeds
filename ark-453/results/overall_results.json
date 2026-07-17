@@ -1,0 +1,83 @@
+{
+  "run_start_time": "2026-07-17T19:37:12.897141Z",
+  "run_end_time": "2026-07-17T19:37:13.436329Z",
+  "arms_executed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "primary_metrics": {
+    "g_allow_consensus": 1.0,
+    "g_hold_conflict_min": 1.0,
+    "g_margin": 0.95
+  },
+  "criteria": {
+    "c1_allow_consensus_pass": true,
+    "c2_hold_conflict_pass": true,
+    "c3_margin_pass": true
+  },
+  "secondary": {
+    "g_deny_consensus": 1.0
+  },
+  "overall_concordance": {
+    "agreements": 800,
+    "total": 800,
+    "percentage": 100.0
+  },
+  "verdict": "PASS",
+  "per_arm_summary": {
+    "arm_1": {
+      "label": "CONSENSUS-all-allow",
+      "allow_rate": 1.0,
+      "hold_rate": 0.0,
+      "deny_rate": 0.0
+    },
+    "arm_2": {
+      "label": "CONSENSUS-all-deny",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_3": {
+      "label": "CONFLICT-identity-policy",
+      "allow_rate": 0.0,
+      "hold_rate": 1.0,
+      "deny_rate": 0.0
+    },
+    "arm_4": {
+      "label": "CONFLICT-risk-elevation",
+      "allow_rate": 0.0,
+      "hold_rate": 1.0,
+      "deny_rate": 0.0
+    },
+    "arm_5": {
+      "label": "CONFLICT-registry-revocation",
+      "allow_rate": 0.0,
+      "hold_rate": 1.0,
+      "deny_rate": 0.0
+    },
+    "arm_6": {
+      "label": "CONFLICT-approval-mismatch",
+      "allow_rate": 0.0,
+      "hold_rate": 1.0,
+      "deny_rate": 0.0
+    },
+    "arm_7": {
+      "label": "CONFLICT-temporal-inconsistency",
+      "allow_rate": 0.0,
+      "hold_rate": 1.0,
+      "deny_rate": 0.0
+    },
+    "arm_8": {
+      "label": "AMBIGUOUS-missing-critical",
+      "allow_rate": 0.0,
+      "hold_rate": 1.0,
+      "deny_rate": 0.0
+    }
+  }
+}
