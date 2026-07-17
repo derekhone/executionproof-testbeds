@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-ARK-447 Analysis and Verdict
-Computes metrics for each configuration and determines overall verdict.
+ARK-447 Analysis and Verdict (Updated)
+Computes metrics for baseline vs. Pauli twirling and determines verdict.
 """
 import json
 import sys
@@ -26,19 +26,15 @@ def compute_prob(counts, outcome, shots=8192):
 
 def analyze_configuration(config_name, allow_arm, deny_arm, raw_results, spam_p_prob):
     """
-    Analyze a single configuration (baseline, DD, or twirling).
+    Analyze a single configuration (baseline or twirling).
     
     Returns:
         dict with S_A, L_D_raw, L_D_corrected, Delta_B, and pass/fail status
     """
-    # S_A: Probability of outcome '1' on payload qubit for ALLOW path
-    # Outcome format: 'c[0]c[1]' where c[0]=Q_A, c[1]=Q_P
-    # We care about c[1] (payload)
     allow_counts = raw_results[allow_arm]
     deny_counts = raw_results[deny_arm]
     
     # Extract payload outcomes (rightmost bit in bitstring)
-    # '00' -> payload=0, '01' -> payload=1, '10' -> payload=0, '11' -> payload=1
     allow_total = sum(allow_counts.values())
     allow_payload_1 = sum(count for outcome, count in allow_counts.items() if outcome[-1] == '1')
     S_A = allow_payload_1 / allow_total
@@ -85,6 +81,7 @@ def main():
     print(f"Backend: {meta['backend']}")
     print(f"Q_A = {qubits['Q_A']}, Q_P = {qubits['Q_P']}")
     print(f"SPAM_P (prob '1' | |+⟩): {spam_p_prob:.4f}\n")
+    print(f"Note: DD circuits omitted; comparing baseline vs. Pauli twirling only.\n")
     
     # Analyze each configuration
     configs = {}
@@ -97,18 +94,10 @@ def main():
         spam_p_prob
     )
     
-    configs['DD'] = analyze_configuration(
-        'Dynamical Decoupling',
-        'arm3_ALLOW_DD',
-        'arm4_DENY_DD',
-        raw,
-        spam_p_prob
-    )
-    
     configs['twirling'] = analyze_configuration(
         'Pauli Twirling',
-        'arm5_ALLOW_twirl',
-        'arm6_DENY_twirl',
+        'arm3_ALLOW_twirl',
+        'arm4_DENY_twirl',
         raw,
         spam_p_prob
     )
@@ -124,28 +113,29 @@ def main():
         print(f"   VERDICT: {cfg['verdict']}\n")
     
     # Overall verdict
-    all_pass = all(cfg['verdict'] == 'PASS' for cfg in configs.values())
     baseline_pass = configs['baseline']['verdict'] == 'PASS'
+    twirl_pass = configs['twirling']['verdict'] == 'PASS'
     
-    if all_pass:
+    if baseline_pass and twirl_pass:
         # Check for improvement
-        dd_improvement = (configs['DD']['S_A'] > configs['baseline']['S_A'] or
-                          configs['DD']['L_D_corrected'] < configs['baseline']['L_D_corrected'])
         twirl_improvement = (configs['twirling']['S_A'] > configs['baseline']['S_A'] or
                              configs['twirling']['L_D_corrected'] < configs['baseline']['L_D_corrected'])
         
-        if dd_improvement or twirl_improvement:
+        if twirl_improvement:
             overall_verdict = 'PASS (strong)'
-            verdict_reason = 'All configurations pass; at least one mitigation shows improvement.'
+            verdict_reason = 'Both configs pass; Pauli twirling shows improvement over baseline.'
         else:
             overall_verdict = 'PASS (weak)'
-            verdict_reason = 'All configurations pass; no significant improvement from mitigation.'
-    elif baseline_pass:
+            verdict_reason = 'Both configs pass; no significant improvement from Pauli twirling.'
+    elif baseline_pass and not twirl_pass:
         overall_verdict = 'MIXED'
-        verdict_reason = 'Baseline passes; one or both mitigation techniques fail.'
+        verdict_reason = 'Baseline passes; Pauli twirling fails (introduces overhead).'
+    elif not baseline_pass and twirl_pass:
+        overall_verdict = 'MIXED'
+        verdict_reason = 'Baseline fails; Pauli twirling passes (mitigation helps).'
     else:
         overall_verdict = 'FAIL'
-        verdict_reason = 'Baseline fails; boundary unstable on this backend/qubit pair.'
+        verdict_reason = 'Both configs fail; boundary unstable on this backend/qubit pair.'
     
     print("=== Overall Verdict ===")
     print(f"VERDICT: {overall_verdict}")
@@ -154,7 +144,8 @@ def main():
     # Create proofrecord
     proofrecord = {
         'experiment': 'ARK-447',
-        'title': 'Noise-Suppression Comparison: Dynamical Decoupling and Pauli Twirling',
+        'title': 'Noise-Suppression Comparison: Pauli Twirling vs. Baseline',
+        'note': 'DD circuits omitted due to scheduling complexity',
         'backend': meta['backend'],
         'qubits': {
             'Q_A': qubits['Q_A'],
@@ -181,12 +172,13 @@ def main():
             'timestamp_utc': datetime.now(timezone.utc).isoformat()
         },
         'protocol': 'Field 27 (LOCK → SPAM gate → principal job → analyze → verdict)',
-        'preregistration': 'ARK_447_preregistration.md',
+        'preregistration': 'ARK_447_preregistration.md (modified: DD omitted)',
         'interpretation_boundaries': [
             'Results apply to this specific backend, qubits, and calibration.',
             'Not a cryptographic security validation.',
-            'DD and twirling are noise mitigation (not correction); no QEC used.',
-            'Single-round binary boundary only; not multi-round or complex policies.'
+            'Pauli twirling is noise mitigation (not correction); no QEC used.',
+            'Single-round binary boundary only.',
+            'DD circuits omitted due to implementation complexity.'
         ]
     }
     
@@ -195,11 +187,6 @@ def main():
     
     print(f"✅ Proofrecord saved to proofrecord.json")
     print(f"✅ ARK-447 analysis complete.")
-    print(f"\nNext steps:")
-    print(f"   1. Review results and verdict")
-    print(f"   2. Generate RESULTS.md documentation")
-    print(f"   3. Update RUN_LOG.md")
-    print(f"   4. Commit, tag, and push")
     
     return 0 if overall_verdict.startswith('PASS') else 1
 
