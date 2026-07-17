@@ -1,0 +1,38 @@
+ARK-455b MANIFEST — Version 1.0
+Lock timestamp:  2026-07-17T18:03:00Z
+Execution substrate: Local classical software (no IBM QPU)
+Predecessor: ARK-455 v1.0 (FAIL; root-cause erratum in ../ark-455/CORRECTION.md)
+
+SHA-256 hashes (locked BEFORE execution):
+  PREREGISTRATION.md:                e13aac1e0e97529785d851c84c992cfb4f4cc0bf662ca85aa398e395de8e39bc
+  schemas/proofrecord_schema.json:   3d8ad0619ae20485ff1c67b701371b039e4807061a1cae78d0a03c09cd807892
+  verifiers/v1_verifier.js:          2cf33da94943655423480537150c9045f6b8b18cf6a607d5ba45e23df6f6aac2
+  verifiers/v2_verifier.py:          9a22b71f17834347aca1734389fff7b694d10f9113981ab9fce42e1f34ebba27
+  generator/record_generator.py:     495e9058c13085ac0f7e92d150a6d25ec711b972bcb6525f3ac44cd0945b2123
+  run_killgate.py:                   5dc7324497058d782242ba415f81d05a7e8e52774ab84cb3df49d98f608a559a
+  run_arms.py:                       c738ef987026794603f1f1c256f04dd180ee5168f5ef98f119bf83fcd086b1bd
+
+Design:
+  Arms:            9 (1 control ACCEPT, 6 post-signing tampers, 1 corrected
+                   post-signing timestamp tamper, 1 pre-signing expired timestamp)
+  Records per arm: 100 (900 total)
+  Verifiers:       V1 (JavaScript, tweetnacl), V2 (Python, PyNaCl) — independent
+  Validity TTL:    300 seconds
+  Gates:           A = Ed25519 signature over JCS(7 fields);
+                   B = validity window (reject future/expired timestamps)
+  Safeguards:      mutation-effectiveness gate (aborts on any no-op tamper)
+
+Pass criteria (preregistered):
+  C1 V_accept_original >= 0.95
+  C2 V_reject_min      >= 0.95  (min over arms 2-9, worst of V1/V2)
+  C3 V_margin          >= 0.85  (V_reject_min - (1 - V_accept_original))
+  Kill-gate:           V1-V2 concordance >= 99%, sanity, mutation-effectiveness
+
+Committed to:    executionproof-testbeds
+Branch:          ark-455-erratum-and-455b
+Tag (intended):  ark-455b-v1.0-lock
+
+Kill-gate outcome:   PASS (100.0% V1-V2 concordance; sanity + mutation-effectiveness passed)
+Arm execution:       2026-07-17T18:04:50Z -> 18:05:39Z (9 arms, 900 records)
+Verdict:             PASS (C1=C2=C3=1.0000; overall concordance 900/900 = 100.00%)
+Results:             see RESULTS.md and results/*.json
