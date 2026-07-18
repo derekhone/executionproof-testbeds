@@ -1,0 +1,30 @@
+ARK-457 — MANIFEST (SHA-256 of locked files)
+Cross-Context Authorization Replay (Confused Deputy)
+Lock timestamp (UTC): 2026-07-18T00:17:33Z
+Substrate: classical software (no quantum hardware, no cryptography)
+
+These hashes are committed BEFORE any scenario is generated or evaluated (LOCK).
+Results are produced only after this commit. The recorded verdict stands as executed.
+
+SHA-256 hashes (ARK-457 locked files):
+  PREREGISTRATION.md:                          9348475503b2d7b4b8d9e43140a936abecf7db96a9f59353ab013ced021cd88d
+  schemas/context_replay_scenario_schema.json: 6312a66df6ef5422ff19d7380aab001bb76251b4dee986b3a84a2b44fe007e41
+  verifiers/v1_guard.js:                       e2195a0cd76a9cd9a5b0e1ebe939aa68491752b0938db4d96b1678a2c5a75982
+  verifiers/v2_guard.py:                       3620e43258450d8dbb571acec3c5b2a8a14ced85bf2b5e335aacfdf51fde1058
+  generator/scenario_generator.py:             1f24a47eed82bfb8ff43a0bf0e12930dc243e5ffc37e09da8f1db97e4947dbed
+  run_killgate.py:                             f685f60ed57b737cbabcafa6c4bc2d542e58bf2fd18760523462d9ae5c9e9c03
+  run_arms.py:                                 66de18cfd8b518ae073dbed247ec1d19044d86be0e4acd925c4f5d5b7d532d58
+
+OUTCOME (filled after execution):
+  VERDICT: PASS  (lock commit 452f6ea; executed 2026-07-18T00:19:46Z UTC)
+  Primary metrics:
+    g_allow_exact (arm 1 ALLOW)              = 1.0000  (C1 ≥ 0.95: PASS)
+    g_deny_crosscontext_min (arms 2-8 DENY)  = 1.0000  (C2 ≥ 0.95: PASS)
+    g_margin                                 = 0.9500  (C3 ≥ 0.90: PASS)
+  Dual-guard concordance: 800/800 = 100.00%
+  Kill-gate: PASS (88/88 concordance; all 88 context-replay-effective)
+  Context-replay effectiveness gate: PASS on all 8 arms (800/800 scenarios effective)
+  Exact context match allows execution (100%); every cross-context replay class —
+  including confusable near-matches (trailing space, case flip, zero-width, homoglyph) —
+  is refused (100%). Perfect separation, no cross-context ALLOW.
+  The recorded verdict stands as executed.
