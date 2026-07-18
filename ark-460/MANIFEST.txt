@@ -1,0 +1,17 @@
+ARK-460 — Preregistration LOCK Manifest
+Cloud IAM Role Grant · Dependency Loss
+Locked: 2026-07-18T18:49:00Z
+
+SHA-256 of locked files (verify with ./compute_hashes.sh):
+
+  PREREGISTRATION.md:                              e15f55275ca02104c55dc06d0873ce5efe9bab71e11c920727926695d97993da
+  verifiers/v1_guard.js:                           51b56ae84e7b652686c700debf60efd03596505566f085b122eed1beef485170
+  verifiers/v2_guard.py:                           a8c098062e5268d164abbd783185966787a8d9fd4ffe6f152453fdc9e3129992
+  generator/scenario_generator.py:                 32905b0f4579f248c7538c55bfc24f5c3cd70ebaebe1dfbec116fa6f72405b8d
+  run_killgate.py:                                 b5dd3de7d04d765d75c92dec27f13fe7927b41eafcb4ab582aa0bc7cdd57267b
+  run_arms.py:                                     f1716302d227a1fba4d6aa5793fbea821f438dca6f97dd45060e08b02e8eae77
+
+Protocol: files above are frozen at lock time. Official execution occurs AFTER
+this lock. Any post-lock change to a locked file must be disclosed as a harness
+fix in RESULTS.md. Development/dry-run validation occurred before lock; both
+guards and the harness ran clean on first execution with no post-development fixes required.

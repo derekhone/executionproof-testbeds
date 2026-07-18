@@ -1,0 +1,127 @@
+{
+  "experiment": "ARK-460",
+  "title": "Cloud IAM Role Grant \u00b7 Dependency Loss",
+  "total_scenarios": 800,
+  "arms": [
+    {
+      "arm": 1,
+      "name": "ALL-AVAILABLE",
+      "expect": "ALLOW",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 100,
+        "HOLD": 0
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 2,
+      "name": "PolicyRegistry-UNAVAILABLE",
+      "expect": "HOLD",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "HOLD": 100
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 3,
+      "name": "IdentityProvider-UNAVAILABLE",
+      "expect": "HOLD",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "HOLD": 100
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 4,
+      "name": "SignatureVerifier-UNAVAILABLE",
+      "expect": "HOLD",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "HOLD": 100
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 5,
+      "name": "AuditLogger-UNAVAILABLE",
+      "expect": "HOLD",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "HOLD": 100
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 6,
+      "name": "MULTIPLE-UNAVAILABLE",
+      "expect": "HOLD",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "HOLD": 100
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 7,
+      "name": "ALL-UNAVAILABLE",
+      "expect": "HOLD",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "HOLD": 100
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 8,
+      "name": "ALL-AVAILABLE-baseline",
+      "expect": "ALLOW",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 100,
+        "HOLD": 0
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    }
+  ],
+  "metrics": {
+    "g_allow_available": 1.0,
+    "g_hold_unavailable_min": 1.0,
+    "g_margin": 0.95,
+    "overall_concordance": 1.0
+  },
+  "criteria": {
+    "C1_allow_available": {
+      "threshold": 0.95,
+      "value": 1.0,
+      "pass": true
+    },
+    "C2_hold_unavailable": {
+      "threshold": 0.95,
+      "value": 1.0,
+      "pass": true
+    },
+    "C3_margin": {
+      "threshold": 0.9,
+      "value": 0.95,
+      "pass": true
+    }
+  },
+  "verdict": "PASS"
+}
