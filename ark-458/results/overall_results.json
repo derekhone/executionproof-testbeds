@@ -1,0 +1,99 @@
+{
+  "experiment": "ARK-458",
+  "title": "Cloud IAM Role Grant - Exact-Action Binding",
+  "run_start_time": "2026-07-18T18:13:54.867530Z",
+  "run_end_time": "2026-07-18T18:13:55.171612Z",
+  "substrate": "classical software (no quantum hardware)",
+  "arms_executed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "primary_metrics": {
+    "g_allow_exact": 1.0,
+    "g_deny_mutation_min": 1.0,
+    "g_margin": 0.95
+  },
+  "criteria": {
+    "c1_allow_exact_pass": true,
+    "c2_deny_mutation_pass": true,
+    "c3_margin_pass": true
+  },
+  "overall_concordance": {
+    "agreements": 800,
+    "total": 800,
+    "percentage": 100.0
+  },
+  "verdict": "PASS",
+  "per_arm_summary": {
+    "arm_1": {
+      "label": "BASELINE-exact-action-match",
+      "expected": "ALLOW",
+      "allow_rate": 1.0,
+      "hold_rate": 0.0,
+      "deny_rate": 0.0,
+      "concordance_pct": 100.0
+    },
+    "arm_2": {
+      "label": "ROLE-ESCALATION",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0,
+      "concordance_pct": 100.0
+    },
+    "arm_3": {
+      "label": "PRINCIPAL-SWAP",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0,
+      "concordance_pct": 100.0
+    },
+    "arm_4": {
+      "label": "ACCOUNT-SWAP",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0,
+      "concordance_pct": 100.0
+    },
+    "arm_5": {
+      "label": "PERMISSION-EXPANSION",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0,
+      "concordance_pct": 100.0
+    },
+    "arm_6": {
+      "label": "CONDITION-STRIP",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0,
+      "concordance_pct": 100.0
+    },
+    "arm_7": {
+      "label": "MULTI-DIM-TAMPER",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0,
+      "concordance_pct": 100.0
+    },
+    "arm_8": {
+      "label": "CONFUSABLE-NEAR-MATCH",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0,
+      "concordance_pct": 100.0
+    }
+  }
+}

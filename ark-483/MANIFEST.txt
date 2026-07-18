@@ -1,0 +1,17 @@
+ARK-483 — Preregistration LOCK Manifest
+Verification Decision Latency
+Locked: 2026-07-18T18:22:34Z
+
+SHA-256 of locked files (verify with ./compute_hashes.sh):
+
+  PREREGISTRATION.md:                      0847ffcf3d0c7ae3c7595bb64900763c06a94af09e967b5d17ed2e7ce018be57
+  bench/latency_bench.py:                  51e4674c8a254b1b995e94682229d22aded3775c38bfad94d545f2519ac5d8b2
+  bench/latency_bench_v1.js:               e001ce4ca62e88f74108d02aa8b16700e1293bd924286b7dbb3d7a23fcab16e6
+
+Protocol: files above are frozen at lock time. Official execution occurs AFTER
+this lock. Any post-lock change to a locked file must be disclosed as a harness
+fix in RESULTS.md. Development/dry-run validation occurred before lock; both
+benches ran clean on first execution with no post-development fixes required.
+
+Note: the Component Under Test (ark-458 guard) is itself locked under
+ark-458/MANIFEST.txt and is loaded unchanged; ARK-483 does not modify it.

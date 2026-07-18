@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ARK-458 IAM Action Scenario",
+  "description": "A cloud IAM role-grant authorization bound to an exact action tuple, plus an execution-time IAM action to be verified against it.",
+  "type": "object",
+  "required": ["scenario_id", "arm", "expected", "authorization", "execution"],
+  "properties": {
+    "scenario_id": {"type": "string"},
+    "arm": {"type": "integer", "minimum": 1, "maximum": 8},
+    "arm_label": {"type": "string"},
+    "expected": {"type": "string", "enum": ["ALLOW", "DENY"]},
+    "authorization": {
+      "type": "object",
+      "required": ["binding"],
+      "properties": {
+        "binding": {"$ref": "#/definitions/action_tuple"}
+      }
+    },
+    "execution": {
+      "type": "object",
+      "required": ["action"],
+      "properties": {
+        "action": {"$ref": "#/definitions/action_tuple"}
+      }
+    }
+  },
+  "definitions": {
+    "action_tuple": {
+      "type": "object",
+      "required": ["principal", "role", "account", "permission_set", "condition"],
+      "properties": {
+        "principal": {"type": "string", "description": "ARN of the grantee"},
+        "role": {"type": "string", "description": "role / managed policy being granted"},
+        "account": {"type": "string", "description": "target AWS account id"},
+        "permission_set": {"type": "string", "description": "canonical hash of the effective permission scope"},
+        "condition": {"type": "string", "description": "scope condition (region / MFA / resource constraint)"}
+      }
+    }
+  }
+}
