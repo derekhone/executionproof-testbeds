@@ -1,0 +1,38 @@
+{
+  "experiment": "ARK-485",
+  "component": "Verification Decision",
+  "dimension": "Sustained Throughput",
+  "timestamp": "2026-07-18T21:19:17Z",
+  "results": {
+    "python": {
+      "implementation": "V2_Python",
+      "duration_sec": 60.000000392086804,
+      "total_decisions": 90261313,
+      "correct_decisions": 90261313,
+      "accuracy": 1.0,
+      "sustained_throughput": 1504355.2068360362,
+      "warmup_decisions": 8227043,
+      "warmup_sec": 5
+    },
+    "javascript": {
+      "implementation": "V1_JavaScript",
+      "duration_sec": 60,
+      "total_decisions": 571272089,
+      "correct_decisions": 571272089,
+      "accuracy": 1,
+      "sustained_throughput": 9521201.483333332,
+      "warmup_decisions": 48393380,
+      "warmup_sec": 5
+    }
+  },
+  "thresholds": {
+    "python_min": 50000,
+    "javascript_min": 100000,
+    "accuracy_required": 1.0
+  },
+  "verdict": "PASS",
+  "verdict_detail": {
+    "C1_throughput": true,
+    "C2_accuracy": true
+  }
+}

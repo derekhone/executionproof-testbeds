@@ -1,0 +1,56 @@
+{
+  "experiment": "ARK-486",
+  "component": "Verification Decision",
+  "dimension": "Cost At Scale",
+  "timestamp": "2026-07-18T21:46:18Z",
+  "input_data": {
+    "ark485_python_throughput": 1504355.2068360362,
+    "ark485_javascript_throughput": 9521201.483333332
+  },
+  "results": {
+    "python": {
+      "scenario_a_naive": {
+        "model": "serverless_naive_1_invocation_per_decision",
+        "compute_cost_per_decision": 1.384870734340516e-12,
+        "request_cost_per_decision": 2.0000000000000002e-07,
+        "total_cost_per_decision": 2.0000138487073437e-07,
+        "cost_per_million_decisions": 0.20000138487073438,
+        "note": "Unrealistic for an in-process engine; disclosed as an upper bound only."
+      },
+      "scenario_b_realistic": {
+        "model": "realistic_running_service_per_vcpu_second",
+        "vcpu_second_price": 1.1244444444444444e-05,
+        "decisions_per_vcpu_second": 1504355.2068360362,
+        "total_cost_per_decision": 7.474594027625821e-12,
+        "cost_per_million_decisions": 7.474594027625821e-06,
+        "note": "Per-request/API cost amortizes across millions of in-process decisions per invocation."
+      }
+    },
+    "javascript": {
+      "scenario_a_naive": {
+        "model": "serverless_naive_1_invocation_per_decision",
+        "compute_cost_per_decision": 2.188103574582304e-13,
+        "request_cost_per_decision": 2.0000000000000002e-07,
+        "total_cost_per_decision": 2.0000021881035747e-07,
+        "cost_per_million_decisions": 0.20000021881035746,
+        "note": "Unrealistic for an in-process engine; disclosed as an upper bound only."
+      },
+      "scenario_b_realistic": {
+        "model": "realistic_running_service_per_vcpu_second",
+        "vcpu_second_price": 1.1244444444444444e-05,
+        "decisions_per_vcpu_second": 9521201.483333332,
+        "total_cost_per_decision": 1.1809900740077408e-12,
+        "cost_per_million_decisions": 1.1809900740077408e-06,
+        "note": "Per-request/API cost amortizes across millions of in-process decisions per invocation."
+      }
+    }
+  },
+  "thresholds": {
+    "scenario_b_max_per_million": 0.01
+  },
+  "verdict": "PASS",
+  "verdict_detail": {
+    "C1_realistic_cost": true,
+    "C2_disclosure": true
+  }
+}
