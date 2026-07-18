@@ -1,0 +1,2802 @@
+[
+  {
+    "scenario_id": "49c4edab4261c1f4",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000063:user/svc-0063",
+        "role": "DatabaseAdmin",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000063:user/svc-0063",
+        "role": "DatabaseAdmin",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "52459e2e2ff3bccb",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DataAnalyst",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DataAnalyst",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "233b68769ee20546",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000051:user/svc-0051",
+        "role": "AdminFull",
+        "account": "100000000021",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000051:user/svc-0051",
+        "role": "AdminFull",
+        "account": "100000000021",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6ebd26b769dc34f4",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000064:user/svc-0064",
+        "role": "DataAnalyst",
+        "account": "100000000038",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000064:user/svc-0064",
+        "role": "DataAnalyst",
+        "account": "100000000038",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a33f92d559ad9a80",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000067:user/svc-0067",
+        "role": "BillingViewer",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000067:user/svc-0067",
+        "role": "BillingViewer",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "67df0e4542a69dc6",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000063:user/svc-0063",
+        "role": "NetworkEngineer",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000063:user/svc-0063",
+        "role": "NetworkEngineer",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "35e0d55cd314f361",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "NetworkEngineer",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "NetworkEngineer",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "dbe5db3c8e672a66",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d9e9af5d62ff8bb8",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "BillingViewer",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "BillingViewer",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2bc60ff89e899188",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "SecurityOfficer",
+        "account": "100000000026",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "SecurityOfficer",
+        "account": "100000000026",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "84b72936223845a8",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "BillingViewer",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "BillingViewer",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a5c56d0d3c77ff04",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000028",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000028",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "904c158f28d34253",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "AdminFull",
+        "account": "100000000003",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "AdminFull",
+        "account": "100000000003",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a73aae22a2b7a1f4",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "NetworkEngineer",
+        "account": "100000000015",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "NetworkEngineer",
+        "account": "100000000015",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "580b51201b0187cd",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000057:user/svc-0057",
+        "role": "Financial TransactionManager",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000057:user/svc-0057",
+        "role": "Financial TransactionManager",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "de3fd30051f75f1d",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "BillingViewer",
+        "account": "100000000003",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "BillingViewer",
+        "account": "100000000003",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0944a629eb0b3c88",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "DataAnalyst",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "DataAnalyst",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2d638303b5f8a5a7",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "BillingViewer",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "BillingViewer",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "598c66562f1d851e",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000056:user/svc-0056",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000056:user/svc-0056",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b40d2a3ecedb197e",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000045:user/svc-0045",
+        "role": "SecurityOfficer",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000045:user/svc-0045",
+        "role": "SecurityOfficer",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b90c79acb0dc25a8",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "NetworkEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "NetworkEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f5ed3f1eca09ce9f",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "NetworkEngineer",
+        "account": "100000000020",
+        "permission_set": "ps-0000000000000020",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "NetworkEngineer",
+        "account": "100000000020",
+        "permission_set": "ps-0000000000000020",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bd39fd954240a55c",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000079:user/svc-0079",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000079:user/svc-0079",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c4466605dc5c7bf7",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000095:user/svc-0095",
+        "role": "BillingViewer",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000095:user/svc-0095",
+        "role": "BillingViewer",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "279d564d2541bbfb",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "SecurityOfficer",
+        "account": "100000000030",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "SecurityOfficer",
+        "account": "100000000030",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8d8bc35c69c40706",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "DatabaseAdmin",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "DatabaseAdmin",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d245028c6c1baa08",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "NetworkEngineer",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000020",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "NetworkEngineer",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000020",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bba7c9826305712d",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "84ed67ca5867f300",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000048:user/svc-0048",
+        "role": "AdminFull",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000048:user/svc-0048",
+        "role": "AdminFull",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "145458c51fc70197",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000022:user/svc-0022",
+        "role": "DataAnalyst",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000022:user/svc-0022",
+        "role": "DataAnalyst",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "68ffd010dee1aaa5",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7de4e57bcc4d5a04",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "SecurityOfficer",
+        "account": "100000000031",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "SecurityOfficer",
+        "account": "100000000031",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "790fe32621859992",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "AdminFull",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "AdminFull",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bd8825608eb2cdd0",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "NetworkEngineer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "NetworkEngineer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1add42801794e7bd",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "AdminFull",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "AdminFull",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "03afe026568b907f",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "Financial TransactionManager",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "Financial TransactionManager",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d0929907a956d778",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "Financial TransactionManager",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000031",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "Financial TransactionManager",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000031",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bf11f5458b6cfa65",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "AdminFull",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "AdminFull",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e467f2dbed8cac58",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "014d0bc50923195e",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "SecurityOfficer",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "SecurityOfficer",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8e2768de0ec8add7",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "AdminFull",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "AdminFull",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bd20c9a92fcbf35e",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "DatabaseAdmin",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "DatabaseAdmin",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e945b86c7cccfc59",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "BillingViewer",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "BillingViewer",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "89a6983eddac20c7",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f76aa1f48e556ef0",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "NetworkEngineer",
+        "account": "100000000003",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "NetworkEngineer",
+        "account": "100000000003",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c850481803cf72e9",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000083:user/svc-0083",
+        "role": "DataAnalyst",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000083:user/svc-0083",
+        "role": "DataAnalyst",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "23dcd3803cbb32df",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000091:user/svc-0091",
+        "role": "BillingViewer",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000091:user/svc-0091",
+        "role": "BillingViewer",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "73165cb0698437d2",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000057:user/svc-0057",
+        "role": "NetworkEngineer",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000057:user/svc-0057",
+        "role": "NetworkEngineer",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "975e1dc33d6a329b",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "62369ef762e75c02",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "DatabaseAdmin",
+        "account": "100000000017",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "DatabaseAdmin",
+        "account": "100000000017",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "37a797e1554ec9c6",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "DataAnalyst",
+        "account": "100000000041",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "DataAnalyst",
+        "account": "100000000041",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5e8fc9bd2ae2f4a1",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "DataAnalyst",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "DataAnalyst",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "50854d0dd1d4a160",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "AdminFull",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "AdminFull",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c21760b670c45347",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "DatabaseAdmin",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "DatabaseAdmin",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "db845a5e2ec384b2",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000065:user/svc-0065",
+        "role": "DatabaseAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000065:user/svc-0065",
+        "role": "DatabaseAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e36e3326a374850f",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "NetworkEngineer",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "NetworkEngineer",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "4bce3bb9cbdc18df",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "BillingViewer",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "BillingViewer",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9a507faa9175601d",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "BillingViewer",
+        "account": "100000000037",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "BillingViewer",
+        "account": "100000000037",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5e9aa286a348fa8b",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "BillingViewer",
+        "account": "100000000012",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "BillingViewer",
+        "account": "100000000012",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0216c60d43cbf055",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000018:user/svc-0018",
+        "role": "SecurityOfficer",
+        "account": "100000000028",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000018:user/svc-0018",
+        "role": "SecurityOfficer",
+        "account": "100000000028",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f75972d03ac86ceb",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "BillingViewer",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "BillingViewer",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "33d49ab2472a98ca",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000013",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000013",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "254c7a01740a987f",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "NetworkEngineer",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "NetworkEngineer",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c1f3b57ca03d9262",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "NetworkEngineer",
+        "account": "100000000003",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "NetworkEngineer",
+        "account": "100000000003",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "4349893d3e957bb7",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000022:user/svc-0022",
+        "role": "BillingViewer",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000022:user/svc-0022",
+        "role": "BillingViewer",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d327c14e1335d7b1",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "SecurityOfficer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "SecurityOfficer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "51811db08c4fee38",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "Financial TransactionManager",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "Financial TransactionManager",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "fbff93765a6fe754",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5d6c3ca9f0a638c7",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000018:user/svc-0018",
+        "role": "BillingViewer",
+        "account": "100000000049",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000018:user/svc-0018",
+        "role": "BillingViewer",
+        "account": "100000000049",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6bb1d71187d15b0d",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "BillingViewer",
+        "account": "100000000034",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "BillingViewer",
+        "account": "100000000034",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2522a1ad1254aa77",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "DatabaseAdmin",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "DatabaseAdmin",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c918324c67ad5d98",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "DatabaseAdmin",
+        "account": "100000000028",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "DatabaseAdmin",
+        "account": "100000000028",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e8a2cc58d4395a13",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "Financial TransactionManager",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000031",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "Financial TransactionManager",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000031",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "fc1244ce90e85f4f",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "Financial TransactionManager",
+        "account": "100000000026",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "Financial TransactionManager",
+        "account": "100000000026",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e01402ef27cde486",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000072:user/svc-0072",
+        "role": "Financial TransactionManager",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000072:user/svc-0072",
+        "role": "Financial TransactionManager",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8b9f30b279f626c3",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "SecurityOfficer",
+        "account": "100000000042",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "SecurityOfficer",
+        "account": "100000000042",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "fb398b56ff5c3253",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "NetworkEngineer",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "NetworkEngineer",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "ab47480ebafbf61a",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000029:user/svc-0029",
+        "role": "Financial TransactionManager",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000029:user/svc-0029",
+        "role": "Financial TransactionManager",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "412c3d167687a9ad",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "DataAnalyst",
+        "account": "100000000031",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "DataAnalyst",
+        "account": "100000000031",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "254c357a2afb9ac1",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "Financial TransactionManager",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "Financial TransactionManager",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "072ce848a37c7abd",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "SecurityOfficer",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "SecurityOfficer",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a39f250cee862148",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000056:user/svc-0056",
+        "role": "BillingViewer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000056:user/svc-0056",
+        "role": "BillingViewer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "293d72f4cba520e3",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "BillingViewer",
+        "account": "100000000033",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "BillingViewer",
+        "account": "100000000033",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "495a1921b561d4b2",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "DataAnalyst",
+        "account": "100000000021",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "DataAnalyst",
+        "account": "100000000021",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6e2f73d072b55912",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "SecurityOfficer",
+        "account": "100000000005",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "SecurityOfficer",
+        "account": "100000000005",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1f4c7b4f6020ba1d",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "NetworkEngineer",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "NetworkEngineer",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0389e94f0c02135e",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000080:user/svc-0080",
+        "role": "Financial TransactionManager",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000080:user/svc-0080",
+        "role": "Financial TransactionManager",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5b5f3152a2406db7",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5b4e9d6e656ddfc7",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "DataAnalyst",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "DataAnalyst",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a8310bde3a840ded",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000039:user/svc-0039",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000039:user/svc-0039",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5f5bc87ea9cacfce",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000048",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000048",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0c053974d3ec7867",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0636d34f0f36afad",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "BillingViewer",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "BillingViewer",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1b34c4cd4dbfa94a",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "AdminFull",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "AdminFull",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d3162e4a12068871",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000061:user/svc-0061",
+        "role": "AdminFull",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000061:user/svc-0061",
+        "role": "AdminFull",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "4e57cbd6b8c6feb0",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000025:user/svc-0025",
+        "role": "DataAnalyst",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000025:user/svc-0025",
+        "role": "DataAnalyst",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "80308be1432158f3",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "NetworkEngineer",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "NetworkEngineer",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "597a834234080157",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "DataAnalyst",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "DataAnalyst",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d755a4aa10f35fe6",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000097:user/svc-0097",
+        "role": "DatabaseAdmin",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000097:user/svc-0097",
+        "role": "DatabaseAdmin",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "3ad49292f9407bd0",
+    "arm": 1,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "NetworkEngineer",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "NetworkEngineer",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "PaymentGateway": "AVAILABLE",
+      "FraudDetector": "AVAILABLE",
+      "AccountVerifier": "AVAILABLE",
+      "Financial TransactionAuditor": "AVAILABLE"
+    }
+  }
+]
