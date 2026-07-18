@@ -1,5 +1,7 @@
 # ARK-473 — Financial Transaction · Exact-Action Binding
 
+[![DOI](https://i.ytimg.com/vi/HZ6m8oxwvig/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA3vtayewyLm_P1MkTnbxNA1nAXAA)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
 
 - g_allow_exact=1.0000, g_deny_mismatch_min=1.0000, g_margin=1.0000
