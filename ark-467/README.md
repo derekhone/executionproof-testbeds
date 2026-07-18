@@ -1,6 +1,7 @@
 # ARK-467 — Production Deployment · Human Escalation
 
 **Status:** EXECUTED — VERDICT **PASS** (2026-07-18 post-lock)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21433081.svg)](https://doi.org/10.5281/zenodo.21433081)
 
 - g_allow_no_esc=1.0, g_allow_approved=1.0, g_hold_no_approval_min=1.0, g_margin=0.95
 

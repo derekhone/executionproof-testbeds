@@ -1,6 +1,7 @@
 # ARK-466 — Production Deployment · Cross-Context Replay
 
 **Status:** EXECUTED — VERDICT **PASS** (2026-07-18 post-lock)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21433076.svg)](https://doi.org/10.5281/zenodo.21433076)
 
 - g_allow_exact = 1.0000 · g_deny_replay_min = 1.0000 · g_margin = 0.9500
 
