@@ -1,0 +1,2802 @@
+[
+  {
+    "scenario_id": "454c3865352af435",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "AdminFull",
+        "account": "100000000028",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "AdminFull",
+        "account": "100000000028",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c7133a7be4801e43",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000046",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000046",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "ba03dcae6496967b",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "BillingViewer",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "BillingViewer",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bbb75ec8fcd944c2",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "DeploymentManager",
+        "account": "100000000017",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "DeploymentManager",
+        "account": "100000000017",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "14604b5bc44b12ed",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "24ef94c81c561518",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DatabaseAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DatabaseAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "895023275f5e33b9",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "821b39b181c4e9e8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "NetworkEngineer",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "NetworkEngineer",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "317ac3eb084434c1",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "SecurityOfficer",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "SecurityOfficer",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "44f5bd18f2094507",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1b2475c252dccf54",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "DeploymentManager",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "DeploymentManager",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d3a604516b4e2d29",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "BillingViewer",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "BillingViewer",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2749517ed6f6ce2f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "AdminFull",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "AdminFull",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "05b66cf716bfe280",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "SecurityOfficer",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "SecurityOfficer",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9038b930225c0801",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "SecurityOfficer",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "SecurityOfficer",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f3a932e0c7d0a62e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "NetworkEngineer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "NetworkEngineer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "fb87cb39cb580916",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "BillingViewer",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "BillingViewer",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9a0f02ce62a6bc3f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "DatabaseAdmin",
+        "account": "100000000047",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "DatabaseAdmin",
+        "account": "100000000047",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "72b3691d48adf7e0",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000073:user/svc-0073",
+        "role": "NetworkEngineer",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000073:user/svc-0073",
+        "role": "NetworkEngineer",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f35387632d388112",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "AdminFull",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "AdminFull",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c13e91187cb4f76f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "DataAnalyst",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "DataAnalyst",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d11dfa721bfdf033",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "DataAnalyst",
+        "account": "100000000016",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "DataAnalyst",
+        "account": "100000000016",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1a67c4f952f223dd",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "BillingViewer",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "BillingViewer",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "ed1d6ac7ad6562af",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "DataAnalyst",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "DataAnalyst",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7078811ebfdfed4d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000004",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000004",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9573f41288e924fe",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "BillingViewer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "BillingViewer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "fcba09cc8e580152",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "DatabaseAdmin",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "DatabaseAdmin",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "332af4afd1a881d3",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "DeploymentManager",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "DeploymentManager",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "dff66448cd9aa72a",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "DataAnalyst",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "DataAnalyst",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a5225f643d5d2813",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "DeploymentManager",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "DeploymentManager",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "488c02ff576276a5",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "3426bdfd9d3c38a6",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "DatabaseAdmin",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "DatabaseAdmin",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5edf69d963bbf232",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "DeploymentManager",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "DeploymentManager",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e774513dac1a8ece",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "DeploymentManager",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "DeploymentManager",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "dae8f94d7a13e0bd",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "NetworkEngineer",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "NetworkEngineer",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "19f4fcd78fc68270",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000078:user/svc-0078",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000078:user/svc-0078",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "42711e1b7d27cba0",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "DatabaseAdmin",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "DatabaseAdmin",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f4bbdb1d30035f49",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "DataAnalyst",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "DataAnalyst",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a24e0ca1a1dd672b",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000023",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000023",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "af87a3a5131f7e84",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "87f21206f8226c36",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "NetworkEngineer",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "NetworkEngineer",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8b4fd7c127729974",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "93377e0f83a6cc72",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "AdminFull",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "AdminFull",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "134000c438681303",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "DatabaseAdmin",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "DatabaseAdmin",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "869b48a32c65a0b8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "BillingViewer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "BillingViewer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "17faf4c3f40b73da",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "AdminFull",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "AdminFull",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7db325ef8b236c10",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DeploymentManager",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DeploymentManager",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5c92a54052b8543f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000055:user/svc-0055",
+        "role": "DatabaseAdmin",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000055:user/svc-0055",
+        "role": "DatabaseAdmin",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "477b1a0438325b67",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "SecurityOfficer",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "SecurityOfficer",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9a58ccd1d5682dd3",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "SecurityOfficer",
+        "account": "100000000041",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "SecurityOfficer",
+        "account": "100000000041",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8fca57f842a6b55d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "12e86e92b328b4e1",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "944865b752850f71",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6c6e6d6cc433aff7",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "AdminFull",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "AdminFull",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9d98af951661f076",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "BillingViewer",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "BillingViewer",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "39c09eef4bbdbca9",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "AdminFull",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "AdminFull",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8ac23f573fe00416",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "SecurityOfficer",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "SecurityOfficer",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "19c992120c7a10ac",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8b9240258cb24148",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "NetworkEngineer",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "NetworkEngineer",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "24812e1e1c8fcaf6",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "AdminFull",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "AdminFull",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "30175715b6f198fe",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "3728661f12a0f917",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DeploymentManager",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DeploymentManager",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "99dfa9593c10ca9a",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "BillingViewer",
+        "account": "100000000049",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "BillingViewer",
+        "account": "100000000049",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "73b8fa9f237c151f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "SecurityOfficer",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "SecurityOfficer",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a54045b67b9df54a",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "AdminFull",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "AdminFull",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "456152a040084490",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000008",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000008",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "77d9476042b65d80",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "DataAnalyst",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "DataAnalyst",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "69d5f37c932d18c3",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "NetworkEngineer",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "NetworkEngineer",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "367c60086c73e080",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000067:user/svc-0067",
+        "role": "DatabaseAdmin",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000067:user/svc-0067",
+        "role": "DatabaseAdmin",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "44ef5c9a43ca4c36",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "DataAnalyst",
+        "account": "100000000009",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "DataAnalyst",
+        "account": "100000000009",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f27c42cf69bda2d6",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "DeploymentManager",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "DeploymentManager",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7f40c93f88526980",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "DeploymentManager",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "DeploymentManager",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8b20a5b443de487d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "cc369193ae5a0450",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "AdminFull",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "AdminFull",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "3893b9bc00a838e5",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000091:user/svc-0091",
+        "role": "DeploymentManager",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000091:user/svc-0091",
+        "role": "DeploymentManager",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c424b4f225f2f016",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "BillingViewer",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "BillingViewer",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e1188298f5a37a4a",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "SecurityOfficer",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "SecurityOfficer",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "450535f2d51ce2ad",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "BillingViewer",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "BillingViewer",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "da2b331e488546f7",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "DataAnalyst",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "DataAnalyst",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1999a1b5615f2fcc",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000072:user/svc-0072",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000072:user/svc-0072",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7451e8f3aca854b8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2de9d4c55dd5c45a",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "DeploymentManager",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "DeploymentManager",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5df5b44a04647422",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "SecurityOfficer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "SecurityOfficer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a23f99e1e6302e5c",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "DataAnalyst",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "DataAnalyst",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9bf1645bc81a6574",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "NetworkEngineer",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "NetworkEngineer",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "04c36cb7c65b01ae",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "SecurityOfficer",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "SecurityOfficer",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "3665e3bf7b4b52d3",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "AdminFull",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "AdminFull",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "17e082e42cad32b3",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000098:user/svc-0098",
+        "role": "NetworkEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000098:user/svc-0098",
+        "role": "NetworkEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "11021b074d08651d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "NetworkEngineer",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "NetworkEngineer",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e86e1f0392f662e3",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "DataAnalyst",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "DataAnalyst",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "917be5151985c861",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "NetworkEngineer",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "NetworkEngineer",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b02a903b2112298f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DataAnalyst",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DataAnalyst",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9f6fd649ad7aec3c",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a2b2267723f1af33",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "NetworkEngineer",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "NetworkEngineer",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a6407a9d6611421f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "DataAnalyst",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "DataAnalyst",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5a8549e5d72aefdc",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "NetworkEngineer",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "NetworkEngineer",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6a3fc2d64f42c551",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "DataAnalyst",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "DataAnalyst",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "06495ca6806b373b",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "SecurityOfficer",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "SecurityOfficer",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0f9f3f15253a1498",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "DeploymentManager",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "DeploymentManager",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d9ac7ad5b543e534",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "SecurityOfficer",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "SecurityOfficer",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "ServiceRegistry": "UNAVAILABLE",
+      "ConfigStore": "AVAILABLE",
+      "SecretVault": "AVAILABLE",
+      "DeploymentAuditor": "AVAILABLE"
+    }
+  }
+]

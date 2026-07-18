@@ -1,0 +1,2202 @@
+[
+  {
+    "scenario_id": "arm_5_000",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_001",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_002",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_003",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2a",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_004",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-2",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_005",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_006",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2a",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_007",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_008",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_009",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "EU-WEST-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_010",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_011",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_012",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_013",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2a",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_014",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2a",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_015",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_016",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_017",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-south-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_018",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_019",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_020",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-2",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_021",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_022",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_023",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_024",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_025",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_026",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_027",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "EU-WEST-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_028",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_029",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_030",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_031",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_032",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_033",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_034",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_035",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_036",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_037",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_038",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-south-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_039",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_040",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2a",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_041",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-south-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_042",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_043",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2a",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_044",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_045",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-south-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_046",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_047",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_048",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_049",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2a",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_050",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-2",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_051",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-south-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_052",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_053",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_054",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_055",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_056",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_057",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_058",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_059",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-2",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_060",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2a",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_061",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_062",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2a",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_063",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_064",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_065",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_066",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_067",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_068",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_069",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_070",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_071",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_072",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_073",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_074",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_075",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_076",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_077",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-south-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_078",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-south-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_079",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_080",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_081",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_082",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_083",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_084",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_085",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "us-east-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_086",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "EU-WEST-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_087",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_088",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-east-1",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_089",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_090",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-south-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_091",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "EU-WEST-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_092",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_093",
+    "authorized_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2",
+      "deployment_method": "canary"
+    },
+    "presented_deployment": {
+      "service_name": "analytics-engine",
+      "environment": "staging",
+      "version": "v3.0.0-rc.2",
+      "region": "us-west-2a",
+      "deployment_method": "canary"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_094",
+    "authorized_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "eu-west-1",
+      "deployment_method": "blue-green"
+    },
+    "presented_deployment": {
+      "service_name": "payment-processor",
+      "environment": "production",
+      "version": "v1.8.5",
+      "region": "EU-WEST-1",
+      "deployment_method": "blue-green"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_095",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_096",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_097",
+    "authorized_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "ap-southeast-1",
+      "deployment_method": "recreate"
+    },
+    "presented_deployment": {
+      "service_name": "notification-service",
+      "environment": "production",
+      "version": "sha256:a3f5e9c12b",
+      "region": "us-east-1",
+      "deployment_method": "recreate"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_098",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  },
+  {
+    "scenario_id": "arm_5_099",
+    "authorized_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "us-east-1",
+      "deployment_method": "rolling-update"
+    },
+    "presented_deployment": {
+      "service_name": "user-api",
+      "environment": "production",
+      "version": "v2.3.1",
+      "region": "eu-west-1",
+      "deployment_method": "rolling-update"
+    },
+    "expected_decision": "DENY",
+    "arm": 5,
+    "mismatch_dimensions": [
+      "region"
+    ]
+  }
+]
