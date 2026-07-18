@@ -1,0 +1,2448 @@
+[
+  {
+    "scenario_id": "4aed1dbe05caa528",
+    "authorized_transaction": {
+      "account_from": "ACC-001054",
+      "account_to": "ACC-001015",
+      "amount": "500.00",
+      "currency": "GBP",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001049",
+      "account_to": "ACC-001034",
+      "amount": "1000.00",
+      "currency": "GBP",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "account_from",
+      "transaction_type",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "b01f534eb22e66c1",
+    "authorized_transaction": {
+      "account_from": "ACC-001012",
+      "account_to": "ACC-001068",
+      "amount": "100.00",
+      "currency": "EUR",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001044",
+      "account_to": "ACC-001068",
+      "amount": "10000.00",
+      "currency": "CHF",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "amount",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "eb9cfd6a677c4050",
+    "authorized_transaction": {
+      "account_from": "ACC-001038",
+      "account_to": "ACC-001017",
+      "amount": "5000.00",
+      "currency": "GBP",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001076",
+      "account_to": "ACC-001017",
+      "amount": "1000.00",
+      "currency": "JPY",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "currency",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "11f945c9567389d5",
+    "authorized_transaction": {
+      "account_from": "ACC-001090",
+      "account_to": "ACC-001059",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001083",
+      "account_to": "ACC-001018",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "7de8ee88d3551598",
+    "authorized_transaction": {
+      "account_from": "ACC-001049",
+      "account_to": "ACC-001036",
+      "amount": "1000.00",
+      "currency": "EUR",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001060",
+      "account_to": "ACC-001084",
+      "amount": "1000.00",
+      "currency": "JPY",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "account_to",
+      "account_from",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "5ab518ab85ca282a",
+    "authorized_transaction": {
+      "account_from": "ACC-001015",
+      "account_to": "ACC-001030",
+      "amount": "5000.00",
+      "currency": "JPY",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001015",
+      "account_to": "ACC-001025",
+      "amount": "500.00",
+      "currency": "USD",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type",
+      "currency",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "fb64955683f16d64",
+    "authorized_transaction": {
+      "account_from": "ACC-001053",
+      "account_to": "ACC-001094",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001093",
+      "account_to": "ACC-001094",
+      "amount": "500.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "account_from",
+      "transaction_type",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "2c080b3d3078f63f",
+    "authorized_transaction": {
+      "account_from": "ACC-001063",
+      "account_to": "ACC-001071",
+      "amount": "10000.00",
+      "currency": "JPY",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001046",
+      "account_to": "ACC-001070",
+      "amount": "10000.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "account_from",
+      "transaction_type",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "cc56276d659bdc0a",
+    "authorized_transaction": {
+      "account_from": "ACC-001087",
+      "account_to": "ACC-001043",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001073",
+      "account_to": "ACC-001088",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "account_from",
+      "transaction_type",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "08feed0b965333fe",
+    "authorized_transaction": {
+      "account_from": "ACC-001061",
+      "account_to": "ACC-001042",
+      "amount": "100.00",
+      "currency": "EUR",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001048",
+      "account_to": "ACC-001073",
+      "amount": "5000.00",
+      "currency": "USD",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "amount",
+      "currency",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "c759d2e84fd811cb",
+    "authorized_transaction": {
+      "account_from": "ACC-001044",
+      "account_to": "ACC-001064",
+      "amount": "5000.00",
+      "currency": "EUR",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001033",
+      "account_to": "ACC-001043",
+      "amount": "1000.00",
+      "currency": "GBP",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "transaction_type",
+      "amount",
+      "currency",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "a99d3be9524a7cec",
+    "authorized_transaction": {
+      "account_from": "ACC-001004",
+      "account_to": "ACC-001014",
+      "amount": "5000.00",
+      "currency": "GBP",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001004",
+      "account_to": "ACC-001014",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "76c6306284c6a61c",
+    "authorized_transaction": {
+      "account_from": "ACC-001039",
+      "account_to": "ACC-001017",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001039",
+      "account_to": "ACC-001095",
+      "amount": "5000.00",
+      "currency": "USD",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "currency",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "36dd83eb6fd6fd67",
+    "authorized_transaction": {
+      "account_from": "ACC-001023",
+      "account_to": "ACC-001047",
+      "amount": "10000.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001089",
+      "account_to": "ACC-001005",
+      "amount": "500.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "account_from",
+      "amount",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "1899662640578223",
+    "authorized_transaction": {
+      "account_from": "ACC-001062",
+      "account_to": "ACC-001018",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001095",
+      "account_to": "ACC-001092",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "currency",
+      "transaction_type",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "8f521c6f7b2c89a5",
+    "authorized_transaction": {
+      "account_from": "ACC-001008",
+      "account_to": "ACC-001062",
+      "amount": "1000.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001000",
+      "account_to": "ACC-001056",
+      "amount": "5000.00",
+      "currency": "USD",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "currency",
+      "account_from",
+      "amount",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "e860b1ecd6dfd634",
+    "authorized_transaction": {
+      "account_from": "ACC-001098",
+      "account_to": "ACC-001080",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001052",
+      "account_to": "ACC-001025",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "c51f2d86aed60dcc",
+    "authorized_transaction": {
+      "account_from": "ACC-001010",
+      "account_to": "ACC-001056",
+      "amount": "1000.00",
+      "currency": "EUR",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001016",
+      "account_to": "ACC-001069",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "transaction_type",
+      "currency",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "64977e8a85fcbb87",
+    "authorized_transaction": {
+      "account_from": "ACC-001099",
+      "account_to": "ACC-001011",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001014",
+      "account_to": "ACC-001011",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "transaction_type",
+      "amount",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "4ee290afb50c91d7",
+    "authorized_transaction": {
+      "account_from": "ACC-001009",
+      "account_to": "ACC-001095",
+      "amount": "500.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001077",
+      "account_to": "ACC-001095",
+      "amount": "10000.00",
+      "currency": "JPY",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "currency",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "5fde8bec46185cc7",
+    "authorized_transaction": {
+      "account_from": "ACC-001077",
+      "account_to": "ACC-001020",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001041",
+      "account_to": "ACC-001053",
+      "amount": "100.00",
+      "currency": "GBP",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "amount",
+      "account_to",
+      "account_from",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "301985dd76332f02",
+    "authorized_transaction": {
+      "account_from": "ACC-001063",
+      "account_to": "ACC-001030",
+      "amount": "100.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001063",
+      "account_to": "ACC-001066",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "transaction_type",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "47d4fbd4cc8b72ca",
+    "authorized_transaction": {
+      "account_from": "ACC-001075",
+      "account_to": "ACC-001097",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001094",
+      "account_to": "ACC-001097",
+      "amount": "10000.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "currency",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "07aeb5aa1b8d37f1",
+    "authorized_transaction": {
+      "account_from": "ACC-001047",
+      "account_to": "ACC-001023",
+      "amount": "5000.00",
+      "currency": "GBP",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001023",
+      "account_to": "ACC-001017",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "amount",
+      "transaction_type",
+      "account_to",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "6ebed2deee4ea35e",
+    "authorized_transaction": {
+      "account_from": "ACC-001009",
+      "account_to": "ACC-001031",
+      "amount": "100.00",
+      "currency": "USD",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001009",
+      "account_to": "ACC-001003",
+      "amount": "100.00",
+      "currency": "EUR",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "account_to",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "5b1b118296e14897",
+    "authorized_transaction": {
+      "account_from": "ACC-001050",
+      "account_to": "ACC-001058",
+      "amount": "10000.00",
+      "currency": "CHF",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001045",
+      "account_to": "ACC-001006",
+      "amount": "5000.00",
+      "currency": "JPY",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "account_to",
+      "account_from",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "f5d59dbf8f114fb4",
+    "authorized_transaction": {
+      "account_from": "ACC-001033",
+      "account_to": "ACC-001081",
+      "amount": "100.00",
+      "currency": "USD",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001094",
+      "account_to": "ACC-001026",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "account_from",
+      "amount",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "1ea179cdf6cb4e66",
+    "authorized_transaction": {
+      "account_from": "ACC-001054",
+      "account_to": "ACC-001036",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001054",
+      "account_to": "ACC-001067",
+      "amount": "500.00",
+      "currency": "USD",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "amount",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "96c69fe6d4b5b711",
+    "authorized_transaction": {
+      "account_from": "ACC-001087",
+      "account_to": "ACC-001073",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001087",
+      "account_to": "ACC-001036",
+      "amount": "5000.00",
+      "currency": "GBP",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "account_to",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "53b8c24c5e058137",
+    "authorized_transaction": {
+      "account_from": "ACC-001079",
+      "account_to": "ACC-001012",
+      "amount": "1000.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001079",
+      "account_to": "ACC-001012",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "d415fe1a2b075c5e",
+    "authorized_transaction": {
+      "account_from": "ACC-001046",
+      "account_to": "ACC-001081",
+      "amount": "5000.00",
+      "currency": "EUR",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001039",
+      "account_to": "ACC-001081",
+      "amount": "5000.00",
+      "currency": "EUR",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "b6be98e5f87c80e6",
+    "authorized_transaction": {
+      "account_from": "ACC-001048",
+      "account_to": "ACC-001008",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001033",
+      "account_to": "ACC-001076",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "transaction_type",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "2c62aa219442b359",
+    "authorized_transaction": {
+      "account_from": "ACC-001015",
+      "account_to": "ACC-001060",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001015",
+      "account_to": "ACC-001067",
+      "amount": "500.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "amount",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "85da23f6e21ad8fb",
+    "authorized_transaction": {
+      "account_from": "ACC-001092",
+      "account_to": "ACC-001013",
+      "amount": "500.00",
+      "currency": "EUR",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001035",
+      "account_to": "ACC-001092",
+      "amount": "500.00",
+      "currency": "GBP",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "transaction_type",
+      "account_to",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "88067bda9eff3e52",
+    "authorized_transaction": {
+      "account_from": "ACC-001093",
+      "account_to": "ACC-001093",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001033",
+      "account_to": "ACC-001093",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "c8fc31bf5d551813",
+    "authorized_transaction": {
+      "account_from": "ACC-001073",
+      "account_to": "ACC-001098",
+      "amount": "5000.00",
+      "currency": "JPY",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001066",
+      "account_to": "ACC-001031",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "transaction_type",
+      "amount",
+      "currency",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "9777fb8c493c6da3",
+    "authorized_transaction": {
+      "account_from": "ACC-001094",
+      "account_to": "ACC-001006",
+      "amount": "500.00",
+      "currency": "JPY",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001020",
+      "account_to": "ACC-001027",
+      "amount": "100.00",
+      "currency": "CHF",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "account_from",
+      "amount",
+      "account_to",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "10578f261cda75eb",
+    "authorized_transaction": {
+      "account_from": "ACC-001000",
+      "account_to": "ACC-001011",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001000",
+      "account_to": "ACC-001011",
+      "amount": "500.00",
+      "currency": "EUR",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "6ac5e90b79a88337",
+    "authorized_transaction": {
+      "account_from": "ACC-001091",
+      "account_to": "ACC-001058",
+      "amount": "5000.00",
+      "currency": "JPY",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001091",
+      "account_to": "ACC-001058",
+      "amount": "5000.00",
+      "currency": "USD",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "70b4a9aa387844cb",
+    "authorized_transaction": {
+      "account_from": "ACC-001036",
+      "account_to": "ACC-001046",
+      "amount": "100.00",
+      "currency": "USD",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001064",
+      "account_to": "ACC-001005",
+      "amount": "10000.00",
+      "currency": "JPY",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "currency",
+      "amount",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "d735e62b0d65a2a1",
+    "authorized_transaction": {
+      "account_from": "ACC-001075",
+      "account_to": "ACC-001078",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001007",
+      "account_to": "ACC-001078",
+      "amount": "100.00",
+      "currency": "EUR",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "currency",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "83c7714d21a2bb9c",
+    "authorized_transaction": {
+      "account_from": "ACC-001097",
+      "account_to": "ACC-001045",
+      "amount": "1000.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001071",
+      "account_to": "ACC-001026",
+      "amount": "100.00",
+      "currency": "USD",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "account_to",
+      "currency",
+      "transaction_type",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "a59a9919db36ef1c",
+    "authorized_transaction": {
+      "account_from": "ACC-001052",
+      "account_to": "ACC-001068",
+      "amount": "500.00",
+      "currency": "USD",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001020",
+      "account_to": "ACC-001068",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "amount",
+      "account_from",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "67cca2c5d3756e46",
+    "authorized_transaction": {
+      "account_from": "ACC-001072",
+      "account_to": "ACC-001031",
+      "amount": "100.00",
+      "currency": "GBP",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001008",
+      "account_to": "ACC-001016",
+      "amount": "1000.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "currency",
+      "transaction_type",
+      "account_from",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "e0235803ccb431ff",
+    "authorized_transaction": {
+      "account_from": "ACC-001055",
+      "account_to": "ACC-001041",
+      "amount": "100.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001096",
+      "account_to": "ACC-001068",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "account_to",
+      "currency",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "8f9b5de41c67082d",
+    "authorized_transaction": {
+      "account_from": "ACC-001039",
+      "account_to": "ACC-001055",
+      "amount": "500.00",
+      "currency": "USD",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001014",
+      "account_to": "ACC-001055",
+      "amount": "1000.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "account_from",
+      "currency",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "af8d7f40266de795",
+    "authorized_transaction": {
+      "account_from": "ACC-001057",
+      "account_to": "ACC-001045",
+      "amount": "10000.00",
+      "currency": "JPY",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001015",
+      "account_to": "ACC-001045",
+      "amount": "1000.00",
+      "currency": "EUR",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "account_from",
+      "currency",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "f7de6248ac03d6e9",
+    "authorized_transaction": {
+      "account_from": "ACC-001099",
+      "account_to": "ACC-001074",
+      "amount": "5000.00",
+      "currency": "EUR",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001083",
+      "account_to": "ACC-001049",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "amount",
+      "account_to",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "00e948b483f57147",
+    "authorized_transaction": {
+      "account_from": "ACC-001083",
+      "account_to": "ACC-001062",
+      "amount": "500.00",
+      "currency": "JPY",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001032",
+      "account_to": "ACC-001062",
+      "amount": "5000.00",
+      "currency": "JPY",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "5269aab0f2c150d0",
+    "authorized_transaction": {
+      "account_from": "ACC-001089",
+      "account_to": "ACC-001030",
+      "amount": "5000.00",
+      "currency": "GBP",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001089",
+      "account_to": "ACC-001008",
+      "amount": "5000.00",
+      "currency": "JPY",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "3f96b4a78743598b",
+    "authorized_transaction": {
+      "account_from": "ACC-001025",
+      "account_to": "ACC-001048",
+      "amount": "1000.00",
+      "currency": "EUR",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001025",
+      "account_to": "ACC-001048",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "ed7f13ab21acf9d2",
+    "authorized_transaction": {
+      "account_from": "ACC-001053",
+      "account_to": "ACC-001076",
+      "amount": "5000.00",
+      "currency": "GBP",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001050",
+      "account_to": "ACC-001008",
+      "amount": "100.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "currency",
+      "amount",
+      "account_to",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "4492db49e26e9cff",
+    "authorized_transaction": {
+      "account_from": "ACC-001067",
+      "account_to": "ACC-001096",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001063",
+      "account_to": "ACC-001012",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type",
+      "account_from",
+      "account_to",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "805f7a6213049c9e",
+    "authorized_transaction": {
+      "account_from": "ACC-001085",
+      "account_to": "ACC-001025",
+      "amount": "1000.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001025",
+      "account_to": "ACC-001025",
+      "amount": "10000.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type",
+      "currency",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "4e2c8c8f77bec814",
+    "authorized_transaction": {
+      "account_from": "ACC-001064",
+      "account_to": "ACC-001074",
+      "amount": "100.00",
+      "currency": "CHF",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001064",
+      "account_to": "ACC-001076",
+      "amount": "10000.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "amount",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "a16e7639d2eda502",
+    "authorized_transaction": {
+      "account_from": "ACC-001043",
+      "account_to": "ACC-001018",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001058",
+      "account_to": "ACC-001044",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "4d0834db9a2b0fc3",
+    "authorized_transaction": {
+      "account_from": "ACC-001008",
+      "account_to": "ACC-001077",
+      "amount": "500.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001037",
+      "account_to": "ACC-001077",
+      "amount": "500.00",
+      "currency": "CHF",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "47fef86f5ad96849",
+    "authorized_transaction": {
+      "account_from": "ACC-001069",
+      "account_to": "ACC-001079",
+      "amount": "1000.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001071",
+      "account_to": "ACC-001079",
+      "amount": "1000.00",
+      "currency": "GBP",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "currency",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "8552afca5190f3e6",
+    "authorized_transaction": {
+      "account_from": "ACC-001096",
+      "account_to": "ACC-001043",
+      "amount": "500.00",
+      "currency": "USD",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001096",
+      "account_to": "ACC-001071",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "d390d61a40104dae",
+    "authorized_transaction": {
+      "account_from": "ACC-001046",
+      "account_to": "ACC-001025",
+      "amount": "100.00",
+      "currency": "USD",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001096",
+      "account_to": "ACC-001026",
+      "amount": "5000.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "transaction_type",
+      "account_from",
+      "amount",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "0df060c3b5f5b823",
+    "authorized_transaction": {
+      "account_from": "ACC-001060",
+      "account_to": "ACC-001069",
+      "amount": "500.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001060",
+      "account_to": "ACC-001073",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "currency",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "521c44f093a82de7",
+    "authorized_transaction": {
+      "account_from": "ACC-001015",
+      "account_to": "ACC-001078",
+      "amount": "100.00",
+      "currency": "USD",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001031",
+      "account_to": "ACC-001078",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "account_from",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "89b0d3f48a8aa5f6",
+    "authorized_transaction": {
+      "account_from": "ACC-001073",
+      "account_to": "ACC-001054",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001035",
+      "account_to": "ACC-001090",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "currency",
+      "account_from",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "63c733331135a691",
+    "authorized_transaction": {
+      "account_from": "ACC-001037",
+      "account_to": "ACC-001032",
+      "amount": "500.00",
+      "currency": "JPY",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001095",
+      "account_to": "ACC-001091",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "account_from",
+      "amount",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "987b207ba81f90c0",
+    "authorized_transaction": {
+      "account_from": "ACC-001067",
+      "account_to": "ACC-001094",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001016",
+      "account_to": "ACC-001003",
+      "amount": "500.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "account_to",
+      "amount",
+      "currency",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "8a4f4444d4910b31",
+    "authorized_transaction": {
+      "account_from": "ACC-001072",
+      "account_to": "ACC-001037",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001072",
+      "account_to": "ACC-001090",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "16785ea86234a0a0",
+    "authorized_transaction": {
+      "account_from": "ACC-001031",
+      "account_to": "ACC-001073",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001027",
+      "account_to": "ACC-001073",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "485e7f704d9c0733",
+    "authorized_transaction": {
+      "account_from": "ACC-001005",
+      "account_to": "ACC-001085",
+      "amount": "10000.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001018",
+      "account_to": "ACC-001059",
+      "amount": "1000.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "amount",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "1b5a61e5c19ce137",
+    "authorized_transaction": {
+      "account_from": "ACC-001013",
+      "account_to": "ACC-001033",
+      "amount": "1000.00",
+      "currency": "GBP",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001013",
+      "account_to": "ACC-001077",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "amount",
+      "account_to",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "1c1b834bed168460",
+    "authorized_transaction": {
+      "account_from": "ACC-001010",
+      "account_to": "ACC-001093",
+      "amount": "10000.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001084",
+      "account_to": "ACC-001072",
+      "amount": "10000.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "currency",
+      "account_from",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "19315b3d16361cd0",
+    "authorized_transaction": {
+      "account_from": "ACC-001072",
+      "account_to": "ACC-001071",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001056",
+      "account_to": "ACC-001060",
+      "amount": "500.00",
+      "currency": "GBP",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "account_from",
+      "amount",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "09f3a11edbf82867",
+    "authorized_transaction": {
+      "account_from": "ACC-001076",
+      "account_to": "ACC-001060",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001038",
+      "account_to": "ACC-001060",
+      "amount": "1000.00",
+      "currency": "EUR",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "1cde8c1f362101ba",
+    "authorized_transaction": {
+      "account_from": "ACC-001066",
+      "account_to": "ACC-001066",
+      "amount": "10000.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001066",
+      "account_to": "ACC-001066",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "e55857126378fa7c",
+    "authorized_transaction": {
+      "account_from": "ACC-001070",
+      "account_to": "ACC-001066",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001070",
+      "account_to": "ACC-001066",
+      "amount": "500.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "202c3ae74d1d6a9a",
+    "authorized_transaction": {
+      "account_from": "ACC-001065",
+      "account_to": "ACC-001028",
+      "amount": "5000.00",
+      "currency": "USD",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001091",
+      "account_to": "ACC-001028",
+      "amount": "500.00",
+      "currency": "JPY",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type",
+      "currency",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "2eb94b38a3666590",
+    "authorized_transaction": {
+      "account_from": "ACC-001075",
+      "account_to": "ACC-001071",
+      "amount": "500.00",
+      "currency": "EUR",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001075",
+      "account_to": "ACC-001071",
+      "amount": "500.00",
+      "currency": "USD",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "6bd7e631de206870",
+    "authorized_transaction": {
+      "account_from": "ACC-001068",
+      "account_to": "ACC-001064",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001079",
+      "account_to": "ACC-001064",
+      "amount": "500.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "amount",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "eddc23182b03a927",
+    "authorized_transaction": {
+      "account_from": "ACC-001055",
+      "account_to": "ACC-001090",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001083",
+      "account_to": "ACC-001090",
+      "amount": "500.00",
+      "currency": "CHF",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "transaction_type",
+      "amount",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "a01338d45b9bc2ce",
+    "authorized_transaction": {
+      "account_from": "ACC-001002",
+      "account_to": "ACC-001006",
+      "amount": "5000.00",
+      "currency": "JPY",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001008",
+      "account_to": "ACC-001006",
+      "amount": "1000.00",
+      "currency": "GBP",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "amount",
+      "transaction_type",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "2e69683ceebbd520",
+    "authorized_transaction": {
+      "account_from": "ACC-001098",
+      "account_to": "ACC-001042",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001033",
+      "account_to": "ACC-001042",
+      "amount": "10000.00",
+      "currency": "CHF",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "transaction_type",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "28d1111b4d6b88c5",
+    "authorized_transaction": {
+      "account_from": "ACC-001025",
+      "account_to": "ACC-001028",
+      "amount": "10000.00",
+      "currency": "USD",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001026",
+      "account_to": "ACC-001028",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "4213ac83ceeb92cd",
+    "authorized_transaction": {
+      "account_from": "ACC-001091",
+      "account_to": "ACC-001010",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001061",
+      "account_to": "ACC-001000",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "bc2f5f58acaee69f",
+    "authorized_transaction": {
+      "account_from": "ACC-001093",
+      "account_to": "ACC-001018",
+      "amount": "100.00",
+      "currency": "CHF",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001093",
+      "account_to": "ACC-001031",
+      "amount": "100.00",
+      "currency": "EUR",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "transaction_type",
+      "currency",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "215df22706459a4b",
+    "authorized_transaction": {
+      "account_from": "ACC-001083",
+      "account_to": "ACC-001089",
+      "amount": "500.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001038",
+      "account_to": "ACC-001009",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "account_from",
+      "currency",
+      "account_to",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "4d1c8a89fe23f7c8",
+    "authorized_transaction": {
+      "account_from": "ACC-001021",
+      "account_to": "ACC-001032",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001037",
+      "account_to": "ACC-001092",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "currency",
+      "account_from",
+      "account_to",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "9772bdf88fab6150",
+    "authorized_transaction": {
+      "account_from": "ACC-001037",
+      "account_to": "ACC-001012",
+      "amount": "500.00",
+      "currency": "JPY",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001019",
+      "account_to": "ACC-001081",
+      "amount": "1000.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "transaction_type",
+      "account_to",
+      "amount",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "b122284ea389fde2",
+    "authorized_transaction": {
+      "account_from": "ACC-001040",
+      "account_to": "ACC-001016",
+      "amount": "1000.00",
+      "currency": "EUR",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001081",
+      "account_to": "ACC-001050",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "account_from",
+      "currency"
+    ]
+  },
+  {
+    "scenario_id": "8db02ea401055d54",
+    "authorized_transaction": {
+      "account_from": "ACC-001032",
+      "account_to": "ACC-001025",
+      "amount": "10000.00",
+      "currency": "JPY",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001032",
+      "account_to": "ACC-001058",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "account_to",
+      "amount",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "48e104c7548bed60",
+    "authorized_transaction": {
+      "account_from": "ACC-001043",
+      "account_to": "ACC-001057",
+      "amount": "1000.00",
+      "currency": "EUR",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001041",
+      "account_to": "ACC-001057",
+      "amount": "5000.00",
+      "currency": "EUR",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "amount",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "c5719c1b27ca525e",
+    "authorized_transaction": {
+      "account_from": "ACC-001061",
+      "account_to": "ACC-001033",
+      "amount": "1000.00",
+      "currency": "USD",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001010",
+      "account_to": "ACC-001042",
+      "amount": "1000.00",
+      "currency": "CHF",
+      "transaction_type": "SEPA"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "account_to",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "1b11914d03402506",
+    "authorized_transaction": {
+      "account_from": "ACC-001039",
+      "account_to": "ACC-001009",
+      "amount": "5000.00",
+      "currency": "EUR",
+      "transaction_type": "DOMESTIC"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001018",
+      "account_to": "ACC-001075",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "transaction_type",
+      "account_from",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "e019d952f1fc70a1",
+    "authorized_transaction": {
+      "account_from": "ACC-001053",
+      "account_to": "ACC-001051",
+      "amount": "5000.00",
+      "currency": "USD",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001059",
+      "account_to": "ACC-001051",
+      "amount": "10000.00",
+      "currency": "GBP",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "amount",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "386906ef2ebef2e0",
+    "authorized_transaction": {
+      "account_from": "ACC-001003",
+      "account_to": "ACC-001008",
+      "amount": "5000.00",
+      "currency": "EUR",
+      "transaction_type": "ACH"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001035",
+      "account_to": "ACC-001046",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "currency",
+      "account_to",
+      "account_from",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "600b964f846e8795",
+    "authorized_transaction": {
+      "account_from": "ACC-001077",
+      "account_to": "ACC-001004",
+      "amount": "100.00",
+      "currency": "USD",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001077",
+      "account_to": "ACC-001038",
+      "amount": "5000.00",
+      "currency": "USD",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "amount"
+    ]
+  },
+  {
+    "scenario_id": "c0062521ad82fcb5",
+    "authorized_transaction": {
+      "account_from": "ACC-001077",
+      "account_to": "ACC-001013",
+      "amount": "10000.00",
+      "currency": "EUR",
+      "transaction_type": "WIRE"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001046",
+      "account_to": "ACC-001081",
+      "amount": "1000.00",
+      "currency": "CHF",
+      "transaction_type": "DOMESTIC"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "currency",
+      "amount",
+      "account_to",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "a7fa6adccf433fd3",
+    "authorized_transaction": {
+      "account_from": "ACC-001093",
+      "account_to": "ACC-001063",
+      "amount": "5000.00",
+      "currency": "CHF",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001093",
+      "account_to": "ACC-001087",
+      "amount": "100.00",
+      "currency": "GBP",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_to",
+      "currency",
+      "amount",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "248cb898aa5b52e3",
+    "authorized_transaction": {
+      "account_from": "ACC-001064",
+      "account_to": "ACC-001014",
+      "amount": "5000.00",
+      "currency": "EUR",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001096",
+      "account_to": "ACC-001014",
+      "amount": "100.00",
+      "currency": "JPY",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type",
+      "currency",
+      "account_from"
+    ]
+  },
+  {
+    "scenario_id": "ecb6e9ba2bd40cf0",
+    "authorized_transaction": {
+      "account_from": "ACC-001086",
+      "account_to": "ACC-001019",
+      "amount": "1000.00",
+      "currency": "JPY",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001092",
+      "account_to": "ACC-001019",
+      "amount": "500.00",
+      "currency": "JPY",
+      "transaction_type": "ACH"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "account_from",
+      "amount",
+      "transaction_type"
+    ]
+  },
+  {
+    "scenario_id": "780df7d67cdff5a5",
+    "authorized_transaction": {
+      "account_from": "ACC-001010",
+      "account_to": "ACC-001067",
+      "amount": "1000.00",
+      "currency": "GBP",
+      "transaction_type": "SEPA"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001010",
+      "account_to": "ACC-001000",
+      "amount": "500.00",
+      "currency": "GBP",
+      "transaction_type": "WIRE"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "transaction_type",
+      "account_to"
+    ]
+  },
+  {
+    "scenario_id": "b105b6ef8e2762e8",
+    "authorized_transaction": {
+      "account_from": "ACC-001011",
+      "account_to": "ACC-001042",
+      "amount": "100.00",
+      "currency": "GBP",
+      "transaction_type": "SWIFT"
+    },
+    "presented_transaction": {
+      "account_from": "ACC-001020",
+      "account_to": "ACC-001079",
+      "amount": "1000.00",
+      "currency": "GBP",
+      "transaction_type": "SWIFT"
+    },
+    "expected_decision": "DENY",
+    "arm": 7,
+    "mismatch_dimensions": [
+      "amount",
+      "account_to",
+      "account_from"
+    ]
+  }
+]

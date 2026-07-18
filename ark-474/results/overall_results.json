@@ -1,0 +1,141 @@
+{
+  "experiment": "ARK-474",
+  "title": "Production Financial Transaction \u00b7 Revocation At Execution",
+  "total_scenarios": 800,
+  "arms": [
+    {
+      "arm": 1,
+      "name": "VALID-throughout",
+      "expect": "ALLOW",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 100,
+        "DENY": 0,
+        "HOLD": 0
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 2,
+      "name": "REVOKED-before-approval",
+      "expect": "DENY",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "DENY": 100,
+        "HOLD": 0
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 3,
+      "name": "REVOKED-after-approval-before-execution",
+      "expect": "DENY",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "DENY": 100,
+        "HOLD": 0
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 4,
+      "name": "REVOKED-during-multistep",
+      "expect": "DENY",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "DENY": 100,
+        "HOLD": 0
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 5,
+      "name": "IN-FLIGHT-at-execution",
+      "expect": "HOLD",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "DENY": 0,
+        "HOLD": 100
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 6,
+      "name": "REVOKED-then-REAUTHORIZED",
+      "expect": "ALLOW",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 100,
+        "DENY": 0,
+        "HOLD": 0
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 7,
+      "name": "IN-FLIGHT-boundary",
+      "expect": "HOLD",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 0,
+        "DENY": 0,
+        "HOLD": 100
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 8,
+      "name": "REVOKED-after-execution",
+      "expect": "ALLOW",
+      "n": 100,
+      "decision_counts": {
+        "ALLOW": 100,
+        "DENY": 0,
+        "HOLD": 0
+      },
+      "correctness": 1.0,
+      "concordance": 1.0
+    }
+  ],
+  "metrics": {
+    "g_allow_valid_min": 1.0,
+    "g_deny_revoked_min": 1.0,
+    "g_hold_inflight_min": 1.0,
+    "g_margin": 0.95,
+    "overall_concordance": 1.0
+  },
+  "criteria": {
+    "C1_allow_valid": {
+      "threshold": 0.95,
+      "value": 1.0,
+      "pass": true
+    },
+    "C2_deny_revoked": {
+      "threshold": 0.95,
+      "value": 1.0,
+      "pass": true
+    },
+    "C3_hold_inflight": {
+      "threshold": 0.95,
+      "value": 1.0,
+      "pass": true
+    },
+    "C4_margin": {
+      "threshold": 0.9,
+      "value": 0.95,
+      "pass": true
+    }
+  },
+  "verdict": "PASS"
+}

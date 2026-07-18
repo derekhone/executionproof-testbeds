@@ -1,0 +1,2002 @@
+[
+  {
+    "scenario_id": "arm1_exact_000",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_001",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_002",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_003",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_004",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_005",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_006",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_007",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_008",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_009",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_010",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_011",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_012",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_013",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_014",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_015",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_016",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_017",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_018",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_019",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_020",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_021",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_022",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_023",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_024",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_025",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_026",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_027",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_028",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_029",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_030",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_031",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_032",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_033",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_034",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_035",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_036",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_037",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_038",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_039",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_040",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_041",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_042",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_043",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_044",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_045",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_046",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_047",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_048",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_049",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_050",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_051",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_052",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_053",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_054",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_055",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_056",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_057",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_058",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_059",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_060",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_061",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_062",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_063",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_064",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_065",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_066",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_067",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_068",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_069",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_070",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_071",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_072",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_073",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_074",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_075",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_076",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_077",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_078",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_079",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_080",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_081",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_082",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_083",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_084",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_085",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_086",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_087",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_088",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_089",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_090",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_091",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_092",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_093",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_094",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_095",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_096",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_097",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_098",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "ALLOW"
+  },
+  {
+    "scenario_id": "arm1_exact_099",
+    "arm": 1,
+    "arm_name": "Exact Match",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "ALLOW"
+  }
+]
