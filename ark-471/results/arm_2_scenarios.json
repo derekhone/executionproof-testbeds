@@ -1,0 +1,3602 @@
+[
+  {
+    "scenario_id": "d241f31c5feb1d6c",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000046",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0036",
+        "session": "session-00000041",
+        "resource": "resource-0016",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000046",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0026",
+        "session": "session-00000041",
+        "resource": "resource-0016",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "ed1ba1679357bd7e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "Database QueryManager",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0032",
+        "session": "session-0000003f",
+        "resource": "resource-0030",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "Database QueryManager",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0008",
+        "session": "session-0000003f",
+        "resource": "resource-0030",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "f6238fc91b23b487",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0030",
+        "session": "session-00000020",
+        "resource": "resource-0021",
+        "audience": "api.sts.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0029",
+        "session": "session-00000020",
+        "resource": "resource-0021",
+        "audience": "api.sts.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "c2ece2a0276fab3e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0030",
+        "session": "session-00000060",
+        "resource": "resource-0011",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0049",
+        "session": "session-00000060",
+        "resource": "resource-0011",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "70cdac431b40db0d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "AdminFull",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0013",
+        "session": "session-00000009",
+        "resource": "resource-0014",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "AdminFull",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0045",
+        "session": "session-00000009",
+        "resource": "resource-0014",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "71b0db5a7188366a",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "AdminFull",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0040",
+        "session": "session-0000000e",
+        "resource": "resource-0026",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "AdminFull",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0002",
+        "session": "session-0000000e",
+        "resource": "resource-0026",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "94e6316573ce3fcf",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "AdminFull",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0012",
+        "session": "session-0000002c",
+        "resource": "resource-0032",
+        "audience": "api.iam.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "AdminFull",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0007",
+        "session": "session-0000002c",
+        "resource": "resource-0032",
+        "audience": "api.iam.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "85c6ef9d789c9356",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "Database QueryManager",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0000",
+        "session": "session-00000017",
+        "resource": "resource-0003",
+        "audience": "api.iam.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "Database QueryManager",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0012",
+        "session": "session-00000017",
+        "resource": "resource-0003",
+        "audience": "api.iam.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "30d715b9ba9ac1b8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0008",
+        "session": "session-00000014",
+        "resource": "resource-0006",
+        "audience": "api.iam.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0046",
+        "session": "session-00000014",
+        "resource": "resource-0006",
+        "audience": "api.iam.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "eb814226531529be",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0026",
+        "session": "session-00000045",
+        "resource": "resource-0036",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0043",
+        "session": "session-00000045",
+        "resource": "resource-0036",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "19facfdb1f1c0f2d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "Database QueryManager",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0031",
+        "session": "session-0000000a",
+        "resource": "resource-0030",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "Database QueryManager",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0025",
+        "session": "session-0000000a",
+        "resource": "resource-0030",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "167d719c8c806904",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "DataAnalyst",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0018",
+        "session": "session-00000018",
+        "resource": "resource-0035",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "DataAnalyst",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0016",
+        "session": "session-00000018",
+        "resource": "resource-0035",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "a4733e96ab9d7d4f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "Database QueryManager",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0049",
+        "session": "session-00000035",
+        "resource": "resource-0028",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "Database QueryManager",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0046",
+        "session": "session-00000035",
+        "resource": "resource-0028",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "d6626a7e3c890577",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "Database QueryManager",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0015",
+        "session": "session-0000003a",
+        "resource": "resource-0044",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "Database QueryManager",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0038",
+        "session": "session-0000003a",
+        "resource": "resource-0044",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "77e25308e3489ca2",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "AdminFull",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0030",
+        "session": "session-00000027",
+        "resource": "resource-0041",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "AdminFull",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0040",
+        "session": "session-00000027",
+        "resource": "resource-0041",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "2fa1369828a286e0",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "Database QueryManager",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0044",
+        "session": "session-00000056",
+        "resource": "resource-0000",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "Database QueryManager",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0024",
+        "session": "session-00000056",
+        "resource": "resource-0000",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "ad2cc417b2c5a68a",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "AdminFull",
+        "account": "100000000047",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0038",
+        "session": "session-0000002a",
+        "resource": "resource-0038",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "AdminFull",
+        "account": "100000000047",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0032",
+        "session": "session-0000002a",
+        "resource": "resource-0038",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "58c7092416cc880c",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000073:user/svc-0073",
+        "role": "AdminFull",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0011",
+        "session": "session-00000031",
+        "resource": "resource-0017",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000073:user/svc-0073",
+        "role": "AdminFull",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0036",
+        "session": "session-00000031",
+        "resource": "resource-0017",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "9686498269d4b9b0",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "DataAnalyst",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0046",
+        "session": "session-00000002",
+        "resource": "resource-0008",
+        "audience": "api.iam.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "DataAnalyst",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0028",
+        "session": "session-00000002",
+        "resource": "resource-0008",
+        "audience": "api.iam.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "6fb3f479cbe21ae1",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0032",
+        "session": "session-00000054",
+        "resource": "resource-0006",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0013",
+        "session": "session-00000054",
+        "resource": "resource-0006",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "fb079d420c15f6d0",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000016",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0000",
+        "session": "session-00000023",
+        "resource": "resource-0006",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000016",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0020",
+        "session": "session-00000023",
+        "resource": "resource-0006",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "2b54f539603147b5",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "Database QueryManager",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0046",
+        "session": "session-00000028",
+        "resource": "resource-0049",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "Database QueryManager",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0003",
+        "session": "session-00000028",
+        "resource": "resource-0049",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "2f8c1404df7ad5cf",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0025",
+        "session": "session-00000004",
+        "resource": "resource-0029",
+        "audience": "api.sts.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0038",
+        "session": "session-00000004",
+        "resource": "resource-0029",
+        "audience": "api.sts.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "ae68b3590247fe9d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000004",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0006",
+        "session": "session-0000005f",
+        "resource": "resource-0017",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000004",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0020",
+        "session": "session-0000005f",
+        "resource": "resource-0017",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "4b13089a39a8cdea",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "Database QueryManager",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0017",
+        "session": "session-00000043",
+        "resource": "resource-0002",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "Database QueryManager",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0031",
+        "session": "session-00000043",
+        "resource": "resource-0002",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "1d902c45f12ede37",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "AdminFull",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0025",
+        "session": "session-00000047",
+        "resource": "resource-0033",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "AdminFull",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0027",
+        "session": "session-00000047",
+        "resource": "resource-0033",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "85ddc4c9c9229cc8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0042",
+        "session": "session-00000052",
+        "resource": "resource-0017",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0011",
+        "session": "session-00000052",
+        "resource": "resource-0017",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "fec0aa523cacfe9e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0018",
+        "session": "session-00000013",
+        "resource": "resource-0027",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0039",
+        "session": "session-00000013",
+        "resource": "resource-0027",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "c3bcf8d17277b4e6",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "DataAnalyst",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0007",
+        "session": "session-00000036",
+        "resource": "resource-0041",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "DataAnalyst",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0018",
+        "session": "session-00000036",
+        "resource": "resource-0041",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "e8e7c826d6bcfca7",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0040",
+        "session": "session-0000002e",
+        "resource": "resource-0002",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0025",
+        "session": "session-0000002e",
+        "resource": "resource-0002",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "f867257eea44944c",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "AdminFull",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0018",
+        "session": "session-0000005e",
+        "resource": "resource-0019",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "AdminFull",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0024",
+        "session": "session-0000005e",
+        "resource": "resource-0019",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "cde0606707e97b39",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "DataAnalyst",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0011",
+        "session": "session-0000004f",
+        "resource": "resource-0036",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "DataAnalyst",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0033",
+        "session": "session-0000004f",
+        "resource": "resource-0036",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "61cdfdedbc252d34",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0035",
+        "session": "session-0000004c",
+        "resource": "resource-0007",
+        "audience": "api.iam.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0012",
+        "session": "session-0000004c",
+        "resource": "resource-0007",
+        "audience": "api.iam.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "f6167ae3f1f28e3b",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "AdminFull",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0044",
+        "session": "session-00000062",
+        "resource": "resource-0010",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "AdminFull",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0004",
+        "session": "session-00000062",
+        "resource": "resource-0010",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "a3f5160a4f0736d1",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000078:user/svc-0078",
+        "role": "Database QueryManager",
+        "account": "100000000036",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0022",
+        "session": "session-0000002d",
+        "resource": "resource-0023",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000078:user/svc-0078",
+        "role": "Database QueryManager",
+        "account": "100000000036",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0014",
+        "session": "session-0000002d",
+        "resource": "resource-0023",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "329b30f8d34315ef",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "AdminFull",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0028",
+        "session": "session-00000023",
+        "resource": "resource-0036",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "AdminFull",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0004",
+        "session": "session-00000023",
+        "resource": "resource-0036",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "4ca609bc610c5b49",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0003",
+        "session": "session-00000009",
+        "resource": "resource-0008",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0032",
+        "session": "session-00000009",
+        "resource": "resource-0008",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "1ed6858272304b0e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000023",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0033",
+        "session": "session-00000012",
+        "resource": "resource-0045",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000023",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0019",
+        "session": "session-00000012",
+        "resource": "resource-0045",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "c8ab4518e416edcc",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0008",
+        "session": "session-00000023",
+        "resource": "resource-0020",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0043",
+        "session": "session-00000023",
+        "resource": "resource-0020",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "4faa0a4139759b5d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "AdminFull",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0044",
+        "session": "session-0000000e",
+        "resource": "resource-0018",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "AdminFull",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0019",
+        "session": "session-0000000e",
+        "resource": "resource-0018",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "c6c3858087ecbeca",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0010",
+        "session": "session-0000005c",
+        "resource": "resource-0021",
+        "audience": "api.iam.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0036",
+        "session": "session-0000005c",
+        "resource": "resource-0021",
+        "audience": "api.iam.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "a39cb2696ad8e665",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0009",
+        "session": "session-00000023",
+        "resource": "resource-0000",
+        "audience": "api.iam.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0031",
+        "session": "session-00000023",
+        "resource": "resource-0000",
+        "audience": "api.iam.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "3db0182056447811",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "AdminFull",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0030",
+        "session": "session-00000036",
+        "resource": "resource-0033",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "AdminFull",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0037",
+        "session": "session-00000036",
+        "resource": "resource-0033",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "0024f4bc983ac65d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "Database QueryManager",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0001",
+        "session": "session-00000057",
+        "resource": "resource-0017",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "Database QueryManager",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0004",
+        "session": "session-00000057",
+        "resource": "resource-0017",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "1c7a58484dfef164",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "DataAnalyst",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0027",
+        "session": "session-00000033",
+        "resource": "resource-0023",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "DataAnalyst",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0034",
+        "session": "session-00000033",
+        "resource": "resource-0023",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "7da1943d9698ac4b",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DataAnalyst",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0030",
+        "session": "session-00000028",
+        "resource": "resource-0044",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DataAnalyst",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0007",
+        "session": "session-00000028",
+        "resource": "resource-0044",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "abf1634d52aa09af",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000055:user/svc-0055",
+        "role": "AdminFull",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0047",
+        "session": "session-0000001e",
+        "resource": "resource-0002",
+        "audience": "api.iam.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000055:user/svc-0055",
+        "role": "AdminFull",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0034",
+        "session": "session-0000001e",
+        "resource": "resource-0002",
+        "audience": "api.iam.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "64e67fbdec9c4b2f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "Database QueryManager",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0024",
+        "session": "session-0000004f",
+        "resource": "resource-0012",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "Database QueryManager",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0025",
+        "session": "session-0000004f",
+        "resource": "resource-0012",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "7cf52c9b23db490b",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "Database QueryManager",
+        "account": "100000000041",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0014",
+        "session": "session-00000040",
+        "resource": "resource-0035",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "Database QueryManager",
+        "account": "100000000041",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0001",
+        "session": "session-00000040",
+        "resource": "resource-0035",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "b97b6474754caf2f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0013",
+        "session": "session-0000004b",
+        "resource": "resource-0021",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0046",
+        "session": "session-0000004b",
+        "resource": "resource-0021",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "9c04a17a0b92f58d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0048",
+        "session": "session-00000051",
+        "resource": "resource-0013",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0019",
+        "session": "session-00000051",
+        "resource": "resource-0013",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "10900b18e51e37ff",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0031",
+        "session": "session-00000040",
+        "resource": "resource-0023",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0041",
+        "session": "session-00000040",
+        "resource": "resource-0023",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "19432f4ec74f7ce3",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "DataAnalyst",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0033",
+        "session": "session-00000025",
+        "resource": "resource-0033",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "DataAnalyst",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0025",
+        "session": "session-00000025",
+        "resource": "resource-0033",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "22c7fbdee1d605f8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "Database QueryManager",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0018",
+        "session": "session-00000032",
+        "resource": "resource-0019",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "Database QueryManager",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0040",
+        "session": "session-00000032",
+        "resource": "resource-0019",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "76e2d0f198fc3550",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0013",
+        "session": "session-00000047",
+        "resource": "resource-0049",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0048",
+        "session": "session-00000047",
+        "resource": "resource-0049",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "75c7e810f792b408",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "Database QueryManager",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0008",
+        "session": "session-00000058",
+        "resource": "resource-0009",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "Database QueryManager",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0001",
+        "session": "session-00000058",
+        "resource": "resource-0009",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "5df93de160652d47",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0026",
+        "session": "session-00000007",
+        "resource": "resource-0002",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0036",
+        "session": "session-00000007",
+        "resource": "resource-0002",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "a0010f29013e0bb5",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "AdminFull",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0043",
+        "session": "session-00000018",
+        "resource": "resource-0039",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "AdminFull",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0047",
+        "session": "session-00000018",
+        "resource": "resource-0039",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "c2c102dd64cb0066",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "DataAnalyst",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0025",
+        "session": "session-0000004d",
+        "resource": "resource-0035",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "DataAnalyst",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0011",
+        "session": "session-0000004d",
+        "resource": "resource-0035",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "65f0fd3690489e37",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "Database QueryManager",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0029",
+        "session": "session-00000031",
+        "resource": "resource-0026",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "Database QueryManager",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0028",
+        "session": "session-00000031",
+        "resource": "resource-0026",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "d25abed642e33540",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DataAnalyst",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0044",
+        "session": "session-00000023",
+        "resource": "resource-0020",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DataAnalyst",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0000",
+        "session": "session-00000023",
+        "resource": "resource-0020",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "021be01800bdc2f8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "Database QueryManager",
+        "account": "100000000049",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0003",
+        "session": "session-0000005c",
+        "resource": "resource-0030",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "Database QueryManager",
+        "account": "100000000049",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0014",
+        "session": "session-0000005c",
+        "resource": "resource-0030",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "b4c3862afa577bdd",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "Database QueryManager",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0006",
+        "session": "session-00000015",
+        "resource": "resource-0002",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "Database QueryManager",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0032",
+        "session": "session-00000015",
+        "resource": "resource-0002",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "69ce336af493f177",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "DataAnalyst",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0037",
+        "session": "session-00000027",
+        "resource": "resource-0029",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "DataAnalyst",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0002",
+        "session": "session-00000027",
+        "resource": "resource-0029",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "bf2afb7a1a7cb206",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000008",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0015",
+        "session": "session-00000060",
+        "resource": "resource-0034",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000008",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0037",
+        "session": "session-00000060",
+        "resource": "resource-0034",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "6a7cc329ae3754a1",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0031",
+        "session": "session-00000031",
+        "resource": "resource-0034",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0026",
+        "session": "session-00000031",
+        "resource": "resource-0034",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "8b41ba10463003a9",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0004",
+        "session": "session-00000013",
+        "resource": "resource-0028",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0011",
+        "session": "session-00000013",
+        "resource": "resource-0028",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "48710aedb77c5b9d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000067:user/svc-0067",
+        "role": "AdminFull",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0003",
+        "session": "session-00000018",
+        "resource": "resource-0032",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000067:user/svc-0067",
+        "role": "AdminFull",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0040",
+        "session": "session-00000018",
+        "resource": "resource-0032",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "bed4885d76464f8b",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000009",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0016",
+        "session": "session-0000003d",
+        "resource": "resource-0008",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000009",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0020",
+        "session": "session-0000003d",
+        "resource": "resource-0008",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "8865165786a7d10c",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "DataAnalyst",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0034",
+        "session": "session-0000003c",
+        "resource": "resource-0021",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "DataAnalyst",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0030",
+        "session": "session-0000003c",
+        "resource": "resource-0021",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "9f871964a5ab0ba1",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "DataAnalyst",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0040",
+        "session": "session-00000021",
+        "resource": "resource-0010",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "DataAnalyst",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0023",
+        "session": "session-00000021",
+        "resource": "resource-0010",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "861a39a31b1e0c25",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0008",
+        "session": "session-00000048",
+        "resource": "resource-0029",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0046",
+        "session": "session-00000048",
+        "resource": "resource-0029",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "2e74171a49d318ee",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "DataAnalyst",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0008",
+        "session": "session-00000047",
+        "resource": "resource-0047",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "DataAnalyst",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0023",
+        "session": "session-00000047",
+        "resource": "resource-0047",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "55bfcedf8c701bc5",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000091:user/svc-0091",
+        "role": "DataAnalyst",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0021",
+        "session": "session-0000000c",
+        "resource": "resource-0017",
+        "audience": "api.iam.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000091:user/svc-0091",
+        "role": "DataAnalyst",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0014",
+        "session": "session-0000000c",
+        "resource": "resource-0017",
+        "audience": "api.iam.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "63bf06fa598a3be5",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "Database QueryManager",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0034",
+        "session": "session-0000001f",
+        "resource": "resource-0033",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "Database QueryManager",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0016",
+        "session": "session-0000001f",
+        "resource": "resource-0033",
+        "audience": "api.sts.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "1f118cad452ec3fe",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "Database QueryManager",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0004",
+        "session": "session-00000059",
+        "resource": "resource-0017",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "Database QueryManager",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0048",
+        "session": "session-00000059",
+        "resource": "resource-0017",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "af54638117fb2c01",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "Database QueryManager",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0038",
+        "session": "session-0000004a",
+        "resource": "resource-0030",
+        "audience": "api.iam.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "Database QueryManager",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0035",
+        "session": "session-0000004a",
+        "resource": "resource-0030",
+        "audience": "api.iam.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "8eb814923d889848",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0037",
+        "session": "session-00000046",
+        "resource": "resource-0040",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0009",
+        "session": "session-00000046",
+        "resource": "resource-0040",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "9c3a375eef8eb5ad",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000072:user/svc-0072",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0032",
+        "session": "session-00000035",
+        "resource": "resource-0031",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000072:user/svc-0072",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0034",
+        "session": "session-00000035",
+        "resource": "resource-0031",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "1199c2316090c093",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0027",
+        "session": "session-00000046",
+        "resource": "resource-0025",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0035",
+        "session": "session-00000046",
+        "resource": "resource-0025",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "6837d828cb2df40a",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "DataAnalyst",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0029",
+        "session": "session-00000027",
+        "resource": "resource-0040",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "DataAnalyst",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0033",
+        "session": "session-00000027",
+        "resource": "resource-0040",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "b8200086b052294f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "Database QueryManager",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0000",
+        "session": "session-0000003b",
+        "resource": "resource-0044",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "Database QueryManager",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0023",
+        "session": "session-0000003b",
+        "resource": "resource-0044",
+        "audience": "api.sts.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "0811564a2c99c891",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0017",
+        "session": "session-00000058",
+        "resource": "resource-0043",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0010",
+        "session": "session-00000058",
+        "resource": "resource-0043",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "0ea5c0ddc31b93a8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "AdminFull",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0041",
+        "session": "session-00000017",
+        "resource": "resource-0015",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "AdminFull",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0043",
+        "session": "session-00000017",
+        "resource": "resource-0015",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "7dc183a9e4a3d325",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "Database QueryManager",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0040",
+        "session": "session-0000001a",
+        "resource": "resource-0046",
+        "audience": "api.sts.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "Database QueryManager",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0008",
+        "session": "session-0000001a",
+        "resource": "resource-0046",
+        "audience": "api.sts.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "6277d3c01e3d7305",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "DataAnalyst",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0040",
+        "session": "session-00000052",
+        "resource": "resource-0010",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "DataAnalyst",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0049",
+        "session": "session-00000052",
+        "resource": "resource-0010",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "ed17560b8e7bd166",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000098:user/svc-0098",
+        "role": "AdminFull",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0003",
+        "session": "session-0000004c",
+        "resource": "resource-0009",
+        "audience": "api.iam.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000098:user/svc-0098",
+        "role": "AdminFull",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0014",
+        "session": "session-0000004c",
+        "resource": "resource-0009",
+        "audience": "api.iam.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "464d4edbbad464d9",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "AdminFull",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0000",
+        "session": "session-00000049",
+        "resource": "resource-0030",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "AdminFull",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0024",
+        "session": "session-00000049",
+        "resource": "resource-0030",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "3f0ab68843b67b66",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0046",
+        "session": "session-00000023",
+        "resource": "resource-0010",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0018",
+        "session": "session-00000023",
+        "resource": "resource-0010",
+        "audience": "api.sts.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "13fcacb036c0882f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "AdminFull",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0035",
+        "session": "session-0000001c",
+        "resource": "resource-0024",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "AdminFull",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0042",
+        "session": "session-0000001c",
+        "resource": "resource-0024",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "81f22e9b790977e4",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0048",
+        "session": "session-0000002b",
+        "resource": "resource-0010",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0026",
+        "session": "session-0000002b",
+        "resource": "resource-0010",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "b3d1363f1e1f9bd1",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0025",
+        "session": "session-00000062",
+        "resource": "resource-0024",
+        "audience": "api.iam.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "AdminFull",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0044",
+        "session": "session-00000062",
+        "resource": "resource-0024",
+        "audience": "api.iam.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "ddcb26751bbdc140",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "AdminFull",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0044",
+        "session": "session-0000004f",
+        "resource": "resource-0000",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "AdminFull",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0046",
+        "session": "session-0000004f",
+        "resource": "resource-0000",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "test"
+      }
+    }
+  },
+  {
+    "scenario_id": "d3ff327d144ea45a",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0008",
+        "session": "session-0000002a",
+        "resource": "resource-0028",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0003",
+        "session": "session-0000002a",
+        "resource": "resource-0028",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "cd3f7fbddd18dc4b",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "AdminFull",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0009",
+        "session": "session-00000024",
+        "resource": "resource-0042",
+        "audience": "api.iam.aws.com",
+        "environment": "production"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "AdminFull",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0027",
+        "session": "session-00000024",
+        "resource": "resource-0042",
+        "audience": "api.iam.aws.com",
+        "environment": "production"
+      }
+    }
+  },
+  {
+    "scenario_id": "15eb17f211cf4a13",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0030",
+        "session": "session-00000026",
+        "resource": "resource-0048",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0017",
+        "session": "session-00000026",
+        "resource": "resource-0048",
+        "audience": "api.iam.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "a33a1f420b70d0bf",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "Database QueryManager",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0032",
+        "session": "session-00000056",
+        "resource": "resource-0033",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "Database QueryManager",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0045",
+        "session": "session-00000056",
+        "resource": "resource-0033",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "development"
+      }
+    }
+  },
+  {
+    "scenario_id": "7177ca446ac15ac1",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "DataAnalyst",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0037",
+        "session": "session-00000021",
+        "resource": "resource-0033",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "DataAnalyst",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0045",
+        "session": "session-00000021",
+        "resource": "resource-0033",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "aab8dfafc9c973a5",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "Database QueryManager",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0001",
+        "session": "session-00000025",
+        "resource": "resource-0040",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "Database QueryManager",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0016",
+        "session": "session-00000025",
+        "resource": "resource-0040",
+        "audience": "api.iam.internal.aws.com",
+        "environment": "staging"
+      }
+    }
+  },
+  {
+    "scenario_id": "32571834c1172712",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "Database QueryManager",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0034",
+        "session": "session-00000045",
+        "resource": "resource-0048",
+        "audience": "api.iam.aws.com",
+        "environment": "staging"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "Database QueryManager",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "context": {
+        "tenant": "tenant-0039",
+        "session": "session-00000045",
+        "resource": "resource-0048",
+        "audience": "api.iam.aws.com",
+        "environment": "staging"
+      }
+    }
+  }
+]
