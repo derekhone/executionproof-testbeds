@@ -16,6 +16,15 @@ SHA-256 hashes (ARK-457 locked files):
   run_arms.py:                                 66de18cfd8b518ae073dbed247ec1d19044d86be0e4acd925c4f5d5b7d532d58
 
 OUTCOME (filled after execution):
-  VERDICT: PENDING EXECUTION
-  (This section will be filled with measured metrics and the lock commit hash
-   after the kill-gate and 8-arm run complete. The recorded verdict stands as executed.)
+  VERDICT: PASS  (lock commit 452f6ea; executed 2026-07-18T00:19:46Z UTC)
+  Primary metrics:
+    g_allow_exact (arm 1 ALLOW)              = 1.0000  (C1 ≥ 0.95: PASS)
+    g_deny_crosscontext_min (arms 2-8 DENY)  = 1.0000  (C2 ≥ 0.95: PASS)
+    g_margin                                 = 0.9500  (C3 ≥ 0.90: PASS)
+  Dual-guard concordance: 800/800 = 100.00%
+  Kill-gate: PASS (88/88 concordance; all 88 context-replay-effective)
+  Context-replay effectiveness gate: PASS on all 8 arms (800/800 scenarios effective)
+  Exact context match allows execution (100%); every cross-context replay class —
+  including confusable near-matches (trailing space, case flip, zero-width, homoglyph) —
+  is refused (100%). Perfect separation, no cross-context ALLOW.
+  The recorded verdict stands as executed.

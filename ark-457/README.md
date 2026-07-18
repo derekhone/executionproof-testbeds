@@ -1,6 +1,11 @@
 # ARK-457 — Cross-Context Authorization Replay (Confused Deputy)
 
-**Status:** LOCKED — pending execution
+**Status:** EXECUTED — VERDICT **PASS** (lock commit `452f6ea`, tag `ark-457-v1.0-lock`; executed 2026-07-18T00:19:46Z UTC)
+
+- g_allow_exact = 1.0000 (C1 ≥ 0.95 ✓) · g_deny_crosscontext_min = 1.0000 (C2 ≥ 0.95 ✓) · g_margin = 0.9500 (C3 ≥ 0.90 ✓)
+- Dual-guard concordance 800/800 = 100.00%; kill-gate 88/88; all 800 scenarios context-replay-effective
+- See `RESULTS.md` for the full readout.
+
 **Substrate:** Classical software (no quantum hardware, no cryptography)
 **Guards:** Dual independent — V1 (JavaScript), V2 (Python)
 **Series:** ExecutionProof authorization-boundary corpus (enterprise-failure-mode phase)
