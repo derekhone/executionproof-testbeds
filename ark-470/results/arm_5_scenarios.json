@@ -1,0 +1,2802 @@
+[
+  {
+    "scenario_id": "61d8c337b9ddd8d4",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "DatabaseAdmin",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "DatabaseAdmin",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "36f6f57236cb7365",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000018",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000018",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "4384736001a06adb",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "DatabaseAdmin",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "DatabaseAdmin",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2eda96566213bec5",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000016:user/svc-0016",
+        "role": "Database QueryManager",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000016:user/svc-0016",
+        "role": "Database QueryManager",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "fa9f1edfa2ce384f",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "49aef4ed31d5d9d9",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "NetworkEngineer",
+        "account": "100000000031",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "NetworkEngineer",
+        "account": "100000000031",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d5f623c0ec0f45a6",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "DatabaseAdmin",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "DatabaseAdmin",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "aa27bc2d23a6c13e",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "AdminFull",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "AdminFull",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "376d91230a7717ec",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "BillingViewer",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "BillingViewer",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e991525e5a9f8cd2",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "NetworkEngineer",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "NetworkEngineer",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e91b8a3d9744f9fe",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "DataAnalyst",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "DataAnalyst",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8940da5f6c5a6d01",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000060:user/svc-0060",
+        "role": "Database QueryManager",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000060:user/svc-0060",
+        "role": "Database QueryManager",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1ffc93090bef9515",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "SecurityOfficer",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "SecurityOfficer",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "ee4e5e20c733d83e",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "NetworkEngineer",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "NetworkEngineer",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b3c83c3102719cd6",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7e27f6e650b2c3d0",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "NetworkEngineer",
+        "account": "100000000046",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "NetworkEngineer",
+        "account": "100000000046",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "299dd29f25bc8e6b",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "DataAnalyst",
+        "account": "100000000039",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "DataAnalyst",
+        "account": "100000000039",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "244a15bd3340f840",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "AdminFull",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "AdminFull",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9a9089b898f5421a",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "NetworkEngineer",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "NetworkEngineer",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2f05ff5719b42de0",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000065:user/svc-0065",
+        "role": "NetworkEngineer",
+        "account": "100000000020",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000065:user/svc-0065",
+        "role": "NetworkEngineer",
+        "account": "100000000020",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "12b120f722fe9778",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "Database QueryManager",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "Database QueryManager",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "58af37107f3e1cb1",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "641cb0f41b19f137",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000064:user/svc-0064",
+        "role": "AdminFull",
+        "account": "100000000005",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000064:user/svc-0064",
+        "role": "AdminFull",
+        "account": "100000000005",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a27c616b92e3bd22",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000018:user/svc-0018",
+        "role": "DataAnalyst",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000018:user/svc-0018",
+        "role": "DataAnalyst",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a07d90ee4f584a31",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "DataAnalyst",
+        "account": "100000000037",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "DataAnalyst",
+        "account": "100000000037",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f49a7088cd3d7aa2",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "BillingViewer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "BillingViewer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8861ee4d66f0dd3c",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "DataAnalyst",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "DataAnalyst",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "11c0fec66686441d",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "DatabaseAdmin",
+        "account": "100000000001",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "DatabaseAdmin",
+        "account": "100000000001",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2fe5ac663d1f05fb",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "BillingViewer",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "BillingViewer",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "49a3f1c7f291b419",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "AdminFull",
+        "account": "100000000030",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "AdminFull",
+        "account": "100000000030",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "925a4445e86b7c8b",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000096:user/svc-0096",
+        "role": "Database QueryManager",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000096:user/svc-0096",
+        "role": "Database QueryManager",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f16c0fe5f4b9bd7a",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000048:user/svc-0048",
+        "role": "BillingViewer",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000048:user/svc-0048",
+        "role": "BillingViewer",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7bc3d731acff867d",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "DatabaseAdmin",
+        "account": "100000000012",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "DatabaseAdmin",
+        "account": "100000000012",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "63a7f922a81fbda0",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000025:user/svc-0025",
+        "role": "NetworkEngineer",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000025:user/svc-0025",
+        "role": "NetworkEngineer",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "448566180a203555",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "Database QueryManager",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "Database QueryManager",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "20b37d559cc844c3",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000055:user/svc-0055",
+        "role": "NetworkEngineer",
+        "account": "100000000034",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000055:user/svc-0055",
+        "role": "NetworkEngineer",
+        "account": "100000000034",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "727216c554918400",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "AdminFull",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000031",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "AdminFull",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000031",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8f4ed53fb21e302e",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000065:user/svc-0065",
+        "role": "NetworkEngineer",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000065:user/svc-0065",
+        "role": "NetworkEngineer",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "ba05e86b64271ef6",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000080:user/svc-0080",
+        "role": "DatabaseAdmin",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000080:user/svc-0080",
+        "role": "DatabaseAdmin",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9d9ae2e50c03579e",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000048:user/svc-0048",
+        "role": "BillingViewer",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000048:user/svc-0048",
+        "role": "BillingViewer",
+        "account": "100000000006",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5a300612ecbf42d0",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "BillingViewer",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "BillingViewer",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b3232dc0f7903435",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "BillingViewer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "BillingViewer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "af9ec862ffc214f2",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "4dba5036f0c1f65e",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000029:user/svc-0029",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000028",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000029:user/svc-0029",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000028",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b3ae01b613d63018",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000095:user/svc-0095",
+        "role": "DatabaseAdmin",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000095:user/svc-0095",
+        "role": "DatabaseAdmin",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5ea6ebbbc0a46a50",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000083:user/svc-0083",
+        "role": "NetworkEngineer",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000083:user/svc-0083",
+        "role": "NetworkEngineer",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "139a028e0dd2bbfd",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "SecurityOfficer",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "SecurityOfficer",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "3d82f624498963e3",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000056:user/svc-0056",
+        "role": "SecurityOfficer",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000056:user/svc-0056",
+        "role": "SecurityOfficer",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "89ad6e2363385ce9",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "NetworkEngineer",
+        "account": "100000000022",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "NetworkEngineer",
+        "account": "100000000022",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2e70ac91f2154f76",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000055:user/svc-0055",
+        "role": "DataAnalyst",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000055:user/svc-0055",
+        "role": "DataAnalyst",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "74330330342fa8dd",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "NetworkEngineer",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "NetworkEngineer",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "484180163895d187",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "BillingViewer",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "BillingViewer",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a7f41f1fdac05cb4",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "Database QueryManager",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "Database QueryManager",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f2613f790b3a9011",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000050:user/svc-0050",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000050:user/svc-0050",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6f25a17a17026b56",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "AdminFull",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "AdminFull",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7f2543cb09b0c0e8",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000048",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000048",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "44081fd225aa91db",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DataAnalyst",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DataAnalyst",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "3b5eb62d4b29c7ce",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "073ff54e59aac41e",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "BillingViewer",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "BillingViewer",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0001f0a93a31f9a5",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "Database QueryManager",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "Database QueryManager",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a30f4f7f0135d633",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000047:user/svc-0047",
+        "role": "AdminFull",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000047:user/svc-0047",
+        "role": "AdminFull",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "cd2aa3500712c357",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000096:user/svc-0096",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000096:user/svc-0096",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "df90d6599c991780",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "68be5fbc7f631416",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000051:user/svc-0051",
+        "role": "AdminFull",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000051:user/svc-0051",
+        "role": "AdminFull",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8bb4d52156a9c519",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000058:user/svc-0058",
+        "role": "AdminFull",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000058:user/svc-0058",
+        "role": "AdminFull",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "936ed4202c3e1ff2",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "56c145bebce92134",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8794cdda3c072cc5",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000098:user/svc-0098",
+        "role": "DataAnalyst",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000098:user/svc-0098",
+        "role": "DataAnalyst",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "fa1ce42d939c87d1",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "BillingViewer",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "BillingViewer",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "927083f49dd0b5ed",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "AdminFull",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "AdminFull",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9c0d5a35f99607e3",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "Database QueryManager",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "Database QueryManager",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e1d6d072f3c293d6",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "DataAnalyst",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "DataAnalyst",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e46e150053302582",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "Database QueryManager",
+        "account": "100000000001",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "Database QueryManager",
+        "account": "100000000001",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2a5cf0a354f14be3",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b3036e2292f850c4",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000076:user/svc-0076",
+        "role": "DataAnalyst",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000076:user/svc-0076",
+        "role": "DataAnalyst",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b2b5de93a9d65127",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000065:user/svc-0065",
+        "role": "DatabaseAdmin",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000065:user/svc-0065",
+        "role": "DatabaseAdmin",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "79f4dcb8f966ea75",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000039:user/svc-0039",
+        "role": "BillingViewer",
+        "account": "100000000020",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000039:user/svc-0039",
+        "role": "BillingViewer",
+        "account": "100000000020",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0475756eae67ccb2",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "Database QueryManager",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "Database QueryManager",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e0589ee979f9bea4",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6434166fd3f4e9d0",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "NetworkEngineer",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "NetworkEngineer",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "00f3a49f36846c62",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000047:user/svc-0047",
+        "role": "SecurityOfficer",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000047:user/svc-0047",
+        "role": "SecurityOfficer",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "fa778d63bfdd5d3a",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "62375504fc6574b3",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "BillingViewer",
+        "account": "100000000017",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "BillingViewer",
+        "account": "100000000017",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "64fb8d0794ca8bf6",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "AdminFull",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "AdminFull",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "dc12cc3bf6833fb4",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "NetworkEngineer",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000020",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "NetworkEngineer",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000020",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "259c440d4559b53a",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "AdminFull",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "AdminFull",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bb443f3121d5322d",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "SecurityOfficer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "SecurityOfficer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0ab95bd1447950d5",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "3b82dcbc6b6b4ca2",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c1192ec4688efcf7",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "Database QueryManager",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "Database QueryManager",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "eade8fccc3aba8fa",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000096:user/svc-0096",
+        "role": "DatabaseAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000096:user/svc-0096",
+        "role": "DatabaseAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6384d6a50e4f0bd1",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "aec0b10c49e58b6b",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000072:user/svc-0072",
+        "role": "NetworkEngineer",
+        "account": "100000000016",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000072:user/svc-0072",
+        "role": "NetworkEngineer",
+        "account": "100000000016",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7f622336b3991940",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "Database QueryManager",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "Database QueryManager",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "79bb8a5fabb0b956",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "NetworkEngineer",
+        "account": "100000000038",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "NetworkEngineer",
+        "account": "100000000038",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7c924d3d9233a2c6",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "DataAnalyst",
+        "account": "100000000031",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "DataAnalyst",
+        "account": "100000000031",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6dc8b514ab2d80b3",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "DataAnalyst",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "DataAnalyst",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d101f8dd29b10e83",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "AdminFull",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000068:user/svc-0068",
+        "role": "AdminFull",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8a2629941447f4ed",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000056:user/svc-0056",
+        "role": "AdminFull",
+        "account": "100000000046",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000056:user/svc-0056",
+        "role": "AdminFull",
+        "account": "100000000046",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1ec8b15cad5f1d78",
+    "arm": 5,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000073:user/svc-0073",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000030",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000073:user/svc-0073",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000030",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "QueryValidator": "AVAILABLE",
+      "SchemaRegistry": "AVAILABLE",
+      "PermissionStore": "AVAILABLE",
+      "Database QueryAuditor": "UNAVAILABLE"
+    }
+  }
+]

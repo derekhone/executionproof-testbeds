@@ -1,0 +1,94 @@
+{
+  "experiment": "ARK-471",
+  "total_scenarios": 800,
+  "arms": [
+    {
+      "arm": 1,
+      "name": "EXACT-MATCH",
+      "expect": "ALLOW",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 2,
+      "name": "CROSS-TENANT",
+      "expect": "DENY",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 3,
+      "name": "CROSS-SESSION",
+      "expect": "DENY",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 4,
+      "name": "CROSS-RESOURCE",
+      "expect": "DENY",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 5,
+      "name": "CROSS-AUDIENCE",
+      "expect": "DENY",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 6,
+      "name": "CROSS-ENVIRONMENT",
+      "expect": "DENY",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 7,
+      "name": "MULTI-DIM",
+      "expect": "DENY",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 8,
+      "name": "EXACT-MATCH-baseline",
+      "expect": "ALLOW",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    }
+  ],
+  "metrics": {
+    "g_allow_exact": 1.0,
+    "g_deny_replay_min": 1.0,
+    "g_margin": 0.95,
+    "overall_concordance": 1.0
+  },
+  "criteria": {
+    "C1": {
+      "threshold": 0.95,
+      "value": 1.0,
+      "pass": true
+    },
+    "C2": {
+      "threshold": 0.95,
+      "value": 1.0,
+      "pass": true
+    },
+    "C3": {
+      "threshold": 0.9,
+      "value": 0.95,
+      "pass": true
+    }
+  },
+  "verdict": "PASS"
+}
