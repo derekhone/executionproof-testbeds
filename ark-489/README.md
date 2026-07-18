@@ -1,5 +1,7 @@
 # ARK-489 — Authority Engine · Burst Throughput
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434407.svg)](https://doi.org/10.5281/zenodo.21434407)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
 
 - Burst throughput **3,090,730 decisions/sec** over 10s (threshold ≥200K ✓)

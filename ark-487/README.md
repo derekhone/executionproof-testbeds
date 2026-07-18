@@ -1,5 +1,7 @@
 # ARK-487 — Authority Engine · Cold Start Latency
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434402.svg)](https://doi.org/10.5281/zenodo.21434402)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
 
 - Cold start **p95 = 9.34 ms** (9,337 µs), mean 7.87 ms, over 200 runs (threshold ≤50 ms ✓)

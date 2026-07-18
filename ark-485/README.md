@@ -1,5 +1,7 @@
 # ARK-485 — Verification Decision · Sustained Throughput
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434398.svg)](https://doi.org/10.5281/zenodo.21434398)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
 
 - V2 (Python): **1,504,355 decisions/sec** sustained over 60s (threshold ≥50K ✓)
