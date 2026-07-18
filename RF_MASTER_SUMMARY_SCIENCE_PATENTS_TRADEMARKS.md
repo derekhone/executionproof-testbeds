@@ -26,13 +26,13 @@ RF's public scientific corpus spans **five research programs**, all preregistere
 
 | Program | Theme | Substrate | Status |
 |---|---|---|---|
-| **ARK** | ExecutionProof authorization boundary (Verification Before Execution) | Quantum hardware (441–448) + classical software (449–484) | 30 experiment IDs, 52 records — active |
+| **ARK** | ExecutionProof authorization boundary (Verification Before Execution) | Quantum hardware (441–448) + classical software (449–492) | 38 experiment IDs, 60 records — active |
 | **WITNESS** | Quantum-sourced authorization nonces with verifiable provenance | IBM quantum hardware (`ibm_fez`) | 2 experiments, 6 cases — complete + published |
 | **BELLWETHER** | Nonclassicality (Bell/Mermin/contextuality) witness bound into a nonce | IBM quantum hardware (`ibm_fez`) | 3 experiments — complete + published |
 | **CHRONO** | Temporal nonclassicality (Leggett–Garg) witness bound into a nonce | IBM quantum hardware (`ibm_fez`) | 1 experiment — complete + published |
 | **UIP Phase 1** | Foundational physics program (precursor) | — | Closed |
 
-**Corpus totals (ARK + WITNESS, reconciled 2026-07-18):** 52 case records across 30 experiment IDs → **49 PASS · 2 honest FAIL · 1 GATE-STOP**, **48/48 Zenodo publications complete (100%)**. The BELLWETHER (3) and CHRONO (1) quantum-witness experiments are additionally published (4 more DOIs).
+**Corpus totals (ARK + WITNESS, reconciled 2026-07-18):** 60 case records across 38 experiment IDs → **57 PASS · 2 honest FAIL · 1 GATE-STOP**, **56/56 Zenodo publications complete (100%)**. P02 Latency/Throughput/Scale (ARK-483–492) complete 10/10. The BELLWETHER (3) and CHRONO (1) quantum-witness experiments are additionally published (4 more DOIs).
 
 ---
 
@@ -93,15 +93,23 @@ Each series tests the same 5 failure modes: **Exact-Action Binding · Revocation
 - Kill-gate falsifiability: **5,306 / 5,306 wrong-allows detected (100%)**
 - All gate metrics met: g_allow = 1.0000, g_deny/hold_min = 1.0000, g_margin ≥ 0.9500
 
-### 1.4 P02 Latency / Throughput Series (ARK-483–484) — 2/10 complete
-CUT = frozen ARK-458 guard (unchanged).
+### 1.4 P02 Latency / Throughput / Scale Series (ARK-483–492) — ✅ 10/10 COMPLETE
+CUT = frozen ARK-458 guard (Verification Decision) + minimal in-memory reference Authority/Evidence engines (measurement only, **not** production engines).
 
 | ARK | Question | Verdict | Result | DOI |
 |---|---|---|---|---|
 | 483 | Verification decision — latency | ✅ PASS | worst-path p95 **1.822 µs** (Py) / **0.652 µs** (JS); ceiling 1000 µs | 10.5281/zenodo.21432647 |
 | 484 | Verification decision — burst throughput | ✅ PASS | **1.66M dec/s** (Py, 16.6× pred) / **4.52M dec/s** (JS, 30.2× pred) | 10.5281/zenodo.21433111 |
+| 485 | Verification decision — sustained throughput | ✅ PASS | **1.50M dec/s** (Py) / **9.52M dec/s** (JS), 100% acc over 60s | 10.5281/zenodo.21434398 |
+| 486 | Verification decision — cost at scale | ✅ PASS | **fixed prior FAIL**; Scenario B realistic **$7.47e-06/M** (Py) / **$1.18e-06/M** (JS); naive $0.20/M disclosed | 10.5281/zenodo.21434400 |
+| 487 | Authority Engine — cold start | ✅ PASS | p95 **9.34 ms** (mean 7.87 ms); correctness gate PASS | 10.5281/zenodo.21434402 |
+| 488 | Authority Engine — p95 latency | ✅ PASS | warm p95 **0.32 µs**, p99 0.41 µs (200k decisions) | 10.5281/zenodo.21434405 |
+| 489 | Authority Engine — burst throughput | ✅ PASS | **3.09M dec/s**, 100% acc | 10.5281/zenodo.21434407 |
+| 490 | Authority Engine — sustained throughput | ✅ PASS | **2.49M dec/s** over 60s, 100% acc (~81% of burst) | 10.5281/zenodo.21434409 |
+| 491 | Authority Engine — cost at scale | ✅ PASS | Scenario B **$3.59e-06/M**; naive $0.20/M disclosed | 10.5281/zenodo.21434411 |
+| 492 | Evidence Engine — cold start | ✅ PASS | p95 **44.0 ms**; tamper + broken-chain correctly DENY | 10.5281/zenodo.21434413 |
 
-*Honest finding: DENY is slower than ALLOW in both implementations (reason-string formatting dominates the tail, not comparison work). Disclosed.*
+*Honest findings: (a) DENY slower than ALLOW in ARK-483 (reason-string formatting dominates tail). (b) ARK-486 corrected a cost-model category error (per-request serverless price per in-process decision) → verdict on realistic running-service model, naive bound disclosed. (c) ARK-487–492 measure minimal in-memory reference engines, not production engines; claims bounded to single-threaded in-memory load. All disclosed.*
 
 ---
 
@@ -247,12 +255,12 @@ Commits are timestamped but **not** GPG/SSH-signed. Provenance = public commit h
 | ARK Hardware (441–448) | 9 | 9 | 7 | 1 | 1 | 9/9 ✓ |
 | ARK Classical pre-P01 (449–457) | 10 | 10 | 9 | 1 | 0 | 10/10 ✓ |
 | ARK P01 Production (458–482) | 25 | 25 | 25 | 0 | 0 | 25/25 ✓ |
-| ARK P02 Latency (483–484) | 2 | 2 | 2 | 0 | 0 | 2/2 ✓ |
+| ARK P02 Latency/Throughput/Scale (483–492) | 10 | 10 | 10 | 0 | 0 | 10/10 ✓ |
 | WITNESS (1–2) | 2 | 6 | 6 | 0 | 0 | 2/2 ✓ |
-| **ARK+WITNESS subtotal** | **48** | **52** | **49** | **2** | **1** | **48/48 ✓** |
+| **ARK+WITNESS subtotal** | **56** | **60** | **57** | **2** | **1** | **56/56 ✓** |
 | BELLWETHER (1–3) | 3 | 3 | 3 | 0 | 0 | 3/3 ✓ |
 | CHRONO (1) | 1 | 1 | 1 | 0 | 0 | 1/1 ✓ |
-| **GRAND TOTAL** | **52** | **56** | **53** | **2** | **1** | **52/52 ✓** |
+| **GRAND TOTAL** | **60** | **64** | **61** | **2** | **1** | **60/60 ✓** |
 
 **IP totals:** 56 USPTO patent filings · 5 pending federal trademarks + 1 common-law mark.
 
@@ -263,7 +271,7 @@ Commits are timestamped but **not** GPG/SSH-signed. Provenance = public commit h
 The **500-experiment schema (ARK-458–957)** is a floor, not a ceiling — 10 priority groups (P01–P10), with new groups anticipated beyond P10.
 
 - **P01 Production Boundary (458–482)** — ✅ COMPLETE
-- **P02 Latency/Throughput (483–507)** — in progress (483–484 done); next ARK-485–492 (Verification-Decision throughput/cost + Authority Engine)
+- **P02 Latency/Throughput/Scale (483–492)** — ✅ complete (10/10 PASS, all published); next P03 Dependency Cascade (ARK-493+)
 - **P03 Reliability/Failure Modes (508–532)** — next
 - **P04–P10** — ProofRecord & crypto, identity/delegation, evidence policy, AI-agent tool-use, treasury/financial, VaultProof/digital-asset, cloud control-plane
 
