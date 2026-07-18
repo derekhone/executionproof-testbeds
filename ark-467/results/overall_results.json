@@ -1,0 +1,100 @@
+{
+  "experiment": "ARK-467",
+  "total_scenarios": 800,
+  "arms": [
+    {
+      "arm": 1,
+      "name": "NO-ESCALATION",
+      "expect": "ALLOW",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 2,
+      "name": "ESCALATION-APPROVED",
+      "expect": "ALLOW",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 3,
+      "name": "ESCALATION-NO-APPROVAL",
+      "expect": "HOLD",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 4,
+      "name": "ESCALATION-INVALID",
+      "expect": "HOLD",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 5,
+      "name": "ESCALATION-INCOMPLETE",
+      "expect": "HOLD",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 6,
+      "name": "NO-ESCALATION-baseline",
+      "expect": "ALLOW",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 7,
+      "name": "ESCALATION-APPROVED-baseline",
+      "expect": "ALLOW",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    },
+    {
+      "arm": 8,
+      "name": "ESCALATION-NO-APPROVAL-baseline",
+      "expect": "HOLD",
+      "n": 100,
+      "correctness": 1.0,
+      "concordance": 1.0
+    }
+  ],
+  "metrics": {
+    "g_allow_no_esc": 1.0,
+    "g_allow_approved": 1.0,
+    "g_hold_no_approval_min": 1.0,
+    "g_margin": 0.95,
+    "overall_concordance": 1.0
+  },
+  "criteria": {
+    "C1": {
+      "threshold": 0.95,
+      "value": 1.0,
+      "pass": true
+    },
+    "C2": {
+      "threshold": 0.95,
+      "value": 1.0,
+      "pass": true
+    },
+    "C3": {
+      "threshold": 0.95,
+      "value": 1.0,
+      "pass": true
+    },
+    "C4": {
+      "threshold": 0.9,
+      "value": 0.95,
+      "pass": true
+    }
+  },
+  "verdict": "PASS"
+}
