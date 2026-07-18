@@ -1,5 +1,7 @@
 # ARK-477 — Financial Transaction · Human Escalation
 
+[![DOI](https://i.ytimg.com/vi/HZ6m8oxwvig/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA3vtayewyLm_P1MkTnbxNA1nAXAA)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
 
 - g_allow_no_esc=1.0000, g_allow_approved=1.0000, g_hold_no_approval_min=1.0000, g_margin=0.9500

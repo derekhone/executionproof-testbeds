@@ -1,5 +1,7 @@
 # ARK-480 — API Rate Limit · Dependency Loss
 
+[![DOI](https://i.ytimg.com/vi/HZ6m8oxwvig/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA3vtayewyLm_P1MkTnbxNA1nAXAA)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
 
 - g_allow_available=1.0000, g_hold_unavailable_min=1.0000, g_margin=0.9500
