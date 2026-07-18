@@ -3,6 +3,14 @@
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18T18:49Z UTC, post-lock)
 
 - g_allow_available = 1.0000 (C1 ≥ 0.95 ✓) · g_hold_unavailable_min = 1.0000 (C2 ≥ 0.95 ✓) · g_margin = 0.9500 (C3 ≥ 0.90 ✓)
+
+## Zenodo DOI
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21432883.svg)](https://doi.org/10.5281/zenodo.21432883)
+
+**Published:** 2026-07-18  
+**Record:** https://zenodo.org/record/21432883
+
 - Dual-guard concordance 800/800 = 100.00%; kill-gate 150/150 wrong-allows (falsifiable)
 - See `RESULTS.md` for the full readout.
 

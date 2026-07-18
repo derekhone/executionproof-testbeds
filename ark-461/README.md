@@ -3,6 +3,14 @@
 **Status:** EXECUTED — VERDICT **PASS** (2026-07-18 post-lock)
 
 - g_allow_exact = 1.0000 · g_deny_replay_min = 1.0000 · g_margin = 0.9500
+
+## Zenodo DOI
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21432887.svg)](https://doi.org/10.5281/zenodo.21432887)
+
+**Published:** 2026-07-18  
+**Record:** https://zenodo.org/record/21432887
+
 - Concordance 800/800 = 100%, kill-gate 150/150 wrong-allows
 - See `RESULTS.md`
 
