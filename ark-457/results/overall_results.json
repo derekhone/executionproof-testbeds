@@ -1,0 +1,88 @@
+{
+  "run_start_time": "2026-07-18T00:19:46.257677Z",
+  "run_end_time": "2026-07-18T00:19:46.568150Z",
+  "arms_executed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "primary_metrics": {
+    "g_allow_exact": 1.0,
+    "g_deny_crosscontext_min": 1.0,
+    "g_margin": 0.95
+  },
+  "criteria": {
+    "c1_allow_exact_pass": true,
+    "c2_deny_crosscontext_pass": true,
+    "c3_margin_pass": true
+  },
+  "overall_concordance": {
+    "agreements": 800,
+    "total": 800,
+    "percentage": 100.0
+  },
+  "verdict": "PASS",
+  "per_arm_summary": {
+    "arm_1": {
+      "label": "BASELINE-exact-context-match",
+      "expected": "ALLOW",
+      "allow_rate": 1.0,
+      "hold_rate": 0.0,
+      "deny_rate": 0.0
+    },
+    "arm_2": {
+      "label": "CROSS-TENANT",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_3": {
+      "label": "CROSS-SESSION",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_4": {
+      "label": "CROSS-RESOURCE",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_5": {
+      "label": "CROSS-AUDIENCE",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_6": {
+      "label": "CROSS-ENVIRONMENT",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_7": {
+      "label": "MULTI-DIMENSION-mismatch",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    },
+    "arm_8": {
+      "label": "CONFUSABLE-near-match",
+      "expected": "DENY",
+      "allow_rate": 0.0,
+      "hold_rate": 0.0,
+      "deny_rate": 1.0
+    }
+  }
+}

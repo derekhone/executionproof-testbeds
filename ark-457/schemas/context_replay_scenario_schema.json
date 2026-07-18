@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CrossContextReplayScenario",
+  "description": "ARK-457 scenario: an authorization bound to a context tuple, with an execution attempted under a (possibly different) context. The guard must ALLOW only on exact context-tuple match.",
+  "type": "object",
+  "required": ["scenario_id", "arm", "authorization", "execution"],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^ARK457-ARM[1-8]-[0-9]{3}$"
+    },
+    "arm": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "authorization": {
+      "type": "object",
+      "required": ["action", "subject", "binding"],
+      "properties": {
+        "action": {
+          "type": "string",
+          "enum": ["transfer", "approve", "delegate", "execute"]
+        },
+        "subject": {
+          "type": "string"
+        },
+        "binding": {
+          "type": "object",
+          "description": "The context tuple the authorization is bound to. Execution is only valid under an EXACT match of every dimension.",
+          "required": ["tenant", "session", "resource", "audience", "environment"],
+          "properties": {
+            "tenant": {"type": "string"},
+            "session": {"type": "string"},
+            "resource": {"type": "string"},
+            "audience": {"type": "string"},
+            "environment": {"type": "string"}
+          }
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "required": ["context"],
+      "properties": {
+        "context": {
+          "type": "object",
+          "description": "The context presented at execution time. Compared byte/code-point exact against the authorization binding.",
+          "required": ["tenant", "session", "resource", "audience", "environment"],
+          "properties": {
+            "tenant": {"type": "string"},
+            "session": {"type": "string"},
+            "resource": {"type": "string"},
+            "audience": {"type": "string"},
+            "environment": {"type": "string"}
+          }
+        }
+      }
+    }
+  }
+}
