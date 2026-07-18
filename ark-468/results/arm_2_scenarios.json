@@ -1,0 +1,2002 @@
+[
+  {
+    "scenario_id": "arm2_db_mismatch_000",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_001",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_002",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_003",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_004",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_005",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_006",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_007",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_008",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_009",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_010",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_011",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_012",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_013",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_014",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_015",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_016",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_017",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_018",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_019",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_020",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_021",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_022",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_023",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_024",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_025",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_026",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_027",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_028",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_029",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_030",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_031",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_032",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_033",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_034",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_035",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_036",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_037",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_038",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_039",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_040",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_041",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_042",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_043",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_044",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_045",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_046",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_047",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_048",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_049",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_050",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_051",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_052",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_053",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_054",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_055",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_056",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_057",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_058",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_059",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_060",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_061",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_062",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_063",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_064",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_065",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_066",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_067",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_068",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_069",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_070",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_071",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_072",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_073",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_074",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_075",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_076",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_077",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_078",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_079",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_080",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_081",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_082",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_083",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_084",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_085",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_086",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_087",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_088",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_089",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_090",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_091",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_092",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_093",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_094",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_095",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_query": {
+      "database_name": "production_db_modified",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_096",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_097",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "test_db_modified",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_098",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_query": {
+      "database_name": "analytics_db_modified",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm2_db_mismatch_099",
+    "arm": 2,
+    "arm_name": "Database Name Mismatch",
+    "authorized_query": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_query": {
+      "database_name": "staging_db_modified",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  }
+]
