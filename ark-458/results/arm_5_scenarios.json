@@ -1,0 +1,2402 @@
+[
+  {
+    "scenario_id": "ARK458-A5-000",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "SupportEngineer",
+        "account": "100000000011",
+        "permission_set": "ps-09a89e6c0636ea58",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "SupportEngineer",
+        "account": "100000000011",
+        "permission_set": "ps-ddff8f6347938c68",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-001",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-84b5461e6164642c",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-7ee0e86e21e3e200",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-002",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "OrganizationAdmin",
+        "account": "100000000016",
+        "permission_set": "ps-a9f4e66e9d7fc50a",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "OrganizationAdmin",
+        "account": "100000000016",
+        "permission_set": "ps-6c43e4cb92585bbf",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-003",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "DataAnalyst",
+        "account": "100000000024",
+        "permission_set": "ps-c86f8da2284bc8ed",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "DataAnalyst",
+        "account": "100000000024",
+        "permission_set": "ps-637736855e1b8690",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-004",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "DeployBot",
+        "account": "100000000019",
+        "permission_set": "ps-9151b92a81ed8d52",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "DeployBot",
+        "account": "100000000019",
+        "permission_set": "ps-0392ff1eb58ac901",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-005",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "PowerUser",
+        "account": "100000000020",
+        "permission_set": "ps-6c551df2ffd1596b",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "PowerUser",
+        "account": "100000000020",
+        "permission_set": "ps-d3c9f7cd680c2aff",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-006",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "SecurityAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-0a3506d1243f0aff",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "SecurityAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-e264996fcbde7910",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-007",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "AdministratorAccess",
+        "account": "100000000029",
+        "permission_set": "ps-f52bb377dae189f7",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "AdministratorAccess",
+        "account": "100000000029",
+        "permission_set": "ps-73651f1b91082c7c",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-008",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "PowerUser",
+        "account": "100000000017",
+        "permission_set": "ps-7540b18d19db246b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "PowerUser",
+        "account": "100000000017",
+        "permission_set": "ps-3d9de4db154638ef",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-009",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "AdministratorAccess",
+        "account": "100000000018",
+        "permission_set": "ps-7364b5e20499d627",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "AdministratorAccess",
+        "account": "100000000018",
+        "permission_set": "ps-d5979cd6c319e9e9",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-010",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "AdministratorAccess",
+        "account": "100000000010",
+        "permission_set": "ps-7364b5e20499d627",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "AdministratorAccess",
+        "account": "100000000010",
+        "permission_set": "ps-d5979cd6c319e9e9",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-011",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "OrganizationAdmin",
+        "account": "100000000026",
+        "permission_set": "ps-705298a46a99b7b6",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "OrganizationAdmin",
+        "account": "100000000026",
+        "permission_set": "ps-5bf1fdcfc5bbc71d",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-012",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "OrganizationAdmin",
+        "account": "100000000004",
+        "permission_set": "ps-a9f4e66e9d7fc50a",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "OrganizationAdmin",
+        "account": "100000000004",
+        "permission_set": "ps-6c43e4cb92585bbf",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-013",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "SupportEngineer",
+        "account": "100000000039",
+        "permission_set": "ps-79c5f723eb54d6d4",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "SupportEngineer",
+        "account": "100000000039",
+        "permission_set": "ps-86c7a04fa9ffbb09",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-014",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "SecurityAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-8d3b57d2b1892832",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "SecurityAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-bf8c0a6acc930c33",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-015",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "OrganizationAdmin",
+        "account": "100000000011",
+        "permission_set": "ps-705298a46a99b7b6",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "OrganizationAdmin",
+        "account": "100000000011",
+        "permission_set": "ps-5bf1fdcfc5bbc71d",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-016",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "BillingViewer",
+        "account": "100000000032",
+        "permission_set": "ps-e6df9752d3af76c6",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "BillingViewer",
+        "account": "100000000032",
+        "permission_set": "ps-dfd8b0de688e6ce5",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-017",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "SupportEngineer",
+        "account": "100000000006",
+        "permission_set": "ps-ec43ab09c171202a",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "SupportEngineer",
+        "account": "100000000006",
+        "permission_set": "ps-b85755132b5d245c",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-018",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "OrganizationAdmin",
+        "account": "100000000020",
+        "permission_set": "ps-42055798e1a3371b",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "OrganizationAdmin",
+        "account": "100000000020",
+        "permission_set": "ps-2ee91370b0577f1e",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-019",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000039:user/svc-0039",
+        "role": "PowerUser",
+        "account": "100000000003",
+        "permission_set": "ps-521f960ecabc5e5b",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000039:user/svc-0039",
+        "role": "PowerUser",
+        "account": "100000000003",
+        "permission_set": "ps-655ef5dbf6192341",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-020",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "SupportEngineer",
+        "account": "100000000038",
+        "permission_set": "ps-09a89e6c0636ea58",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "SupportEngineer",
+        "account": "100000000038",
+        "permission_set": "ps-ddff8f6347938c68",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-021",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000015",
+        "permission_set": "ps-e08f82a214bbe9b5",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000015",
+        "permission_set": "ps-d45413d021f2b6f5",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-022",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "OrganizationAdmin",
+        "account": "100000000032",
+        "permission_set": "ps-47cc778ce4e9a83d",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "OrganizationAdmin",
+        "account": "100000000032",
+        "permission_set": "ps-3b78675c0fc603cb",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-023",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "DatabaseAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-5d3c679f6e5fa0ce",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "DatabaseAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-8026c20061ac3a79",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-024",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "PowerUser",
+        "account": "100000000013",
+        "permission_set": "ps-d6a76fc43379df9c",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "PowerUser",
+        "account": "100000000013",
+        "permission_set": "ps-a1e68da6c8484572",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-025",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "SecurityAuditor",
+        "account": "100000000026",
+        "permission_set": "ps-20580b9065f89d8a",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "SecurityAuditor",
+        "account": "100000000026",
+        "permission_set": "ps-dd3bb52f7b2cb8ab",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-026",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "NetworkAdmin",
+        "account": "100000000025",
+        "permission_set": "ps-586b8831aa9f0333",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "NetworkAdmin",
+        "account": "100000000025",
+        "permission_set": "ps-942c9d7d747a83a3",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-027",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "DatabaseAdmin",
+        "account": "100000000023",
+        "permission_set": "ps-1999b1d0d827c375",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "DatabaseAdmin",
+        "account": "100000000023",
+        "permission_set": "ps-2f1f476d7281f4f2",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-028",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "AdministratorAccess",
+        "account": "100000000028",
+        "permission_set": "ps-a92629653e449e9e",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "AdministratorAccess",
+        "account": "100000000028",
+        "permission_set": "ps-e8c20901dfb1c139",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-029",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "NetworkAdmin",
+        "account": "100000000011",
+        "permission_set": "ps-057800515d701b59",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "NetworkAdmin",
+        "account": "100000000011",
+        "permission_set": "ps-2c439247e9d88427",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-030",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "DatabaseAdmin",
+        "account": "100000000026",
+        "permission_set": "ps-4f404fa3bcec1db1",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "DatabaseAdmin",
+        "account": "100000000026",
+        "permission_set": "ps-891baea7687ab80e",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-031",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "DeployBot",
+        "account": "100000000037",
+        "permission_set": "ps-96e97297b8cbd5c9",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "DeployBot",
+        "account": "100000000037",
+        "permission_set": "ps-87b263e4b707de71",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-032",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "BillingViewer",
+        "account": "100000000003",
+        "permission_set": "ps-23c6d4587a974085",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "BillingViewer",
+        "account": "100000000003",
+        "permission_set": "ps-f182168b05508ff1",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-033",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "DataAnalyst",
+        "account": "100000000029",
+        "permission_set": "ps-84b5461e6164642c",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "DataAnalyst",
+        "account": "100000000029",
+        "permission_set": "ps-7ee0e86e21e3e200",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-034",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "SupportEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-3cdc36fc2b6876a4",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "SupportEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-15fccca76abdfc71",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-035",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "OrganizationAdmin",
+        "account": "100000000017",
+        "permission_set": "ps-47cc778ce4e9a83d",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000023:user/svc-0023",
+        "role": "OrganizationAdmin",
+        "account": "100000000017",
+        "permission_set": "ps-3b78675c0fc603cb",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-036",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "PowerUser",
+        "account": "100000000034",
+        "permission_set": "ps-92bbd19045cc6f63",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "PowerUser",
+        "account": "100000000034",
+        "permission_set": "ps-4c5d40e2b8194457",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-037",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "SupportEngineer",
+        "account": "100000000002",
+        "permission_set": "ps-09a89e6c0636ea58",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "SupportEngineer",
+        "account": "100000000002",
+        "permission_set": "ps-ddff8f6347938c68",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-038",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "BillingViewer",
+        "account": "100000000029",
+        "permission_set": "ps-a4240965c38c5f48",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "BillingViewer",
+        "account": "100000000029",
+        "permission_set": "ps-dd8f1fda24a37bf9",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-039",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000020",
+        "permission_set": "ps-8c08c69c972558c1",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000020",
+        "permission_set": "ps-79cba3a81ad76bb8",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-040",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "DataAnalyst",
+        "account": "100000000033",
+        "permission_set": "ps-3d193155db010104",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "DataAnalyst",
+        "account": "100000000033",
+        "permission_set": "ps-e27e9fda9889d3ec",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-041",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "DataAnalyst",
+        "account": "100000000034",
+        "permission_set": "ps-068755f08240fad5",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "DataAnalyst",
+        "account": "100000000034",
+        "permission_set": "ps-038e2ac70982d7fa",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-042",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "BillingViewer",
+        "account": "100000000023",
+        "permission_set": "ps-e6df9752d3af76c6",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "BillingViewer",
+        "account": "100000000023",
+        "permission_set": "ps-dfd8b0de688e6ce5",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-043",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "DeployBot",
+        "account": "100000000033",
+        "permission_set": "ps-b7d656ec26b3a4f0",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "DeployBot",
+        "account": "100000000033",
+        "permission_set": "ps-255df3d09f449bfb",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-044",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "PowerUser",
+        "account": "100000000013",
+        "permission_set": "ps-7540b18d19db246b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "PowerUser",
+        "account": "100000000013",
+        "permission_set": "ps-3d9de4db154638ef",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-045",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "DatabaseAdmin",
+        "account": "100000000013",
+        "permission_set": "ps-1999b1d0d827c375",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "DatabaseAdmin",
+        "account": "100000000013",
+        "permission_set": "ps-2f1f476d7281f4f2",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-046",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "SecurityAuditor",
+        "account": "100000000011",
+        "permission_set": "ps-8d3b57d2b1892832",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "SecurityAuditor",
+        "account": "100000000011",
+        "permission_set": "ps-bf8c0a6acc930c33",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-047",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "AdministratorAccess",
+        "account": "100000000003",
+        "permission_set": "ps-90cc16d0cc4e3679",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "AdministratorAccess",
+        "account": "100000000003",
+        "permission_set": "ps-e0274f6d6fcdb523",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-048",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "SupportEngineer",
+        "account": "100000000011",
+        "permission_set": "ps-09a89e6c0636ea58",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "SupportEngineer",
+        "account": "100000000011",
+        "permission_set": "ps-ddff8f6347938c68",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-049",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000025:user/svc-0025",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-e08f82a214bbe9b5",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000025:user/svc-0025",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-d45413d021f2b6f5",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-050",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000009",
+        "permission_set": "ps-d13d584ac87069e5",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000009",
+        "permission_set": "ps-c1eaac92517946ff",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-051",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "SupportEngineer",
+        "account": "100000000022",
+        "permission_set": "ps-3cdc36fc2b6876a4",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "SupportEngineer",
+        "account": "100000000022",
+        "permission_set": "ps-15fccca76abdfc71",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-052",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "NetworkAdmin",
+        "account": "100000000009",
+        "permission_set": "ps-d03aa166b5e193fb",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "NetworkAdmin",
+        "account": "100000000009",
+        "permission_set": "ps-b35009214bd5aa38",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-053",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "SupportEngineer",
+        "account": "100000000025",
+        "permission_set": "ps-ec43ab09c171202a",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "SupportEngineer",
+        "account": "100000000025",
+        "permission_set": "ps-b85755132b5d245c",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-054",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "SecurityAuditor",
+        "account": "100000000009",
+        "permission_set": "ps-8d3b57d2b1892832",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "SecurityAuditor",
+        "account": "100000000009",
+        "permission_set": "ps-bf8c0a6acc930c33",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-055",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "OrganizationAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-42055798e1a3371b",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "OrganizationAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-2ee91370b0577f1e",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-056",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "DeployBot",
+        "account": "100000000031",
+        "permission_set": "ps-03c898e59f94effe",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "DeployBot",
+        "account": "100000000031",
+        "permission_set": "ps-e8a2392d25854b1f",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-057",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "BillingViewer",
+        "account": "100000000038",
+        "permission_set": "ps-42c5ed92b37233a5",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "BillingViewer",
+        "account": "100000000038",
+        "permission_set": "ps-dc945a9e67cd1b02",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-058",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "SupportEngineer",
+        "account": "100000000032",
+        "permission_set": "ps-f9d32fd9767354c0",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "SupportEngineer",
+        "account": "100000000032",
+        "permission_set": "ps-c4d39866d2547359",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-059",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "AdministratorAccess",
+        "account": "100000000005",
+        "permission_set": "ps-14b09a5284a8157d",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "AdministratorAccess",
+        "account": "100000000005",
+        "permission_set": "ps-2613a10ae4122d42",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-060",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "BillingViewer",
+        "account": "100000000006",
+        "permission_set": "ps-42c5ed92b37233a5",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "BillingViewer",
+        "account": "100000000006",
+        "permission_set": "ps-dc945a9e67cd1b02",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-061",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "SecurityAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-8d3b57d2b1892832",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "SecurityAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-bf8c0a6acc930c33",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-062",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "NetworkAdmin",
+        "account": "100000000005",
+        "permission_set": "ps-057800515d701b59",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "NetworkAdmin",
+        "account": "100000000005",
+        "permission_set": "ps-2c439247e9d88427",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-063",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-068755f08240fad5",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000004:user/svc-0004",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-038e2ac70982d7fa",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-064",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000016:user/svc-0016",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000003",
+        "permission_set": "ps-93d6410f29eb2627",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000016:user/svc-0016",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000003",
+        "permission_set": "ps-12fb10dd9d7bfb8f",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-065",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "PowerUser",
+        "account": "100000000020",
+        "permission_set": "ps-92bbd19045cc6f63",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "PowerUser",
+        "account": "100000000020",
+        "permission_set": "ps-4c5d40e2b8194457",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-066",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "AdministratorAccess",
+        "account": "100000000023",
+        "permission_set": "ps-43651fa17005f064",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "AdministratorAccess",
+        "account": "100000000023",
+        "permission_set": "ps-b527bb29509935c6",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-067",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "NetworkAdmin",
+        "account": "100000000009",
+        "permission_set": "ps-5c4b3eee67ab7d78",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "NetworkAdmin",
+        "account": "100000000009",
+        "permission_set": "ps-16bbd2d6c58f7d92",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-068",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "PowerUser",
+        "account": "100000000034",
+        "permission_set": "ps-6c551df2ffd1596b",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "PowerUser",
+        "account": "100000000034",
+        "permission_set": "ps-d3c9f7cd680c2aff",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-069",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "DatabaseAdmin",
+        "account": "100000000038",
+        "permission_set": "ps-5d3c679f6e5fa0ce",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "DatabaseAdmin",
+        "account": "100000000038",
+        "permission_set": "ps-8026c20061ac3a79",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-070",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "OrganizationAdmin",
+        "account": "100000000031",
+        "permission_set": "ps-6d0cd33b58742972",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "OrganizationAdmin",
+        "account": "100000000031",
+        "permission_set": "ps-4e3f28c346e13d6e",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-071",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "SecurityAuditor",
+        "account": "100000000020",
+        "permission_set": "ps-ad0db293680a422e",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "SecurityAuditor",
+        "account": "100000000020",
+        "permission_set": "ps-2c456a36fa7e1d81",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-072",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "BillingViewer",
+        "account": "100000000025",
+        "permission_set": "ps-e8a8de7de2170746",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "BillingViewer",
+        "account": "100000000025",
+        "permission_set": "ps-aa924f34651517c7",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-073",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "DeployBot",
+        "account": "100000000022",
+        "permission_set": "ps-96e97297b8cbd5c9",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "DeployBot",
+        "account": "100000000022",
+        "permission_set": "ps-87b263e4b707de71",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-074",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-65143b18a0e478e0",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-e1b550d0f06538a6",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-075",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "BillingViewer",
+        "account": "100000000009",
+        "permission_set": "ps-d6e3920d4c630709",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "BillingViewer",
+        "account": "100000000009",
+        "permission_set": "ps-7de785f294294dd6",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-076",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000016:user/svc-0016",
+        "role": "PowerUser",
+        "account": "100000000030",
+        "permission_set": "ps-521f960ecabc5e5b",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000016:user/svc-0016",
+        "role": "PowerUser",
+        "account": "100000000030",
+        "permission_set": "ps-655ef5dbf6192341",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-077",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "DatabaseAdmin",
+        "account": "100000000024",
+        "permission_set": "ps-4f404fa3bcec1db1",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "DatabaseAdmin",
+        "account": "100000000024",
+        "permission_set": "ps-891baea7687ab80e",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-078",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "DatabaseAdmin",
+        "account": "100000000014",
+        "permission_set": "ps-81993cfbb1596989",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "DatabaseAdmin",
+        "account": "100000000014",
+        "permission_set": "ps-711aaf1995463b8c",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-079",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "DataAnalyst",
+        "account": "100000000028",
+        "permission_set": "ps-65143b18a0e478e0",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "DataAnalyst",
+        "account": "100000000028",
+        "permission_set": "ps-e1b550d0f06538a6",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-080",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "AdministratorAccess",
+        "account": "100000000026",
+        "permission_set": "ps-90cc16d0cc4e3679",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "AdministratorAccess",
+        "account": "100000000026",
+        "permission_set": "ps-e0274f6d6fcdb523",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-081",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "SupportEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-bf4c80d1621d5f62",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "SupportEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-c7ef4eb1e6391d53",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-082",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "PowerUser",
+        "account": "100000000016",
+        "permission_set": "ps-d6a76fc43379df9c",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "PowerUser",
+        "account": "100000000016",
+        "permission_set": "ps-a1e68da6c8484572",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-083",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000029:user/svc-0029",
+        "role": "DeployBot",
+        "account": "100000000028",
+        "permission_set": "ps-b7d656ec26b3a4f0",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000029:user/svc-0029",
+        "role": "DeployBot",
+        "account": "100000000028",
+        "permission_set": "ps-255df3d09f449bfb",
+        "condition": "region=us-east-1;mfa=true;resource=prod-db"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-084",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "DeployBot",
+        "account": "100000000003",
+        "permission_set": "ps-bda84866699d70d2",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "DeployBot",
+        "account": "100000000003",
+        "permission_set": "ps-36e09b37a88348fa",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-085",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "DataAnalyst",
+        "account": "100000000038",
+        "permission_set": "ps-3d193155db010104",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "DataAnalyst",
+        "account": "100000000038",
+        "permission_set": "ps-e27e9fda9889d3ec",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-086",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "DatabaseAdmin",
+        "account": "100000000021",
+        "permission_set": "ps-b52053420cdc1fb1",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "DatabaseAdmin",
+        "account": "100000000021",
+        "permission_set": "ps-9f5ccd2769cd54cf",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-087",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000025:user/svc-0025",
+        "role": "BillingViewer",
+        "account": "100000000038",
+        "permission_set": "ps-d6e3920d4c630709",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000025:user/svc-0025",
+        "role": "BillingViewer",
+        "account": "100000000038",
+        "permission_set": "ps-7de785f294294dd6",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-088",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "DataAnalyst",
+        "account": "100000000016",
+        "permission_set": "ps-1e536d8b834687d1",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "DataAnalyst",
+        "account": "100000000016",
+        "permission_set": "ps-806b508b174de61c",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-089",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "SupportEngineer",
+        "account": "100000000023",
+        "permission_set": "ps-bf4c80d1621d5f62",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "SupportEngineer",
+        "account": "100000000023",
+        "permission_set": "ps-c7ef4eb1e6391d53",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-090",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "AdministratorAccess",
+        "account": "100000000022",
+        "permission_set": "ps-7364b5e20499d627",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "AdministratorAccess",
+        "account": "100000000022",
+        "permission_set": "ps-d5979cd6c319e9e9",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-091",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000022:user/svc-0022",
+        "role": "NetworkAdmin",
+        "account": "100000000009",
+        "permission_set": "ps-a36b14afd153a9f6",
+        "condition": "mfa=true;time<=8h"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000022:user/svc-0022",
+        "role": "NetworkAdmin",
+        "account": "100000000009",
+        "permission_set": "ps-7eabd3a1b2d0e0ae",
+        "condition": "mfa=true;time<=8h"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-092",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000037",
+        "permission_set": "ps-93d6410f29eb2627",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000037",
+        "permission_set": "ps-12fb10dd9d7bfb8f",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-093",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "PowerUser",
+        "account": "100000000004",
+        "permission_set": "ps-92bbd19045cc6f63",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "PowerUser",
+        "account": "100000000004",
+        "permission_set": "ps-4c5d40e2b8194457",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-094",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "OrganizationAdmin",
+        "account": "100000000009",
+        "permission_set": "ps-42055798e1a3371b",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000006:user/svc-0006",
+        "role": "OrganizationAdmin",
+        "account": "100000000009",
+        "permission_set": "ps-2ee91370b0577f1e",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-095",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "OrganizationAdmin",
+        "account": "100000000010",
+        "permission_set": "ps-a9f4e66e9d7fc50a",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "OrganizationAdmin",
+        "account": "100000000010",
+        "permission_set": "ps-6c43e4cb92585bbf",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-096",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000021",
+        "permission_set": "ps-d13d584ac87069e5",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000021",
+        "permission_set": "ps-c1eaac92517946ff",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-097",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "DatabaseAdmin",
+        "account": "100000000037",
+        "permission_set": "ps-4f404fa3bcec1db1",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "DatabaseAdmin",
+        "account": "100000000037",
+        "permission_set": "ps-891baea7687ab80e",
+        "condition": "region=us-east-1;mfa=true;ip=10.0.0.0/8"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-098",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "DeployBot",
+        "account": "100000000022",
+        "permission_set": "ps-03c898e59f94effe",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "DeployBot",
+        "account": "100000000022",
+        "permission_set": "ps-e8a2392d25854b1f",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  },
+  {
+    "scenario_id": "ARK458-A5-099",
+    "arm": 5,
+    "arm_label": "PERMISSION-EXPANSION",
+    "expected": "DENY",
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "PowerUser",
+        "account": "100000000009",
+        "permission_set": "ps-6c551df2ffd1596b",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "PowerUser",
+        "account": "100000000009",
+        "permission_set": "ps-d3c9f7cd680c2aff",
+        "condition": "region=eu-west-1;mfa=true"
+      }
+    }
+  }
+]

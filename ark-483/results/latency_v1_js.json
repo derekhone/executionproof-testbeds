@@ -1,0 +1,63 @@
+{
+  "experiment": "ARK-483",
+  "title": "Verification Decision Latency",
+  "component_under_test": "ark-458/verifiers/v1_guard.js::evaluate (exact-action-binding, LOCKED bytes via vm sandbox)",
+  "substrate": "classical software (in-process, no I/O, no network)",
+  "run_time": "2026-07-18T18:22:38Z",
+  "warmup_iterations": 5000,
+  "timed_iterations_per_path": 100000,
+  "cold_start_us": 36.6,
+  "paths": {
+    "allow_exact_match": {
+      "n": 100000,
+      "mean_us": 0.1374,
+      "median_us": 0.112,
+      "p50_us": 0.112,
+      "p95_us": 0.179,
+      "p99_us": 0.237,
+      "p999_us": 1.49,
+      "min_us": 0.1,
+      "max_us": 346.809,
+      "stdev_us": 1.388,
+      "throughput_decisions_per_sec": 7279724
+    },
+    "deny_first_dim_mismatch": {
+      "n": 100000,
+      "mean_us": 0.4173,
+      "median_us": 0.327,
+      "p50_us": 0.327,
+      "p95_us": 0.619,
+      "p99_us": 1.275,
+      "p999_us": 3.892,
+      "min_us": 0.294,
+      "max_us": 408.868,
+      "stdev_us": 1.9363,
+      "throughput_decisions_per_sec": 2396636
+    },
+    "deny_last_dim_mismatch": {
+      "n": 100000,
+      "mean_us": 0.4267,
+      "median_us": 0.371,
+      "p50_us": 0.371,
+      "p95_us": 0.652,
+      "p99_us": 0.763,
+      "p999_us": 1.402,
+      "min_us": 0.351,
+      "max_us": 256.528,
+      "stdev_us": 1.0178,
+      "throughput_decisions_per_sec": 2343487
+    }
+  },
+  "environment": {
+    "node_version": "v22.14.0",
+    "v8_version": "12.4.254.21-node.22",
+    "platform": "Linux 6.17.0-1015-aws",
+    "arch": "x64",
+    "cpu_model": "Intel(R) Xeon(R) 6975P-C"
+  },
+  "preregistered_p95_ceiling_us": 1000,
+  "worst_path_p95_us": 0.652,
+  "ceiling_pass": true,
+  "verdict": "PASS",
+  "bounds_note": "Absolute latencies are bounded to the environment above. Measures the in-process decision only; excludes network, auth-token retrieval, evidence persistence, and process startup."
+}
