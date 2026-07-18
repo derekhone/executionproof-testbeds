@@ -1,0 +1,23 @@
+{
+  "verdict": "PASS",
+  "criteria": {
+    "C1_v2_throughput_gte_100k": true,
+    "C2_v1_throughput_gte_150k": true,
+    "C3_all_correct": true
+  },
+  "v1_results": {
+    "implementation": "V1-JavaScript",
+    "decisions_processed": 100000,
+    "correct_decisions": 100000,
+    "batch_total_time_sec": 0.022100436,
+    "throughput_decisions_per_sec": 4524797.610327687
+  },
+  "v2_results": {
+    "implementation": "V2-Python",
+    "decisions_processed": 100000,
+    "correct_decisions": 100000,
+    "batch_total_time_sec": 0.06033978518098593,
+    "throughput_decisions_per_sec": 1657281.339336151
+  },
+  "total_scenarios": 100000
+}
