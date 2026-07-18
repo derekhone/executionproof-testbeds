@@ -1,5 +1,7 @@
 # ARK-492 — Evidence Engine · Cold Start Latency
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434413.svg)](https://doi.org/10.5281/zenodo.21434413)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
 
 - Cold start **p95 = 44.00 ms** (43,998 µs), mean 43.45 ms, over 200 runs (threshold ≤100 ms ✓)

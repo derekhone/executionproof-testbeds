@@ -1,5 +1,7 @@
 # ARK-488 — Authority Engine · P95 Decision Latency
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434405.svg)](https://doi.org/10.5281/zenodo.21434405)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
 
 - Warm per-decision latency **p95 = 0.320 µs**, p99 = 0.407 µs over 200,000 decisions (threshold p95 ≤ 50 µs ✓)

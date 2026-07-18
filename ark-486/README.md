@@ -1,5 +1,7 @@
 # ARK-486 — Verification Decision · Cost at Scale
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434400.svg)](https://doi.org/10.5281/zenodo.21434400)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock; supersedes an earlier FAIL caused by a cost-model category error)
 
 - **Verdict basis — Scenario B (realistic running service):** Python **$7.47 per billion** decisions ($7.47e-06/M), JS $1.18e-06/M — both ≪ $0.01/M threshold ✓

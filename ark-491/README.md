@@ -1,5 +1,7 @@
 # ARK-491 — Authority Engine · Cost at Scale
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434411.svg)](https://doi.org/10.5281/zenodo.21434411)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
 
 - **Verdict basis — Scenario B (realistic running service):** **$3.59e-06 per million decisions** (≪ $0.01/M threshold ✓)

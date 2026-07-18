@@ -1,13 +1,13 @@
 # Remnant Fieldworks Inc. — Master Corpus Scoreboard
-## ARK Series 441–484 + WITNESS Series
-**Last updated:** 2026-07-18 (P01 complete — all 25 production-boundary experiments)
+## ARK Series 441–492 + WITNESS Series
+**Last updated:** 2026-07-18 (P01 complete + P02 complete — all 10 latency/throughput/scale experiments)
 
 ---
 
 ## EXECUTIVE SUMMARY
 
-**Total RF Corpus:** 33 case records across 30 experiment IDs
-- **ARK Series:** 28 experiments (26 PASS, 2 FAIL honest, 1 GATE-STOP) — 21 records prior + 7 new (ARK-459-462, ARK-463-467, ARK-468-482, ARK-484)
+**Total RF Corpus:** 41 case records across 38 experiment IDs
+- **ARK Series:** 36 experiments (34 PASS, 2 FAIL honest, 1 GATE-STOP) — prior + P02 completion (ARK-485-492)
 - **WITNESS Series:** 2 experiments, 6 cases (all PASS)
 
 **P01 Production-Boundary Series (ARK-458-482):** ✅ **COMPLETE** — 25/25 experiments PASS
@@ -16,9 +16,12 @@
 - 100% kill-gate falsifiability
 - All 25 experiments published to Zenodo with DOI badges
 
-**P02 Latency/Throughput Series (ARK-483-492):** 2/10 complete
-- ARK-483 (Latency): ✅ PASS
-- ARK-484 (Burst Throughput): ✅ PASS
+**P02 Latency/Throughput/Scale Series (ARK-483-492):** ✅ **COMPLETE** — 10/10 experiments PASS
+- Verification Decision (483-486): latency, burst, sustained, cost — all PASS
+- Authority Engine (487-491): cold start, p95, burst, sustained, cost — all PASS (in-memory reference)
+- Evidence Engine (492): cold start with tamper + broken-chain DENY — PASS (in-memory reference)
+- ARK-486 fixed (prior cost-model FAIL corrected honestly; both scenarios disclosed)
+- All 10 published to Zenodo with DOI badges
 
 ---
 
@@ -173,21 +176,23 @@ Testing exact-action binding and 4 critical failure modes for API rate limit aut
 ---
 
 ## P02 LATENCY/THROUGHPUT SERIES (ARK-483–492)
-**Status:** 2/10 complete
-**Substrate:** Classical software (frozen ARK-458 guard as CUT)
+**Status:** ✅ **10/10 COMPLETE** (all PASS) — completed 2026-07-18
+**Substrate:** Classical software (frozen ARK-458 guard + in-memory reference Authority/Evidence engines as CUT)
 
 | ARK | Question | Verdict | Metrics | DOI |
 |-----|----------|---------|---------|-----|
 | ARK-483 | Verification Decision — Latency | ✅ PASS | V2 Py p95: 1.822µs, V1 JS p95: 0.652µs (ceiling: 1000µs) | 10.5281/zenodo.21432647 |
 | ARK-484 | Verification Decision — Burst Throughput | ✅ PASS | V2 Py: 1,657,281 dec/sec (16.6× pred), V1 JS: 4,524,798 dec/sec (30.2× pred) | 10.5281/zenodo.21433111 |
-| ARK-485 | Verification Decision — Sustained Throughput | ⏳ PENDING | | |
-| ARK-486 | Verification Decision — Cost At Scale | ⏳ PENDING | | |
-| ARK-487 | Authority Engine — Cold Start | ⏳ PENDING | | |
-| ARK-488 | Authority Engine — P95 Latency | ⏳ PENDING | | |
-| ARK-489 | Authority Engine — Burst Throughput | ⏳ PENDING | | |
-| ARK-490 | Authority Engine — Sustained Throughput | ⏳ PENDING | | |
-| ARK-491 | Authority Engine — Cost At Scale | ⏳ PENDING | | |
-| ARK-492 | Evidence Engine — Cold Start | ⏳ PENDING | | |
+| ARK-485 | Verification Decision — Sustained Throughput | ✅ PASS | V2 Py: 1,504,355 dec/sec, V1 JS: 9,521,201 dec/sec, 100% acc over 60s | 10.5281/zenodo.21434398 |
+| ARK-486 | Verification Decision — Cost At Scale | ✅ PASS | Fixed prior FAIL. Scenario B realistic: $7.47e-06/M (Py), $1.18e-06/M (JS); naive $0.20/M disclosed | 10.5281/zenodo.21434400 |
+| ARK-487 | Authority Engine — Cold Start | ✅ PASS | p95 9.34ms (mean 7.87ms), correctness gate PASS | 10.5281/zenodo.21434402 |
+| ARK-488 | Authority Engine — P95 Latency | ✅ PASS | warm p95 0.32µs, p99 0.41µs over 200k decisions | 10.5281/zenodo.21434405 |
+| ARK-489 | Authority Engine — Burst Throughput | ✅ PASS | 3,090,730 dec/sec, 100% acc | 10.5281/zenodo.21434407 |
+| ARK-490 | Authority Engine — Sustained Throughput | ✅ PASS | 2,491,235 dec/sec over 60s, 100% acc (~81% of burst) | 10.5281/zenodo.21434409 |
+| ARK-491 | Authority Engine — Cost At Scale | ✅ PASS | Scenario B $3.59e-06/M; naive $0.20/M disclosed | 10.5281/zenodo.21434411 |
+| ARK-492 | Evidence Engine — Cold Start | ✅ PASS | p95 44.0ms; tamper + broken-chain correctly DENY | 10.5281/zenodo.21434413 |
+
+**P02 Honesty note:** ARK-487–492 use *minimal in-process reference* Authority/Evidence engines built for MEASUREMENT ONLY — not production engines. ARK-486/491 cost verdicts taken on a realistic running-service model (per vCPU-second), with the naive per-request serverless figure disclosed as an upper bound. Claims bounded to the tested in-memory reference under single-threaded load.
 
 ---
 
@@ -199,24 +204,24 @@ Testing exact-action binding and 4 critical failure modes for API rate limit aut
 | ARK Hardware (441–448) | 9 | 9 | 7 | 1 | 1 | 9/9 ✓ |
 | ARK Classical Pre-P01 (449–457) | 10 | 10 | 9 | 1 | 0 | 10/10 ✓ |
 | ARK P01 Production (458–482) | 25 | 25 | 25 | 0 | 0 | 25/25 ✓ |
-| ARK P02 Latency/Throughput (483–484) | 2 | 2 | 2 | 0 | 0 | 2/2 ✓ |
+| ARK P02 Latency/Throughput/Scale (483–492) | 10 | 10 | 10 | 0 | 0 | 10/10 ✓ |
 | WITNESS Series (1–2) | 2 | 6 | 6 | 0 | 0 | 2/2 ✓ |
-| **TOTAL** | **48** | **52** | **49** | **2** | **1** | **48/48 ✓** |
+| **TOTAL** | **56** | **60** | **57** | **2** | **1** | **56/56 ✓** |
 
 ### ARK Series Summary
-- **Total ARK experiments:** 28 unique IDs (46 records including retests)
-- **PASS:** 26 experiments (43 records)
-- **FAIL (honest):** 2 experiments (ARK-445, ARK-455) — both have PASS retests (445b, 455b)
+- **Total ARK experiments:** 36 unique IDs (54 records including retests)
+- **PASS:** 34 experiments (51 records)
+- **FAIL (honest):** 2 experiments (ARK-445, ARK-455) — both have PASS retests (445b, 455b); ARK-486 prior cost-model FAIL corrected pre-lock (never published as FAIL)
 - **GATE-STOP:** 1 experiment (ARK-448)
-- **Published to Zenodo:** 28/28 (100%)
+- **Published to Zenodo:** 36/36 (100%)
 
 ### Overall RF Corpus (as of 2026-07-18)
-- **Total experiments:** 30 unique IDs
-- **Total case records:** 52
-- **PASS records:** 49
+- **Total experiments:** 38 unique IDs
+- **Total case records:** 60
+- **PASS records:** 57
 - **FAIL records:** 2 (honest, standing)
 - **GATE-STOP records:** 1
-- **Zenodo publications:** 48/48 complete with DOI badges (100%)
+- **Zenodo publications:** 56/56 complete with DOI badges (100%)
 
 ---
 
@@ -287,8 +292,8 @@ All 52 case records maintain full compliance:
 
 ### Zenodo
 - **Token:** Available (REDACTED_ZENODO_TOKEN)
-- **Publications:** 48/48 complete
-- **Latest batch:** ARK-468-482 (15 DOIs published 2026-07-18)
+- **Publications:** 56/56 complete
+- **Latest batch:** ARK-485-492 (8 DOIs published 2026-07-18, P02 completion)
 
 ### IBM Quantum
 - **Budget status:** ~0s or minimal after WITNESS-2
@@ -303,8 +308,8 @@ All 52 case records maintain full compliance:
 1. ✅ **Synthetic Exploration Phase** (ARK-441–457): 19 experiments
 2. ✅ **P01 Production-Boundary Phase** (ARK-458–482): 25 experiments — **COMPLETE 2026-07-18**
 
-### ACTIVE PHASES
-3. 🔄 **P02 Latency/Throughput Phase** (ARK-483–492): 2/10 complete
+### COMPLETED PHASES (cont.)
+3. ✅ **P02 Latency/Throughput/Scale Phase** (ARK-483–492): 10 experiments — **COMPLETE 2026-07-18**
 
 ### PLANNED PHASES
 4. ⏳ **P03 Dependency Cascade** (ARK-493–517)
@@ -312,6 +317,6 @@ All 52 case records maintain full compliance:
 
 ---
 
-**Document Version:** 2.0 (2026-07-18)
+**Document Version:** 3.0 (2026-07-18)
 **Maintained by:** Remnant Fieldworks Inc.
-**Last Corpus Update:** P01 complete (25/25 experiments PASS, all published)
+**Last Corpus Update:** P02 complete (10/10 experiments PASS, all published); ARK-486 cost-model corrected

@@ -1,5 +1,7 @@
 # ARK-490 — Authority Engine · Sustained Throughput
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21434409.svg)](https://doi.org/10.5281/zenodo.21434409)
+
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
 
 - Sustained throughput **2,491,235 decisions/sec** over 60s (threshold ≥100K ✓)
