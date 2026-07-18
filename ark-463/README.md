@@ -1,6 +1,7 @@
 # ARK-463 — Production Deployment · Exact-Action Binding
 
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21433070.svg)](https://doi.org/10.5281/zenodo.21433070)
 
 - g_allow_exact = 1.0000 (C1 ≥ 0.95 ✓) · g_deny_mismatch_min = 1.0000 (C2 ≥ 0.95 ✓) · g_margin = 1.0000 (C3 ≥ 0.90 ✓)
 - Dual-guard concordance 800/800 = 100.00%; kill-gate 600/600 wrong-allows (falsifiable)

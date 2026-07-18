@@ -1,6 +1,7 @@
 # ARK-464 — Production Deployment · Revocation At Execution
 
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18T19:15Z UTC, post-lock — see `MANIFEST.txt`)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21433072.svg)](https://doi.org/10.5281/zenodo.21433072)
 
 - g_allow_valid_min = 1.0000 (C1 ≥ 0.95 ✓) · g_deny_revoked_min = 1.0000 (C2 ≥ 0.95 ✓) · g_hold_inflight_min = 1.0000 (C3 ≥ 0.95 ✓) · g_margin = 0.9500 (C4 ≥ 0.90 ✓)
 - Dual-guard concordance 800/800 = 100.00%; kill-gate wrong-allows 125/125 (testbed falsifiable); all 800 scenarios timing-gated

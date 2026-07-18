@@ -1,6 +1,7 @@
 # ARK-465 — Production Deployment · Dependency Loss
 
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18T19:15Z UTC, post-lock)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21433074.svg)](https://doi.org/10.5281/zenodo.21433074)
 
 - g_allow_available = 1.0000 (C1 ≥ 0.95 ✓) · g_hold_unavailable_min = 1.0000 (C2 ≥ 0.95 ✓) · g_margin = 0.9500 (C3 ≥ 0.90 ✓)
 
