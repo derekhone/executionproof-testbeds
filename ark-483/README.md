@@ -1,6 +1,7 @@
 # ARK-483 — Verification Decision Latency
 
 **Status:** EXECUTED — VERDICT **PASS** (both implementations; executed 2026-07-18T18:22Z UTC, post-lock — see `MANIFEST.txt`)
+**DOI:** [10.5281/zenodo.21432647](https://zenodo.org/record/21432647) (version) · [10.5281/zenodo.21398675](https://zenodo.org/record/21398675) (ARK series concept)
 
 - Worst-path p95: **1.822 µs** (Python V2) · **0.652 µs** (JavaScript V1) — both ≤ the preregistered **1000 µs** ceiling (C1 ✓), with ~550×–1,500× headroom.
 - A single ExecutionProof verification decision costs **~1 microsecond** on the reference machines; the decision logic is not a meaningful latency source on an authorization path.

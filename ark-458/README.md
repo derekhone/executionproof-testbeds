@@ -1,6 +1,7 @@
 # ARK-458 — Cloud IAM Role Grant · Exact-Action Binding
 
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18T18:13:54Z UTC; preregistration locked in `MANIFEST.txt`)
+**DOI:** [10.5281/zenodo.21432645](https://zenodo.org/record/21432645) (version) · [10.5281/zenodo.21398675](https://zenodo.org/record/21398675) (ARK series concept)
 
 - `g_allow_exact` = 1.0000 (C1 ≥ 0.95 ✓) · `g_deny_mutation_min` = 1.0000 (C2 ≥ 0.95 ✓) · `g_margin` = 0.9500 (C3 ≥ 0.90 ✓)
 - Dual-guard concordance 800/800 = 100.00%; kill-gate wrong-allows 281/700 (testbed falsifiable); all 800 scenarios effectiveness-gated
