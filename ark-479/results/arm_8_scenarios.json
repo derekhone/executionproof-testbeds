@@ -1,0 +1,3102 @@
+[
+  {
+    "scenario_id": "c9f9d1de6aa95bf7",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "DatabaseAdmin",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 9.787690269752483
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "DatabaseAdmin",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 35.74184259064514
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 37.86325126569505,
+      "propagation_delay": 3.231728496087771,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "70f81de75cbdbd8c",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "NetworkEngineer",
+        "account": "100000000049",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 6.2052267530657845
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "NetworkEngineer",
+        "account": "100000000049",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 13.886829330242493
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 17.993815920812633,
+      "propagation_delay": 4.103117295007422,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "6d070d67a4505b20",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000025:user/svc-0025",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 5.9893892639298105
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000025:user/svc-0025",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 22.609376228062644
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 29.428235352231386,
+      "propagation_delay": 1.855605285324712,
+      "reason": "api-key-rotation"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "7ade38a1b4c152cb",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "NetworkEngineer",
+        "account": "100000000003",
+        "permission_set": "ps-0000000000000020",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 6.325090078724708
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "NetworkEngineer",
+        "account": "100000000003",
+        "permission_set": "ps-0000000000000020",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 20.17417919140037
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 20.693059304450315,
+      "propagation_delay": 4.276763516877456,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "c4d669693b14263a",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "AdminFull",
+        "account": "100000000034",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 2.203663912801239
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "AdminFull",
+        "account": "100000000034",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 21.384798562332506
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 26.314458152200267,
+      "propagation_delay": 1.6503020943283309,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "129f94ce571d09df",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000065:user/svc-0065",
+        "role": "DataAnalyst",
+        "account": "100000000035",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 7.167597048718754
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000065:user/svc-0065",
+        "role": "DataAnalyst",
+        "account": "100000000035",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 23.14551601062476
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 26.357516697717585,
+      "propagation_delay": 2.8434544389963885,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "7e0fc2ad41513385",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DatabaseAdmin",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 1.5652956524640482
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DatabaseAdmin",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 29.95286169586381
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 36.65393585385426,
+      "propagation_delay": 4.378517354256363,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "b9bd25372211000a",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000078:user/svc-0078",
+        "role": "BillingViewer",
+        "account": "100000000030",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 0.01594191645064802
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000078:user/svc-0078",
+        "role": "BillingViewer",
+        "account": "100000000030",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 29.539920249883064
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 35.523855751587064,
+      "propagation_delay": 4.712891844263563,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "61abe22bd0c684ac",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000052:user/svc-0052",
+        "role": "DatabaseAdmin",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 5.252044769688377
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000052:user/svc-0052",
+        "role": "DatabaseAdmin",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 14.913079539161307
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 20.264985682982903,
+      "propagation_delay": 2.71971670390585,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "0b081732bd9662e7",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000003",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 8.285295873987478
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000003",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 22.370719848067694
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 30.678992511392124,
+      "propagation_delay": 3.972690434653683,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "8269164ef4bb6925",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "AdminFull",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 8.28157217795441
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "AdminFull",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 29.198763598334267
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 36.700249607897824,
+      "propagation_delay": 2.9287512280437578,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "ddb37c4517463868",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 4.280421597274349
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 30.88393094489272
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 39.55812133590787,
+      "propagation_delay": 3.5796223257190385,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "e8e59613a4b9e35d",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000098:user/svc-0098",
+        "role": "DataAnalyst",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 9.115939374749304
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000098:user/svc-0098",
+        "role": "DataAnalyst",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 15.068096391443966
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 16.975382491626696,
+      "propagation_delay": 1.5856706351373098,
+      "reason": "api-key-rotation"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "bfa899acc928bdd1",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 2.5049140012512994
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000010:user/svc-0010",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 10.458796759963935
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 15.41754062892998,
+      "propagation_delay": 4.521948996664019,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "29ab61909750f73f",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 4.79727756305828
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 33.705998598126044
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 43.40425177625487,
+      "propagation_delay": 2.332218988321228,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "f5388e9d7ebcf7c4",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "AdminFull",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 9.540001504942296
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "AdminFull",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 25.778710161124188
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 30.338910441701014,
+      "propagation_delay": 2.1075985068113776,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "069ef4b7d5259160",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "DataAnalyst",
+        "account": "100000000020",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 7.184049539396899
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000070:user/svc-0070",
+        "role": "DataAnalyst",
+        "account": "100000000020",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 28.667215265916248
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 34.17491474819611,
+      "propagation_delay": 3.916165614918835,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "5fcf50a5c1d419b6",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000039:user/svc-0039",
+        "role": "SecurityOfficer",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 4.080703768256529
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000039:user/svc-0039",
+        "role": "SecurityOfficer",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 27.06115029915927
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 33.336661445376805,
+      "propagation_delay": 2.726982612140203,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "a6d4f57c2b3cd1a5",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "API Rate LimitManager",
+        "account": "100000000035",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 0.27287518505448305
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "API Rate LimitManager",
+        "account": "100000000035",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 7.133571479652549
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 13.385694933525027,
+      "propagation_delay": 1.589876360835595,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "0138c6724ba208ea",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 2.6021653744220687
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 9.557551595462165
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 14.167190971892186,
+      "propagation_delay": 3.5000890852683546,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "b6c5365f34533e47",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 8.855931702731473
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 23.88104305275306
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 31.48502183627474,
+      "propagation_delay": 2.01002719325091,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "925c2f12bdbd830e",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "DataAnalyst",
+        "account": "100000000035",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 8.989299547175849
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "DataAnalyst",
+        "account": "100000000035",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 25.659219745668572
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 33.77956589342622,
+      "propagation_delay": 2.7514436589075704,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "d2c870dd7032bc27",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 9.48064492166883
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 30.08593262425092
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 39.979264242690164,
+      "propagation_delay": 2.5862240892782333,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "2bbd2cb609e07575",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 3.085158013563505
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000053:user/svc-0053",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 28.527024027410413
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 30.953284352979974,
+      "propagation_delay": 2.234749904633034,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "d9107ccf417235bd",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000052:user/svc-0052",
+        "role": "NetworkEngineer",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 0.850995432082875
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000052:user/svc-0052",
+        "role": "NetworkEngineer",
+        "account": "100000000037",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 7.514815350309862
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 9.37579265535188,
+      "propagation_delay": 2.674894359622142,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "8ac2138beaf0234e",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "NetworkEngineer",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 0.06477155787138256
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "NetworkEngineer",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 17.515572432429124
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 21.3464076853128,
+      "propagation_delay": 4.1793137012244514,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "bdf3322c4692866f",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DataAnalyst",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 6.800405384416007
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DataAnalyst",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 24.162590321582634
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 26.68434907228967,
+      "propagation_delay": 1.4772133594351073,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "252cb1a8d03ec431",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000063:user/svc-0063",
+        "role": "API Rate LimitManager",
+        "account": "100000000031",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 0.695840199798905
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000063:user/svc-0063",
+        "role": "API Rate LimitManager",
+        "account": "100000000031",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 8.413353579716373
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 14.593586310691368,
+      "propagation_delay": 1.9254378519468882,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "154a1b82a6a99529",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 2.368439150623579
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 25.05472941412821
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 29.284451182182508,
+      "propagation_delay": 4.904417956107315,
+      "reason": "api-key-rotation"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "e28b608a7900ae84",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 6.762150883153088
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 34.60023037765522
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 38.09762987952051,
+      "propagation_delay": 4.883487226988487,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "f3ade0022605a284",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "DataAnalyst",
+        "account": "100000000009",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 8.202115259514377
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "DataAnalyst",
+        "account": "100000000009",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 28.777992054229088
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 36.286130071421965,
+      "propagation_delay": 2.4277592740633374,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "63b9bf2db0c9f343",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 3.5280420719377847
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 9.836341742203583
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 12.715549089807086,
+      "propagation_delay": 3.7185205791759355,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "d55311b42b9e9c56",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 0.19105999218143488
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000054:user/svc-0054",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 19.16241107291848
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 21.127500006684063,
+      "propagation_delay": 2.7362330877913315,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "a0c8de7c487f1c59",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 1.17279158421558
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 16.64819946075131
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 20.830828125927937,
+      "propagation_delay": 3.206783443426591,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "67ac2ab7b3952af9",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000045:user/svc-0045",
+        "role": "API Rate LimitManager",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 0.13634291859923042
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000045:user/svc-0045",
+        "role": "API Rate LimitManager",
+        "account": "100000000010",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 7.138497345955864
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 14.325200071725375,
+      "propagation_delay": 3.000918431181371,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "c45e5aa8a0c46363",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000067:user/svc-0067",
+        "role": "API Rate LimitManager",
+        "account": "100000000042",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 6.499371766506041
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000067:user/svc-0067",
+        "role": "API Rate LimitManager",
+        "account": "100000000042",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 13.37222830528781
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 21.58004840533468,
+      "propagation_delay": 4.220897496592597,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "36c9a89831542ebb",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "AdminFull",
+        "account": "100000000036",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 6.933579744780813
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "AdminFull",
+        "account": "100000000036",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 29.362874373127262
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 34.410584893631906,
+      "propagation_delay": 3.2220915477191654,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "417faa1a2ae58406",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "DatabaseAdmin",
+        "account": "100000000039",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 6.10722250925029
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "DatabaseAdmin",
+        "account": "100000000039",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 36.043603486336686
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 40.99530787766038,
+      "propagation_delay": 2.1512994564474317,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "07e917d28ec385ba",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 5.659584045084162
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 10.693861444119854
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 16.858697539320293,
+      "propagation_delay": 1.8016537363744605,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "1cf10d9bd6d804c0",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "AdminFull",
+        "account": "100000000003",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 1.1736653660613883
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "AdminFull",
+        "account": "100000000003",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 13.801853658554815
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 21.13399686941118,
+      "propagation_delay": 2.0338967353952007,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "98fbe6da613030de",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000056:user/svc-0056",
+        "role": "DatabaseAdmin",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 0.3087095271101703
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000056:user/svc-0056",
+        "role": "DatabaseAdmin",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 16.338810878205262
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 23.049445879134993,
+      "propagation_delay": 3.090124660223281,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "54765a7933819105",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "DatabaseAdmin",
+        "account": "100000000030",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 6.858628083672712
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "DatabaseAdmin",
+        "account": "100000000030",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 28.01835266163304
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 32.31542939353391,
+      "propagation_delay": 1.3328798634730625,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "f09b09e19eebb75c",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "SecurityOfficer",
+        "account": "100000000026",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 8.004058684266507
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "SecurityOfficer",
+        "account": "100000000026",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 35.25721026127262
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 36.287401099386905,
+      "propagation_delay": 4.139465119388499,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "0e08f7c5a9bb9ec6",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "DataAnalyst",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 4.512613636874549
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "DataAnalyst",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 32.34218744947717
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 39.63014740765391,
+      "propagation_delay": 1.3019540352516166,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "3b9d9e59c194dad6",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000047",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 7.111776812564068
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000047",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 15.382065899275526
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 25.2663857989734,
+      "propagation_delay": 4.811917002858481,
+      "reason": "api-key-rotation"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "a343a7e54df9ed57",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000022:user/svc-0022",
+        "role": "DataAnalyst",
+        "account": "100000000037",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 9.486865379231878
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000022:user/svc-0022",
+        "role": "DataAnalyst",
+        "account": "100000000037",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 21.986987743784372
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 25.279671052956115,
+      "propagation_delay": 2.933325787440359,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "3ccdec094521af61",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 3.1465165024322825
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000002:user/svc-0002",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 16.945321314825645
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 26.90940360635016,
+      "propagation_delay": 1.2810947274105806,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "d0a6db76ef9ff2f4",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "API Rate LimitManager",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 6.034350292995079
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000026:user/svc-0026",
+        "role": "API Rate LimitManager",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 16.235804341130322
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 20.10437608655825,
+      "propagation_delay": 2.2271181965073477,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "5e426a8f524addb4",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000063:user/svc-0063",
+        "role": "NetworkEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 0.26416166692907916
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000063:user/svc-0063",
+        "role": "NetworkEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 7.939974557938362
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 16.972494133695772,
+      "propagation_delay": 2.142786312746143,
+      "reason": "api-key-rotation"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "f970caa5b5e2674b",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000031",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 8.759476343738905
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000031",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 21.29197569566236
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 26.328847079021564,
+      "propagation_delay": 3.8066576634298075,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "e93edb6b04e682f1",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "SecurityOfficer",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 7.013570196834148
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "SecurityOfficer",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 30.355663998014535
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 36.725417728617934,
+      "propagation_delay": 3.3380231738050066,
+      "reason": "api-key-rotation"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "3af4d347a2b7334a",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "BillingViewer",
+        "account": "100000000023",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 7.916590740402146
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "BillingViewer",
+        "account": "100000000023",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 15.974106916169365
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 20.719893129718113,
+      "propagation_delay": 2.9549514244338577,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "b2610eecb6a79bd4",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "DatabaseAdmin",
+        "account": "100000000035",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 8.01604510407535
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000024:user/svc-0024",
+        "role": "DatabaseAdmin",
+        "account": "100000000035",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 15.52856020415726
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 22.35280521376818,
+      "propagation_delay": 2.115482324227042,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "0a5017520d3fb61c",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000085:user/svc-0085",
+        "role": "AdminFull",
+        "account": "100000000032",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 6.872312344824621
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000085:user/svc-0085",
+        "role": "AdminFull",
+        "account": "100000000032",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 19.5322288481427
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 26.130637615686656,
+      "propagation_delay": 4.932969842245193,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "7c935818eb5b2431",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "AdminFull",
+        "account": "100000000003",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 0.2818597615426499
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "AdminFull",
+        "account": "100000000003",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 14.194219887192004
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 17.267473197441387,
+      "propagation_delay": 4.377512269539103,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "7f0dddf1bf71a09c",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "API Rate LimitManager",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 5.049470371101325
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "API Rate LimitManager",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 20.44250289009529
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 21.977518836002332,
+      "propagation_delay": 4.570044845912514,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "8f44a2a3a3d5f68d",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000063:user/svc-0063",
+        "role": "API Rate LimitManager",
+        "account": "100000000012",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 1.2654803873389386
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000063:user/svc-0063",
+        "role": "API Rate LimitManager",
+        "account": "100000000012",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 15.023739628926062
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 21.414581125240016,
+      "propagation_delay": 2.2867623144142475,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "8da8a3a3985c160d",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000022:user/svc-0022",
+        "role": "DataAnalyst",
+        "account": "100000000015",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 2.2497128542846023
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000022:user/svc-0022",
+        "role": "DataAnalyst",
+        "account": "100000000015",
+        "permission_set": "ps-000000000000000e",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 19.763606804771616
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 24.922514507205644,
+      "propagation_delay": 1.94878623894496,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "51799cfcb4adf1ed",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "BillingViewer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 3.519027317710589
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "BillingViewer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 29.091799616164224
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 36.846791670448454,
+      "propagation_delay": 3.7066629694399498,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "f5a00efe93d1a665",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "SecurityOfficer",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 1.8328805160631612
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "SecurityOfficer",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 13.929238421398047
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 16.62599697587505,
+      "propagation_delay": 4.3883587982808585,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "252c5b9e874a1e83",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "DatabaseAdmin",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 8.033393638712148
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "DatabaseAdmin",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 28.977664997720062
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 33.598329760703606,
+      "propagation_delay": 1.7057532787352754,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "3b1127843a85e5bd",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "SecurityOfficer",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 0.8194208955331417
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "SecurityOfficer",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 19.8493043797705
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 28.425692896101012,
+      "propagation_delay": 3.816313091955108,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "91e03e50b59a13a0",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000060:user/svc-0060",
+        "role": "NetworkEngineer",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 9.58984479293213
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000060:user/svc-0060",
+        "role": "NetworkEngineer",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 33.21768643037601
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 33.32214812631333,
+      "propagation_delay": 2.3221093751531554,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "91faeb24fa31edb5",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "NetworkEngineer",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 7.099660472489332
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "NetworkEngineer",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 35.72818008803108
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 39.559546224760425,
+      "propagation_delay": 1.102254544633423,
+      "reason": "api-key-rotation"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "e83169026285511c",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000047:user/svc-0047",
+        "role": "DatabaseAdmin",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 4.5641540583278095
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000047:user/svc-0047",
+        "role": "DatabaseAdmin",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 30.744982712835313
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 38.20811590389549,
+      "propagation_delay": 3.835539104576889,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "99c2035b03b2ef4c",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "API Rate LimitManager",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 3.601862414648558
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "API Rate LimitManager",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 11.695940786853775
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 18.03723130216713,
+      "propagation_delay": 2.6229069824344493,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "8605010bc1b9098c",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000003",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 7.336179854695086
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000003",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 36.662620176476004
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 37.37307220647047,
+      "propagation_delay": 3.483786883243838,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "46c6edef22a18aff",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "DataAnalyst",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 8.724605952593338
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "DataAnalyst",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 23.182009054432164
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 29.10234807878364,
+      "propagation_delay": 3.5324017782519226,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "074afa5ee31537ad",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 5.181246252714154
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 23.896260113506056
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 24.56302457507287,
+      "propagation_delay": 1.5716273569301458,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "9ad9b4960df4f710",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000016:user/svc-0016",
+        "role": "DatabaseAdmin",
+        "account": "100000000048",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 2.2682751901093345
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000016:user/svc-0016",
+        "role": "DatabaseAdmin",
+        "account": "100000000048",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 26.312764403877626
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 33.80247177711711,
+      "propagation_delay": 2.6285134398288985,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "fc1745b6a402fb8f",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000031",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 6.925686703821005
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000031",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 36.299027879652655
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 39.0248161347755,
+      "propagation_delay": 2.978082836802277,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "6b70ebfd1c213928",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "NetworkEngineer",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 0.7110687963300621
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "NetworkEngineer",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 19.152632480233976
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 26.398347876109522,
+      "propagation_delay": 3.7673155595692127,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "8da51f9310976e3f",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "DatabaseAdmin",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000031",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 6.275633152175544
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "DatabaseAdmin",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000031",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 12.375848475529438
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 14.805148819321918,
+      "propagation_delay": 2.794619365952609,
+      "reason": "api-key-rotation"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "3593d7766af8f0cb",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000083:user/svc-0083",
+        "role": "NetworkEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 0.32172796913739976
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000083:user/svc-0083",
+        "role": "NetworkEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 30.20592033252441
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 35.60716234350828,
+      "propagation_delay": 2.0209611599284067,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "5043556628354815",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000079:user/svc-0079",
+        "role": "API Rate LimitManager",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 9.562354045436166
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000079:user/svc-0079",
+        "role": "API Rate LimitManager",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 27.735966860840442
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 30.256408120746293,
+      "propagation_delay": 2.838652396913885,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "16c1eb6d77fd5ab2",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "SecurityOfficer",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 1.9256319322342663
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "SecurityOfficer",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 9.525837712481087
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 16.99219854678297,
+      "propagation_delay": 3.152536139511517,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "2c06013635d77db0",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000078:user/svc-0078",
+        "role": "API Rate LimitManager",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 8.656895789340089
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000078:user/svc-0078",
+        "role": "API Rate LimitManager",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 34.87250919269705
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 36.385187889851,
+      "propagation_delay": 3.1506587581894587,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "9e23a28d3fead929",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 5.3709028703182256
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 24.934598281100882
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 26.414487431180845,
+      "propagation_delay": 3.135629545916564,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "bb57f85923288c09",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "DatabaseAdmin",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 9.956700971178483
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "DatabaseAdmin",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 22.35205920217676
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 26.829782973048506,
+      "propagation_delay": 3.6759091654202853,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "76301ac7578f2a51",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000095:user/svc-0095",
+        "role": "NetworkEngineer",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 3.2423903732749237
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000095:user/svc-0095",
+        "role": "NetworkEngineer",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 20.64009233725038
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 28.196944266664,
+      "propagation_delay": 2.3784288340972704,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "9eb764a1880d14d1",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "AdminFull",
+        "account": "100000000030",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 0.10309135058874985
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "AdminFull",
+        "account": "100000000030",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 10.51933747147945
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 17.259954729070394,
+      "propagation_delay": 1.4206415593473305,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "982797940d43edc9",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "SecurityOfficer",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 8.109793362872495
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "SecurityOfficer",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 34.40460303570342
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 41.641223721286195,
+      "propagation_delay": 3.5848011907006465,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "4578553ae21bbb37",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000085:user/svc-0085",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 7.295087962059522
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000085:user/svc-0085",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 32.831350709449396
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 39.991195050700306,
+      "propagation_delay": 2.1182012132700216,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "10d07dcc64367fa7",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "SecurityOfficer",
+        "account": "100000000004",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 0.4813574979050739
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "SecurityOfficer",
+        "account": "100000000004",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 23.06388142997411
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 24.449143997296705,
+      "propagation_delay": 2.9245463456219647,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "d4e219f835f0c698",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000097:user/svc-0097",
+        "role": "DataAnalyst",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 3.3729883748752076
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000097:user/svc-0097",
+        "role": "DataAnalyst",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 13.875620559332281
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 15.934924832846812,
+      "propagation_delay": 4.912812365610263,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "cc4094bec9488042",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DatabaseAdmin",
+        "account": "100000000003",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 5.805325169572958
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DatabaseAdmin",
+        "account": "100000000003",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 14.628503015305077
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 22.113201973995043,
+      "propagation_delay": 2.7611524116155017,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "34ff90bb782dde6a",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "BillingViewer",
+        "account": "100000000013",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 7.473893686712297
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "BillingViewer",
+        "account": "100000000013",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 22.029373842450575
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 25.837251732661354,
+      "propagation_delay": 1.8452423849075834,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "2ee70163c88b7326",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "DataAnalyst",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 3.5131495060789266
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "DataAnalyst",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 16.294516396335418
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 20.08131956919209,
+      "propagation_delay": 4.3368981543911485,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "98458c51104e8ad1",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "API Rate LimitManager",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 0.7691106745103748
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "API Rate LimitManager",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 22.876890059274423
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 28.39738831261679,
+      "propagation_delay": 3.5207028552266086,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "51c824ba3aaf2be4",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "SecurityOfficer",
+        "account": "100000000018",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 7.245144938830299
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "SecurityOfficer",
+        "account": "100000000018",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 32.25607926938357
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 35.77214849124072,
+      "propagation_delay": 2.438984688801712,
+      "reason": "api-key-rotation"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "af332566afd7614b",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "DataAnalyst",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 3.2906376967904816
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "DataAnalyst",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000019",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 22.80620486573259
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 30.366406959976533,
+      "propagation_delay": 2.4766210723470468,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "821f15635bd6345a",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "API Rate LimitManager",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_approval": 8.013919528598178
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "API Rate LimitManager",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=eu-west-1;mfa=false"
+      },
+      "t_execution": 26.50683853408814
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 35.64279853986813,
+      "propagation_delay": 3.0319915933116746,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "9ef6744e07166c8a",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000091:user/svc-0091",
+        "role": "API Rate LimitManager",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 6.3692737825871015
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000091:user/svc-0091",
+        "role": "API Rate LimitManager",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 13.713110580204933
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 22.250340351480958,
+      "propagation_delay": 2.654027396380179,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "8928b0f11da25d3d",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000051:user/svc-0051",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000032",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_approval": 8.397401125176989
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000051:user/svc-0051",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000032",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-east-1;mfa=false"
+      },
+      "t_execution": 19.011801489455443
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 25.29952286920531,
+      "propagation_delay": 1.654618856756389,
+      "reason": "emergency-shutdown"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "27ca57bc6d359dcf",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "NetworkEngineer",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 5.753199077190305
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "NetworkEngineer",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 15.097515299196335
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 15.242035447832384,
+      "propagation_delay": 1.1723351583883015,
+      "reason": "credential-compromise"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "a339ac9cd20cc57b",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "AdminFull",
+        "account": "100000000021",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 9.230615888562808
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "AdminFull",
+        "account": "100000000021",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 21.723834189166453
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 28.519464035635636,
+      "propagation_delay": 3.10604244100614,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "7bf23dd33d0e1b75",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "AdminFull",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=*;mfa=true"
+      },
+      "t_approval": 8.244806861157347
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "AdminFull",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=*;mfa=true"
+      },
+      "t_execution": 30.33605800670005
+    },
+    "multistep": true,
+    "revocation": {
+      "t_revoke": 39.55721571576679,
+      "propagation_delay": 4.200289921074006,
+      "reason": "account-suspended"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "1ce5abf7d8f02f1e",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "NetworkEngineer",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_approval": 6.750990199148489
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "NetworkEngineer",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-east-1;mfa=true"
+      },
+      "t_execution": 24.97668284718761
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 34.85010977963784,
+      "propagation_delay": 3.432620950515411,
+      "reason": "api-key-rotation"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "2e5dec38f7d1d374",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000039:user/svc-0039",
+        "role": "SecurityOfficer",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 9.453623907426888
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000039:user/svc-0039",
+        "role": "SecurityOfficer",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 30.20960108229974
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 39.81007021406404,
+      "propagation_delay": 3.622341023727353,
+      "reason": "policy-change"
+    },
+    "reauthorization": null
+  },
+  {
+    "scenario_id": "4f91c15ab4ba984d",
+    "arm": 8,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "DatabaseAdmin",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_approval": 9.11979826862701
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "DatabaseAdmin",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-west-2;mfa=true"
+      },
+      "t_execution": 23.92356512079533
+    },
+    "multistep": false,
+    "revocation": {
+      "t_revoke": 31.6653498287564,
+      "propagation_delay": 3.0031137163322508,
+      "reason": "employee-termination"
+    },
+    "reauthorization": null
+  }
+]

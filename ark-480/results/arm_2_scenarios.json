@@ -1,0 +1,2802 @@
+[
+  {
+    "scenario_id": "091f45cd2bc88af6",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "AdminFull",
+        "account": "100000000028",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000019:user/svc-0019",
+        "role": "AdminFull",
+        "account": "100000000028",
+        "permission_set": "ps-0000000000000030",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c67cb2c18cc94bc6",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000046",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000046",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2a76b7ecf6502b63",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "BillingViewer",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "BillingViewer",
+        "account": "100000000000",
+        "permission_set": "ps-000000000000002c",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "89f52827a95c9979",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "API Rate LimitManager",
+        "account": "100000000017",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "API Rate LimitManager",
+        "account": "100000000017",
+        "permission_set": "ps-000000000000001a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c196b900540049a3",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000013:user/svc-0013",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000035",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7e20ef6bd34daab3",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DatabaseAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "DatabaseAdmin",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2d7b222f433767bd",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000069:user/svc-0069",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "57adf8b0f9c00722",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "NetworkEngineer",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000005:user/svc-0005",
+        "role": "NetworkEngineer",
+        "account": "100000000006",
+        "permission_set": "ps-000000000000001c",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c8b772f2781e0b47",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "SecurityOfficer",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000033:user/svc-0033",
+        "role": "SecurityOfficer",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0073828d1bc66a07",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000045",
+        "permission_set": "ps-000000000000001e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "184f68dd6ac67711",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "API Rate LimitManager",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000003:user/svc-0003",
+        "role": "API Rate LimitManager",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9b9864d8d2ad836e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "BillingViewer",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "BillingViewer",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000006",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2504244d20db57c4",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "AdminFull",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "AdminFull",
+        "account": "100000000024",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f81ba1c869b97eba",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "SecurityOfficer",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000008:user/svc-0008",
+        "role": "SecurityOfficer",
+        "account": "100000000015",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9d7a655d0ad5b61c",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "SecurityOfficer",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "SecurityOfficer",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "84ba38cb6c719099",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "NetworkEngineer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000086:user/svc-0086",
+        "role": "NetworkEngineer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bae17b51cc4d594e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "BillingViewer",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "BillingViewer",
+        "account": "100000000019",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d083198343143e85",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "DatabaseAdmin",
+        "account": "100000000047",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "DatabaseAdmin",
+        "account": "100000000047",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "500235286575a1b9",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000073:user/svc-0073",
+        "role": "NetworkEngineer",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000073:user/svc-0073",
+        "role": "NetworkEngineer",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000022",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6812ac0a85641854",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "AdminFull",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000034:user/svc-0034",
+        "role": "AdminFull",
+        "account": "100000000023",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "307d7192c74843e2",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "DataAnalyst",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "DataAnalyst",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000000c",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6e6fd0b2fd2834dc",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "DataAnalyst",
+        "account": "100000000016",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000043:user/svc-0043",
+        "role": "DataAnalyst",
+        "account": "100000000016",
+        "permission_set": "ps-000000000000002b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "141b63d3bb73cfb8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "BillingViewer",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "BillingViewer",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000016",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e9ee163a982d50d3",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "DataAnalyst",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "DataAnalyst",
+        "account": "100000000046",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1d840401180fbecf",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000004",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000004",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bf0d736343ea9de7",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "BillingViewer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000035:user/svc-0035",
+        "role": "BillingViewer",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000024",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "4753d5672201e5eb",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "DatabaseAdmin",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "DatabaseAdmin",
+        "account": "100000000026",
+        "permission_set": "ps-0000000000000010",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5273d825dda5d147",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "API Rate LimitManager",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "API Rate LimitManager",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000007",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b33d8b687f379683",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "DataAnalyst",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000087:user/svc-0087",
+        "role": "DataAnalyst",
+        "account": "100000000007",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "20989ec92d84566e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "API Rate LimitManager",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "API Rate LimitManager",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "db75d6f567248a72",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000021:user/svc-0021",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "3fa48b77f7c86396",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "DatabaseAdmin",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000059:user/svc-0059",
+        "role": "DatabaseAdmin",
+        "account": "100000000016",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d83a773df2cc6437",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "API Rate LimitManager",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "API Rate LimitManager",
+        "account": "100000000002",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "02aa3569c81f4814",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "API Rate LimitManager",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000000:user/svc-0000",
+        "role": "API Rate LimitManager",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "9170a1b13a96863d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "NetworkEngineer",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "NetworkEngineer",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "815ade7c1d465741",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000078:user/svc-0078",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000078:user/svc-0078",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "287376a350ab3586",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "DatabaseAdmin",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "DatabaseAdmin",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000002",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "4440e48158250d8a",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "DataAnalyst",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000009:user/svc-0009",
+        "role": "DataAnalyst",
+        "account": "100000000033",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "4ea976e45638cd1e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000023",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000038:user/svc-0038",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000023",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "479cff68fa58e111",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000018",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a627f8b2a1f3164b",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "NetworkEngineer",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "NetworkEngineer",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "0e60657b540956c4",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000020:user/svc-0020",
+        "role": "DataAnalyst",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b8b18889a9a740da",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "AdminFull",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000074:user/svc-0074",
+        "role": "AdminFull",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000001b",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bdece7412022249c",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "DatabaseAdmin",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "DatabaseAdmin",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000008",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "e061a1ab3fecb230",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "BillingViewer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000082:user/svc-0082",
+        "role": "BillingViewer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "795e8c3445cc13e5",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "AdminFull",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "AdminFull",
+        "account": "100000000009",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2442bd4783513b19",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "API Rate LimitManager",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000062:user/svc-0062",
+        "role": "API Rate LimitManager",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000001d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1ccee6a4e2d1ebb8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000055:user/svc-0055",
+        "role": "DatabaseAdmin",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000055:user/svc-0055",
+        "role": "DatabaseAdmin",
+        "account": "100000000034",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "aa61cf2c60725afc",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "SecurityOfficer",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000084:user/svc-0084",
+        "role": "SecurityOfficer",
+        "account": "100000000029",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1de4c1dff221c366",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "SecurityOfficer",
+        "account": "100000000041",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "SecurityOfficer",
+        "account": "100000000041",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b4502f27e177c0eb",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f8b2b542e8ba4b91",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000077:user/svc-0077",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000040",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "1d43980b4d6c9db6",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000015:user/svc-0015",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "a04730ca35c06203",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "AdminFull",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "AdminFull",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "784ba52b8e74f863",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "BillingViewer",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000042:user/svc-0042",
+        "role": "BillingViewer",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000000b",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "ca91b66ccfb103ef",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "AdminFull",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000014:user/svc-0014",
+        "role": "AdminFull",
+        "account": "100000000017",
+        "permission_set": "ps-0000000000000015",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7d3c2615c48ce3eb",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "SecurityOfficer",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "SecurityOfficer",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000013",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "b782e839deed267e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000001:user/svc-0001",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "59c4ffb9ddd991cd",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "NetworkEngineer",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "NetworkEngineer",
+        "account": "100000000014",
+        "permission_set": "ps-000000000000002e",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "fc791f155a2fb84e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "AdminFull",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "AdminFull",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "42d825167ef1d859",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000089:user/svc-0089",
+        "role": "BillingViewer",
+        "account": "100000000036",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "c8f344e0d7a882bf",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "API Rate LimitManager",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "API Rate LimitManager",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000011",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "69fed14dc7d8faef",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "BillingViewer",
+        "account": "100000000049",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000031:user/svc-0031",
+        "role": "BillingViewer",
+        "account": "100000000049",
+        "permission_set": "ps-0000000000000028",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "67c3bbc63b7512f4",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "SecurityOfficer",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000032:user/svc-0032",
+        "role": "SecurityOfficer",
+        "account": "100000000040",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "ea6fe5890e79e764",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "AdminFull",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "AdminFull",
+        "account": "100000000007",
+        "permission_set": "ps-000000000000000d",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2b84a050bbdadb64",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000008",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000008",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "93475a3b10fb437d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "DataAnalyst",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "DataAnalyst",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5ae8440a1741ef4f",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "NetworkEngineer",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "NetworkEngineer",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000000a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "604e3919ed57d2d0",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000067:user/svc-0067",
+        "role": "DatabaseAdmin",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000067:user/svc-0067",
+        "role": "DatabaseAdmin",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "4a06c5a92ce077ce",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "DataAnalyst",
+        "account": "100000000009",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "DataAnalyst",
+        "account": "100000000009",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "49bd4eba83939ce8",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "API Rate LimitManager",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000092:user/svc-0092",
+        "role": "API Rate LimitManager",
+        "account": "100000000044",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d535423b813edb66",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "API Rate LimitManager",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "API Rate LimitManager",
+        "account": "100000000019",
+        "permission_set": "ps-000000000000002d",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "6521e5775f107c1e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000088:user/svc-0088",
+        "role": "DataAnalyst",
+        "account": "100000000014",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8ff0f1a9c010d045",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "AdminFull",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "AdminFull",
+        "account": "100000000032",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "99b5e5452f6049fd",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000091:user/svc-0091",
+        "role": "API Rate LimitManager",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000091:user/svc-0091",
+        "role": "API Rate LimitManager",
+        "account": "100000000038",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d2e717956ec63bf6",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "BillingViewer",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "BillingViewer",
+        "account": "100000000041",
+        "permission_set": "ps-0000000000000005",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "cf77ff83026d6851",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "SecurityOfficer",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000094:user/svc-0094",
+        "role": "SecurityOfficer",
+        "account": "100000000000",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2577df86a41ffa12",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "BillingViewer",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000093:user/svc-0093",
+        "role": "BillingViewer",
+        "account": "100000000001",
+        "permission_set": "ps-0000000000000004",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "2b55165e47f80ebb",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "DataAnalyst",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000090:user/svc-0090",
+        "role": "DataAnalyst",
+        "account": "100000000004",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f5287b413adfa7d2",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000072:user/svc-0072",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000072:user/svc-0072",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000039",
+        "permission_set": "ps-0000000000000018",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "13fb2986913e916b",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000027:user/svc-0027",
+        "role": "ReadOnlyAuditor",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000009",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "fcc4c4c7ed457409",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "API Rate LimitManager",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000030:user/svc-0030",
+        "role": "API Rate LimitManager",
+        "account": "100000000005",
+        "permission_set": "ps-0000000000000027",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "7d6aa89717a3bdec",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "SecurityOfficer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "SecurityOfficer",
+        "account": "100000000029",
+        "permission_set": "ps-0000000000000014",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d1f5fba6c7b970da",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "DataAnalyst",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000041:user/svc-0041",
+        "role": "DataAnalyst",
+        "account": "100000000002",
+        "permission_set": "ps-000000000000002f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "781834bbc2eb43b6",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "NetworkEngineer",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000044:user/svc-0044",
+        "role": "NetworkEngineer",
+        "account": "100000000027",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "22c0312718d0565d",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "SecurityOfficer",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000036:user/svc-0036",
+        "role": "SecurityOfficer",
+        "account": "100000000045",
+        "permission_set": "ps-0000000000000001",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "97ae946459b16fb5",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "AdminFull",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000007:user/svc-0007",
+        "role": "AdminFull",
+        "account": "100000000022",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "435f4083e13a8369",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000098:user/svc-0098",
+        "role": "NetworkEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000098:user/svc-0098",
+        "role": "NetworkEngineer",
+        "account": "100000000008",
+        "permission_set": "ps-000000000000000f",
+        "condition": "region=eu-west-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bb36d0b8b111a5c9",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "NetworkEngineer",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000071:user/svc-0071",
+        "role": "NetworkEngineer",
+        "account": "100000000013",
+        "permission_set": "ps-0000000000000025",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "093616f8b7035cfc",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "DataAnalyst",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000081:user/svc-0081",
+        "role": "DataAnalyst",
+        "account": "100000000012",
+        "permission_set": "ps-0000000000000012",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "bb97bafdc6019471",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "NetworkEngineer",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000075:user/svc-0075",
+        "role": "NetworkEngineer",
+        "account": "100000000042",
+        "permission_set": "ps-0000000000000003",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "d7e7758c143e93c2",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DataAnalyst",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000066:user/svc-0066",
+        "role": "DataAnalyst",
+        "account": "100000000021",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "8c013300767b5268",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000017:user/svc-0017",
+        "role": "DatabaseAdmin",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000026",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "63320f83cdcfd650",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "NetworkEngineer",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000046:user/svc-0046",
+        "role": "NetworkEngineer",
+        "account": "100000000043",
+        "permission_set": "ps-000000000000002a",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "39ae594eaf97e10e",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "DataAnalyst",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000037:user/svc-0037",
+        "role": "DataAnalyst",
+        "account": "100000000043",
+        "permission_set": "ps-0000000000000021",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "5c3a835ee2edb747",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "NetworkEngineer",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000011:user/svc-0011",
+        "role": "NetworkEngineer",
+        "account": "100000000024",
+        "permission_set": "ps-0000000000000029",
+        "condition": "region=us-east-1;mfa=false"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "f00d84107d529707",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "DataAnalyst",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000049:user/svc-0049",
+        "role": "DataAnalyst",
+        "account": "100000000011",
+        "permission_set": "ps-0000000000000017",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "047295e4fb56a19c",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "SecurityOfficer",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000040:user/svc-0040",
+        "role": "SecurityOfficer",
+        "account": "100000000047",
+        "permission_set": "ps-0000000000000000",
+        "condition": "region=us-west-2;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "3474f32910dd62e1",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "API Rate LimitManager",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000012:user/svc-0012",
+        "role": "API Rate LimitManager",
+        "account": "100000000011",
+        "permission_set": "ps-000000000000001f",
+        "condition": "region=us-east-1;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  },
+  {
+    "scenario_id": "211ef595877de1da",
+    "arm": 2,
+    "authorization": {
+      "binding": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "SecurityOfficer",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "execution": {
+      "action": {
+        "principal": "arn:aws:iam::100000000028:user/svc-0028",
+        "role": "SecurityOfficer",
+        "account": "100000000027",
+        "permission_set": "ps-0000000000000023",
+        "condition": "region=*;mfa=true"
+      }
+    },
+    "dependencies": {
+      "RateLimiter": "UNAVAILABLE",
+      "QuotaStore": "AVAILABLE",
+      "TokenValidator": "AVAILABLE",
+      "API Rate LimitAuditor": "AVAILABLE"
+    }
+  }
+]

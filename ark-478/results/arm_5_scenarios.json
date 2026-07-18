@@ -1,0 +1,2002 @@
+[
+  {
+    "scenario_id": "arm5_schema_mismatch_000",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_001",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_002",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_003",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_004",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_005",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_006",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_007",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_008",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_009",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_010",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_011",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_012",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_013",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_014",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_015",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_016",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_017",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_018",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_019",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_020",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_021",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_022",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_023",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_024",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_025",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_026",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_027",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_028",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_029",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_030",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_031",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_032",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_033",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_034",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_035",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_036",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_037",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_038",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_039",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_040",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_041",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_042",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_043",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_044",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_045",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_046",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_047",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_048",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_049",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_050",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_051",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_052",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_053",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_054",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_055",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_056",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_057",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_058",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_059",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_060",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_061",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_062",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "users",
+      "operation": "DROP",
+      "schema_version": "v2.3.1.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_063",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_064",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_065",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_066",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_067",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_068",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_069",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_070",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_071",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_072",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_073",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_074",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_075",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_076",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_077",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_078",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_079",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_080",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_081",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_082",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_083",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_084",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_085",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_086",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_087",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_088",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_089",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_090",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_091",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0",
+      "execution_mode": "transaction"
+    },
+    "presented_request": {
+      "database_name": "production_db",
+      "table_name": "audit_logs",
+      "operation": "DELETE",
+      "schema_version": "v4.2.0.1",
+      "execution_mode": "transaction"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_092",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b",
+      "execution_mode": "batch"
+    },
+    "presented_request": {
+      "database_name": "staging_db",
+      "table_name": "temp_data",
+      "operation": "TRUNCATE",
+      "schema_version": "sha256:a3f5e9c12b.1",
+      "execution_mode": "batch"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_093",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_094",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_095",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_096",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_097",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "test_db",
+      "table_name": "test_results",
+      "operation": "TRUNCATE",
+      "schema_version": "v3.0.0-rc.2.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_098",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  },
+  {
+    "scenario_id": "arm5_schema_mismatch_099",
+    "arm": 5,
+    "arm_name": "Schema Version Mismatch",
+    "authorized_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5",
+      "execution_mode": "direct"
+    },
+    "presented_request": {
+      "database_name": "analytics_db",
+      "table_name": "events",
+      "operation": "DELETE",
+      "schema_version": "v1.8.5.1",
+      "execution_mode": "direct"
+    },
+    "expected_decision": "DENY"
+  }
+]
