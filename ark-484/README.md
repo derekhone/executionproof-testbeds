@@ -1,6 +1,7 @@
 # ARK-484 — Verification Decision · Burst Throughput
 
 **Status:** EXECUTED — VERDICT **PASS** (executed 2026-07-18 post-lock)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21433111.svg)](https://doi.org/10.5281/zenodo.21433111)
 
 - V2 (Python): **1,657,281 decisions/sec** (threshold ≥100K ✓, achieved 16.6× prediction)
 - V1 (JavaScript): **4,524,798 decisions/sec** (threshold ≥150K ✓, achieved 30.2× prediction)
