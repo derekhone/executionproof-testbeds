@@ -15,7 +15,7 @@ authorization decision can be reliably enforced at the moment of execution, and 
 its full preregistration, code, raw job data, and analysis.
 
 This is **applied verification-layer R&D** (the ExecutionProof product lineage). It is **distinct from**
-the UIP Phase 1 physics falsification program (a separate academic effort with its own repository and DOI).
+the Coherent Inheritance Framework (CIF) Phase 1 physics falsification program — formerly published under the working title Unified Inheritance Physics (UIP) — a separate academic effort with its own repository and DOI.
 See [`PROVENANCE.md`](PROVENANCE.md) for the relocation history and the relationship between the two tracks.
 
 ---
