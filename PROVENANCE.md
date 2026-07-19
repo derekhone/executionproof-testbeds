@@ -3,6 +3,13 @@
 This document records the origin and relocation history of this repository honestly and completely,
 consistent with the audit-trail integrity that governs the ARK series.
 
+> **Naming note.** The sibling physics program referenced below was originally published under the working
+> title Unified Inheritance Physics (UIP); its active framework name is now the Coherent Inheritance
+> Framework (CIF), and its repository is now `cif-phase1-testbeds`. To preserve the audit trail, this
+> document deliberately retains the original `uip-phase1-testbeds` repository path, the original program
+> labels, and the verbatim quotation of the locked `INDEPENDENCE_NOTICE.md` exactly as committed at lock
+> time. GitHub automatically redirects the former `uip-phase1-testbeds` URLs to the renamed repository.
+
 ---
 
 ## 1. Two distinct tracks (why this repository exists)
