@@ -1,0 +1,115 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "5817280c935718f17f17fe0c61f3b5c2",
+  "case_id": "ARK-496-A006",
+  "experiment_id": "ARK-496",
+  "timestamp_utc": "2026-07-20T17:38:24.994241Z",
+  "actor": {
+    "actor_id": "actor:executor-01",
+    "credential_token_hash": "3a7deb66c6f457374bdfb3ff53c65517cd64db1132e5052e0a2fadca8d0b373b",
+    "delegated_by": "actor:orchestrator-01"
+  },
+  "requested_action": {
+    "tool_id": "T3",
+    "tool_name": "deploy_application",
+    "parameters": {
+      "app": "svc-c"
+    },
+    "canonical_json": "{\"app\":\"svc-c\",\"tool_id\":\"T3\",\"tool_name\":\"deploy_application\"}",
+    "exact_action_hash": "289e0649d1e3ebacdffbe3c18e2ed733e1ef742a0e798e59fd8684aea0751b17"
+  },
+  "authority_basis": {
+    "authority_source": "delegation",
+    "authority_record_id": "none",
+    "delegator_chain": [
+      {
+        "delegator_id": "actor:orchestrator-01",
+        "delegatee_id": "actor:executor-01",
+        "allowed_tools": [
+          "T3"
+        ]
+      }
+    ],
+    "authority_valid_at_execution": false,
+    "authority_resolved_at": "2026-07-20T17:38:24.993952Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [
+      "approval_ref",
+      "risk_review"
+    ],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {
+      "approval_ref": "value-approval_ref",
+      "risk_review": "value-risk_review"
+    }
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "FAIL",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "DENY",
+  "decision_reason": "delegation expired at execution time",
+  "execution_outcome": {
+    "tool_called": false,
+    "tool_ledger_entry_id": "fd6b7ceb6e8c527a00d305b7886ea35d",
+    "idempotency_key": "f4a80c3dd5c68c98de9ce25adace6628",
+    "duplicate_prevented": false
+  },
+  "chain": {
+    "prior_record_hash": "899554af149dda4ed1398b2178724344eac47f2d8c2c0bd75f1d664fb22cb200",
+    "this_record_hash": "4413f5975a3dfddf7e5d12236170808d6dfe6563ca11fa686757f2cb5c4a9be3"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "289e0649d1e3ebacdffbe3c18e2ed733e1ef742a0e798e59fd8684aea0751b17",
+    "guard_b_result": "PASS",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "289e0649d1e3ebacdffbe3c18e2ed733e1ef742a0e798e59fd8684aea0751b17",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "9b58a7d3e5d8578de00ad889e38d2d88143f89fecb146f67650e10caf32f167657a83a43d49302db43e4dc8ab63160c3c0a03e3fb01beef5461fd7126b190f0d",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}

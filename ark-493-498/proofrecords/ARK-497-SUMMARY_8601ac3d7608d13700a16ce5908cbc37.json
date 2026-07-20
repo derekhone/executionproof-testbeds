@@ -1,0 +1,150 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "8601ac3d7608d13700a16ce5908cbc37",
+  "case_id": "ARK-497-SUMMARY",
+  "experiment_id": "ARK-497",
+  "timestamp_utc": "2026-07-20T17:38:25.233818Z",
+  "actor": {
+    "actor_id": "actor:series-summary",
+    "credential_token_hash": "1f98badd2e32d2d91e7b400f9886171e290e3bf3900d21f899796ea26ad42ff6",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "SUMMARY",
+    "tool_name": "series_summary",
+    "parameters": {
+      "case_ids": [
+        "ARK-497-L001",
+        "ARK-497-L002",
+        "ARK-497-L003",
+        "ARK-497-L004",
+        "ARK-497-L005",
+        "ARK-497-L006",
+        "ARK-497-L007",
+        "ARK-497-L008",
+        "ARK-497-L009",
+        "ARK-497-L010",
+        "ARK-497-L011",
+        "ARK-497-L012",
+        "ARK-497-L013",
+        "ARK-497-L014",
+        "ARK-497-L015",
+        "ARK-497-L016",
+        "ARK-497-L017",
+        "ARK-497-L018",
+        "ARK-497-L019",
+        "ARK-497-L020",
+        "ARK-497-T001",
+        "ARK-497-T002",
+        "ARK-497-T003",
+        "ARK-497-T004",
+        "ARK-497-T005",
+        "ARK-497-T006",
+        "ARK-497-T007",
+        "ARK-497-T008",
+        "ARK-497-T009",
+        "ARK-497-T010"
+      ],
+      "case_count": 30,
+      "self_import_analysis": {
+        "analysis": "ast.walk on self performed before verification",
+        "modules_imported": [
+          "ast",
+          "base64",
+          "cryptography",
+          "hashlib",
+          "json",
+          "os",
+          "pathlib",
+          "sys",
+          "unicodedata"
+        ],
+        "forbidden_testbed_imports": [],
+        "non_permitted_imports": [],
+        "permitted_only": true
+      },
+      "p497_1_legitimate_reconstruction": true,
+      "p497_2_tamper_detection_rate": "10/10",
+      "p497_3_false_positives": 0,
+      "p497_4_permitted_only_imports": true
+    },
+    "canonical_json": "{\"case_ids\":[\"ARK-497-L001\",\"ARK-497-L002\",\"ARK-497-L003\",\"ARK-497-L004\",\"ARK-497-L005\",\"ARK-497-L006\",\"ARK-497-L007\",\"ARK-497-L008\",\"ARK-497-L009\",\"ARK-497-L010\",\"ARK-497-L011\",\"ARK-497-L012\",\"ARK-497-L013\",\"ARK-497-L014\",\"ARK-497-L015\",\"ARK-497-L016\",\"ARK-497-L017\",\"ARK-497-L018\",\"ARK-497-L019\",\"ARK-497-L020\",\"ARK-497-T001\",\"ARK-497-T002\",\"ARK-497-T003\",\"ARK-497-T004\",\"ARK-497-T005\",\"ARK-497-T006\",\"ARK-497-T007\",\"ARK-497-T008\",\"ARK-497-T009\",\"ARK-497-T010\"],\"experiment_id\":\"ARK-497\",\"p497_1_legitimate_reconstruction\":true,\"p497_2_tamper_detection_rate\":\"10/10\",\"p497_3_false_positives\":0,\"p497_4_permitted_only_imports\":true,\"self_import_analysis\":{\"analysis\":\"ast.walk on self performed before verification\",\"forbidden_testbed_imports\":[],\"modules_imported\":[\"ast\",\"base64\",\"cryptography\",\"hashlib\",\"json\",\"os\",\"pathlib\",\"sys\",\"unicodedata\"],\"non_permitted_imports\":[],\"permitted_only\":true},\"tool_id\":\"SUMMARY\",\"tool_name\":\"series_summary\"}",
+    "exact_action_hash": "b723d6cf4152a48d9b5b87ebe0bad180c8a6171ccf1ad6eee1695c3ef8961577"
+  },
+  "authority_basis": {
+    "authority_source": "series-summary",
+    "authority_record_id": "none",
+    "delegator_chain": [],
+    "authority_valid_at_execution": true,
+    "authority_resolved_at": "2026-07-20T17:38:25.233877Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {}
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "PASS",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "EXPERIMENT-PASS",
+  "decision_reason": "series-summary for ARK-497: EXPERIMENT-PASS",
+  "execution_outcome": {
+    "tool_called": false,
+    "tool_ledger_entry_id": null,
+    "idempotency_key": "dd5d7054757ad0d0ce2305d44a711840",
+    "duplicate_prevented": false
+  },
+  "chain": {
+    "prior_record_hash": "c06a55eb93605aa1b8e1c2b9d734ad49a6e889adb52b167433711bc372c8a1ab",
+    "this_record_hash": "74385f8c8f19cd49cd03194c6532fae96c22a8afe56aa70f73fbcfec8c98ca25"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "b723d6cf4152a48d9b5b87ebe0bad180c8a6171ccf1ad6eee1695c3ef8961577",
+    "guard_b_result": "PASS",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "b723d6cf4152a48d9b5b87ebe0bad180c8a6171ccf1ad6eee1695c3ef8961577",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "d9c32ea557a318a76fb9e97b26efb1f775d53924c2529b47cbd33a68460c685dfd916c14ef45c0a5720cb2147187b60c03ce2f5de8b08a11cb7b698e92da2802",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}

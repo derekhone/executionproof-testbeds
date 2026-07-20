@@ -1,0 +1,115 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "601ffcd943ab362d7bc0c346e8a76c46",
+  "case_id": "ARK-494-M003",
+  "experiment_id": "ARK-494",
+  "timestamp_utc": "2026-07-20T17:37:58.151278Z",
+  "actor": {
+    "actor_id": "actor:payments-agent-01",
+    "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "T1",
+    "tool_name": "send_payment",
+    "parameters": {
+      "approval_id": "APPROVAL-2026-07-20-001",
+      "amount": 5000,
+      "currency": "USD",
+      "destination_bank": "ROUTING-999000999",
+      "environment": "production",
+      "memo": "Invoice-INV-2026-0047",
+      "payment_timing": "immediate",
+      "recipient_id": "account-A-9872",
+      "recipient_name": "Vendor Alpha LLC"
+    },
+    "canonical_json": "{\"amount\":5000,\"approval_id\":\"APPROVAL-2026-07-20-001\",\"currency\":\"USD\",\"destination_bank\":\"ROUTING-999000999\",\"environment\":\"production\",\"memo\":\"Invoice-INV-2026-0047\",\"payment_timing\":\"immediate\",\"recipient_id\":\"account-A-9872\",\"recipient_name\":\"Vendor Alpha LLC\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}",
+    "exact_action_hash": "133270383e60b46a22260f116aa152fd38c7780d9b713bfb0050b8f1c52d6a38"
+  },
+  "authority_basis": {
+    "authority_source": "direct-authority",
+    "authority_record_id": "authrec:actor:payments-agent-01",
+    "delegator_chain": [],
+    "authority_valid_at_execution": true,
+    "authority_resolved_at": "2026-07-20T17:37:58.151128Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [
+      "approval_ref",
+      "risk_review"
+    ],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {
+      "approval_ref": "value-approval_ref",
+      "risk_review": "value-risk_review"
+    }
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "PASS",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "FAIL"
+  },
+  "decision": "DENY",
+  "decision_reason": "exact-action hash mismatch (mutation of approved action)",
+  "execution_outcome": {
+    "tool_called": false,
+    "tool_ledger_entry_id": "7e4111dfa5197ccee9801c11f30e4786",
+    "idempotency_key": "6f83489b197e164a3dc4b29f6f6c47d0",
+    "duplicate_prevented": false
+  },
+  "chain": {
+    "prior_record_hash": "efc59ebfd9479ed7bb899941bb8e8b2924ddefee7e954a6570db30df98f8110a",
+    "this_record_hash": "fc1b341bfb04c901bb471e708f2b52d6b45cd52de1205a59f7634547af0eab4b"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "133270383e60b46a22260f116aa152fd38c7780d9b713bfb0050b8f1c52d6a38",
+    "guard_b_result": "PASS",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "133270383e60b46a22260f116aa152fd38c7780d9b713bfb0050b8f1c52d6a38",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "3bcea7bf87fb6679c3933c22145022a0dd855ee2cc2657ca2a4d3d1905ae6c7771c0acc5f7b9a0d81374789146d5b7b632bca4f8d3845c5c6ffc843167c8b309",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}
