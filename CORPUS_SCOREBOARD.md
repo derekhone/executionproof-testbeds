@@ -1,14 +1,29 @@
 # Remnant Fieldworks Inc. — Master Corpus Scoreboard
-## ARK Series 441–492 + WITNESS Series
-**Last updated:** 2026-07-18 (P01 complete + P02 complete — all 10 latency/throughput/scale experiments)
+## ARK Series 441–498 + WITNESS Series
+**Last updated:** 2026-07-20 (P01 + P02 complete; ARK-493–498 Enterprise Agent Boundary Testbed complete — all 6 PASS)
 
 ---
 
 ## EXECUTIVE SUMMARY
 
-**Total RF Corpus:** 41 case records across 38 experiment IDs
-- **ARK Series:** 36 experiments (34 PASS, 2 FAIL honest, 1 GATE-STOP) — prior + P02 completion (ARK-485-492)
+**Total RF Corpus (this repository):** 47 case records across 44 experiment IDs
+- **ARK Series:** 42 experiments (40 PASS, 2 FAIL honest, 1 GATE-STOP) — prior + P02 (ARK-485-492) + ARK-493-498 enterprise boundary testbed
 - **WITNESS Series:** 2 experiments, 6 cases (all PASS)
+
+> Counting note: this scoreboard is **repository-scoped** and counts at
+> experiment-level granularity (one case record per preregistered experiment,
+> plus the multi-case WITNESS records). The **program-wide public headline**
+> reported on executionproof.io / remnantfieldworks.com uses a different tier
+> (individual scored cases across all sibling repos) — see this series'
+> `ark-493-498/results/reconciliation_report.md` and `publication_batch.md` for
+> that reconciliation. The two numbers are different scopes, both traceable.
+
+**ARK-493–498 Enterprise Agent Boundary Testbed:** ✅ **COMPLETE** — 6/6 experiments PASS
+- Non-quantum, production-like enforcement series (real software enforcement point; real HTTP/loopback-TCP boundary in ARK-498)
+- 161 scored sub-cases, 161 PASS, 0 enforcement leaks, GATE-STOP not triggered
+- Dual-guard (in-process Guard-A + isolated-subprocess Guard-B) agreement on all 161 records
+- Frozen preregistration v1.1, SHA-256 `464b9fb8be9d6cca052f236dc9deec9f8e89b781cafc58701e79b2d05d52952a`
+- Directory: [`ark-493-498/`](ark-493-498/)
 
 **P01 Production-Boundary Series (ARK-458-482):** ✅ **COMPLETE** — 25/25 experiments PASS
 - 20,000 authorization decisions tested across 5 critical failure modes
@@ -273,7 +288,10 @@ All 52 case records maintain full compliance:
   - Authority Engine performance (cold start, p95 latency, burst/sustained throughput, cost at scale)
   - Evidence Engine performance
 
-### P03 Dependency Cascade (ARK-493–517)
+### Enterprise Agent Boundary Testbed (ARK-493–498) — ✅ COMPLETE 2026-07-20
+- Enforcement, semantic, temporal, delegation, reconstructability, and networked-performance boundaries — all 6 PASS
+
+### P03 Dependency Cascade (ARK-499–517)
 - Identity Provider failure modes (full outage, timeout, stale cache, split brain, recovery)
 - Policy Registry failure modes (full outage, timeout, stale cache, split brain, recovery)
 
@@ -286,14 +304,19 @@ All 52 case records maintain full compliance:
 
 ### GitHub
 - **Repository:** executionproof-testbeds
-- **Branch:** main (SHA: 293c326)
-- **Open PRs:** 0
+- **Branch:** main
+- **Open PRs:** 1 (ARK-493–498 Enterprise Agent Boundary Testbed — pending review)
 - **Authentication:** GitHub token available via Git_Tool
 
 ### Zenodo
-- **Token:** Available (IjKV4tF4GhrsAlNpWwyGrfaCJe4BmKZWnufwoYixZAj5vTWoTMAR4HK5jE98)
-- **Publications:** 56/56 complete
+- **Token:** Available (stored in connector secrets — NOT committed here; see note below)
+- **Publications:** ARK-493–498 series deposition prepared 2026-07-20 (see `ark-493-498/results/publication_batch.md`)
 - **Latest batch:** ARK-485-492 (8 DOIs published 2026-07-18, P02 completion)
+
+> ⚠️ Security note: a prior revision of this file committed a plaintext Zenodo
+> API token. It has been removed from the current revision but **remains in git
+> history** (commit 293c326). That token should be treated as compromised and
+> rotated in the Zenodo account settings.
 
 ### IBM Quantum
 - **Budget status:** ~0s or minimal after WITNESS-2
@@ -310,13 +333,14 @@ All 52 case records maintain full compliance:
 
 ### COMPLETED PHASES (cont.)
 3. ✅ **P02 Latency/Throughput/Scale Phase** (ARK-483–492): 10 experiments — **COMPLETE 2026-07-18**
+4. ✅ **Enterprise Agent Boundary Testbed** (ARK-493–498): 6 experiments — **COMPLETE 2026-07-20** (all PASS, 161 scored cases, 0 leaks)
 
 ### PLANNED PHASES
-4. ⏳ **P03 Dependency Cascade** (ARK-493–517)
-5. ⏳ **P04+ Extended Testing** (ARK-518+)
+5. ⏳ **P03 Dependency Cascade** (ARK-499–517) — remaining dependency-cascade experiments (identity-provider / policy-registry failure modes); ARK-498 already covers networked dependency loss + recovery
+6. ⏳ **P04+ Extended Testing** (ARK-518+)
 
 ---
 
-**Document Version:** 3.0 (2026-07-18)
+**Document Version:** 3.1 (2026-07-20)
 **Maintained by:** Remnant Fieldworks Inc.
-**Last Corpus Update:** P02 complete (10/10 experiments PASS, all published); ARK-486 cost-model corrected
+**Last Corpus Update:** ARK-493–498 Enterprise Agent Boundary Testbed complete (6/6 PASS, 161 scored cases, 0 enforcement leaks, GATE-STOP not triggered)

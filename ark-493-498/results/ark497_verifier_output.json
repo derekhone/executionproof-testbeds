@@ -1,0 +1,1708 @@
+{
+  "self_import_analysis": {
+    "analysis": "ast.walk on self performed before verification",
+    "modules_imported": [
+      "ast",
+      "base64",
+      "cryptography",
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "sys",
+      "unicodedata"
+    ],
+    "forbidden_testbed_imports": [],
+    "non_permitted_imports": [],
+    "permitted_only": true
+  },
+  "verification_spec_version": "ark-enterprise-v1.0",
+  "records_verified": 30,
+  "results": [
+    {
+      "case_id": "ARK-493-C001",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.139104Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "f141cba4560fcdeeb2e51894f9af097a",
+          "idempotency_key": "19428688e8b157040b875e4bb9d1bd13",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "cefe580ca55c49dcac56721bd6f395f6c88699ba51910ce09d09db6ff96b3b22",
+          "stored_this_record_hash": "cefe580ca55c49dcac56721bd6f395f6c88699ba51910ce09d09db6ff96b3b22",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L001.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C002",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.195366Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "b248b6c42235a8032e93b0c74bd3dc2c",
+          "idempotency_key": "ca12fcaa742a54fbcc75a763775adec2",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "6b287a779fc72305fbc0d622d436d41f4287496c52627476b2fe1c86cbfedc91",
+          "stored_this_record_hash": "6b287a779fc72305fbc0d622d436d41f4287496c52627476b2fe1c86cbfedc91",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L002.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C003",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.246790Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "c3562965d5f03243c2d10aeb0c8aac5d",
+          "idempotency_key": "c744f1223b368a2db3d972c91c196f1e",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "bf6c5ba0e8cb8ad7db2496ffa5218bbb4525522d98ad9adbdc80f466d6720b05",
+          "stored_this_record_hash": "bf6c5ba0e8cb8ad7db2496ffa5218bbb4525522d98ad9adbdc80f466d6720b05",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L003.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C004",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.297443Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "4bab8f865db9718b7fbbedde19e87573",
+          "idempotency_key": "98f2283bbe5278e611512d53fc5ccc62",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "6effa8ca0f1e15b33152beda31711d5c96a9f7e8004a806a13d8b51e0eb04004",
+          "stored_this_record_hash": "6effa8ca0f1e15b33152beda31711d5c96a9f7e8004a806a13d8b51e0eb04004",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L004.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C005",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.349694Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "f2a9b724454755fbf5a28207c1eba342",
+          "idempotency_key": "4839d258be06764f1067a0132cb233dc",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "da76f13ec2c1bd6d2ab603717d4e01453af16937d1ada7023bd037f6ea9a0fdd",
+          "stored_this_record_hash": "da76f13ec2c1bd6d2ab603717d4e01453af16937d1ada7023bd037f6ea9a0fdd",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L005.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C006",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.399878Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "e68f86976fcb58850603fbc78070c34f",
+          "idempotency_key": "94d6bdb8f8f2cc80c363a4aec0ffe846",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "0c78bfe86c452aa1602adecf28fa64ed2ae0dd4e3a6b61f519fcce464f3bfb0c",
+          "stored_this_record_hash": "0c78bfe86c452aa1602adecf28fa64ed2ae0dd4e3a6b61f519fcce464f3bfb0c",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L006.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C007",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:53.451854Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "c407c6865626e2d78556621e3051690a",
+          "idempotency_key": "fd48520221fe672b5c4a8d84cc7edc54",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "5ca552a2abe632e8e51a6e817bce28b20e806a985c423e751c132308a736dc20",
+          "stored_this_record_hash": "5ca552a2abe632e8e51a6e817bce28b20e806a985c423e751c132308a736dc20",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L007.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C008",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:53.502334Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "ed100b03b824308373dace9709fdffd8",
+          "idempotency_key": "be32465dc5b306d755e936c9f23ed297",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "2112218f31bd83bc93470b9791befda8432d3db090279fb2aa37012a5cb2fda3",
+          "stored_this_record_hash": "2112218f31bd83bc93470b9791befda8432d3db090279fb2aa37012a5cb2fda3",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L008.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C009",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:53.553523Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "383507c48a208ea4bd168ccf2fef7123",
+          "idempotency_key": "20131fc9b1cc5e8377574f6fe925be0c",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "e7d1c73cebe26db1f8f5aad78c0f707872a7eefdf280b1cb25a28f12f6615270",
+          "stored_this_record_hash": "e7d1c73cebe26db1f8f5aad78c0f707872a7eefdf280b1cb25a28f12f6615270",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L009.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C010",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:53.604110Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "68c288fb6a4b6e42f02c57b69ea2f007",
+          "idempotency_key": "1a9b893bab36142b24b33978d99a9528",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "a50019e68d4e30c9ddf014f3a4c8371e1ddd5a47bbd2d8602110a73afee8ac2b",
+          "stored_this_record_hash": "a50019e68d4e30c9ddf014f3a4c8371e1ddd5a47bbd2d8602110a73afee8ac2b",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L010.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C011",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:53.658986Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "5712e952d1744853a40677c57c346883",
+          "idempotency_key": "b9bc6453703670ca38a840b26953bb52",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "5e74514cfa6b72c4dd415909593ca14afe02ec049e37a7dea62ad8aab4cec4ba",
+          "stored_this_record_hash": "5e74514cfa6b72c4dd415909593ca14afe02ec049e37a7dea62ad8aab4cec4ba",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L011.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C012",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:53.708499Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "02f321c7d1e7babdf4d1015d846cbfc7",
+          "idempotency_key": "af4ab4b60a1ff9aebace6f7372d82f05",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "e28574f8bd7b16076c280ee2529d783ad46ad6171bd6560fa89d39d99d8502dd",
+          "stored_this_record_hash": "e28574f8bd7b16076c280ee2529d783ad46ad6171bd6560fa89d39d99d8502dd",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L012.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C025",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:54.404821Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "37fa1edaaed13efedc0b07424f2bef30",
+          "idempotency_key": "f3050a43e30f313ceb349d132ca22683",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "7ae9bc543605a65a5e38a6c46b16edf4d550a57592c020655e1b98ed0b81c38f",
+          "stored_this_record_hash": "7ae9bc543605a65a5e38a6c46b16edf4d550a57592c020655e1b98ed0b81c38f",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L013.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C026",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:54.468229Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "7ffd7622a45a949ce650d03d28429598",
+          "idempotency_key": "44e73fcebe62b532a54fe9fff24d5e5e",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "68e85361e2357ed72921f8f75f5553aa1d898ead70fc0e9e03c4ee4a33209284",
+          "stored_this_record_hash": "68e85361e2357ed72921f8f75f5553aa1d898ead70fc0e9e03c4ee4a33209284",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L014.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C013",
+      "decision": "HOLD",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.757853Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": false,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "HOLD",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "3f0e79d036bbb686dc77b3bf0b2a5e6c",
+          "idempotency_key": "2759db668b1a45479cc4e25ada3b3731",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "a8d18f811914fe690057591dade35e300afc884138ee2b9971f5cd612d7ea67f",
+          "stored_this_record_hash": "a8d18f811914fe690057591dade35e300afc884138ee2b9971f5cd612d7ea67f",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L015.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C014",
+      "decision": "HOLD",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.807018Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": false,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "HOLD",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "d49ac9b75b692b0253841d053d8837e8",
+          "idempotency_key": "5e00de949808a888505f1ffb060f45bd",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "b48054ebe5ff3ebfe644c5313ab637359e6a1f18f7f1367eed1ebc4d43e6a028",
+          "stored_this_record_hash": "b48054ebe5ff3ebfe644c5313ab637359e6a1f18f7f1367eed1ebc4d43e6a028",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L016.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C015",
+      "decision": "HOLD",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.856491Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": false,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "HOLD",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "f359afe334a2ef20069f561b0a9bb373",
+          "idempotency_key": "a50936d11ebf51ab74b4e927afbb5092",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "d1112d6044ee762714cbf40614f610d1b471a3ec72c6dcdf075f30f51530e7e3",
+          "stored_this_record_hash": "d1112d6044ee762714cbf40614f610d1b471a3ec72c6dcdf075f30f51530e7e3",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L017.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C016",
+      "decision": "HOLD",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.908634Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": false,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "HOLD",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "2ab707aa8d68b816d0fb3907acf39b77",
+          "idempotency_key": "e8962fd0b93ff8c4f0902c28c767505b",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "f060c327e9d15c48ab7917a2b5bb2a84787bcbf050c75ded07a65681a44e2883",
+          "stored_this_record_hash": "f060c327e9d15c48ab7917a2b5bb2a84787bcbf050c75ded07a65681a44e2883",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L018.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C017",
+      "decision": "HOLD",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:53.967557Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": false,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "HOLD",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "3e7610ca37fc39e3145a8b92b15b15dd",
+          "idempotency_key": "e6e4cc2e77428d9e7133acc290bbb817",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "df2576c878ece4a457e6c07af4a5e016a107ff0717c165fa2fe90c822cdb76e9",
+          "stored_this_record_hash": "df2576c878ece4a457e6c07af4a5e016a107ff0717c165fa2fe90c822cdb76e9",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L019.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C018",
+      "decision": "HOLD",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:payments-agent-01",
+          "credential_token_hash": "076694ac6d8934340869a1563878dcdd9ba496b74ffca521f6d6bac699a19ec3"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T1-resource\",\"tool_id\":\"T1\",\"tool_name\":\"send_payment\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:payments-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:54.018012Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": false,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "HOLD",
+        "7_exact_action": {
+          "recomputed": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "stored": "67f8f1d7b3ad7165c27c6c6a030fadbd6406b0334b56155260304a751b47340d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "3c0b2bb4a180994295f2bd06376e963d",
+          "idempotency_key": "5b6f860fb2b402599ccc62ce0d4a2e5e",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "7032b654976233bbb40a4620a4e6ab2bfbbeefa7037584e16d3df77b0d5d3ef4",
+          "stored_this_record_hash": "7032b654976233bbb40a4620a4e6ab2bfbbeefa7037584e16d3df77b0d5d3ef4",
+          "match": true
+        },
+        "signature_valid": true
+      },
+      "tamper_detected": false,
+      "tamper_reasons": [],
+      "file": "legitimate__ARK-497-L020.json",
+      "expected_class": "legitimate"
+    },
+    {
+      "case_id": "ARK-493-C027",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:54.529792Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "d450cc6d4d04ee764b8e91d390f8bbc8",
+          "idempotency_key": "4d744523c92cb211c14bb56059b9f96b",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "bb0124939189ea330cbbf9a276767d6c9b6cb9868202c1e8ec7135025cde7be2",
+          "stored_this_record_hash": "a8bb2918319429b7c195710ef7251a2acd211fb07890995623bfd1abd7e54eca",
+          "match": false
+        },
+        "signature_valid": false
+      },
+      "tamper_detected": true,
+      "tamper_reasons": [
+        "this_record_hash mismatch (a hashed field was altered)",
+        "decision 'ALLOW' inconsistent with gate_evaluation (expected 'DENY')",
+        "tool_called inconsistent with decision",
+        "ed25519 signature verification failed"
+      ],
+      "file": "tamper__ARK-497-T001.json",
+      "expected_class": "tamper"
+    },
+    {
+      "case_id": "ARK-493-C019",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:dba-agent-01",
+          "credential_token_hash": "592583443a522d5c2b3a932d7af71881fab7067ad469c3555d9fbd3ad974464c"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:dba-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:54.069499Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac67400000000",
+          "match": false
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "b93fbfb25fc3d8297a2d4a7abe72b9cf",
+          "idempotency_key": "aec745f00eaef72e85b97e5c939d930a",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "4e5fa79a547a27ea26f82409662f548b23a23903a64b4ba1cfed0f81a7c4cb03",
+          "stored_this_record_hash": "76b2e047b16b72f93d0eb0bfd11cda4f50ee6d8e91d33f67c55ee8b4a6b0dd74",
+          "match": false
+        },
+        "signature_valid": false
+      },
+      "tamper_detected": true,
+      "tamper_reasons": [
+        "exact_action_hash != SHA256(canonical_json)",
+        "this_record_hash mismatch (a hashed field was altered)",
+        "ed25519 signature verification failed"
+      ],
+      "file": "tamper__ARK-497-T002.json",
+      "expected_class": "tamper"
+    },
+    {
+      "case_id": "ARK-493-C020",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:impostor-99",
+          "credential_token_hash": "592583443a522d5c2b3a932d7af71881fab7067ad469c3555d9fbd3ad974464c"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:dba-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:54.118600Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "bf1922a6abb11ca3de0af6e40bdd5874",
+          "idempotency_key": "2e3427c312edef193b6aac013e7cb072",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "393d081a09284540e7a97b4718cb602a6bb030c681cec048531522c4f7caf47e",
+          "stored_this_record_hash": "ab38c2d09935bd2c5151c3222d6411fac4bbb594a6ee60e63cbd506d2162fcaa",
+          "match": false
+        },
+        "signature_valid": false
+      },
+      "tamper_detected": true,
+      "tamper_reasons": [
+        "this_record_hash mismatch (a hashed field was altered)",
+        "ed25519 signature verification failed"
+      ],
+      "file": "tamper__ARK-497-T003.json",
+      "expected_class": "tamper"
+    },
+    {
+      "case_id": "ARK-493-C028",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:54.581037Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "02558355708db75e6a1fac7a50619ea5",
+          "idempotency_key": "a36c0ab496dea3ffaf3e865c8e1a49b2",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "1023754c61bb6e978cd22b5bb675f481f2065e3e1ed7ef72b0fc7960caa4faa0",
+          "stored_this_record_hash": "ba2247558f1f46a94bd626469bb0a8e3c98758889090c01fd6963681664a54fd",
+          "match": false
+        },
+        "signature_valid": false
+      },
+      "tamper_detected": true,
+      "tamper_reasons": [
+        "this_record_hash mismatch (a hashed field was altered)",
+        "ed25519 signature verification failed"
+      ],
+      "file": "tamper__ARK-497-T004.json",
+      "expected_class": "tamper"
+    },
+    {
+      "case_id": "ARK-493-C021",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:dba-agent-01",
+          "credential_token_hash": "592583443a522d5c2b3a932d7af71881fab7067ad469c3555d9fbd3ad974464c"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:dba-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:54.167804Z"
+        },
+        "4_policy_version": "ark-enterprise-v2.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "cf7d1aeec06fe65b3e5fb5087c5cf896",
+          "idempotency_key": "7adab15efc1aa34240b2386e0b70f2b0",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "bdd3e0df98258363e97679b28edb4c06b40d0a58cb3f719486f984627e7f97d7",
+          "stored_this_record_hash": "7e54631235b1b40cd3f31eb5cc80707de3d0306511ad40106e9b950ac1c78235",
+          "match": false
+        },
+        "signature_valid": false
+      },
+      "tamper_detected": true,
+      "tamper_reasons": [
+        "this_record_hash mismatch (a hashed field was altered)",
+        "ed25519 signature verification failed"
+      ],
+      "file": "tamper__ARK-497-T005.json",
+      "expected_class": "tamper"
+    },
+    {
+      "case_id": "ARK-493-C031",
+      "decision": "HOLD",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:dba-agent-01",
+          "credential_token_hash": "592583443a522d5c2b3a932d7af71881fab7067ad469c3555d9fbd3ad974464c"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:dba-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:54.730032Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "HOLD",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "88452a93056b9c3a32cbd36190215023",
+          "idempotency_key": "3b90fd52a8ad5f93e7cd43a485591252",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "6966fb929cb7b9a0014ff344dec8dfca8c7ca3ac6be003a17d4ff0f7a8f37b8b",
+          "stored_this_record_hash": "29bafe905af6c882ac46b81a88bf4c93eef8d309b4ae846618b6fd977f84b082",
+          "match": false
+        },
+        "signature_valid": false
+      },
+      "tamper_detected": true,
+      "tamper_reasons": [
+        "this_record_hash mismatch (a hashed field was altered)",
+        "ed25519 signature verification failed"
+      ],
+      "file": "tamper__ARK-497-T006.json",
+      "expected_class": "tamper"
+    },
+    {
+      "case_id": "ARK-493-C029",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:54.630499Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "7abbaf978284e3748df14cb0975975a2",
+          "idempotency_key": "9e3452246c597e440c363a91598d6800",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "571f9835b0ffe282960cf3697b03a56129d437272713f145f768051b11c1980c",
+          "stored_this_record_hash": "e13cd66ec75d66322dba6be6b66bfaa0f77113df4c5b513d7fd91775f751558b",
+          "match": false
+        },
+        "signature_valid": false
+      },
+      "tamper_detected": true,
+      "tamper_reasons": [
+        "this_record_hash mismatch (a hashed field was altered)",
+        "tool_called inconsistent with decision",
+        "ed25519 signature verification failed"
+      ],
+      "file": "tamper__ARK-497-T007.json",
+      "expected_class": "tamper"
+    },
+    {
+      "case_id": "ARK-493-C022",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:dba-agent-01",
+          "credential_token_hash": "592583443a522d5c2b3a932d7af71881fab7067ad469c3555d9fbd3ad974464c"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:dba-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:54.221140Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "09e72dcd7c316c7792cf8bd14aa8c08b",
+          "idempotency_key": "2f246492c9ffe46dd7b4f3f4964cb55c",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "4c82e6e02427463e2d1ced1e21ff5ab49da42d4f831ddd76dd8801e3221137a1",
+          "stored_this_record_hash": "11bba1f3fcc37c897026ec79a9ba43f29bec0ab031b652ecffda553eb0ec1e26",
+          "match": false
+        },
+        "signature_valid": false
+      },
+      "tamper_detected": true,
+      "tamper_reasons": [
+        "this_record_hash mismatch (a hashed field was altered)",
+        "ed25519 signature verification failed"
+      ],
+      "file": "tamper__ARK-497-T008.json",
+      "expected_class": "tamper"
+    },
+    {
+      "case_id": "ARK-493-C030",
+      "decision": "DENY",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:unauthorized-01",
+          "credential_token_hash": "6081e3030930ccc282a189e21950bb4dfa1ee2667d20991c11fc90434e5ccf97"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:unauthorized-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": false,
+          "authority_resolved_at": "2026-07-20T17:37:54.681630Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "DENY",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": false,
+          "tool_ledger_entry_id": "be90141df7a80cf30295bae3c589f20d",
+          "idempotency_key": "75c2e216fdd3110bbc59bab5784d6696",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "5098f772ea570d06602237cba90982442752a3c6e0dcd7a5ec4bd25f3fab1b12",
+          "stored_this_record_hash": "c328aac99688988c9705403cab220a04911354a477db9911719ad44b142263ed",
+          "match": false
+        },
+        "signature_valid": false
+      },
+      "tamper_detected": true,
+      "tamper_reasons": [
+        "this_record_hash mismatch (a hashed field was altered)",
+        "decision 'DENY' inconsistent with gate_evaluation (expected 'ALLOW')",
+        "ed25519 signature verification failed"
+      ],
+      "file": "tamper__ARK-497-T009.json",
+      "expected_class": "tamper"
+    },
+    {
+      "case_id": "ARK-493-C023",
+      "decision": "ALLOW",
+      "elements": {
+        "1_actor_identity": {
+          "actor_id": "actor:dba-agent-01",
+          "credential_token_hash": "592583443a522d5c2b3a932d7af71881fab7067ad469c3555d9fbd3ad974464c"
+        },
+        "2_requested_action": {
+          "canonical_json": "{\"note\":\"ark-493\",\"target\":\"T2-resource\",\"tool_id\":\"T2\",\"tool_name\":\"delete_database_table\"}"
+        },
+        "3_authority": {
+          "authority_source": "direct-authority",
+          "authority_record_id": "authrec:actor:dba-agent-01",
+          "delegator_chain": [],
+          "authority_valid_at_execution": true,
+          "authority_resolved_at": "2026-07-20T17:37:54.281428Z"
+        },
+        "4_policy_version": "ark-enterprise-v1.0",
+        "5_evidence_state": {
+          "required_evidence_fields": [
+            "approval_ref",
+            "risk_review"
+          ],
+          "evidence_present": true,
+          "evidence_fresh": true,
+          "evidence_snapshot": {
+            "approval_ref": "value-approval_ref",
+            "risk_review": "value-risk_review"
+          }
+        },
+        "6_decision": "ALLOW",
+        "7_exact_action": {
+          "recomputed": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "stored": "23ba71e185a66feea1b22f44ec06779ebe4f5d416549b45a92eac6747ddc060d",
+          "match": true
+        },
+        "8_execution_outcome": {
+          "tool_called": true,
+          "tool_ledger_entry_id": "8b3e13ed811c1481f5940c8275e7df09",
+          "idempotency_key": "b463054495b9a5974d797232fa94a27e",
+          "duplicate_prevented": false
+        },
+        "9_chain_integrity": {
+          "recomputed_this_record_hash": "de3f1714eeda4d7a5c761e68d42918cfd30a3ce1bb51a9d4b732247624f0792d",
+          "stored_this_record_hash": "b855668be37dddd5767f58320f0b1741174446cdb7ac57de98e7431027313889",
+          "match": false
+        },
+        "signature_valid": false
+      },
+      "tamper_detected": true,
+      "tamper_reasons": [
+        "this_record_hash mismatch (a hashed field was altered)",
+        "ed25519 signature verification failed"
+      ],
+      "file": "tamper__ARK-497-T010.json",
+      "expected_class": "tamper"
+    }
+  ]
+}

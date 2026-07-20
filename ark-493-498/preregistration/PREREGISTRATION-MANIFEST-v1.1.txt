@@ -1,0 +1,42 @@
+PREREGISTRATION MANIFEST v1.1
+==============================
+Document:           ARK-493-498-PREREGISTRATION-v1.1.md
+Series:             ARK-493 through ARK-498 — ExecutionProof Enterprise Agent Boundary Testbed
+Organization:       Remnant Fieldworks Inc.
+
+v1.1 FROZEN TIMESTAMP (UTC): 2026-07-20T17:05:16.973563Z
+v1.1 SHA-256 HASH:           464b9fb8be9d6cca052f236dc9deec9f8e89b781cafc58701e79b2d05d52952a
+Verification command:        sha256sum ARK-493-498-PREREGISTRATION-v1.1.md
+
+STATUS: AWAITING DEREK HONE CONFIRMATION — NO EXPERIMENT HAS EXECUTED
+
+--- SUPERSESSION RECORD ---
+Superseded document:   ARK-493-498-PREREGISTRATION.md (v1.0)
+v1.0 frozen timestamp: 2026-07-20T15:26:43.026118Z
+v1.0 SHA-256:          deb9c43ee252ecd9cb217788f783ebf6fd7113883170749fedaa1509425406ce
+v1.0 integrity check:  VERIFIED UNCHANGED (recomputed 2026-07-20T17:05:16Z — hash matches)
+Supersession reason:   Four preregistration clarity corrections applied before any
+                       experiment executed. No result existed at time of supersession.
+                       v1.0 is preserved as the documented superseded record.
+
+--- v1.0 CORRECTIONS APPLIED IN v1.1 ---
+C1. ARK-493 ledger contradiction resolved — blocked/held entries preserved; only
+    executed entries are prohibited on DENY/HOLD cases.
+C2. Three corpus counting tiers defined — experiment IDs (+6 max), scored cases
+    (actual), ProofRecords (1:1 with scored cases + series-summary records).
+C3. ARK-498 pass criteria strengthened — 6 hard criteria including ProofRecord
+    completeness (100%), dependency-loss zero-ALLOW, recovery no-re-execute,
+    error accounting, and signature verification.
+C4. Dual-guard independence formally specified — separate implementations, 
+    independently computed hashes, no shared decision variable, separately
+    recorded outputs, disagreement = preserved FAIL before enforcement.
+
+Strongly recommended additions also incorporated:
+- Locked technical constants (serialization, Unicode NFC, time format, hash
+  algorithm, signature algorithm, test seed, dependency-failure schedule,
+  container versions, clock source).
+- HOLD non-executable rule formally stated.
+- Idempotency key formally required for queued and retry paths.
+
+--- HASH ALGORITHM ---
+Computed by: sha256sum (GNU coreutils, Linux)
