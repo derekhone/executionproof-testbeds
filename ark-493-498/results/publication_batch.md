@@ -122,7 +122,7 @@ Replace the standing evidence summary block on **both** executionproof.io and bu
 
 ## 4. Consistency checklist before publishing
 
-- [x] Public headline uses reconciled **post-series** totals (72 / 232 / 229 / 2 / 1 / 10), not this-series-only numbers.
+- [x] Public headline uses reconciled **post-series** totals (72 / 232 / 229 / 2 / 1 / 9), not this-series-only numbers.
 - [x] FAIL (2) and GATE-STOP (1) reported, not hidden.
 - [x] ARK-498 performance carries the mandatory characterization label and no SLA claim.
 - [x] No comparison drawn to ARK-483–492 microsecond testbed.
