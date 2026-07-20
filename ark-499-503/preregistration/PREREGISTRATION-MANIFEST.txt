@@ -1,0 +1,41 @@
+PREREGISTRATION MANIFEST
+========================
+Document: ARK-499-503-PREREGISTRATION-v1.0.md
+Series:   ARK-499 through ARK-503 — ExecutionProof Enterprise Adapter Series
+          (real backing systems: PostgreSQL / CI-CD / OIDC-IAM; endurance; review)
+Organization: Remnant Fieldworks Inc.
+
+FROZEN TIMESTAMP (UTC): 2026-07-20T22:20:00Z
+PREREGISTRATION SHA-256: 84bd915e7d7aab8268f40a339e71dbd96ac2440f929dca6d37bfdde990d24b61
+
+STATUS: FROZEN BEFORE EXECUTION. The question, arms, metrics, thresholds,
+kill-conditions and publication rule were fixed and hashed before any ARK-499
+through ARK-503 code was run. Results preserve every PASS / FAIL / HOLD /
+SMOKE / NOT-EXECUTED outcome without rewriting.
+
+Computed by: sha256sum on Linux (GNU coreutils)
+Verification command: sha256sum -c PREREGISTRATION-MANIFEST.txt
+
+------------------------------------------------------------------------------
+FROZEN GATE-UNDER-TEST (byte-identical to the ARK-493-498 series; reused, NOT
+re-implemented — verified identical by SHA-256 on 2026-07-20):
+------------------------------------------------------------------------------
+7bfb92f4485b69c272b37b6a06ef9f428e461b490ee043e52d6c13d6d858398e  ../gate/core.py
+9f08f2b7bbc1bce84aa3cd2637e9c328868eccf6624434ed622cdbe7e5722acd  ../gate/gate.py
+1dc4ee187074713ef1dbcfec108477dedceb0c31bd8d5f3e749864096f3e4356  ../gate/policy.py
+e444ed9edcf0087bc95bc5d58c4fd5303d9d59f41a61f44a5273a3739dbe1e91  ../gate/actor_registry.py
+8e18ff4cb2671b5e6fdbc6705e3a69bed66ee14818ba3d0dbc84c233e445eb54  ../guards/guard_a.py
+2eb5d2a0d7de4317e61eeae296cf1e09905e7dbcee93d5f12ab79e44b73a0419  ../guards/guard_b_verifier.py
+878a8e6691daa454b5a569ad063ae2f2657c053fdd941d7f031a174cf1e305c4  ../enforcement/proofstore.py
+fe7cdf207351c560adf7e6847d98113b20f2cf43ca083dd1e8f477c340d8874a  ../actor/actor_agent.py
+
+------------------------------------------------------------------------------
+PREREGISTRATION DOCUMENT:
+------------------------------------------------------------------------------
+84bd915e7d7aab8268f40a339e71dbd96ac2440f929dca6d37bfdde990d24b61  ARK-499-503-PREREGISTRATION-v1.0.md
+
+NOTE: The NEW code for this series (enforcement/real_enforcement_point.py, the
+three adapters, and the experiment drivers) is the *device under test* and is
+expected to evolve during build; only the gate-under-test above is frozen. The
+integrity of every recorded decision is independently checkable via the
+published-key verifier in ark503_review_package/independent_verifier.py.

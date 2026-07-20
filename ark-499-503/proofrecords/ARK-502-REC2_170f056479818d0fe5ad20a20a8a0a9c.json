@@ -1,0 +1,116 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "170f056479818d0fe5ad20a20a8a0a9c",
+  "case_id": "ARK-502-REC2",
+  "experiment_id": "ARK-502",
+  "timestamp_utc": "2026-07-20T22:40:54.546780Z",
+  "actor": {
+    "actor_id": "actor:dba-agent-01",
+    "credential_token_hash": "592583443a522d5c2b3a932d7af71881fab7067ad469c3555d9fbd3ad974464c",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "T2",
+    "tool_name": "postgres_write",
+    "parameters": {
+      "account": "soak-recover-2",
+      "amount": 1,
+      "note": "soak allow recover-2"
+    },
+    "canonical_json": "{\"account\":\"soak-recover-2\",\"amount\":1,\"note\":\"soak allow recover-2\",\"tool_id\":\"T2\",\"tool_name\":\"postgres_write\"}",
+    "exact_action_hash": "67ebaceb3012b553846fc502f1d1a00e2871b0d496d1403829db14ca63044fbd"
+  },
+  "authority_basis": {
+    "authority_source": "direct-authority",
+    "authority_record_id": "authrec:actor:dba-agent-01",
+    "delegator_chain": [],
+    "authority_valid_at_execution": true,
+    "authority_resolved_at": "2026-07-20T22:40:54.542860Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [
+      "approval_ref",
+      "risk_review"
+    ],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {
+      "approval_ref": "value-approval_ref",
+      "risk_review": "value-risk_review"
+    }
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "PASS",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "ALLOW",
+  "decision_reason": "all six dimensions passed",
+  "execution_outcome": {
+    "tool_called": true,
+    "tool_ledger_entry_id": "pgw-5c971fda30a5d2cf",
+    "idempotency_key": "d137e42bf485d9bee123c2e64e66a3dd",
+    "duplicate_prevented": false
+  },
+  "real_effect": {
+    "backend": "postgresql-17",
+    "committed": true,
+    "row_id": 124,
+    "idempotency_key": "d137e42bf485d9bee123c2e64e66a3dd"
+  },
+  "identity_basis": null,
+  "chain": {
+    "prior_record_hash": "302f5ff8fd3c26f18934ca9919a710d163e1594838b5ca2d6691337da6e304dc",
+    "this_record_hash": "2651efb322bc7852c810a1af5ebf1d8a43e363ba3362ee1b2cb8ee53a9a7be36"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "67ebaceb3012b553846fc502f1d1a00e2871b0d496d1403829db14ca63044fbd",
+    "guard_b_result": "PASS",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "67ebaceb3012b553846fc502f1d1a00e2871b0d496d1403829db14ca63044fbd",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "e739119ee92e2c614573291747766ae0feeb3ccc6e52be5446b002c5b8d0677c19997b259a3537270e7de69b64c7fbe0d9bca80b102524754381ca7aa2c1510a",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}
