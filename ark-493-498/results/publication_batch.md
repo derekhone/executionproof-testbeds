@@ -3,9 +3,10 @@
 **Prepared for:** Remnant Fieldworks Inc. — ExecutionProof program
 **Source of truth:** this series' run artifacts (`results/`, `proofrecords/`, `ledgers/`) + reconciled corpus totals in `reconciliation_report.md`
 **Framing rule:** every public number below is the **reconciled post-series total**; negative results (FAIL, GATE-STOP) are reported, not suppressed.
+**Repository count (corrected):** this series was published as the `ark-493-498/` subdirectory of the existing `executionproof-testbeds` repository — it creates **no new repository**, so the repository total stays **9** (not 10).
 
 **Reconciled public headline numbers (use everywhere):**
-**72 preregistered experiments · 232 case records · 229 PASS · 2 FAIL · 1 GATE-STOP · 10 repositories.**
+**72 preregistered experiments · 232 case records · 229 PASS · 2 FAIL · 1 GATE-STOP · 9 repositories.**
 This series (ARK-493–498) contributed 6 experiments and 161 scored cases, all PASS, with 0 new FAIL and 0 GATE-STOP.
 
 ---
@@ -49,7 +50,7 @@ never retried until they pass.
 ### Standing corpus (reconciled, all series to date)
 
 **72 preregistered experiments · 232 case records · 229 PASS · 2 FAIL ·
-1 GATE-STOP · 10 repositories.** The 2 FAIL and 1 GATE-STOP records are retained
+1 GATE-STOP · 9 repositories.** The 2 FAIL and 1 GATE-STOP records are retained
 unchanged — preserving negative results is part of the methodology.
 
 ### Reproduce
@@ -86,7 +87,7 @@ SHA-256 `464b9fb8be9d6cca052f236dc9deec9f8e89b781cafc58701e79b2d05d52952a`.
 >
 > Latency/throughput data are explicitly published as *production-like overhead characterization*, not a benchmark certification and not a production SLA, and must not be compared to the prior in-process microsecond testbed (ARK-483–492).
 >
-> Standing reconciled corpus across all series to date: 72 preregistered experiments, 232 case records, 229 PASS, 2 FAIL, 1 GATE-STOP, across 10 repositories. Negative results (FAIL, GATE-STOP) are retained unchanged.
+> Standing reconciled corpus across all series to date: 72 preregistered experiments, 232 case records, 229 PASS, 2 FAIL, 1 GATE-STOP, across 9 repositories. Negative results (FAIL, GATE-STOP) are retained unchanged.
 
 **Keywords:** AI agent safety, authorization gate, fail-closed enforcement, proof-carrying decisions, hash chain, ed25519, tamper detection, preregistration, reproducibility
 
@@ -104,7 +105,7 @@ Replace the standing evidence summary block on **both** executionproof.io and bu
 
 > ### Evidence corpus (updated — ARK-493 → ARK-498 series added)
 >
-> **72 preregistered experiments · 232 case records · 229 PASS · 2 FAIL · 1 GATE-STOP · 10 repositories.**
+> **72 preregistered experiments · 232 case records · 229 PASS · 2 FAIL · 1 GATE-STOP · 9 repositories.**
 >
 > The latest series (ARK-493–498) added six experiments and 161 scored cases, all PASS, with zero enforcement leaks and independent dual-guard verification on every record. The 2 FAIL and 1 GATE-STOP records from prior series are retained unchanged — we publish negative results because preserving them is what makes the corpus trustworthy.
 >

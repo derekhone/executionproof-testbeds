@@ -67,7 +67,7 @@
 | PASS | +161 |
 | FAIL | +0 |
 | GATE-STOP | +0 |
-| Repositories | +1 (this testbed repository) |
+| Repositories | +0 (added to the existing `executionproof-testbeds` repository as the `ark-493-498/` subdirectory — no new repository created) |
 
 ### 2.3 Projected post-series totals
 
@@ -78,9 +78,9 @@
 | PASS | 68 | +161 | **229** |
 | FAIL | 2 | +0 | **2** |
 | GATE-STOP | 1 | +0 | **1** |
-| Repositories | 9 | +1 | **10** |
+| Repositories | 9 | +0 | **9** |
 
-**Reconciled public headline numbers to use going forward: 72 experiments, 232 case records, 229 PASS, 2 FAIL, 1 GATE-STOP across 10 repositories.**
+**Reconciled public headline numbers to use going forward: 72 experiments, 232 case records, 229 PASS, 2 FAIL, 1 GATE-STOP across 9 repositories.**
 
 > The 2 pre-existing FAIL records and the 1 pre-existing GATE-STOP record are **retained unchanged**. Honest framing requires that the historical FAIL/GATE-STOP entries continue to be reported; they are evidence the methodology preserves negative results rather than suppressing them.
 
