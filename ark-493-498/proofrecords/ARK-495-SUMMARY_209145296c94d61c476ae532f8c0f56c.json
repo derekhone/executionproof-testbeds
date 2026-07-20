@@ -1,0 +1,110 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "209145296c94d61c476ae532f8c0f56c",
+  "case_id": "ARK-495-SUMMARY",
+  "experiment_id": "ARK-495",
+  "timestamp_utc": "2026-07-20T17:38:24.633525Z",
+  "actor": {
+    "actor_id": "actor:series-summary",
+    "credential_token_hash": "1f98badd2e32d2d91e7b400f9886171e290e3bf3900d21f899796ea26ad42ff6",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "SUMMARY",
+    "tool_name": "series_summary",
+    "parameters": {
+      "case_ids": [
+        "ARK-495-CONTROL",
+        "ARK-495-C001",
+        "ARK-495-C002",
+        "ARK-495-C003",
+        "ARK-495-C004",
+        "ARK-495-C005",
+        "ARK-495-C006",
+        "ARK-495-C007",
+        "ARK-495-C008",
+        "ARK-495-C009",
+        "ARK-495-C010"
+      ],
+      "case_count": 11
+    },
+    "canonical_json": "{\"case_ids\":[\"ARK-495-CONTROL\",\"ARK-495-C001\",\"ARK-495-C002\",\"ARK-495-C003\",\"ARK-495-C004\",\"ARK-495-C005\",\"ARK-495-C006\",\"ARK-495-C007\",\"ARK-495-C008\",\"ARK-495-C009\",\"ARK-495-C010\"],\"experiment_id\":\"ARK-495\",\"tool_id\":\"SUMMARY\",\"tool_name\":\"series_summary\"}",
+    "exact_action_hash": "92dde7e8e5b134bb4b331688e66fdfde90f59f2a2f604f123d0601894db243e9"
+  },
+  "authority_basis": {
+    "authority_source": "series-summary",
+    "authority_record_id": "none",
+    "delegator_chain": [],
+    "authority_valid_at_execution": true,
+    "authority_resolved_at": "2026-07-20T17:38:24.633548Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {}
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "PASS",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "EXPERIMENT-PASS",
+  "decision_reason": "series-summary for ARK-495: EXPERIMENT-PASS",
+  "execution_outcome": {
+    "tool_called": false,
+    "tool_ledger_entry_id": null,
+    "idempotency_key": "bc2c9bce29c42b33e6fcaa836b27fb7c",
+    "duplicate_prevented": false
+  },
+  "chain": {
+    "prior_record_hash": "b62d0d1b6548fccfbb38d20e769b5542653f28bcf037249f3c3b8f04d8a1cd8a",
+    "this_record_hash": "fe36809539eb8d70dac384e8536fc972d517a7371b936b6c3c02a5c1ee475c61"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "92dde7e8e5b134bb4b331688e66fdfde90f59f2a2f604f123d0601894db243e9",
+    "guard_b_result": "PASS",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "92dde7e8e5b134bb4b331688e66fdfde90f59f2a2f604f123d0601894db243e9",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "d0d895a0279b32bc85977d267c2416e7b96c747e1cbb5958ab96375570c15fa481d24f8056515c8125cabe6e94fd81714067d96cd892d80e6405be7a0db01a0e",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}
