@@ -59,6 +59,14 @@ mandatory ARK-498 performance-characterization caveat.
 
 ---
 
+## Standing corpus (reconciled, all series to date)
+
+**72 preregistered experiments · 232 case records · 229 PASS · 2 FAIL ·
+1 GATE-STOP · 9 repositories.** The 2 FAIL and 1 GATE-STOP records are retained
+unchanged — preserving negative results is part of the methodology.
+
+---
+
 ## Method invariants (applied to every experiment)
 
 1. **Preregistration-first.** A 28-field preregistration + all code + a SHA-256 `MANIFEST.txt` are committed
