@@ -1,0 +1,113 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "f67891388d182dac6c77322131a6f9ff",
+  "case_id": "ARK-498-SUMMARY",
+  "experiment_id": "ARK-498",
+  "timestamp_utc": "2026-07-20T17:39:09.509089Z",
+  "actor": {
+    "actor_id": "actor:series-summary",
+    "credential_token_hash": "1f98badd2e32d2d91e7b400f9886171e290e3bf3900d21f899796ea26ad42ff6",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "SUMMARY",
+    "tool_name": "series_summary",
+    "parameters": {
+      "case_ids": [
+        "ARK-498-S001",
+        "ARK-498-S002",
+        "ARK-498-S003",
+        "ARK-498-S004",
+        "ARK-498-S005",
+        "ARK-498-S006",
+        "ARK-498-S007",
+        "ARK-498-S008",
+        "ARK-498-S009"
+      ],
+      "case_count": 9,
+      "criteria": {
+        "P-498-1_fail_closed": true,
+        "P-498-2_zero_duplicate_exec": true,
+        "P-498-3_completeness": true,
+        "P-498-4_error_accounting": true,
+        "P-498-5_recovery_no_reexec": true,
+        "P-498-6_signature_verify": true,
+        "server_errors": 0,
+        "allow_on_error": 0
+      },
+      "label": "PRODUCTION-LIKE OVERHEAD CHARACTERIZATION · NOT A BENCHMARK CERTIFICATION · NOT A PRODUCTION SLA"
+    },
+    "canonical_json": "{\"case_ids\":[\"ARK-498-S001\",\"ARK-498-S002\",\"ARK-498-S003\",\"ARK-498-S004\",\"ARK-498-S005\",\"ARK-498-S006\",\"ARK-498-S007\",\"ARK-498-S008\",\"ARK-498-S009\"],\"criteria\":{\"P-498-1_fail_closed\":true,\"P-498-2_zero_duplicate_exec\":true,\"P-498-3_completeness\":true,\"P-498-4_error_accounting\":true,\"P-498-5_recovery_no_reexec\":true,\"P-498-6_signature_verify\":true,\"allow_on_error\":0,\"server_errors\":0},\"experiment_id\":\"ARK-498\",\"label\":\"PRODUCTION-LIKE OVERHEAD CHARACTERIZATION · NOT A BENCHMARK CERTIFICATION · NOT A PRODUCTION SLA\",\"tool_id\":\"SUMMARY\",\"tool_name\":\"series_summary\"}",
+    "exact_action_hash": "956ec75cf3fcea3d6368286e5749f4ce63d12fb9768ea3ae47919d3c0b30013d"
+  },
+  "authority_basis": {
+    "authority_source": "series-summary",
+    "authority_record_id": "none",
+    "delegator_chain": [],
+    "authority_valid_at_execution": true,
+    "authority_resolved_at": "2026-07-20T17:39:09.509140Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {}
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "PASS",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "EXPERIMENT-PASS",
+  "decision_reason": "series-summary for ARK-498: EXPERIMENT-PASS",
+  "execution_outcome": {
+    "tool_called": false,
+    "tool_ledger_entry_id": null,
+    "idempotency_key": "5143b846de0b4e573d5d6de85650eb98",
+    "duplicate_prevented": false
+  },
+  "chain": {
+    "prior_record_hash": "1289b02c8f6c642e9c411f868435f458648fc6b2fac666cceb167a103d74ca29",
+    "this_record_hash": "e5f5f6cf8c480bef7c7660881f6cdc4a46de1c96524ac9a3e4494d5e72d7b48e"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "956ec75cf3fcea3d6368286e5749f4ce63d12fb9768ea3ae47919d3c0b30013d",
+    "guard_b_result": "PENDING",
+    "guard_b_fields_checked": [],
+    "guard_b_canonical_hash_computed": "",
+    "dual_guard_agreement": false,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "d97515f2f453f138caf8294826c96694250697a1944c8903ed21e086b07b4fb46c38530611039110559068c0335447db328bca3f85dd21249470eaa90f8e150c",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}

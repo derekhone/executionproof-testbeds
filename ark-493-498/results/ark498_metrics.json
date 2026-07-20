@@ -1,0 +1,98 @@
+{
+  "label": "PRODUCTION-LIKE OVERHEAD CHARACTERIZATION · NOT A BENCHMARK CERTIFICATION · NOT A PRODUCTION SLA",
+  "scenarios": {
+    "S001": {
+      "cold_start_latency_ms": 85.19391994923353,
+      "decision": "ALLOW"
+    },
+    "S002": {
+      "n": 100,
+      "p50_ms": 83.8884306140244,
+      "mean_ms": 83.92208015546203,
+      "error_rate": 0.0
+    },
+    "S003": {
+      "n": 500,
+      "concurrency": 10,
+      "p50_ms": 84.40815517678857,
+      "p95_ms": 88.03817555308342,
+      "p99_ms": 93.90220305882393,
+      "error_rate": 0.0
+    },
+    "S004": {
+      "n": 1000,
+      "concurrency": 5,
+      "throughput_rps_mid60pct": 59.67949352912534,
+      "ok_count": 1000
+    },
+    "S005": {
+      "n": 40,
+      "failure_window": 20,
+      "dependency": "policy",
+      "leak_count": 0,
+      "fail_closed_count": 20
+    },
+    "S006": {
+      "n": 40,
+      "failure_window": 20,
+      "dependency": "authority",
+      "leak_count": 0,
+      "fail_closed_count": 20
+    },
+    "S007": {
+      "n": 40,
+      "failure_window": 20,
+      "dependency": "proofrecord",
+      "leak_count": 0,
+      "fail_closed_count": 20
+    },
+    "S008": {
+      "n": 40,
+      "recovery_time_ms": 83.91947764903307,
+      "first_post_recovery_allow_proofrecord": "979b04ac2bf11b868b7f3ca39e4d23a2",
+      "executed_after_recovery": 20,
+      "denied_window_keys": 20,
+      "auto_reexecutions_of_denied": 0
+    },
+    "S009": {
+      "unique_keys": 5,
+      "total_sends": 50,
+      "executed_entries": 5,
+      "duplicate_executions": 0
+    }
+  },
+  "record_audit": {
+    "complete_records": 1766,
+    "completeness_rate": 1.0,
+    "guard_b_pass": 1766,
+    "records_total": 1766,
+    "self_import_analysis": {
+      "forbidden_imports_found": [],
+      "modules_imported": [
+        "ast",
+        "base64",
+        "cryptography",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "sys",
+        "unicodedata"
+      ],
+      "permitted_only": true
+    },
+    "signature_verification_rate": 1.0,
+    "unique_proofrecord_ids": 1766
+  },
+  "criteria": {
+    "P-498-1_fail_closed": true,
+    "P-498-2_zero_duplicate_exec": true,
+    "P-498-3_completeness": true,
+    "P-498-4_error_accounting": true,
+    "P-498-5_recovery_no_reexec": true,
+    "P-498-6_signature_verify": true,
+    "server_errors": 0,
+    "allow_on_error": 0
+  },
+  "decision": "EXPERIMENT-PASS"
+}

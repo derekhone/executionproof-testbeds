@@ -1,0 +1,19 @@
+{
+  "policy_version": "ark-enterprise-v1.0",
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "evidence_freshness_seconds": 60,
+  "serialization_rules": {
+    "normalization": "NFC",
+    "json": "sort_keys=True, separators=(',',':'), ensure_ascii=False",
+    "hash": "SHA-256 over UTF-8, lowercase hex",
+    "record_hash_excludes": [
+      "verification"
+    ],
+    "record_hash_this_record_placeholder": "COMPUTING"
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_pem_file": "public_key.pem",
+    "public_key_raw_b64": "O2onvM62pC1io6jQKm8Nc2UyFXcd4kOmOsBIoYtZ2ik="
+  }
+}
