@@ -1,0 +1,118 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "c9d65fda33fdef661a670bee930a91bc",
+  "case_id": "ARK-499-SUMMARY",
+  "experiment_id": "ARK-499",
+  "timestamp_utc": "2026-07-20T22:40:33.313127Z",
+  "actor": {
+    "actor_id": "actor:series-summary",
+    "credential_token_hash": "1f98badd2e32d2d91e7b400f9886171e290e3bf3900d21f899796ea26ad42ff6",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "SUMMARY",
+    "tool_name": "series_summary",
+    "parameters": {
+      "case_ids": [
+        "ARK-499-A1",
+        "ARK-499-A2",
+        "ARK-499-A3",
+        "ARK-499-A4",
+        "ARK-499-A5",
+        "ARK-499-A6",
+        "ARK-499-A7"
+      ],
+      "case_count": 7,
+      "total_committed_rows": 2,
+      "expected_rows": 2,
+      "leaks": 0,
+      "hard_criteria": {
+        "P-499-1_zero_leaks": true,
+        "P-499-2_allow_commits_exactly_one": true,
+        "P-499-3_failclosed_rollback": true,
+        "P-499-4_concurrent_exactly_once": true,
+        "P-499-5_dual_guard_100pct": true,
+        "auditor_is_readonly": true
+      },
+      "auditor_readonly": true
+    },
+    "canonical_json": "{\"auditor_readonly\":true,\"case_ids\":[\"ARK-499-A1\",\"ARK-499-A2\",\"ARK-499-A3\",\"ARK-499-A4\",\"ARK-499-A5\",\"ARK-499-A6\",\"ARK-499-A7\"],\"expected_rows\":2,\"experiment_id\":\"ARK-499\",\"hard_criteria\":{\"P-499-1_zero_leaks\":true,\"P-499-2_allow_commits_exactly_one\":true,\"P-499-3_failclosed_rollback\":true,\"P-499-4_concurrent_exactly_once\":true,\"P-499-5_dual_guard_100pct\":true,\"auditor_is_readonly\":true},\"leaks\":0,\"tool_id\":\"SUMMARY\",\"tool_name\":\"series_summary\",\"total_committed_rows\":2}",
+    "exact_action_hash": "00d2ae4a16c86ed7e8ca1dd1ce6262fbb330e419f3a614f5e4e8998ec601b6ea"
+  },
+  "authority_basis": {
+    "authority_source": "series-summary",
+    "authority_record_id": "none",
+    "delegator_chain": [],
+    "authority_valid_at_execution": true,
+    "authority_resolved_at": "2026-07-20T22:40:33.313184Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {}
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "PASS",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "EXPERIMENT-PASS",
+  "decision_reason": "series-summary for ARK-499: EXPERIMENT-PASS",
+  "execution_outcome": {
+    "tool_called": false,
+    "tool_ledger_entry_id": null,
+    "idempotency_key": "fab0da4e000e4f5814a3d1cbe8cf8549",
+    "duplicate_prevented": false
+  },
+  "chain": {
+    "prior_record_hash": "077277dc01f6c026840dd6ca8d166e4603b1e1aeaa60b2709490245fc9c5660d",
+    "this_record_hash": "31a984d82aa91d00b637b88f7551e80124a176feffcdee4c6f1794743e26d93b"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "00d2ae4a16c86ed7e8ca1dd1ce6262fbb330e419f3a614f5e4e8998ec601b6ea",
+    "guard_b_result": "PASS",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "00d2ae4a16c86ed7e8ca1dd1ce6262fbb330e419f3a614f5e4e8998ec601b6ea",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "8c4254d0c5a38f4d0e568ba1e80c423cd2249760c33e2749b866517bcdf7f6140955f474f60e4443b917edf432c20514c3d405e99aab5b85e7cd4fa37fa48203",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}

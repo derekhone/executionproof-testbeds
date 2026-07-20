@@ -1,0 +1,130 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "8bfb09ecd9d549295a16e4b74b8be413",
+  "case_id": "ARK-502-SUMMARY",
+  "experiment_id": "ARK-502",
+  "timestamp_utc": "2026-07-20T22:40:55.554975Z",
+  "actor": {
+    "actor_id": "actor:series-summary",
+    "credential_token_hash": "1f98badd2e32d2d91e7b400f9886171e290e3bf3900d21f899796ea26ad42ff6",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "SUMMARY",
+    "tool_name": "series_summary",
+    "parameters": {
+      "case_ids": [
+        "ARK-502-SMOKE"
+      ],
+      "case_count": 1,
+      "scope": "BOUNDED SMOKE ONLY - not 14-day endurance",
+      "endurance_14day": "NOT-EXECUTED",
+      "total_ops": 418,
+      "decisions": {
+        "ops": 418,
+        "dg_fail": 0,
+        "ALLOW": 147,
+        "DENY": 151,
+        "HOLD": 120
+      },
+      "committed_rows": 132,
+      "expected_commits": 132,
+      "leaks": 0,
+      "chain_reverify": {
+        "records": 427,
+        "linkage_breaks": 0,
+        "dual_guard_fails": 0
+      },
+      "hard_criteria": {
+        "P-502-SMOKE-1_chain_continuity_across_restart": true,
+        "P-502-SMOKE-2_zero_leaks": true,
+        "P-502-SMOKE-3_dual_guard_100pct": true,
+        "P-502-SMOKE-4_malformed_failclosed": true,
+        "P-502-SMOKE-5_outage_all_failclosed": true,
+        "P-502-SMOKE-6_policy_and_burst": true
+      }
+    },
+    "canonical_json": "{\"case_ids\":[\"ARK-502-SMOKE\"],\"chain_reverify\":{\"dual_guard_fails\":0,\"linkage_breaks\":0,\"records\":427},\"committed_rows\":132,\"decisions\":{\"ALLOW\":147,\"DENY\":151,\"HOLD\":120,\"dg_fail\":0,\"ops\":418},\"endurance_14day\":\"NOT-EXECUTED\",\"expected_commits\":132,\"experiment_id\":\"ARK-502\",\"hard_criteria\":{\"P-502-SMOKE-1_chain_continuity_across_restart\":true,\"P-502-SMOKE-2_zero_leaks\":true,\"P-502-SMOKE-3_dual_guard_100pct\":true,\"P-502-SMOKE-4_malformed_failclosed\":true,\"P-502-SMOKE-5_outage_all_failclosed\":true,\"P-502-SMOKE-6_policy_and_burst\":true},\"leaks\":0,\"scope\":\"BOUNDED SMOKE ONLY - not 14-day endurance\",\"tool_id\":\"SUMMARY\",\"tool_name\":\"series_summary\",\"total_ops\":418}",
+    "exact_action_hash": "06d052d1918b9cbb65b2847d4afaddb0cb83787d9f0185528b6fb4e521fd23f7"
+  },
+  "authority_basis": {
+    "authority_source": "series-summary",
+    "authority_record_id": "none",
+    "delegator_chain": [],
+    "authority_valid_at_execution": true,
+    "authority_resolved_at": "2026-07-20T22:40:55.555007Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {}
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "PASS",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "SMOKE-PASS",
+  "decision_reason": "series-summary for ARK-502: SMOKE-PASS",
+  "execution_outcome": {
+    "tool_called": false,
+    "tool_ledger_entry_id": null,
+    "idempotency_key": "02365cb3b6961f986acf78ba5404c49d",
+    "duplicate_prevented": false
+  },
+  "chain": {
+    "prior_record_hash": "73b98499c0b73168fe95741ea02469082ef19e99585a032137657a0f49097411",
+    "this_record_hash": "1228b8d0810d6152996b92d57cfa6b5da84f14252dcd636d58e5557d42b35725"
+  },
+  "verification": {
+    "guard_a_result": "FAIL",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "06d052d1918b9cbb65b2847d4afaddb0cb83787d9f0185528b6fb4e521fd23f7",
+    "guard_b_result": "FAIL",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "06d052d1918b9cbb65b2847d4afaddb0cb83787d9f0185528b6fb4e521fd23f7",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "044630dfabb618548c6c61c87de75671ffa4d2f330f426f84ef9e24393410eb504da8ee8f3919befffc573076b48756193cf0155b38ce621b6b48cb740127c06",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}

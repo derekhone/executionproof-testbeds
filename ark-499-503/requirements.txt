@@ -1,0 +1,19 @@
+# ARK-499-503 Enterprise Adapter Series — Python dependencies
+# Python 3.11+ recommended.
+#
+# NOTE ON BACKING SYSTEMS (honesty label):
+#   ARK-499 uses a REAL, self-hosted PostgreSQL 17 cluster (initdb/pg_ctl on loopback).
+#   ARK-500 uses a REAL local git repository acting as a CI/CD release boundary.
+#   ARK-501 uses a REAL self-hosted RS256 OIDC issuer + JWKS + resource server (Flask on loopback).
+#   These are genuine components, NOT mocks — but they are self-hosted, NOT
+#   Docker/Kubernetes/managed cloud and NOT Okta/Azure AD/Auth0. See the report.
+#
+# System prerequisite (NOT a pip package): PostgreSQL 17 server binaries
+#   (initdb, pg_ctl, postgres) must be on PATH for ARK-499 / ARK-502.
+#   On Debian/Ubuntu: apt-get install postgresql-17
+
+psycopg2-binary>=2.9        # ARK-499 / ARK-502 PostgreSQL client
+PyJWT>=2.8                  # ARK-501 RS256 token mint/verify
+cryptography>=42.0          # RS256 keys, ed25519 chain signing/verification
+Flask>=3.0                  # ARK-501 self-hosted OIDC issuer + resource server
+requests>=2.31             # ARK-501 issuer/JWKS/resource-server HTTP calls

@@ -1,0 +1,121 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "d395ce5f4e5a896c52225edd09e60447",
+  "case_id": "ARK-501-C7",
+  "experiment_id": "ARK-501",
+  "timestamp_utc": "2026-07-20T22:40:34.542973Z",
+  "actor": {
+    "actor_id": "actor:infra-agent-01",
+    "credential_token_hash": "037fd88b7444480cc56e7d31a3d5369d4e454d91246630bd529f61e4689d3e8d",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "T4",
+    "tool_name": "privileged_resource_access",
+    "parameters": {
+      "resource": "prod-secret-store",
+      "note": "C7 concurrent"
+    },
+    "canonical_json": "{\"note\":\"C7 concurrent\",\"resource\":\"prod-secret-store\",\"tool_id\":\"T4\",\"tool_name\":\"privileged_resource_access\"}",
+    "exact_action_hash": "5bbf2d59ba7b934744de9406fbe3953686ff2fb92e962182189c5860566bc076"
+  },
+  "authority_basis": {
+    "authority_source": "direct-authority",
+    "authority_record_id": "authrec:actor:infra-agent-01",
+    "delegator_chain": [],
+    "authority_valid_at_execution": true,
+    "authority_resolved_at": "2026-07-20T22:40:34.532862Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [
+      "security_scan",
+      "reviewer_approval"
+    ],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {
+      "security_scan": "value-security_scan",
+      "reviewer_approval": "value-reviewer_approval"
+    }
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "PASS",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "ALLOW",
+  "decision_reason": "all six dimensions passed",
+  "execution_outcome": {
+    "tool_called": true,
+    "tool_ledger_entry_id": "access-7825fa5e41b7bf52",
+    "idempotency_key": "04e396acec55a88cadc1a98f20c76ded",
+    "duplicate_prevented": false
+  },
+  "real_effect": {
+    "http_status": 200,
+    "granted": true,
+    "resource_id": "prod-secret-store"
+  },
+  "identity_basis": {
+    "sub": "infra-agent-01",
+    "jti": "jti-infra-agent-01-1784587234-79dea5",
+    "roles": [
+      "deploy"
+    ],
+    "kid": "rf-ark501-key-1"
+  },
+  "chain": {
+    "prior_record_hash": "bbc83c6279d3e0b2e3d8fd83426a1732e86398db145b747afbb5d6534d50b8db",
+    "this_record_hash": "fce19cd1f73fb9f15bf3379f56aa6e948a8503af08b16b6a87504b9012a72ff3"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "5bbf2d59ba7b934744de9406fbe3953686ff2fb92e962182189c5860566bc076",
+    "guard_b_result": "PASS",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "5bbf2d59ba7b934744de9406fbe3953686ff2fb92e962182189c5860566bc076",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "d027ee017879d98357f92e0914c50171ca66386e38afbd3fcd065190999d54ea45440aa9928348cd2ecdbb734297a4c3009a7bbb3a662a002ce1283284a1cd08",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}
