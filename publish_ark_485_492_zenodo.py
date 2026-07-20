@@ -4,7 +4,11 @@ import requests
 import json
 import os
 
-ZENODO_TOKEN = "REDACTED_ZENODO_TOKEN"
+# SECURITY: never hardcode credentials. Read the Zenodo token from the environment.
+# A previously hardcoded token here was exposed publicly and has been revoked/rotated.
+ZENODO_TOKEN = os.environ.get("ZENODO_TOKEN", "")
+if not ZENODO_TOKEN:
+    raise SystemExit("Set the ZENODO_TOKEN environment variable before running this script.")
 ZENODO_API = "https://zenodo.org/api/deposit/depositions"
 CONCEPT_DOI = "10.5281/zenodo.21398675"
 
