@@ -1,0 +1,19 @@
+{
+  "series": "ARK-499-503",
+  "started_utc": "2026-07-20T22:40:32.250426+00:00",
+  "finished_utc": "2026-07-20T22:40:55.705542+00:00",
+  "preregistration_sha256": "84bd915e7d7aab8268f40a339e71dbd96ac2440f929dca6d37bfdde990d24b61",
+  "results": {
+    "ARK-499": "EXPERIMENT-PASS",
+    "ARK-500": "EXPERIMENT-PASS",
+    "ARK-501": "EXPERIMENT-PASS",
+    "ARK-502": "SMOKE-PASS",
+    "ARK-503": "NOT-EXECUTED"
+  },
+  "notes": [
+    "ARK-499/500/501 executed with REAL backing systems (native PostgreSQL 17 / local git CI runner / self-hosted RS256 OIDC).",
+    "NOT Docker/K8s/cloud; NOT Okta/AzureAD/Auth0.",
+    "ARK-502 is a bounded smoke ONLY; >=14-day endurance is NOT-EXECUTED.",
+    "ARK-503 is NOT-EXECUTED; awaiting a signed independent rubric."
+  ]
+}

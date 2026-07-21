@@ -1,0 +1,111 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "42b3fb33cdd7306a3c3e623adc188ce9",
+  "case_id": "ARK-500-B5",
+  "experiment_id": "ARK-500",
+  "timestamp_utc": "2026-07-20T22:40:33.670574Z",
+  "actor": {
+    "actor_id": "actor:infra-agent-01",
+    "credential_token_hash": "037fd88b7444480cc56e7d31a3d5369d4e454d91246630bd529f61e4689d3e8d",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "T3",
+    "tool_name": "cicd_deploy",
+    "parameters": {
+      "artifact_digest": "37b5d5b86a252625157de4ae09d78bfcd704a34506309abc9c91e91ea3aecf6f",
+      "environment": "staging",
+      "note": "B5 revoked-authority"
+    },
+    "canonical_json": "{\"artifact_digest\":\"37b5d5b86a252625157de4ae09d78bfcd704a34506309abc9c91e91ea3aecf6f\",\"environment\":\"staging\",\"note\":\"B5 revoked-authority\",\"tool_id\":\"T3\",\"tool_name\":\"cicd_deploy\"}",
+    "exact_action_hash": "30e57ffe43f91bd061232d6a98838c006ca57ba15505be727a5291965e1da487"
+  },
+  "authority_basis": {
+    "authority_source": "direct-authority",
+    "authority_record_id": "authrec:actor:infra-agent-01",
+    "delegator_chain": [],
+    "authority_valid_at_execution": false,
+    "authority_resolved_at": "2026-07-20T22:40:33.670477Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [
+      "security_scan",
+      "reviewer_approval"
+    ],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {
+      "security_scan": "value-security_scan",
+      "reviewer_approval": "value-reviewer_approval"
+    }
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "FAIL",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "DENY",
+  "decision_reason": "authority revoked",
+  "execution_outcome": {
+    "tool_called": false,
+    "tool_ledger_entry_id": "cicd-blocked-DENY-4",
+    "idempotency_key": "7224bfc03a43e4ed7fa421d9240d1b00",
+    "duplicate_prevented": false
+  },
+  "real_effect": null,
+  "identity_basis": null,
+  "chain": {
+    "prior_record_hash": "f5a8a699d484ada86ac57e8fda7418800a25d8d932bba5158b9078e6ab1da81f",
+    "this_record_hash": "02aaa3a17a574d74417b5112049867c5d8a7c3a50070aad64b71a10f08821838"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "30e57ffe43f91bd061232d6a98838c006ca57ba15505be727a5291965e1da487",
+    "guard_b_result": "PASS",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "30e57ffe43f91bd061232d6a98838c006ca57ba15505be727a5291965e1da487",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "6776144829da42d33ac64555a3217c456a7e29f6ce7e388b386bf495a04b9946cf2a4fbc892ad2eff79aaefe9a90accb191d83b7b5e77157bdae1f52ec44470b",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}
