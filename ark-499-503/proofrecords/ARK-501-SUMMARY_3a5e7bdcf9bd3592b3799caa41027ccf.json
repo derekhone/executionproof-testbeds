@@ -1,0 +1,117 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "3a5e7bdcf9bd3592b3799caa41027ccf",
+  "case_id": "ARK-501-SUMMARY",
+  "experiment_id": "ARK-501",
+  "timestamp_utc": "2026-07-20T22:40:34.633196Z",
+  "actor": {
+    "actor_id": "actor:series-summary",
+    "credential_token_hash": "1f98badd2e32d2d91e7b400f9886171e290e3bf3900d21f899796ea26ad42ff6",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "SUMMARY",
+    "tool_name": "series_summary",
+    "parameters": {
+      "case_ids": [
+        "ARK-501-C1",
+        "ARK-501-C2",
+        "ARK-501-C3",
+        "ARK-501-C4",
+        "ARK-501-C5",
+        "ARK-501-C6",
+        "ARK-501-C7"
+      ],
+      "case_count": 7,
+      "total_grants": 2,
+      "expected_grants": 2,
+      "forged_probe_status": 403,
+      "hard_criteria": {
+        "P-501-1_zero_unauthorized_grants": true,
+        "P-501-2_allow_only_c1_c7": true,
+        "P-501-3_grants_all_have_role": true,
+        "P-501-4_concurrent_exactly_once": true,
+        "P-501-5_forged_rejected_by_resource_server": true,
+        "P-501-6_dual_guard_100pct": true
+      }
+    },
+    "canonical_json": "{\"case_ids\":[\"ARK-501-C1\",\"ARK-501-C2\",\"ARK-501-C3\",\"ARK-501-C4\",\"ARK-501-C5\",\"ARK-501-C6\",\"ARK-501-C7\"],\"expected_grants\":2,\"experiment_id\":\"ARK-501\",\"forged_probe_status\":403,\"hard_criteria\":{\"P-501-1_zero_unauthorized_grants\":true,\"P-501-2_allow_only_c1_c7\":true,\"P-501-3_grants_all_have_role\":true,\"P-501-4_concurrent_exactly_once\":true,\"P-501-5_forged_rejected_by_resource_server\":true,\"P-501-6_dual_guard_100pct\":true},\"tool_id\":\"SUMMARY\",\"tool_name\":\"series_summary\",\"total_grants\":2}",
+    "exact_action_hash": "56e5e7d1cded6f1728575d4a16d20b083988434cbb64be08992fa85c1c8023d1"
+  },
+  "authority_basis": {
+    "authority_source": "series-summary",
+    "authority_record_id": "none",
+    "delegator_chain": [],
+    "authority_valid_at_execution": true,
+    "authority_resolved_at": "2026-07-20T22:40:34.633230Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {}
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "PASS",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "EXPERIMENT-PASS",
+  "decision_reason": "series-summary for ARK-501: EXPERIMENT-PASS",
+  "execution_outcome": {
+    "tool_called": false,
+    "tool_ledger_entry_id": null,
+    "idempotency_key": "3398d6a61e0b4ada4dc813ded200356e",
+    "duplicate_prevented": false
+  },
+  "chain": {
+    "prior_record_hash": "fce19cd1f73fb9f15bf3379f56aa6e948a8503af08b16b6a87504b9012a72ff3",
+    "this_record_hash": "db5307f338c997350d271f20e6d3e45df71fa5085aa6e4e7c1cdcfb41b0e4a85"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "56e5e7d1cded6f1728575d4a16d20b083988434cbb64be08992fa85c1c8023d1",
+    "guard_b_result": "PASS",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "56e5e7d1cded6f1728575d4a16d20b083988434cbb64be08992fa85c1c8023d1",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "5bfad25b82d718ca7b5b802eca56d836e671bb5abc0b4671baa9ff95ec051fabba05de52e94e6fbd6f466180277acbbda65b0b3c8329ed4e03418daa7014d601",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}

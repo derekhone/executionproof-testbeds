@@ -1,0 +1,116 @@
+{
+  "schema_version": "ark-enterprise-proofrecord-v1.0",
+  "proofrecord_id": "beed17c64ba3ea6dd11c072ff48fcd20",
+  "case_id": "ARK-500-B1",
+  "experiment_id": "ARK-500",
+  "timestamp_utc": "2026-07-20T22:40:33.479191Z",
+  "actor": {
+    "actor_id": "actor:infra-agent-01",
+    "credential_token_hash": "037fd88b7444480cc56e7d31a3d5369d4e454d91246630bd529f61e4689d3e8d",
+    "delegated_by": null
+  },
+  "requested_action": {
+    "tool_id": "T3",
+    "tool_name": "cicd_deploy",
+    "parameters": {
+      "artifact_digest": "37b5d5b86a252625157de4ae09d78bfcd704a34506309abc9c91e91ea3aecf6f",
+      "environment": "staging",
+      "note": "B1 approved release"
+    },
+    "canonical_json": "{\"artifact_digest\":\"37b5d5b86a252625157de4ae09d78bfcd704a34506309abc9c91e91ea3aecf6f\",\"environment\":\"staging\",\"note\":\"B1 approved release\",\"tool_id\":\"T3\",\"tool_name\":\"cicd_deploy\"}",
+    "exact_action_hash": "65c855b70f2b26ca7978f722c29512177f891f361577ab853e88f587f37b81b6"
+  },
+  "authority_basis": {
+    "authority_source": "direct-authority",
+    "authority_record_id": "authrec:actor:infra-agent-01",
+    "delegator_chain": [],
+    "authority_valid_at_execution": true,
+    "authority_resolved_at": "2026-07-20T22:40:33.478920Z"
+  },
+  "policy_version": "ark-enterprise-v1.0",
+  "evidence_state": {
+    "required_evidence_fields": [
+      "security_scan",
+      "reviewer_approval"
+    ],
+    "evidence_present": true,
+    "evidence_fresh": true,
+    "evidence_snapshot": {
+      "security_scan": "value-security_scan",
+      "reviewer_approval": "value-reviewer_approval"
+    }
+  },
+  "gate_evaluation": {
+    "actor_check": "PASS",
+    "authority_check": "PASS",
+    "evidence_check": "PASS",
+    "policy_version_check": "PASS",
+    "state_check": "PASS",
+    "exact_action_check": "PASS"
+  },
+  "decision": "ALLOW",
+  "decision_reason": "all six dimensions passed",
+  "execution_outcome": {
+    "tool_called": true,
+    "tool_ledger_entry_id": "deploy-c59316d627a91d0f",
+    "idempotency_key": "9946970c60ab6a6fb19a1b7b7af86a9f",
+    "duplicate_prevented": false
+  },
+  "real_effect": {
+    "deployed": true,
+    "environment": "staging",
+    "deployed_digest": "37b5d5b86a252625157de4ae09d78bfcd704a34506309abc9c91e91ea3aecf6f",
+    "artifact": "release-1.0.0"
+  },
+  "identity_basis": null,
+  "chain": {
+    "prior_record_hash": "31a984d82aa91d00b637b88f7551e80124a176feffcdee4c6f1794743e26d93b",
+    "this_record_hash": "9b9dbb599abffdf4070eb2c33c09c707f0a9cd175e826e6446cd8927386312c5"
+  },
+  "verification": {
+    "guard_a_result": "PASS",
+    "guard_a_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_a_canonical_hash_computed": "65c855b70f2b26ca7978f722c29512177f891f361577ab853e88f587f37b81b6",
+    "guard_b_result": "PASS",
+    "guard_b_fields_checked": [
+      "required_fields_present",
+      "exact_action_hash_matches_canonical",
+      "decision_consistent_with_gate_evaluation",
+      "tool_called_iff_allow",
+      "chain_prior_hash_linkage",
+      "this_record_hash_correct",
+      "signature_valid"
+    ],
+    "guard_b_canonical_hash_computed": "65c855b70f2b26ca7978f722c29512177f891f361577ab853e88f587f37b81b6",
+    "dual_guard_agreement": true,
+    "dual_guard_disagreement_fields": []
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "public_key_id": "ark-enterprise-testbed-key-v1",
+    "signature_hex": "2da985342baece5a0f8a30b85b347c3344c0ae103571285b53258a1f3cd31fe194d53477b884d65a18c1df63655cb6988329a3bb8f7dabc0fe912fac820e6b0d",
+    "signed_fields": [
+      "proofrecord_id",
+      "case_id",
+      "experiment_id",
+      "timestamp_utc",
+      "actor",
+      "requested_action",
+      "authority_basis",
+      "policy_version",
+      "evidence_state",
+      "gate_evaluation",
+      "decision",
+      "execution_outcome",
+      "chain.prior_record_hash"
+    ]
+  }
+}
