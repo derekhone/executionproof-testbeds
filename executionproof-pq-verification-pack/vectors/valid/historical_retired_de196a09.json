@@ -1,0 +1,197 @@
+{
+  "proof_id": "de196a09-65a4-4b10-a1ef-dbd49c6070bb",
+  "version": "2.1.0",
+  "request_id": "ad86d099-2248-4c02-8d8f-c38ae0477d25",
+  "tenant_id": "nest-tenant-1785628625696",
+  "chain_id": "5c450db5-c08a-4914-936e-28bd70a0d139",
+  "sequence_number": 1,
+  "rail": "CORE",
+  "gate_layers": {
+    "greek": {
+      "gate": "EVIDENCE",
+      "reason": "All 1 evidence items validated successfully (FORMAT_ONLY)",
+      "status": "PASS",
+      "concepts": [
+        {
+          "word": "Logos (\u03bb\u03cc\u03b3\u03bf\u03c2)",
+          "meaning": "Rule, structure, rational account \u2014 the evidence must be structured"
+        },
+        {
+          "word": "Aletheia (\u1f00\u03bb\u03ae\u03b8\u03b5\u03b9\u03b1)",
+          "meaning": "Visible truth, unconcealment \u2014 the evidence must be transparent"
+        },
+        {
+          "word": "Pistis (\u03c0\u03af\u03c3\u03c4\u03b9\u03c2)",
+          "meaning": "Proven reliability, earned trust \u2014 the evidence must be reliable"
+        }
+      ],
+      "question": "What proves this action should occur?"
+    },
+    "hebrew": {
+      "gate": "AUTHORITY",
+      "reason": "Role 'finance_manager' is authorized for action 'view_payment' (fallback policy)",
+      "status": "PASS",
+      "concept": "Aman",
+      "meaning": "That which is established and firm \u2014 foundational trustworthiness",
+      "question": "Who has the right to act?",
+      "root_word": "\u05d0\u05b8\u05de\u05b7\u05df"
+    },
+    "aramaic": {
+      "gate": "CONTROL",
+      "reason": "All verification checks passed: authority valid, evidence confirmed, constraints satisfied, coherence within envelope",
+      "concept": "Shultan (\u05e9\u05c1\u05d5\u05bc\u05dc\u05b0\u05d8\u05b8\u05df) \u2014 dominion, governance, the right to determine",
+      "decision": "ALLOW",
+      "outcomes": [
+        "ALLOW \u2014 Validated execution",
+        "DENY \u2014 Terminated invalid action",
+        "HOLD \u2014 Paused execution due to incomplete evidence"
+      ],
+      "question": "Should the action be executed?",
+      "key_insight": "A system that cannot pause cannot control. Binary (Allow/Deny) systems are forced into premature execution under uncertainty."
+    }
+  },
+  "actor": {
+    "role": "finance_manager",
+    "actor_id": "ci-bot-42",
+    "authority_source": "corp"
+  },
+  "action": {
+    "amount": 5000,
+    "currency": "USD",
+    "resource": "nest-replay",
+    "action_type": "view_payment"
+  },
+  "context": {
+    "environment": "test",
+    "requested_at": "2026-08-01T23:57:05.956Z",
+    "business_reason": "Nest decorator test"
+  },
+  "evidence_items": [
+    {
+      "type": "memo",
+      "status": "verified",
+      "reference": "M-1"
+    }
+  ],
+  "constraints_input": {
+    "max_amount": 10000
+  },
+  "intended_outcome": {
+    "system": "gateway",
+    "operation": "view"
+  },
+  "failure_conditions": [],
+  "proof_requirement": {
+    "evidence_valid_now": true,
+    "authority_valid_now": true,
+    "rail_enforcement_passed": true,
+    "state_constructible_now": true,
+    "coherence_within_envelope": true,
+    "constraints_satisfied_now": true
+  },
+  "authority_result": {
+    "reason": "Role 'finance_manager' is authorized for action 'view_payment' (fallback policy)",
+    "source": "fallback",
+    "status": "PASS",
+    "evaluated_at": "2026-08-01T23:57:05.960Z"
+  },
+  "evidence_result": {
+    "reason": "All 1 evidence items validated successfully (FORMAT_ONLY)",
+    "status": "PASS",
+    "details": [
+      {
+        "valid": true,
+        "reason": "Evidence 'M-1' format-validated (no substance verifier registered for type 'memo')",
+        "reference": "M-1"
+      }
+    ],
+    "evaluated_at": "2026-08-01T23:57:05.961Z",
+    "external_confirmations": 0,
+    "substance_verification": "FORMAT_ONLY"
+  },
+  "constraint_result": {
+    "checks": [
+      {
+        "check": "constraint_source",
+        "detail": "No server-defined constraints found \u2014 using request-supplied constraints (lower trust)",
+        "passed": true
+      },
+      {
+        "check": "amount_limit",
+        "detail": "Amount 5000 within limit 10000",
+        "passed": true
+      },
+      {
+        "check": "policy_version",
+        "detail": "No policy version constraint",
+        "passed": true
+      },
+      {
+        "check": "execution_window",
+        "detail": "No execution window constraint",
+        "passed": true
+      }
+    ],
+    "reason": "All constraints satisfied",
+    "source": "request",
+    "status": "PASS",
+    "evaluated_at": "2026-08-01T23:57:05.962Z"
+  },
+  "control_decision": {
+    "reason": "All verification checks passed: authority valid, evidence confirmed, constraints satisfied, coherence within envelope",
+    "decision": "ALLOW",
+    "decided_at": "2026-08-01T23:57:05.963Z"
+  },
+  "execution_result": {
+    "executed": true,
+    "executed_at": "2026-08-01T23:57:05.963Z"
+  },
+  "coherence_envelope": {
+    "checks": [
+      {
+        "check": "scope_containment",
+        "detail": "Action scoped to resource 'nest-replay' targeting 'gateway.view'",
+        "passed": true,
+        "weight": 20
+      },
+      {
+        "check": "impact_boundary",
+        "detail": "Amount 5000 is 50% of max limit \u2014 within safe range",
+        "passed": true,
+        "weight": 25
+      },
+      {
+        "check": "reversibility",
+        "detail": "Action 'view_payment' is inherently reversible (read-only)",
+        "passed": true,
+        "weight": 20
+      },
+      {
+        "check": "harm_potential",
+        "detail": "Action 'view_payment' has low harm potential",
+        "passed": true,
+        "weight": 20
+      },
+      {
+        "check": "proportionality",
+        "detail": "Action supported by 1 evidence item(s)",
+        "passed": true,
+        "weight": 15
+      }
+    ],
+    "evaluated_at": "2026-08-01T23:57:05.963Z",
+    "safety_score": 100,
+    "envelope_status": "SAFE",
+    "within_envelope": true
+  },
+  "audit_trail": {
+    "summary": "Finance Manager (ci-bot-42) requested 'view_payment' on 'nest-replay' for USD5,000. Business reason: Nest decorator test. Environment: test. Authority: PASS - Role 'finance_manager' is authorized for action 'view_payment' (fallback policy). Evidence: PASS - References: M-1. Constraints: PASS - All constraints satisfied. Decision: ALLOW - All verification checks passed: authority valid, evidence confirmed, constraints satisfied, coherence within envelope. Executed at 2026-08-01T23:57:05.963Z.",
+    "timestamp": "2026-08-01T23:57:05.963Z",
+    "actor_summary": "Finance Manager (ci-bot-42)",
+    "action_summary": "view_payment on nest-replay for USD5,000",
+    "decision_summary": "ALLOW: All verification checks passed: authority valid, evidence confirmed, constraints satisfied, coherence within envelope"
+  },
+  "proof_signature_pq": "0873a34df9e7056fca44356949af90f53a407ee538d542b0afaa97a0cd94de7b1f3da8c0cc6fa4df1ead55b9eca60dd13f1f6bfa57092ba5633395947af9960a1064696136215a608992dbf6df2cbdb272a798d665a6172c3a103bbdf8f6309f0e0040b034e5d88192575f102e6db666fa5d1496b28c8050df2154037eabcbbe10248cc4367c1578a81f4052ccf664d49a9cd2c8d954cebee5f359044e0db47721ccaaf30e227efc3aafa87e4987e1d5d0745ce73daf3fd2301d1fa91a12f6c953b79f939ba45277cd866a7bf4675430a56780a8f719f69eb5ed3652c182bfbf4974a28cb7ea253802817ed8b87bb9859c6616b1f0bb02ab490e202c35be5be1fcfbf2c8b786849e2ff7fb8c95282a31fe23ad38767c15a7baefb11ff6bd422224771e6e8d38a50f51f8e424203fc59537742be1b61fe7fcb0fc30fd68ad2fa56ed978021d53faf82d4a50041ee726fec92c5593044813b6c2d92d6c6b25c88f4dab7fe67f47cdad8698239ee6b27e2411d44c327dc5cb37aa474a4eff330cc28c0b5068c9d0d0a1eb7d98687bc50f727d486843bfe3b31f6d2fedd220ce46c2e3ea62f7163c7d66d6d7a7f93f5c5de2b4feb6688379e3b4288dbb09ff8f7f5524204a305ad6e45769c228910609dfb42006bc22497023e880108f33939297d531afd65aa5a7c414bd2db1cb814508bbcb893f544c05fab1ada56247bce7fa152ad8e042c56441fbba632bf756de1d9a5e7a9c32145420239f2c7589cbac3521f5654d6ca8d739ab78da28172f7cced4a84bd8b57a9fe936a4589bced4efcc404d8c70754cdd6bf18f343ae2f3507e6f73026a15d6b264bc72c9afcdb5bb833343a6a4d9b9f9181948679fd2c489b3a2254d8a85ea6738ab63a29edc97fe0012a2a2b8600f8f3fb56ddf896bbe76e37fb9394d5075c14bec9924218289c7c05b5a11334585d6f09181bffe895ad042a05b626ea1e7c7d29aa5fda2d167f2216e20ce39b1592badcfd65a684db94f2a9b297185ca4ae36cf0fdd08e569c09449974c3177e31970cf6c8713000a3af35e6322d35726d38f68a3074dc1aac70d6230d9a2d0fd081f8ac46d94bcf7838eaac9e2e5e1879637d36f781f3eb743bb3fbc6668c6183fea30e284f6c820ebb702186f7d17c0f24c60f2d02d719bd647c62ee682dab75709a40d4aafc37810fcb679a1706f5ced1d4fd585f5065848460cac6277d63e9c7082284fa37a71b28e2869ac1fc52e5a138dae294abca1625cd6856de3116df63554013563c80e3f0791f74cca39ff67c05e4b0afa5c3cdbaf1f4fea0df9983d33495d27ac306aef79cf3a56624cf86a10475379d694bf999d2aa310c6c146f4ddffc046e24aac25269ecaa15613b138745da082503b39c8324529df6de9d2598775d25367946892ce8efc9a044663dd436f21a50a80456dad369cfa7d5f8f5801e7b48cfb301f3a501d18e27eb71a360ef11618ea7d5dd473efcbb621885b86f947245b569fbbf58fef3b2c2eaeb0d3b38aa6596a02dd1318e8f43cb2b6625f73bf09e4ac3917f9c200715dfbab60ae34606d556f1bb7c0de70be670b168b63882aa1e6b9fa8bd6a9999470c9c63324f915f8b90a53c3f89fbcb49b96682364aa5e3b14408c356f014a1e5578d2f590b35881f59b102cb53b20dd28bc81c5dcf8d0fcdd660423079cb8e095b9f3dd5a4bafc23ab01bdd34c42830166179982c19fcefb5767a6cf697b0531015646c1c54000040f755eac6464a1b7a9a296fc9d1a56d814906fe0357a225c9832ab606750611c64b5b9ecc5f93095a5c7e95e73e962ccf534c3b5c01c61dd18c2e4e3c53bab1d403567a1fe3bc1b996c228f0d9390a549efcc410f34eea4ee023eeb8288228c2f5405d087d2c7d01d9142332f942fb651b38ef1df1ec9e5f2806b2a29a99383cacafdef437e39406d89b9e2c30d45017f5196b4c461c04048e513b0660607499a772eb96c6d68f937d6ff2ef54b049a538187704fb92582d8b5611c61f740383b41ece862979006835e83fab01b8ff4a6ba86791e4a2680cca9f9e4b0593a290e60ce95a2157e19304ee3aa4f574980999d3fcd113b6168363315b91c559414630754fad3caf5a925930156671b6c4a88acf16a1cd8df24f701de935b54bcff9ed96f78938cf5227add548e1e0eccd8352bb37ac69e647b89538fc2069e733f180b60aeb359176e0b4b55409c507cf4e835995b37c0a405be7078b92d69d1efe3f69b5e44e2beb7bb0b32c43377e6700998798cbcad8219464f105e2319be664c9d5191f2a5746da48216e041d291eaa79f1443ce9d731a8660223a842de4359e4a173d6cfd4e1123965f6cd1ee0a37f5007b09b8d37810bb8b0abab42b6acb70befd0c34bb163ef151a65c39f278ff1a5e68efa9311c126ae5b081abf36a2821799ed678fb369c8b88d4cb16257635453715707d478f950db982d97f8e43550d42afacacc2b4236416ed2a28d66f539620f20c5d6091345773e20f14a8d376a3f6cea1777592ea1cc58c154b1c666f0a38f6ad798eb764fc166da46009b3b1fe1cbf1566fb187ed443870d1f98f5bbc6c29ecefa447defba35003ea769c83c6e63745f582d80b74f2a25f38f86027a5014bd4e4d6211a0ed647ee51d8f5d2198fa736835fbc62ca26541ea3ee14e8a8d7cc847b8b50ccaa4422a8db60dfbd0c323e6f11b0f399e690e5dc5b19c180d19c86bf7fe842865353e29c5cf79c22cdd47eb5f5affd96c73304b238247510dbfe0968b29c55b263bd7c3c273befe453f65706e567162066fca0582e1b6193ce7951708ac687bf77ff0440777078bf561191858d2dc419fbadc245d166637669dc69a24f2c557cebbd9eb972a70c1f5ae3c0b362badfa4b3f17c56510ef0752c4a1c234db305eaf9cd7cad0379ed0555c32e0a379b335b3f546a803eb311234130b10cd0c08e23805871e6918b6179f7b8972e47bddda84a3ab8ff491eb58b1e1a5e75c60ef09f43af6762f21e7a0fa943e49206ead4ea3130183ff471568cc3bb504fea62e4f0a183d96124b46fbdf3a26605e7863ef0a7d3fc045d4350e7d98d35554ff39196394dd396d92a32b1f287c229bc6f1d6aa0ca40f6edf5e3faa5ce9aaa8514fa8a8920957ae2128465ab6371c4ade66fb10aa8c471e1198f474e368e22e2cdef2dcdea5d69fd1ffa4c2378b885a9448905cf6317c16687c4e043f870b6481ecb0de24455150a895ca2e000ccad19c82362a1e03f75170203375c2916a8e46fb01b0e9d455509a4ccd77775ab3e602915aaaf1f00d822d530481b13f73a8c7bbcb08b7d49177b5d20b712bb552914b66c698095c42e69289e9b46692bc000704f688d19d56975d5b249d7b2116e002e3c60d7444640d4a4929819bec2e97ed5aeb5ab80339569081170d01b2ef140e2b4213d00bf166cb2cec31c1996414e929ccc16d882f3e48a106e3ebdb5bf056048b5793641c79d4c90ffdcd2d4fa5ce8a7e948d99d0b4a7336d92439c6f47a6f8923476e4924d1aed1bbe513b19e5dc64df7b2d17f4ee9a15885377030852c074644dd329b751513b08503fdcd4906a76b6d8a8d7ad76a1913f0b0e6553adb8cbe17a56b5c77f0c6224783570e31a52d43d81b5d875c38d8cf23f3ff56cbcefae97f20efcb9fbb86d378ea8fed4f4c8c5953e4fdbb15d3976ff38b913546490fdea0d690fcf56240f9975825fc629b99d13d49ac1dd12f4f006a7b320f80749461a9027c11962227a52013a14755b61ada707a74beb8ec2e587c1e475af395d1a0ac4220d5b32e780718ff1623cc496521b3d1b145b6f794a1b66db30cd7bf0856647f22d951df97d737aae72525f1ffdf857cf4af255409eb05dfc78cbd8a9aaa402fff3ae8349c8dc10da3f827e445198f62380322e02cfba1484f32cb00162a3bf20e283c36818c4ac46ea9e860272a4a99732b73f2cda566b389595d7e14e8f3b4bc643265a7b49c29c04d6a0ea298f770d31b526fd4f02ad076237c666ceaffa8e69a1c596fb4250bb1657ae8926eb081f3df448aa41b79ecaca8fc2cbbb0102dd24489dbf503d54fb0cbdffdca56a93a33242763ad1e79fb232671ee348c098951918a62ee1fc6358f97a3dabfc07ddff64a8a4611f0e1097e4906079b4dfe8d4faabbb93e5bc096f83d2938312378ada6dae87970c695d7655329b762c0baa8ff50a7a944d5f624cb81a2a98de6b8e87b43e50a0f8ecebf0c5407392a5f56be850385e34ad2516d8da57620c5b4f2e9fae02b639d5adcbba5d183530c1829b7ab3372f473b190d003c14012d53be97b65eb337ca45ba967a13ef58b7e9aa0715f2d2472bdcf94414713cb4c956875c16bf415c372228d66502418f3b7af71a2f3b332f446eb14bb4678371ed3468058c1b41d088490626e9b8ff9796d3d753804f8da4882ea57b64f3fcaa67102d909cd634598682287fe73859abbe31d2286b7ac1873a8849a1ca31454a775e1a29c25a5d44226d10462ecd6fac0a8b74bf199f0accc6f4cfc64abf81229bee6de55130ea1c8f576c8b5db6205e9f314caf291e794b327a66a6f40adae5d29e4f01b2c71c6e61222235670ab101a246d99a0cf12567386919da5b5d60996d81b273237383c4a676e7b96babb000000000000000000000000050b121b1e2b",
+  "signature_algorithm_pq": "ML-DSA-65",
+  "pq_public_key_id": "13757ac965b41061"
+}
