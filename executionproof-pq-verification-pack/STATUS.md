@@ -1,5 +1,8 @@
 # Status Declaration
 
+> **Pack version 1.1.0** (2026-08-02). Vectors minimized to exactly the fields
+> verification requires; the verifier still exits 0. See `CHANGELOG.md`.
+
 ```
 pack:                     ExecutionProof Post-Quantum ProofRecord Verification Pack
 claim_under_test:         hardware-backed ML-DSA-65 (FIPS 204) signing of ProofRecords

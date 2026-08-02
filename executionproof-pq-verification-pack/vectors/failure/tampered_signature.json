@@ -13,16 +13,16 @@
       "status": "PASS",
       "concepts": [
         {
-          "word": "Logos (\u03bb\u03cc\u03b3\u03bf\u03c2)",
-          "meaning": "Rule, structure, rational account \u2014 the evidence must be structured"
+          "word": "Logos (λόγος)",
+          "meaning": "Rule, structure, rational account — the evidence must be structured"
         },
         {
-          "word": "Aletheia (\u1f00\u03bb\u03ae\u03b8\u03b5\u03b9\u03b1)",
-          "meaning": "Visible truth, unconcealment \u2014 the evidence must be transparent"
+          "word": "Aletheia (ἀλήθεια)",
+          "meaning": "Visible truth, unconcealment — the evidence must be transparent"
         },
         {
-          "word": "Pistis (\u03c0\u03af\u03c3\u03c4\u03b9\u03c2)",
-          "meaning": "Proven reliability, earned trust \u2014 the evidence must be reliable"
+          "word": "Pistis (πίστις)",
+          "meaning": "Proven reliability, earned trust — the evidence must be reliable"
         }
       ],
       "question": "What proves this action should occur?"
@@ -32,19 +32,19 @@
       "reason": "Role 'finance_manager' is authorized for action 'view_payment' (fallback policy)",
       "status": "PASS",
       "concept": "Aman",
-      "meaning": "That which is established and firm \u2014 foundational trustworthiness",
+      "meaning": "That which is established and firm — foundational trustworthiness",
       "question": "Who has the right to act?",
-      "root_word": "\u05d0\u05b8\u05de\u05b7\u05df"
+      "root_word": "אָמַן"
     },
     "aramaic": {
       "gate": "CONTROL",
       "reason": "All verification checks passed: authority valid, evidence confirmed, constraints satisfied, coherence within envelope",
-      "concept": "Shultan (\u05e9\u05c1\u05d5\u05bc\u05dc\u05b0\u05d8\u05b8\u05df) \u2014 dominion, governance, the right to determine",
+      "concept": "Shultan (שׁוּלְטָן) — dominion, governance, the right to determine",
       "decision": "ALLOW",
       "outcomes": [
-        "ALLOW \u2014 Validated execution",
-        "DENY \u2014 Terminated invalid action",
-        "HOLD \u2014 Paused execution due to incomplete evidence"
+        "ALLOW — Validated execution",
+        "DENY — Terminated invalid action",
+        "HOLD — Paused execution due to incomplete evidence"
       ],
       "question": "Should the action be executed?",
       "key_insight": "A system that cannot pause cannot control. Binary (Allow/Deny) systems are forced into premature execution under uncertainty."
@@ -117,7 +117,7 @@
     "checks": [
       {
         "check": "constraint_source",
-        "detail": "No server-defined constraints found \u2014 using request-supplied constraints (lower trust)",
+        "detail": "No server-defined constraints found — using request-supplied constraints (lower trust)",
         "passed": true
       },
       {
@@ -150,10 +150,6 @@
     "executed": true,
     "executed_at": "2026-08-02T13:38:30.111Z"
   },
-  "proof_signature": "8a4a977d148221952ebd0c75cf08b8964ad0fb46f0d97e03a27959897c045b7b",
-  "signature_algorithm": "HMAC-SHA256",
-  "proof_signature_secondary": "361a5d534e80b5003cc93392ce195debe60e7b5c84e742039ffc7696081926bf48724aa9cc92443025e36dc561d0295dff1b8145051f4b9d625ff239001e5a1c",
-  "signature_algorithm_secondary": "HMAC-SHA3-512",
   "proof_signature_pq": "a784829eda87b2ea4f314046913872264a8b702778f31c262c9bb9d6181f51b1d10090bffbaa3aadae6bfa533a8142f2d82fa3d18d6fb519130c3d8363cab24535c3dd0f34c7c34b215391bb0a4855c80346711a0dda4f882fe0ec146649a246afe7e7af82e2825a8222a236d6d6b27b8fd8fc2f2c80ebad3d186fe3a7b88f773658fac9db0367001300aee3b27b64e5ded23cece0a9bc598ba8eebcc6ae80b353834cc106edc8528b018a94f0275bf14537d963041b9a98fc52840e2d69dfd8ff9a8cf6376141161d8ec52fb045def78aeb373bd9d9238d0193cad434e899c0c7262b8e91e10e116b2018aba056aaf6d412ed3d87f5a053c074ec4a98ed17088c048967fdaae24877b9e824bc00c9e6094b4ff20aeb956f624c8e519a8ea93cd9d26e380cba7c9b72b2e3ce32cc9551abc574a0fb2f6293fcaac6322dc091bf51efe4d4255c730be15848bd01a782e9b6ce7b8051d64c327ff9f8edee45e9abd5eefd812cdf1c19978ac1d4d2b312bb52b43873286093dedaa28481f400a47096f61778b08ca8402b13446f3976b6778b7072cd656f1e335c23d95c4ae1f4edd5ddedc2978f092054b3202d3ba6cdffc3ead2db156a69d383e5ac8cf79ffcf9125fab535ed81959046bffb8530e61c19355e7f4642fe2feabc4090de2e8a48726eecc8cc8237b98b834e7484a2bae5baf80a0b2ecfacaaaf3b9bc077d4dfdfd3aa934641dab34dab1025397c56d0d9b9cfdf593bf55b7f0f3c3d6a76d67b1e0f390ec821f76dc3d3de5be4d3aed770daaa30343a6952e7a5284d5519a50281a1625951f96fd5138c49c29c089d2cd5365bb02facc36660744495f224e15a8eea950e9b5c342b544097aa0ae9f93c702c4aa144e69d9f6970433498e92378494c566c82abfbc881d97ccd3789a9493140a4f7cb31c709c16f9aa41f86a993270714cc00b075453bcd70567518d9157f1ba88a343af975933d45faaf532f5bd857fcd812f87708d439b85be551db3989324b47a891fd5f4e80a41b94535b16727e1869ba885383728bfef6e8c790dc642fa0ba19bf22855effe97644c2b7cd93d2a8c05fa3e40bcee6e89d07763b98247b8cced553d82951c1a86395f15ff800079308d092e8d8d490527f8e638e25942d9de8c9b0e818c9cdd853cc3ee982ab3748c44dcce024f2f61b2b8aa6b3ecf3076388fc62122994a6fe05d3cb693e9c608ad54e1b18d71c51d9b0032dde27353521ecb552b613cb32dd3a5a7bcbbf24a679e7ecf84dc2150a73c745911aad70eeb3c28d6d0c2d94f9379b782fc680ebeaca2b0e82497394d7c19ea86bcc00b3fa2fd81f2d46773dc21031e95de7e0f24409380e17b0c8d9ee7fe6f32df45a3863456a83e0b2867fc1443750c45910c9f23120d208c40758a7a286428a3805a6eb0d4f2e978df3c92fad516738a17acc52c2b07e824b5f1bc660e450b8c348fb55597a1dbc14987233072542c928d054f9788ba223e4383c0f21228000ea9bbc76bc6ca823f185c53617429be3f89138a9a1883146896387ade955889811ded1ec83c6adb03e50ac34e699dc541fe3d71f65c27b02f420cc20388393e5d7ffbe457dae475da44d6c2a66c2d4127dfdc14c46adb114bb87c848af63af489340c104b043c9df01ce775f0f1f6e12039a467154f833e8b985d1fbf06af782839aab49c729afc5888f80fa23d7603c5cc0d12cda8a1081fc90daa8881f233a5f80dd0949f4812713bcd7a5e49942a7b62ccaa55259bd4b5c135c8235aeb7252530d444acbc5eefa362069bf2f122aa29124c754e90e9f75b291e71424c7e3982312120c39040a61431bbd17cf7f0e9913fce2848fcc9bddc843b45eac29dc99c7ade204872092f1c385c33d4e2f62a4df685cdb4321994b4977a1907ff245bbba550a839624e372ff7143bb3eb494608374a781f11112a589ebdd7b4dd332c7a0da7441f6ed9043fc3750a056688841a41d5aec69144e28db7a35bc7d97f5206b29fab1648e4774f511eaf285e373b1741efb7877320bbcfe9bf5cb4752523067d88381660fb1bb994801eb651d0da01e806bd1b565d8e68dc8da53d65df4998afa7d283a8cb0d608bd48cb71de308bd079926f5b4f641f0d34653426765720a0bbb9fa0f5df6899cf8ac12cbaf35075370b49f46defc00360d42d03e271e68eb4daa4c1e85f8480722848f08d61ccafcc6436dbd596853f09cc5d9366a733a024114b1ed8f06839449ba59f9a6f2d238a8e739ae163a3a1d5a8d12e16c8351293cb6c684b93439c21c49435dae9bf3ff67a08d54a154adb2a08f685710fc7af6a56ac9560d93f6b4da60c02b7bb27062f7224fdde0d681a4f61eb091c6caf3560a18163cf982bba754fc631ec6fdf3ccd13ea78513fbf8731bbe67024a547ab8859db48f5f0e82cae29019a3122261c10141940f39efd495064e0ea0c515ca039c9455a809f2930931bfc097ac0b8dc5412a6e826cc11eba6116e40e1d86ab2b2223beb6e9cd0fc412f13d9eb3d8c9b58129b0f59217fc6afaf9ef7e10dacd1c5091151a33a1e81e6d99484a2813b1f4fb324c51f337fb6b8f33ccb90349aea704e381f1180273450c03051e82595859b0c3cb9c7397ddd7a781a8a7b6614147861f581b459fd3eef24bd18df4b6e166f4e1130d38df2023aef8ba0833ee267d4c96eb75b9ef1f5a26e1563def9fc0d05adfa5ed04fb02472e7ea9ca22b8869b73d6bce2e36f0156df963dca3429d778167fe8d2ed7470340d2f4b0913459b5a66c60d941eaedc7b52228cd3f98d45c8fc1552dd790ed5b7ac4ce9c27cf3fa09e9f3964217c4feea7956ca24dd0c2e598b786826e2d03eb3bf0fe28cc7e5b37250644e52d7dabdded8e6e33cfc75990596eddc5e3470f81acccaa2c470a62c05ea23113df49b7ba0032accdba01ac59eb266982aa5005967c6bb52e190e90bfca2fdc516db62c4f62022fce698b33968dd7a58db8f4a0a5ccdeb821f79266a577a07af283437767c233de4b43b9eae9769ee304ba54afb313aba918e665fb2100ce4fda4efa7396ec499645073e0e406ad9c9944e0c914f2805eb183a74155dcd3b593b2121b3366b192f369a272d5ca98b4ef02aa9be1cc6370eab7dab956812792bfba8bea6fb846fcd29fe74b6225d8abab5dbc189c979a13ef4045652f8848099298960baedf1535782ed6fbfaa7e9b95ecf93720d425a225b3b907ee7d72d59999f7166baefe18b8a03a24a45603f738c4643ddeb018a74a1bf4d8db91217d0ebf392982e86d4f01337074891088dec41aadb7b95a5ae8af4745b0c161816f71ff80755adcea4a2fdcfca9b32a7bb2bf5709ceaa934e365e9a906c153b422ebff7d58d9c46cb9676a8cfd16015315403576393b9ac2aad8171770dd7f8a95ba09687730ed2687bb0114527fcca7b4abfc16cff8962f99259a276f8ff023e3cd438893bd939ada25c3586becdbd8ab3b2ad6637289f4be730895ac70c2adfb74420c266436ea8b6a2c3ad2ce39ae98336ace04c106fa419ca7eeed34e57bfa4d43180882dc9bb18f9244182a4311f39582bd30c89b1c972eaf5b347cf2b170d3ba7ebb189e1c5fc2e74f5b1aa544bf2374b0c0bf329ac476ba700acd18c76e24b86e8b4f93121948a8c95cc0b2e66c7410f30809ac2114a498027bc06db13b08dfdb90e35a1009ef9f8a97546e87dce45c62d7f1ce2dd172851524ae7ed78167f43abdded336d15ef57f8de837cede77c3d2c77602c3e361513dd7598951051ff16090960c964ceb99e65d622d9870794cd05832c8c42e43bf2b9b0df680c2ddb16b7186a09ece1664827aa9fdabeae046331f3604386a419d9d68eb671b8ae18c6ea5b68f56efef2498d2b67338c0034ddeca30a11b76790a1d5cc6fe7c93d7fec6fb970470b65c687be93d27b5fa05287740713b805b5d7297380b955337df2d2d68335f65596a3d71b06e8d0a0d2c55e381296aa07036f0fcf75d1db25f137f1b746ea55ab0a4856441a4a7fb12d9e948075a7825cd919f600171bd434626defd2c180a0af6a415b717a1565344a9f62a1087f0355314b4cea32e7500e00554fee9deba288757dd62e4ac20b71c47ccc225153e197e9f532d37c69af3491452da59c0b8a13afb40ba30ff7fbdfb70c2d10442362449afeeceaef1584c6e63af44e7b944a67d23e53e936c40e169296ea96949e5e05c871ff156bfdb597bfb121c1feb694ffa4035746e144e186f1a3292d39ca31c1db1fa3b67d89e30c7052350d83ccfa0fe993e0dbf123f2ff1292d50a1ec3f937a906c28514782273fbb2e2a8084ef3c0230b291692bcf5c44fd13ed51c260a01cb7ab9ebedfd7cf19a451efb09111cc519952f9f3eb5da278c8851fc59d2366cc988ee5e0ae1a3ddb4606058e3bf19c94bbc711f5d599050084e5e5802868a2b2713917a167093ee1686b9b81037e1b6c113ac4c355c303b598e5ebe3798e348500f4971387ed889c4d1b1f19e00c66c52e06f82dcd04dda8d714a371b600c37ad18c79f841c6d8fc945bbeb22b95e9bcd8bf71fcbe7530f5d185bb909e71dfba451386404b722fea8422c71f5065244a7ed92fb9fa0952b5c41d91a0a7e5000000000000000000000000000000000000000000000000000000000000000000000205090c1015",
   "signature_algorithm_pq": "ML-DSA-65",
   "pq_public_key_id": "00a69ffbb8a33217",
@@ -174,7 +170,7 @@
       },
       {
         "check": "impact_boundary",
-        "detail": "Amount 5000 is 50% of max limit \u2014 within safe range",
+        "detail": "Amount 5000 is 50% of max limit — within safe range",
         "passed": true,
         "weight": 25
       },
@@ -202,107 +198,6 @@
     "envelope_status": "SAFE",
     "within_envelope": true
   },
-  "policy_snapshot": {
-    "captured_at": "2026-08-02T13:38:30.133Z",
-    "rail_policies": [],
-    "authority_policies": [],
-    "evidence_verifiers": [],
-    "constraint_policies": []
-  },
-  "idempotency_key": null,
-  "invalidated": false,
-  "invalidated_by": null,
-  "invalidated_at": null,
-  "receipts": [
-    {
-      "id": "8373c950-96eb-4cb5-a663-b2272d7ef52e",
-      "created_at": "2026-08-02T13:38:30.370Z",
-      "proof_id": "6f51353d-c1e7-44a1-b7a7-1fdc7536ab2d",
-      "gate_name": "REQUEST_CONTRACT",
-      "gate_layer": "STRUCTURAL",
-      "status": "PASS",
-      "reason": "Request contract structurally complete",
-      "evaluated_at": "2026-08-02T13:38:30.369Z",
-      "receipt_hash": "2b545213070398d1a4d1f81feb2903057e3ec394ac393d68e9e0d2a7a2b9c31b"
-    },
-    {
-      "id": "6ce7026f-9018-4089-bb5b-af6ec4e5bfe1",
-      "created_at": "2026-08-02T13:38:30.381Z",
-      "proof_id": "6f51353d-c1e7-44a1-b7a7-1fdc7536ab2d",
-      "gate_name": "AUTHORITY",
-      "gate_layer": "HEBREW",
-      "status": "PASS",
-      "reason": "Role 'finance_manager' is authorized for action 'view_payment' (fallback policy)",
-      "evaluated_at": "2026-08-02T13:38:30.088Z",
-      "receipt_hash": "faf96bd1b05a5b284fbb4ac9fd84aa6e20320e69390e962c85364f866084117b"
-    },
-    {
-      "id": "cf1ae8ca-974a-4980-8597-afcc8f3bfa4a",
-      "created_at": "2026-08-02T13:38:30.386Z",
-      "proof_id": "6f51353d-c1e7-44a1-b7a7-1fdc7536ab2d",
-      "gate_name": "EVIDENCE",
-      "gate_layer": "GREEK",
-      "status": "PASS",
-      "reason": "All 1 evidence items validated successfully (FORMAT_ONLY)",
-      "evaluated_at": "2026-08-02T13:38:30.094Z",
-      "receipt_hash": "5cfa8d62438bf7e929b6e25517bd73d1b1add1f1dffe7c7d54ceb28d88661811"
-    },
-    {
-      "id": "39d36fa1-f664-491e-a5a9-8aaa855cf65e",
-      "created_at": "2026-08-02T13:38:30.390Z",
-      "proof_id": "6f51353d-c1e7-44a1-b7a7-1fdc7536ab2d",
-      "gate_name": "CONSTRAINT",
-      "gate_layer": "ARAMAIC",
-      "status": "PASS",
-      "reason": "All constraints satisfied",
-      "evaluated_at": "2026-08-02T13:38:30.103Z",
-      "receipt_hash": "45c0b51f56a5e7cd0e3cf0f74535f9159a17e69ea680c6542b70fca8eb25a8db"
-    },
-    {
-      "id": "ddd27711-cad7-4b27-85cd-413bff6fdccd",
-      "created_at": "2026-08-02T13:38:30.393Z",
-      "proof_id": "6f51353d-c1e7-44a1-b7a7-1fdc7536ab2d",
-      "gate_name": "COHERENCE",
-      "gate_layer": "STRUCTURAL",
-      "status": "PASS",
-      "reason": "Safety score: 100/100 (SAFE)",
-      "evaluated_at": "2026-08-02T13:38:30.110Z",
-      "receipt_hash": "3583e2ea278c11cc5594cf6d95c0ec63253981d9111e66889c2e47d2b53f4fa1"
-    },
-    {
-      "id": "791d17de-fe69-4d06-8b18-da09bfcd3c1b",
-      "created_at": "2026-08-02T13:38:30.397Z",
-      "proof_id": "6f51353d-c1e7-44a1-b7a7-1fdc7536ab2d",
-      "gate_name": "RAIL_ENFORCEMENT",
-      "gate_layer": "STRUCTURAL",
-      "status": "PASS",
-      "reason": "Rail CORE requirements met",
-      "evaluated_at": "2026-08-02T13:38:30.369Z",
-      "receipt_hash": "0b251c64d38c6938fe490a54f1b85daf28762aafb795512b92dca4007aba0522"
-    },
-    {
-      "id": "6aef4d24-e27f-4fc6-8494-9795710c7883",
-      "created_at": "2026-08-02T13:38:30.400Z",
-      "proof_id": "6f51353d-c1e7-44a1-b7a7-1fdc7536ab2d",
-      "gate_name": "CONTROL",
-      "gate_layer": "ARAMAIC",
-      "status": "PASS",
-      "reason": "All verification checks passed: authority valid, evidence confirmed, constraints satisfied, coherence within envelope",
-      "evaluated_at": "2026-08-02T13:38:30.110Z",
-      "receipt_hash": "46aad8551a53f89b5b91eaba59ba7d1b143b099d6504564de5a64e8787fd7b2c"
-    },
-    {
-      "id": "4bc291a7-949d-433c-aea7-87cdb1ab1c0e",
-      "created_at": "2026-08-02T13:38:30.403Z",
-      "proof_id": "6f51353d-c1e7-44a1-b7a7-1fdc7536ab2d",
-      "gate_name": "EXECUTION",
-      "gate_layer": "STRUCTURAL",
-      "status": "PASS",
-      "reason": "Execution permitted",
-      "evaluated_at": "2026-08-02T13:38:30.369Z",
-      "receipt_hash": "34bb990baec080f5134bee6b75a3a2f552d3d35979c812d8818a5fe78820e6b0"
-    }
-  ],
   "_failure_kind": "tampered_signature",
   "_expected": "REJECT: signature bytes altered; must not verify"
 }
