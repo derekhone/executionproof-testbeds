@@ -4,6 +4,11 @@
 the post-quantum signing claim for ExecutionProof ProofRecords — without
 talking to the people who built it.**
 
+> **License note:** the contents of this directory are governed by the `LICENSE`
+> file here (a reviewer-use license; CC BY-NC-ND 4.0 on Zenodo), which
+> **supersedes the repository's root MIT license** for this directory. See
+> `LICENSE`.
+
 ```
 claim under test:   ExecutionProof implements hardware-backed ML-DSA-65
                     (NIST FIPS 204) post-quantum signing for ProofRecords
