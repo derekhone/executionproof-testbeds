@@ -13,16 +13,16 @@
       "status": "PASS",
       "concepts": [
         {
-          "word": "Logos (\u03bb\u03cc\u03b3\u03bf\u03c2)",
-          "meaning": "Rule, structure, rational account \u2014 the evidence must be structured"
+          "word": "Logos (λόγος)",
+          "meaning": "Rule, structure, rational account — the evidence must be structured"
         },
         {
-          "word": "Aletheia (\u1f00\u03bb\u03ae\u03b8\u03b5\u03b9\u03b1)",
-          "meaning": "Visible truth, unconcealment \u2014 the evidence must be transparent"
+          "word": "Aletheia (ἀλήθεια)",
+          "meaning": "Visible truth, unconcealment — the evidence must be transparent"
         },
         {
-          "word": "Pistis (\u03c0\u03af\u03c3\u03c4\u03b9\u03c2)",
-          "meaning": "Proven reliability, earned trust \u2014 the evidence must be reliable"
+          "word": "Pistis (πίστις)",
+          "meaning": "Proven reliability, earned trust — the evidence must be reliable"
         }
       ],
       "question": "What proves this action should occur?"
@@ -32,19 +32,19 @@
       "reason": "Role 'finance_manager' is authorized for action 'view_payment' (fallback policy)",
       "status": "PASS",
       "concept": "Aman",
-      "meaning": "That which is established and firm \u2014 foundational trustworthiness",
+      "meaning": "That which is established and firm — foundational trustworthiness",
       "question": "Who has the right to act?",
-      "root_word": "\u05d0\u05b8\u05de\u05b7\u05df"
+      "root_word": "אָמַן"
     },
     "aramaic": {
       "gate": "CONTROL",
       "reason": "All verification checks passed: authority valid, evidence confirmed, constraints satisfied, coherence within envelope",
-      "concept": "Shultan (\u05e9\u05c1\u05d5\u05bc\u05dc\u05b0\u05d8\u05b8\u05df) \u2014 dominion, governance, the right to determine",
+      "concept": "Shultan (שׁוּלְטָן) — dominion, governance, the right to determine",
       "decision": "ALLOW",
       "outcomes": [
-        "ALLOW \u2014 Validated execution",
-        "DENY \u2014 Terminated invalid action",
-        "HOLD \u2014 Paused execution due to incomplete evidence"
+        "ALLOW — Validated execution",
+        "DENY — Terminated invalid action",
+        "HOLD — Paused execution due to incomplete evidence"
       ],
       "question": "Should the action be executed?",
       "key_insight": "A system that cannot pause cannot control. Binary (Allow/Deny) systems are forced into premature execution under uncertainty."
@@ -113,7 +113,7 @@
     "checks": [
       {
         "check": "constraint_source",
-        "detail": "No server-defined constraints found \u2014 using request-supplied constraints (lower trust)",
+        "detail": "No server-defined constraints found — using request-supplied constraints (lower trust)",
         "passed": true
       },
       {
@@ -156,7 +156,7 @@
       },
       {
         "check": "impact_boundary",
-        "detail": "Amount 5000 is 50% of max limit \u2014 within safe range",
+        "detail": "Amount 5000 is 50% of max limit — within safe range",
         "passed": true,
         "weight": 25
       },
