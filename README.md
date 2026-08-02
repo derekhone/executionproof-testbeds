@@ -6,6 +6,25 @@
 
 ---
 
+## Production cryptographic custody status
+
+ExecutionProof has implemented and internally verified hardware-backed ML-DSA-65 signing for newly generated ProofRecords using AWS KMS. Formal RF-100 §8.4 conformance remains pending independent external review.
+
+Operationally, the reported production posture is:
+
+- signing occurs through the AWS KMS `Sign` operation;
+- private ML-DSA-65 signing material does not enter the application process;
+- production reports `hardware_backed = true`;
+- in-process signing is disabled for production ProofRecords;
+- new ProofRecords verify against the active HSM-backed key;
+- historical ProofRecords remain verifiable through retired public keys;
+- tampered records fail verification;
+- key rotation preserves the existing evidence chain.
+
+The external review should specifically confirm canonical payload hashing, deterministic serialization, algorithm and encoding identifiers, domain separation, replay protection, key-version binding, and rotation/retirement/revocation behavior.
+
+---
+
 ## What this repository is
 
 This repository (`executionproof-testbeds`) holds the **ARK authorization-boundary experiment series** — a set of preregistered,
