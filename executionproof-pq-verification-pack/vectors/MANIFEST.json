@@ -1,0 +1,22 @@
+{
+  "pack": "ExecutionProof Post-Quantum ProofRecord Verification Pack",
+  "algorithm": "ML-DSA-65 (CRYSTALS-Dilithium, NIST FIPS 204, security category 3)",
+  "custody": "aws-kms-native \u2014 signing key generated in and never leaving an AWS KMS FIPS 140-3 Level 3 HSM",
+  "active_public_key_id": "00a69ffbb8a33217",
+  "retired_public_key_ids": [
+    "13757ac965b41061"
+  ],
+  "message_binding": {
+    "active_aws_kms_native": "signature is over SHA-256(canonical_payload) (32-byte digest) \u2014 KMS RAW Sign caps message at 4096 bytes",
+    "retired_software_wrapped": "signature is over the raw canonical_payload bytes (in-process signing, pre-rotation)"
+  },
+  "expected_results": {
+    "vectors/valid/proof_v001.json": "VERIFY under ACTIVE key over DIGEST",
+    "vectors/valid/proof_v002.json": "VERIFY under ACTIVE key over DIGEST",
+    "vectors/valid/proof_v003.json": "VERIFY under ACTIVE key over DIGEST",
+    "vectors/valid/historical_retired_de196a09.json": "VERIFY under RETIRED key over RAW (genuine pre-rotation ProofRecord from production; proves historical proofs stay verifiable after rotation)",
+    "vectors/failure/tampered_payload.json": "REJECT (payload altered after signing)",
+    "vectors/failure/tampered_signature.json": "REJECT (signature bytes altered)",
+    "vectors/failure/forged_unknown_key.json": "REJECT (valid signature but under an unpublished key)"
+  }
+}
