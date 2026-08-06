@@ -1,3 +1,9 @@
+> **Repository Role:** Preregistered Experiment Series — ExecutionProof Authorization Boundaries · Part of the [Remnant Fieldworks](https://remnantfieldworks.com) research and product ecosystem
+
+**Where this fits:** [ExecutionProof](https://executionproof.io) is an independent pre-execution governance layer for consequential AI actions — returning ALLOW / HOLD / DENY before Stripe or any downstream system is ever called. Payment authorization is the first production deployment boundary; the same architecture governs infrastructure commands, data release, access changes, and other irreversible actions. This repository records preregistered authorization-boundary experiments that validate the ALLOW/HOLD/DENY enforcement claims.
+
+---
+
 # ExecutionProof Testbeds
 
 **Product:** ExecutionProof™ — *"If it cannot be verified, it cannot execute."*
