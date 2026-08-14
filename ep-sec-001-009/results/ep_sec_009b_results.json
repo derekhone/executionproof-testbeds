@@ -1,0 +1,66 @@
+{
+  "experiment_id": "EP-SEC-009b",
+  "verdict": "PASS",
+  "cases_pass": 8,
+  "cases_fail": 0,
+  "cases_total": 8,
+  "timestamp_utc": "2026-08-14T18:21:54.904464Z",
+  "results": [
+    {
+      "experiment_id": "EP-SEC-009b",
+      "case_id": "SEC-009b-C001",
+      "verdict": "PASS",
+      "detail": "ToolBypassError raised; state unchanged; msg=perform_side_effect('T1') blocked: caller (None in __main__) is not the EnforcementPoint.  All tool execution must pass through the governed enforcement path.",
+      "timestamp_utc": "2026-08-14T18:21:54.884621Z"
+    },
+    {
+      "experiment_id": "EP-SEC-009b",
+      "case_id": "SEC-009b-C002",
+      "verdict": "PASS",
+      "detail": "all 5 tools blocked: ['T1', 'T2', 'T3', 'T4', 'T5']",
+      "timestamp_utc": "2026-08-14T18:21:54.884934Z"
+    },
+    {
+      "experiment_id": "EP-SEC-009b",
+      "case_id": "SEC-009b-C003",
+      "verdict": "PASS",
+      "detail": "alias-resolved call blocked",
+      "timestamp_utc": "2026-08-14T18:21:54.884984Z"
+    },
+    {
+      "experiment_id": "EP-SEC-009b",
+      "case_id": "SEC-009b-C004",
+      "verdict": "PASS",
+      "detail": "fake class blocked (module check caught it)",
+      "timestamp_utc": "2026-08-14T18:21:54.885045Z"
+    },
+    {
+      "experiment_id": "EP-SEC-009b",
+      "case_id": "SEC-009b-C005",
+      "verdict": "PASS",
+      "detail": "subclass blocked (class name is SubclassEP, not EnforcementPoint)",
+      "timestamp_utc": "2026-08-14T18:21:54.900917Z"
+    },
+    {
+      "experiment_id": "EP-SEC-009b",
+      "case_id": "SEC-009b-C006",
+      "verdict": "PASS",
+      "detail": "exec() call blocked",
+      "timestamp_utc": "2026-08-14T18:21:54.901046Z"
+    },
+    {
+      "experiment_id": "EP-SEC-009b",
+      "case_id": "SEC-009b-C007",
+      "verdict": "PASS",
+      "detail": "threaded call blocked",
+      "timestamp_utc": "2026-08-14T18:21:54.901547Z"
+    },
+    {
+      "experiment_id": "EP-SEC-009b",
+      "case_id": "SEC-009b-C008",
+      "verdict": "PASS",
+      "detail": "decision=ALLOW, tool_called=True, proofrecord_id=79de10dcc2bfd17c195dd85e2b073284",
+      "timestamp_utc": "2026-08-14T18:21:54.904416Z"
+    }
+  ]
+}

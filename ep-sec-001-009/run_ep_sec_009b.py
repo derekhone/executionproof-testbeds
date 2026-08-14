@@ -30,10 +30,10 @@ from tools.tools import (
     perform_side_effect, ToolBypassError, SIDE_EFFECT_STATE,
     ALIASES, TOOLS,
 )
+from gate.core import POLICY_VERSION
 
 RESULTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
 EXP = "EP-SEC-009b"
-POLICY_VERSION = "v1.0"
 EVIDENCE_FIELDS = ["budget_remaining", "approval_count", "last_audit_ts"]
 
 results = []
