@@ -209,23 +209,72 @@ invocation) succeeded. See FAIL detail above.
 
 ---
 
+## EP-SEC-009b — Tool Bypass Remediation Verification (PASS)
+
+**Date:** 2026-08-14  
+**Preregistration commit:** `b969c9ac`  
+**Results commit:** `1cd82c9a`  
+**Verdict:** PASS (8/8 cases)
+
+### Context
+
+EP-SEC-009 produced a FAIL on case C005: `tools.tools.perform_side_effect()`
+was directly callable without the enforcement point, bypassing all governance.
+The root cause was that `perform_side_effect()` was a public, unguarded
+module-level function — `ToolBypassError` existed but was never raised.
+
+### Remediation applied
+
+A **call-origin guard** was added to `perform_side_effect()` using
+`inspect.currentframe()`. Before executing any side effect, the function
+verifies that (1) the immediate caller's `self` is an `EnforcementPoint`
+instance, and (2) the caller's module path contains `"enforcement"`. If either
+check fails, it writes a `BYPASS_ATTEMPT` ledger entry and raises
+`ToolBypassError`. This is the only code change — no other substrate file was
+modified.
+
+### Results
+
+| Case | Attack vector | Verdict | Detail |
+|------|--------------|---------|--------|
+| C001 | Direct import + call (SEC-009 C005 replay) | PASS | ToolBypassError raised; state unchanged |
+| C002 | Direct call on all five tools T1–T5 | PASS | All 5 tools blocked |
+| C003 | Call via alias resolution | PASS | Alias-resolved call blocked |
+| C004 | Fake EnforcementPoint class (wrong module) | PASS | Module check caught it |
+| C005 | Subclass of real EnforcementPoint (test module) | PASS | Class name mismatch caught it |
+| C006 | exec()/eval() indirect call | PASS | exec() call blocked |
+| C007 | Threaded direct call | PASS | Threaded call blocked |
+| C008 | Positive control (legitimate EP path) | PASS | decision=ALLOW, tool_called=True |
+
+### Limitations
+
+1. The call-origin guard uses Python stack introspection, which a determined
+   attacker with full source access could circumvent by monkey-patching
+   `inspect.currentframe`, modifying the module, or manipulating frame locals.
+   The guard closes the *trivially accessible* attack surface (direct
+   import + call); it does not claim process-level isolation.
+2. The original EP-SEC-009 FAIL is preserved in the corpus. This experiment is
+   a separately preregistered remediation, not a retcon.
+
+---
+
 ## Updated Corpus Totals
 
-With EP-SEC-001 through EP-SEC-009, the Remnant Fieldworks experimental corpus
+With EP-SEC-001 through EP-SEC-009b, the Remnant Fieldworks experimental corpus
 now contains:
 
 | Metric | Count |
 |---|---|
-| Total experiment IDs | **100** |
-| PASS | **91** |
+| Total experiment IDs | **101** |
+| PASS | **92** |
 | FAIL | **6** (ARK-445, ARK-455, DM-001, QG-001, QG-002, EP-SEC-009) |
 | GATE-STOP | **1** (ARK-448) |
 | SMOKE-PASS unscored | **1** (ARK-502) |
 | NOT-EXECUTED | **1** (ARK-503) |
 | Repositories | **16** |
-| Remediated FAIL → PASS | **2** (ARK-445b, ARK-455b) |
+| Remediated FAIL → PASS | **3** (ARK-445b, ARK-455b, EP-SEC-009b) |
 
-Note: ARK-445 and ARK-455 FAILed and were remediated (445b PASS, 455b PASS).
-Both the original FAIL and the remediation are counted as separate experiment
-IDs. The 6 FAIL total includes all FAIL events; the 91 PASS total includes
-remediations.
+Note: ARK-445, ARK-455, and EP-SEC-009 FAILed and were remediated (445b PASS,
+455b PASS, 009b PASS). Both the original FAIL and the remediation are counted
+as separate experiment IDs. The 6 FAIL total includes all FAIL events; the 92
+PASS total includes remediations.
