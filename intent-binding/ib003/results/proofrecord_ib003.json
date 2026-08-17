@@ -1,0 +1,53 @@
+{
+  "experiment_id": "IB-003",
+  "parent_experiments": [
+    "IB-001",
+    "IB-002"
+  ],
+  "timestamp": "2026-08-16T03:04:38.622552Z",
+  "preregistration_hash": "d6f788f46c05da853a2ebaefa59ef1c69863e3d3d810d44c739c64dae5fb7d8b",
+  "ib001_preregistration_hash": "b349a9c1dfea3aad1741024c25a7af3334fdbfa85c34daff1be7b0fbde253d91",
+  "ib002_preregistration_hash": "a12d0a21bb2f17d6c11b9761bb9d50b701a4e4d4f4d2bc3f0b615fb7c2064d08",
+  "remediation_applied": "normalize_authority_action_type() added to check_authority() membership test",
+  "condition_a_summary": {
+    "total_cases": 12,
+    "controls_correct": 4,
+    "drift_caught": 0,
+    "drift_missed": 8
+  },
+  "condition_b_summary": {
+    "total_cases": 12,
+    "controls_correct": 4,
+    "drift_caught": 8,
+    "drift_missed": 0
+  },
+  "ib001_comparison": {
+    "ib001_condition_a_accuracy": "2/12",
+    "ib001_condition_b_accuracy": "10/12",
+    "ib001_verdict": "FAIL (K2)"
+  },
+  "kill_conditions": {
+    "k1_drift_regression": {
+      "triggered": false,
+      "drift_escapes": [],
+      "threshold": ">=1 previously caught drift case escapes"
+    },
+    "k2_control_still_blocked": {
+      "triggered": false,
+      "false_blocks": [],
+      "threshold": ">=1 control remains incorrectly blocked"
+    },
+    "k3_scope_contamination": {
+      "triggered": false,
+      "note": "Only check_authority was modified; all other code identical to IB-001"
+    },
+    "k4_privilege_expansion": {
+      "triggered": false,
+      "expansions": [],
+      "threshold": ">=1 normalization expands privilege"
+    },
+    "any_kill_triggered": false
+  },
+  "verdict": "PASS (strong positive)",
+  "record_hash": "9862b782777e0866dcfaefce49096369ad8d04aa19709b99686cebb7e0ad107d"
+}

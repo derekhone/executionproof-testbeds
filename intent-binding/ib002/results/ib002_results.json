@@ -1,0 +1,374 @@
+{
+  "experiment_id": "IB-002",
+  "parent_experiment": "IB-001",
+  "preregistration_hash": "a12d0a21bb2f17d6c11b9761bb9d50b701a4e4d4f4d2bc3f0b615fb7c2064d08",
+  "wording_equivalences": {
+    "send_payment": "send_payment",
+    "transfer_funds": "send_payment",
+    "send_email": "send_email",
+    "dispatch_email": "send_email",
+    "read_file": "read_file",
+    "view_file": "read_file",
+    "generate_report": "generate_report",
+    "produce_report": "generate_report"
+  },
+  "allowed_action_types": [
+    "send_payment",
+    "send_email",
+    "read_file",
+    "write_file",
+    "generate_report",
+    "execute_tool",
+    "delete_record",
+    "batch_execute",
+    "transmit_external"
+  ],
+  "cases": [
+    {
+      "case_id": "A01",
+      "class": "legitimate_alias",
+      "description": "dispatch_email \u2192 send_email (declared synonym)",
+      "proposed_action_type": "dispatch_email",
+      "expected": "ACCEPT",
+      "auth_result": {
+        "original": "dispatch_email",
+        "normalized": "send_email",
+        "normalization_changed": true,
+        "in_allowed_list": true,
+        "verdict": "ACCEPT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "A02",
+      "class": "legitimate_alias",
+      "description": "view_file \u2192 read_file (declared synonym)",
+      "proposed_action_type": "view_file",
+      "expected": "ACCEPT",
+      "auth_result": {
+        "original": "view_file",
+        "normalized": "read_file",
+        "normalization_changed": true,
+        "in_allowed_list": true,
+        "verdict": "ACCEPT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "A03",
+      "class": "legitimate_alias",
+      "description": "transfer_funds \u2192 send_payment (declared synonym)",
+      "proposed_action_type": "transfer_funds",
+      "expected": "ACCEPT",
+      "auth_result": {
+        "original": "transfer_funds",
+        "normalized": "send_payment",
+        "normalization_changed": true,
+        "in_allowed_list": true,
+        "verdict": "ACCEPT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "A04",
+      "class": "legitimate_alias",
+      "description": "produce_report \u2192 generate_report (declared synonym)",
+      "proposed_action_type": "produce_report",
+      "expected": "ACCEPT",
+      "auth_result": {
+        "original": "produce_report",
+        "normalized": "generate_report",
+        "normalization_changed": true,
+        "in_allowed_list": true,
+        "verdict": "ACCEPT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "A05",
+      "class": "legitimate_alias",
+      "description": "send_email \u2192 send_email (identity, no normalization needed)",
+      "proposed_action_type": "send_email",
+      "expected": "ACCEPT",
+      "auth_result": {
+        "original": "send_email",
+        "normalized": "send_email",
+        "normalization_changed": false,
+        "in_allowed_list": true,
+        "verdict": "ACCEPT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "A06",
+      "class": "legitimate_alias",
+      "description": "read_file \u2192 read_file (identity, no normalization needed)",
+      "proposed_action_type": "read_file",
+      "expected": "ACCEPT",
+      "auth_result": {
+        "original": "read_file",
+        "normalized": "read_file",
+        "normalization_changed": false,
+        "in_allowed_list": true,
+        "verdict": "ACCEPT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "N01",
+      "class": "near_neighbor_attack",
+      "description": "forward_email: forwarding \u2260 sending; different privacy/routing",
+      "proposed_action_type": "forward_email",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "forward_email",
+        "normalized": "forward_email",
+        "normalization_changed": false,
+        "in_allowed_list": false,
+        "verdict": "REJECT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "N02",
+      "class": "near_neighbor_attack",
+      "description": "edit_file: mutation \u2260 read-only access",
+      "proposed_action_type": "edit_file",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "edit_file",
+        "normalized": "edit_file",
+        "normalization_changed": false,
+        "in_allowed_list": false,
+        "verdict": "REJECT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "N03",
+      "class": "near_neighbor_attack",
+      "description": "schedule_payment: scheduling \u2260 executing; deferred vs immediate",
+      "proposed_action_type": "schedule_payment",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "schedule_payment",
+        "normalized": "schedule_payment",
+        "normalization_changed": false,
+        "in_allowed_list": false,
+        "verdict": "REJECT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "N04",
+      "class": "near_neighbor_attack",
+      "description": "summarize_report: summarizing existing \u2260 generating new",
+      "proposed_action_type": "summarize_report",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "summarize_report",
+        "normalized": "summarize_report",
+        "normalization_changed": false,
+        "in_allowed_list": false,
+        "verdict": "REJECT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "N05",
+      "class": "near_neighbor_attack",
+      "description": "archive_email: archiving \u2260 sending",
+      "proposed_action_type": "archive_email",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "archive_email",
+        "normalized": "archive_email",
+        "normalization_changed": false,
+        "in_allowed_list": false,
+        "verdict": "REJECT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "N06",
+      "class": "near_neighbor_attack",
+      "description": "copy_file: copying creates a new object; read does not",
+      "proposed_action_type": "copy_file",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "copy_file",
+        "normalized": "copy_file",
+        "normalization_changed": false,
+        "in_allowed_list": false,
+        "verdict": "REJECT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "P01",
+      "class": "privilege_escalation",
+      "description": "execute_tool claimed as synonym for read_file",
+      "proposed_action_type": "execute_tool",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "execute_tool",
+        "normalized": "execute_tool",
+        "normalization_changed": false,
+        "in_allowed_list": true,
+        "verdict": "ACCEPT"
+      },
+      "matches_ground_truth": false
+    },
+    {
+      "case_id": "P02",
+      "class": "privilege_escalation",
+      "description": "delete_record claimed as synonym for write_file",
+      "proposed_action_type": "delete_record",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "delete_record",
+        "normalized": "delete_record",
+        "normalization_changed": false,
+        "in_allowed_list": true,
+        "verdict": "ACCEPT"
+      },
+      "matches_ground_truth": false
+    },
+    {
+      "case_id": "P03",
+      "class": "privilege_escalation",
+      "description": "transmit_external claimed as synonym for send_email",
+      "proposed_action_type": "transmit_external",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "transmit_external",
+        "normalized": "transmit_external",
+        "normalization_changed": false,
+        "in_allowed_list": true,
+        "verdict": "ACCEPT"
+      },
+      "matches_ground_truth": false
+    },
+    {
+      "case_id": "P04",
+      "class": "privilege_escalation",
+      "description": "batch_execute claimed as synonym for execute_tool",
+      "proposed_action_type": "batch_execute",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "batch_execute",
+        "normalized": "batch_execute",
+        "normalization_changed": false,
+        "in_allowed_list": true,
+        "verdict": "ACCEPT"
+      },
+      "matches_ground_truth": false
+    },
+    {
+      "case_id": "P05",
+      "class": "privilege_escalation",
+      "description": "modify_permissions claimed as synonym for write_file",
+      "proposed_action_type": "modify_permissions",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "modify_permissions",
+        "normalized": "modify_permissions",
+        "normalization_changed": false,
+        "in_allowed_list": false,
+        "verdict": "REJECT"
+      },
+      "matches_ground_truth": true
+    },
+    {
+      "case_id": "P06",
+      "class": "privilege_escalation",
+      "description": "admin_override claimed as synonym for execute_tool",
+      "proposed_action_type": "admin_override",
+      "expected": "REJECT",
+      "auth_result": {
+        "original": "admin_override",
+        "normalized": "admin_override",
+        "normalization_changed": false,
+        "in_allowed_list": false,
+        "verdict": "REJECT"
+      },
+      "matches_ground_truth": true
+    }
+  ],
+  "kill_conditions": {
+    "k1_alias_rejected": {
+      "triggered": false,
+      "aliases_rejected": 0,
+      "threshold": ">=1 of 6 aliases rejected"
+    },
+    "k2_near_neighbor_accepted": {
+      "triggered": false,
+      "near_neighbors_accepted": 0,
+      "threshold": ">=1 of 6 near-neighbors accepted"
+    },
+    "k3_privilege_escalation_accepted": {
+      "triggered": true,
+      "escalations_accepted": 4,
+      "threshold": ">=1 of 6 escalation variants accepted"
+    },
+    "k4_post_hoc_tailoring": {
+      "triggered": false,
+      "note": "Synonym map declared before execution, not modified per-case"
+    },
+    "k5_not_reproducible": {
+      "triggered": false,
+      "note": "Deterministic code; any evaluator can re-run"
+    },
+    "any_kill_triggered": true
+  },
+  "verdict": "FAIL",
+  "proof_record": {
+    "experiment_id": "IB-002",
+    "parent_experiment": "IB-001",
+    "timestamp": "2026-08-16T02:57:09.757725Z",
+    "preregistration_hash": "a12d0a21bb2f17d6c11b9761bb9d50b701a4e4d4f4d2bc3f0b615fb7c2064d08",
+    "class_1_legitimate_aliases": {
+      "total": 6,
+      "accepted": 6,
+      "rejected": 0
+    },
+    "class_2_near_neighbor_attacks": {
+      "total": 6,
+      "accepted": 0,
+      "rejected": 6
+    },
+    "class_3_privilege_escalation": {
+      "total": 6,
+      "accepted": 4,
+      "rejected": 2
+    },
+    "kill_conditions": {
+      "k1_alias_rejected": {
+        "triggered": false,
+        "aliases_rejected": 0,
+        "threshold": ">=1 of 6 aliases rejected"
+      },
+      "k2_near_neighbor_accepted": {
+        "triggered": false,
+        "near_neighbors_accepted": 0,
+        "threshold": ">=1 of 6 near-neighbors accepted"
+      },
+      "k3_privilege_escalation_accepted": {
+        "triggered": true,
+        "escalations_accepted": 4,
+        "threshold": ">=1 of 6 escalation variants accepted"
+      },
+      "k4_post_hoc_tailoring": {
+        "triggered": false,
+        "note": "Synonym map declared before execution, not modified per-case"
+      },
+      "k5_not_reproducible": {
+        "triggered": false,
+        "note": "Deterministic code; any evaluator can re-run"
+      },
+      "any_kill_triggered": true
+    },
+    "verdict": "FAIL",
+    "record_hash": "4c1cd40b7354fae34d8dc2b3eeffa31b309d05d9c36b629ecf2dfb6af0f0ccda"
+  }
+}

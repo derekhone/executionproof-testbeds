@@ -1,0 +1,2794 @@
+{
+  "experiment_id": "AUTH-002",
+  "preregistration_hash": "3393646b26d2d4af96e24a8b7bf2cca8053ba5da84cef3613e600bf45a0b5738",
+  "total_cases": 18,
+  "correct": 18,
+  "legit_allow_correct": "7/7",
+  "deny_correct": "11/11",
+  "confused_deputy_denied": "3/3",
+  "privilege_expansions": 0,
+  "kill_conditions": {
+    "K1_composition_breaks_legit": {
+      "triggered": false,
+      "failures": [],
+      "detail": "All 7 legitimate cases ALLOW."
+    },
+    "K2_confused_deputy_success": {
+      "triggered": false,
+      "failures": [],
+      "detail": "All 3 confused-deputy cases DENY."
+    },
+    "K3_delegation_leak": {
+      "triggered": false,
+      "failures": [],
+      "detail": "All 7 delegation-leak cases DENY."
+    },
+    "K4_scope_laundering_leak": {
+      "triggered": false,
+      "failures": [],
+      "detail": "Both scope-intersection and privilege-laundering cases DENY."
+    },
+    "K5_normalization_expands_privilege": {
+      "triggered": false,
+      "expansions": [],
+      "detail": "Zero privilege expansions."
+    },
+    "K6_just_in_case_breadth": {
+      "triggered": false,
+      "detail": "All grants are exactly as preregistered. No grant or delegation was broadened beyond its declared minimal set to achieve any ALLOW."
+    },
+    "any_kill_triggered": false,
+    "triggered": []
+  },
+  "verdict": "PASS",
+  "case_results": [
+    {
+      "case_id": "B01",
+      "category": "Delegated authority \u2014 legit",
+      "description": "ops-agent delegates transmit to analytics-agent; both grant and delegation present",
+      "is_chain": false,
+      "action": {
+        "actor": "analytics-agent",
+        "action_type": "transmit_external",
+        "target": "partner-api-endpoint-v2",
+        "target_resource_class": "partner-api",
+        "scope": "single",
+        "request_origin": "ops-agent",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": true,
+        "decision": "ALLOW",
+        "normalized_action_type": "transmit_external",
+        "normalization_changed": false,
+        "original_action_type": "transmit_external",
+        "has_capability": true,
+        "matching_capability": {
+          "grant": {
+            "actor": "analytics-agent",
+            "action_type": "transmit_external",
+            "resource_class": "partner-api",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "checks": {
+            "C1_actor": true,
+            "C2_action_type": true,
+            "C3_resource_class": true,
+            "C4_scope": true,
+            "C5_constraints": true,
+            "C5_detail": {},
+            "C6_fresh": true
+          },
+          "all_passed": true
+        },
+        "needs_delegation": true,
+        "has_delegation": true,
+        "delegation_result": {
+          "found": true,
+          "delegation_grant": {
+            "delegator": "ops-agent",
+            "delegate": "analytics-agent",
+            "action_type": "transmit_external",
+            "resource_class": "partner-api",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "fresh": true
+        },
+        "denial_reason": null,
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "analytics-agent",
+              "action_type": "transmit_external",
+              "resource_class": "partner-api",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": true
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "transmit_external",
+        "normalized": "transmit_external",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "analytics-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "ops-agent",
+          "delegate": "analytics-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ]
+    },
+    {
+      "case_id": "B02",
+      "category": "Delegated authority \u2014 no delegation grant",
+      "description": "analytics-agent holds transmit grant but no delegation grant exists",
+      "is_chain": false,
+      "action": {
+        "actor": "analytics-agent",
+        "action_type": "transmit_external",
+        "target": "partner-api-endpoint-v2",
+        "target_resource_class": "partner-api",
+        "scope": "single",
+        "request_origin": "ops-agent",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": false,
+        "decision": "DENY",
+        "normalized_action_type": "transmit_external",
+        "normalization_changed": false,
+        "original_action_type": "transmit_external",
+        "has_capability": true,
+        "matching_capability": {
+          "grant": {
+            "actor": "analytics-agent",
+            "action_type": "transmit_external",
+            "resource_class": "partner-api",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "checks": {
+            "C1_actor": true,
+            "C2_action_type": true,
+            "C3_resource_class": true,
+            "C4_scope": true,
+            "C5_constraints": true,
+            "C5_detail": {},
+            "C6_fresh": true
+          },
+          "all_passed": true
+        },
+        "needs_delegation": true,
+        "has_delegation": false,
+        "delegation_result": {
+          "found": false,
+          "delegation_grant": null,
+          "fresh": null
+        },
+        "denial_reason": "no_delegation_grant",
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "analytics-agent",
+              "action_type": "transmit_external",
+              "resource_class": "partner-api",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": true
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "transmit_external",
+        "normalized": "transmit_external",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "analytics-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": []
+    },
+    {
+      "case_id": "B03",
+      "category": "Delegated authority \u2014 delegate lacks capability",
+      "description": "Delegation grant exists but analytics-agent does NOT hold transmit capability",
+      "is_chain": false,
+      "action": {
+        "actor": "analytics-agent",
+        "action_type": "transmit_external",
+        "target": "partner-api-endpoint-v2",
+        "target_resource_class": "partner-api",
+        "scope": "single",
+        "request_origin": "ops-agent",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": false,
+        "decision": "DENY",
+        "normalized_action_type": "transmit_external",
+        "normalization_changed": false,
+        "original_action_type": "transmit_external",
+        "has_capability": false,
+        "matching_capability": null,
+        "needs_delegation": true,
+        "has_delegation": true,
+        "delegation_result": {
+          "found": true,
+          "delegation_grant": {
+            "delegator": "ops-agent",
+            "delegate": "analytics-agent",
+            "action_type": "transmit_external",
+            "resource_class": "partner-api",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "fresh": true
+        },
+        "denial_reason": "no_matching_capability",
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "analytics-agent",
+              "action_type": "generate_report",
+              "resource_class": "finance-reports",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": false,
+              "C3_resource_class": false,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": false
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "transmit_external",
+        "normalized": "transmit_external",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "analytics-agent",
+          "action_type": "generate_report",
+          "resource_class": "finance-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "ops-agent",
+          "delegate": "analytics-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ]
+    },
+    {
+      "case_id": "B04",
+      "category": "Cross-agent invocation \u2014 legit",
+      "description": "ops-agent calls audit-agent to generate audit report; audit-agent holds grant + delegation",
+      "is_chain": false,
+      "action": {
+        "actor": "audit-agent",
+        "action_type": "generate_report",
+        "target": "ops-audit-aug-2026.pdf",
+        "target_resource_class": "audit-reports",
+        "scope": "single",
+        "request_origin": "ops-agent",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": true,
+        "decision": "ALLOW",
+        "normalized_action_type": "generate_report",
+        "normalization_changed": false,
+        "original_action_type": "generate_report",
+        "has_capability": true,
+        "matching_capability": {
+          "grant": {
+            "actor": "audit-agent",
+            "action_type": "generate_report",
+            "resource_class": "audit-reports",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "checks": {
+            "C1_actor": true,
+            "C2_action_type": true,
+            "C3_resource_class": true,
+            "C4_scope": true,
+            "C5_constraints": true,
+            "C5_detail": {},
+            "C6_fresh": true
+          },
+          "all_passed": true
+        },
+        "needs_delegation": true,
+        "has_delegation": true,
+        "delegation_result": {
+          "found": true,
+          "delegation_grant": {
+            "delegator": "ops-agent",
+            "delegate": "audit-agent",
+            "action_type": "generate_report",
+            "resource_class": "audit-reports",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "fresh": true
+        },
+        "denial_reason": null,
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "audit-agent",
+              "action_type": "generate_report",
+              "resource_class": "audit-reports",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": true
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "generate_report",
+        "normalized": "generate_report",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "audit-agent",
+          "action_type": "generate_report",
+          "resource_class": "audit-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "ops-agent",
+          "delegate": "audit-agent",
+          "action_type": "generate_report",
+          "resource_class": "audit-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ]
+    },
+    {
+      "case_id": "B05",
+      "category": "Cross-agent invocation \u2014 no standing capability",
+      "description": "Delegation exists but analytics-agent has no delete capability",
+      "is_chain": false,
+      "action": {
+        "actor": "analytics-agent",
+        "action_type": "delete_record",
+        "target": "job-2024-0891",
+        "target_resource_class": "stale-jobs",
+        "scope": "single",
+        "request_origin": "ops-agent",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": false,
+        "decision": "DENY",
+        "normalized_action_type": "delete_record",
+        "normalization_changed": false,
+        "original_action_type": "delete_record",
+        "has_capability": false,
+        "matching_capability": null,
+        "needs_delegation": true,
+        "has_delegation": true,
+        "delegation_result": {
+          "found": true,
+          "delegation_grant": {
+            "delegator": "ops-agent",
+            "delegate": "analytics-agent",
+            "action_type": "delete_record",
+            "resource_class": "stale-jobs",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "fresh": true
+        },
+        "denial_reason": "no_matching_capability",
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "analytics-agent",
+              "action_type": "generate_report",
+              "resource_class": "finance-reports",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": false,
+              "C3_resource_class": false,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": false
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "delete_record",
+        "normalized": "delete_record",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "analytics-agent",
+          "action_type": "generate_report",
+          "resource_class": "finance-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "ops-agent",
+          "delegate": "analytics-agent",
+          "action_type": "delete_record",
+          "resource_class": "stale-jobs",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ]
+    },
+    {
+      "case_id": "B06",
+      "category": "Confused deputy \u2014 classic",
+      "description": "external-requester asks ops-agent to transmit; ops-agent holds grant but no delegation from external-requester",
+      "is_chain": false,
+      "action": {
+        "actor": "ops-agent",
+        "action_type": "transmit_external",
+        "target": "partner-api-endpoint-v2",
+        "target_resource_class": "partner-api",
+        "scope": "single",
+        "request_origin": "external-requester",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": false,
+        "decision": "DENY",
+        "normalized_action_type": "transmit_external",
+        "normalization_changed": false,
+        "original_action_type": "transmit_external",
+        "has_capability": true,
+        "matching_capability": {
+          "grant": {
+            "actor": "ops-agent",
+            "action_type": "transmit_external",
+            "resource_class": "partner-api",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "checks": {
+            "C1_actor": true,
+            "C2_action_type": true,
+            "C3_resource_class": true,
+            "C4_scope": true,
+            "C5_constraints": true,
+            "C5_detail": {},
+            "C6_fresh": true
+          },
+          "all_passed": true
+        },
+        "needs_delegation": true,
+        "has_delegation": false,
+        "delegation_result": {
+          "found": false,
+          "delegation_grant": null,
+          "fresh": null
+        },
+        "denial_reason": "no_delegation_grant",
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "ops-agent",
+              "action_type": "transmit_external",
+              "resource_class": "partner-api",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": true
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "transmit_external",
+        "normalized": "transmit_external",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": []
+    },
+    {
+      "case_id": "B07",
+      "category": "Confused deputy \u2014 tool-mediated",
+      "description": "external-requester asks ops-agent to execute_tool:reconciler; no delegation",
+      "is_chain": false,
+      "action": {
+        "actor": "ops-agent",
+        "action_type": "execute_tool",
+        "target": "reconciler",
+        "target_resource_class": "reconciler",
+        "scope": "single",
+        "request_origin": "external-requester",
+        "metadata": {
+          "named_tool": "reconciler"
+        }
+      },
+      "authorization": {
+        "authorized": false,
+        "decision": "DENY",
+        "normalized_action_type": "execute_tool",
+        "normalization_changed": false,
+        "original_action_type": "execute_tool",
+        "has_capability": true,
+        "matching_capability": {
+          "grant": {
+            "actor": "ops-agent",
+            "action_type": "execute_tool",
+            "resource_class": "reconciler",
+            "scope": "single",
+            "constraints": {
+              "named_tool": "reconciler"
+            },
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "checks": {
+            "C1_actor": true,
+            "C2_action_type": true,
+            "C3_resource_class": true,
+            "C4_scope": true,
+            "C5_constraints": true,
+            "C5_detail": {
+              "named_tool": {
+                "required": "reconciler",
+                "actual": "reconciler",
+                "met": true
+              }
+            },
+            "C6_fresh": true
+          },
+          "all_passed": true
+        },
+        "needs_delegation": true,
+        "has_delegation": false,
+        "delegation_result": {
+          "found": false,
+          "delegation_grant": null,
+          "fresh": null
+        },
+        "denial_reason": "no_delegation_grant",
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "ops-agent",
+              "action_type": "execute_tool",
+              "resource_class": "reconciler",
+              "scope": "single",
+              "constraints": {
+                "named_tool": "reconciler"
+              },
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {
+                "named_tool": {
+                  "required": "reconciler",
+                  "actual": "reconciler",
+                  "met": true
+                }
+              },
+              "C6_fresh": true
+            },
+            "all_passed": true
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "execute_tool",
+        "normalized": "execute_tool",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "execute_tool",
+          "resource_class": "reconciler",
+          "scope": "single",
+          "constraints": {
+            "named_tool": "reconciler"
+          },
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": []
+    },
+    {
+      "case_id": "B08",
+      "category": "Confused deputy \u2014 chained",
+      "description": "external-requester\u2192analytics-agent\u2192ops-agent; ops-agent holds transmit but request_origin is external-requester with no delegation path",
+      "is_chain": false,
+      "action": {
+        "actor": "ops-agent",
+        "action_type": "transmit_external",
+        "target": "partner-api-endpoint-v2",
+        "target_resource_class": "partner-api",
+        "scope": "single",
+        "request_origin": "external-requester",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": false,
+        "decision": "DENY",
+        "normalized_action_type": "transmit_external",
+        "normalization_changed": false,
+        "original_action_type": "transmit_external",
+        "has_capability": true,
+        "matching_capability": {
+          "grant": {
+            "actor": "ops-agent",
+            "action_type": "transmit_external",
+            "resource_class": "partner-api",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "checks": {
+            "C1_actor": true,
+            "C2_action_type": true,
+            "C3_resource_class": true,
+            "C4_scope": true,
+            "C5_constraints": true,
+            "C5_detail": {},
+            "C6_fresh": true
+          },
+          "all_passed": true
+        },
+        "needs_delegation": true,
+        "has_delegation": false,
+        "delegation_result": {
+          "found": false,
+          "delegation_grant": null,
+          "fresh": null
+        },
+        "denial_reason": "no_delegation_grant",
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "ops-agent",
+              "action_type": "transmit_external",
+              "resource_class": "partner-api",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": true
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "transmit_external",
+        "normalized": "transmit_external",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "analytics-agent",
+          "delegate": "ops-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ]
+    },
+    {
+      "case_id": "B09",
+      "category": "Read\u2192transform\u2192transmit chain \u2014 legit",
+      "description": "3-agent chain: ops reads, analytics generates (delegated), ops transmits. All grants + delegations present.",
+      "is_chain": true,
+      "chain_steps": 3,
+      "step_results": [
+        {
+          "step": 0,
+          "actor": "ops-agent",
+          "action_type": "read_file",
+          "request_origin": "ops-agent",
+          "target": "raw-finance-data.csv",
+          "authorization": {
+            "authorized": true,
+            "decision": "ALLOW",
+            "normalized_action_type": "read_file",
+            "normalization_changed": false,
+            "original_action_type": "read_file",
+            "has_capability": true,
+            "matching_capability": {
+              "grant": {
+                "actor": "ops-agent",
+                "action_type": "read_file",
+                "resource_class": "finance-reports",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "checks": {
+                "C1_actor": true,
+                "C2_action_type": true,
+                "C3_resource_class": true,
+                "C4_scope": true,
+                "C5_constraints": true,
+                "C5_detail": {},
+                "C6_fresh": true
+              },
+              "all_passed": true
+            },
+            "needs_delegation": false,
+            "has_delegation": false,
+            "delegation_result": null,
+            "denial_reason": null,
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": true,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": true
+              },
+              {
+                "grant": {
+                  "actor": "analytics-agent",
+                  "action_type": "generate_report",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              },
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "transmit_external",
+                  "resource_class": "partner-api",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": false,
+                  "C3_resource_class": false,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "read_file",
+            "normalized": "read_file",
+            "changed": false,
+            "expansion_detected": false
+          }
+        },
+        {
+          "step": 1,
+          "actor": "analytics-agent",
+          "action_type": "generate_report",
+          "request_origin": "ops-agent",
+          "target": "partner-summary-aug.pdf",
+          "authorization": {
+            "authorized": true,
+            "decision": "ALLOW",
+            "normalized_action_type": "generate_report",
+            "normalization_changed": false,
+            "original_action_type": "generate_report",
+            "has_capability": true,
+            "matching_capability": {
+              "grant": {
+                "actor": "analytics-agent",
+                "action_type": "generate_report",
+                "resource_class": "finance-reports",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "checks": {
+                "C1_actor": true,
+                "C2_action_type": true,
+                "C3_resource_class": true,
+                "C4_scope": true,
+                "C5_constraints": true,
+                "C5_detail": {},
+                "C6_fresh": true
+              },
+              "all_passed": true
+            },
+            "needs_delegation": true,
+            "has_delegation": true,
+            "delegation_result": {
+              "found": true,
+              "delegation_grant": {
+                "delegator": "ops-agent",
+                "delegate": "analytics-agent",
+                "action_type": "generate_report",
+                "resource_class": "finance-reports",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "fresh": true
+            },
+            "denial_reason": null,
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              },
+              {
+                "grant": {
+                  "actor": "analytics-agent",
+                  "action_type": "generate_report",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": true,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": true
+              },
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "transmit_external",
+                  "resource_class": "partner-api",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": false,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "generate_report",
+            "normalized": "generate_report",
+            "changed": false,
+            "expansion_detected": false
+          }
+        },
+        {
+          "step": 2,
+          "actor": "ops-agent",
+          "action_type": "transmit_external",
+          "request_origin": "ops-agent",
+          "target": "partner-api-endpoint-v2",
+          "authorization": {
+            "authorized": true,
+            "decision": "ALLOW",
+            "normalized_action_type": "transmit_external",
+            "normalization_changed": false,
+            "original_action_type": "transmit_external",
+            "has_capability": true,
+            "matching_capability": {
+              "grant": {
+                "actor": "ops-agent",
+                "action_type": "transmit_external",
+                "resource_class": "partner-api",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "checks": {
+                "C1_actor": true,
+                "C2_action_type": true,
+                "C3_resource_class": true,
+                "C4_scope": true,
+                "C5_constraints": true,
+                "C5_detail": {},
+                "C6_fresh": true
+              },
+              "all_passed": true
+            },
+            "needs_delegation": false,
+            "has_delegation": false,
+            "delegation_result": null,
+            "denial_reason": null,
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": false,
+                  "C3_resource_class": false,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              },
+              {
+                "grant": {
+                  "actor": "analytics-agent",
+                  "action_type": "generate_report",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": false,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              },
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "transmit_external",
+                  "resource_class": "partner-api",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": true,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": true
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "transmit_external",
+            "normalized": "transmit_external",
+            "changed": false,
+            "expansion_detected": false
+          }
+        }
+      ],
+      "chain_decision": "ALLOW",
+      "failed_step": null,
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "read_file",
+          "resource_class": "finance-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        },
+        {
+          "actor": "analytics-agent",
+          "action_type": "generate_report",
+          "resource_class": "finance-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        },
+        {
+          "actor": "ops-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "ops-agent",
+          "delegate": "analytics-agent",
+          "action_type": "generate_report",
+          "resource_class": "finance-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ]
+    },
+    {
+      "case_id": "B10",
+      "category": "Read\u2192transform\u2192transmit chain \u2014 transmit unauthorized",
+      "description": "Same as B09 but ops-agent's transmit grant is missing",
+      "is_chain": true,
+      "chain_steps": 3,
+      "step_results": [
+        {
+          "step": 0,
+          "actor": "ops-agent",
+          "action_type": "read_file",
+          "request_origin": "ops-agent",
+          "target": "raw-finance-data.csv",
+          "authorization": {
+            "authorized": true,
+            "decision": "ALLOW",
+            "normalized_action_type": "read_file",
+            "normalization_changed": false,
+            "original_action_type": "read_file",
+            "has_capability": true,
+            "matching_capability": {
+              "grant": {
+                "actor": "ops-agent",
+                "action_type": "read_file",
+                "resource_class": "finance-reports",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "checks": {
+                "C1_actor": true,
+                "C2_action_type": true,
+                "C3_resource_class": true,
+                "C4_scope": true,
+                "C5_constraints": true,
+                "C5_detail": {},
+                "C6_fresh": true
+              },
+              "all_passed": true
+            },
+            "needs_delegation": false,
+            "has_delegation": false,
+            "delegation_result": null,
+            "denial_reason": null,
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": true,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": true
+              },
+              {
+                "grant": {
+                  "actor": "analytics-agent",
+                  "action_type": "generate_report",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "read_file",
+            "normalized": "read_file",
+            "changed": false,
+            "expansion_detected": false
+          }
+        },
+        {
+          "step": 1,
+          "actor": "analytics-agent",
+          "action_type": "generate_report",
+          "request_origin": "ops-agent",
+          "target": "partner-summary-aug.pdf",
+          "authorization": {
+            "authorized": true,
+            "decision": "ALLOW",
+            "normalized_action_type": "generate_report",
+            "normalization_changed": false,
+            "original_action_type": "generate_report",
+            "has_capability": true,
+            "matching_capability": {
+              "grant": {
+                "actor": "analytics-agent",
+                "action_type": "generate_report",
+                "resource_class": "finance-reports",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "checks": {
+                "C1_actor": true,
+                "C2_action_type": true,
+                "C3_resource_class": true,
+                "C4_scope": true,
+                "C5_constraints": true,
+                "C5_detail": {},
+                "C6_fresh": true
+              },
+              "all_passed": true
+            },
+            "needs_delegation": true,
+            "has_delegation": true,
+            "delegation_result": {
+              "found": true,
+              "delegation_grant": {
+                "delegator": "ops-agent",
+                "delegate": "analytics-agent",
+                "action_type": "generate_report",
+                "resource_class": "finance-reports",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "fresh": true
+            },
+            "denial_reason": null,
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              },
+              {
+                "grant": {
+                  "actor": "analytics-agent",
+                  "action_type": "generate_report",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": true,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": true
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "generate_report",
+            "normalized": "generate_report",
+            "changed": false,
+            "expansion_detected": false
+          }
+        },
+        {
+          "step": 2,
+          "actor": "ops-agent",
+          "action_type": "transmit_external",
+          "request_origin": "ops-agent",
+          "target": "partner-api-endpoint-v2",
+          "authorization": {
+            "authorized": false,
+            "decision": "DENY",
+            "normalized_action_type": "transmit_external",
+            "normalization_changed": false,
+            "original_action_type": "transmit_external",
+            "has_capability": false,
+            "matching_capability": null,
+            "needs_delegation": false,
+            "has_delegation": false,
+            "delegation_result": null,
+            "denial_reason": "no_matching_capability",
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": false,
+                  "C3_resource_class": false,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              },
+              {
+                "grant": {
+                  "actor": "analytics-agent",
+                  "action_type": "generate_report",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": false,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "transmit_external",
+            "normalized": "transmit_external",
+            "changed": false,
+            "expansion_detected": false
+          }
+        }
+      ],
+      "chain_decision": "DENY",
+      "failed_step": 2,
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "read_file",
+          "resource_class": "finance-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        },
+        {
+          "actor": "analytics-agent",
+          "action_type": "generate_report",
+          "resource_class": "finance-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "ops-agent",
+          "delegate": "analytics-agent",
+          "action_type": "generate_report",
+          "resource_class": "finance-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ]
+    },
+    {
+      "case_id": "B11",
+      "category": "Stale grant \u2014 expired capability",
+      "description": "ops-agent holds delete_record grant that expired 1 hour ago",
+      "is_chain": false,
+      "action": {
+        "actor": "ops-agent",
+        "action_type": "delete_record",
+        "target": "job-2024-0891",
+        "target_resource_class": "stale-jobs",
+        "scope": "single",
+        "request_origin": "ops-agent",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": false,
+        "decision": "DENY",
+        "normalized_action_type": "delete_record",
+        "normalization_changed": false,
+        "original_action_type": "delete_record",
+        "has_capability": false,
+        "matching_capability": null,
+        "needs_delegation": false,
+        "has_delegation": false,
+        "delegation_result": null,
+        "denial_reason": "no_matching_capability",
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "ops-agent",
+              "action_type": "delete_record",
+              "resource_class": "stale-jobs",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "2026-08-15T00:00:00Z",
+              "expires_at": "2026-08-16T02:00:00Z"
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": false
+            },
+            "all_passed": false
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "delete_record",
+        "normalized": "delete_record",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "delete_record",
+          "resource_class": "stale-jobs",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "2026-08-15T00:00:00Z",
+          "expires_at": "2026-08-16T02:00:00Z"
+        }
+      ],
+      "delegation_grants": []
+    },
+    {
+      "case_id": "B12",
+      "category": "Stale grant \u2014 fresh capability",
+      "description": "ops-agent holds delete_record grant that expires 1 hour from now",
+      "is_chain": false,
+      "action": {
+        "actor": "ops-agent",
+        "action_type": "delete_record",
+        "target": "job-2024-0891",
+        "target_resource_class": "stale-jobs",
+        "scope": "single",
+        "request_origin": "ops-agent",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": true,
+        "decision": "ALLOW",
+        "normalized_action_type": "delete_record",
+        "normalization_changed": false,
+        "original_action_type": "delete_record",
+        "has_capability": true,
+        "matching_capability": {
+          "grant": {
+            "actor": "ops-agent",
+            "action_type": "delete_record",
+            "resource_class": "stale-jobs",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "2026-08-15T00:00:00Z",
+            "expires_at": "2026-08-16T04:00:00Z"
+          },
+          "checks": {
+            "C1_actor": true,
+            "C2_action_type": true,
+            "C3_resource_class": true,
+            "C4_scope": true,
+            "C5_constraints": true,
+            "C5_detail": {},
+            "C6_fresh": true
+          },
+          "all_passed": true
+        },
+        "needs_delegation": false,
+        "has_delegation": false,
+        "delegation_result": null,
+        "denial_reason": null,
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "ops-agent",
+              "action_type": "delete_record",
+              "resource_class": "stale-jobs",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "2026-08-15T00:00:00Z",
+              "expires_at": "2026-08-16T04:00:00Z"
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": true
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "delete_record",
+        "normalized": "delete_record",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "delete_record",
+          "resource_class": "stale-jobs",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "2026-08-15T00:00:00Z",
+          "expires_at": "2026-08-16T04:00:00Z"
+        }
+      ],
+      "delegation_grants": []
+    },
+    {
+      "case_id": "B13",
+      "category": "Stale delegation \u2014 expired delegation grant",
+      "description": "Delegation grant expired; analytics-agent holds live transmit capability",
+      "is_chain": false,
+      "action": {
+        "actor": "analytics-agent",
+        "action_type": "transmit_external",
+        "target": "partner-api-endpoint-v2",
+        "target_resource_class": "partner-api",
+        "scope": "single",
+        "request_origin": "ops-agent",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": false,
+        "decision": "DENY",
+        "normalized_action_type": "transmit_external",
+        "normalization_changed": false,
+        "original_action_type": "transmit_external",
+        "has_capability": true,
+        "matching_capability": {
+          "grant": {
+            "actor": "analytics-agent",
+            "action_type": "transmit_external",
+            "resource_class": "partner-api",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "checks": {
+            "C1_actor": true,
+            "C2_action_type": true,
+            "C3_resource_class": true,
+            "C4_scope": true,
+            "C5_constraints": true,
+            "C5_detail": {},
+            "C6_fresh": true
+          },
+          "all_passed": true
+        },
+        "needs_delegation": true,
+        "has_delegation": false,
+        "delegation_result": {
+          "found": false,
+          "delegation_grant": null,
+          "fresh": null
+        },
+        "denial_reason": "no_delegation_grant",
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "analytics-agent",
+              "action_type": "transmit_external",
+              "resource_class": "partner-api",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": true
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "transmit_external",
+        "normalized": "transmit_external",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "analytics-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "ops-agent",
+          "delegate": "analytics-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "2026-08-14T00:00:00Z",
+          "expires_at": "2026-08-16T02:00:00Z"
+        }
+      ]
+    },
+    {
+      "case_id": "B14",
+      "category": "Capability reuse \u2014 same grant, second action",
+      "description": "Two sequential reads on same class; single-scope grant is non-consumable",
+      "is_chain": true,
+      "chain_steps": 2,
+      "step_results": [
+        {
+          "step": 0,
+          "actor": "ops-agent",
+          "action_type": "read_file",
+          "request_origin": "ops-agent",
+          "target": "report-q1.xlsx",
+          "authorization": {
+            "authorized": true,
+            "decision": "ALLOW",
+            "normalized_action_type": "read_file",
+            "normalization_changed": false,
+            "original_action_type": "read_file",
+            "has_capability": true,
+            "matching_capability": {
+              "grant": {
+                "actor": "ops-agent",
+                "action_type": "read_file",
+                "resource_class": "finance-reports",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "checks": {
+                "C1_actor": true,
+                "C2_action_type": true,
+                "C3_resource_class": true,
+                "C4_scope": true,
+                "C5_constraints": true,
+                "C5_detail": {},
+                "C6_fresh": true
+              },
+              "all_passed": true
+            },
+            "needs_delegation": false,
+            "has_delegation": false,
+            "delegation_result": null,
+            "denial_reason": null,
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": true,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": true
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "read_file",
+            "normalized": "read_file",
+            "changed": false,
+            "expansion_detected": false
+          }
+        },
+        {
+          "step": 1,
+          "actor": "ops-agent",
+          "action_type": "read_file",
+          "request_origin": "ops-agent",
+          "target": "report-q2.xlsx",
+          "authorization": {
+            "authorized": true,
+            "decision": "ALLOW",
+            "normalized_action_type": "read_file",
+            "normalization_changed": false,
+            "original_action_type": "read_file",
+            "has_capability": true,
+            "matching_capability": {
+              "grant": {
+                "actor": "ops-agent",
+                "action_type": "read_file",
+                "resource_class": "finance-reports",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "checks": {
+                "C1_actor": true,
+                "C2_action_type": true,
+                "C3_resource_class": true,
+                "C4_scope": true,
+                "C5_constraints": true,
+                "C5_detail": {},
+                "C6_fresh": true
+              },
+              "all_passed": true
+            },
+            "needs_delegation": false,
+            "has_delegation": false,
+            "delegation_result": null,
+            "denial_reason": null,
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "finance-reports",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": true,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": true
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "read_file",
+            "normalized": "read_file",
+            "changed": false,
+            "expansion_detected": false
+          }
+        }
+      ],
+      "chain_decision": "ALLOW",
+      "failed_step": null,
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "read_file",
+          "resource_class": "finance-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": []
+    },
+    {
+      "case_id": "B15",
+      "category": "Scope intersection attack",
+      "description": "Holds write:ops-config + read:finance-reports; attempts write:finance-reports",
+      "is_chain": false,
+      "action": {
+        "actor": "ops-agent",
+        "action_type": "write_file",
+        "target": "quarterly-earnings-q2.xlsx",
+        "target_resource_class": "finance-reports",
+        "scope": "single",
+        "request_origin": "ops-agent",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": false,
+        "decision": "DENY",
+        "normalized_action_type": "write_file",
+        "normalization_changed": false,
+        "original_action_type": "write_file",
+        "has_capability": false,
+        "matching_capability": null,
+        "needs_delegation": false,
+        "has_delegation": false,
+        "delegation_result": null,
+        "denial_reason": "no_matching_capability",
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "ops-agent",
+              "action_type": "write_file",
+              "resource_class": "ops-config",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": false,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": false
+          },
+          {
+            "grant": {
+              "actor": "ops-agent",
+              "action_type": "read_file",
+              "resource_class": "finance-reports",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": false,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": false
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "write_file",
+        "normalized": "write_file",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "write_file",
+          "resource_class": "ops-config",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        },
+        {
+          "actor": "ops-agent",
+          "action_type": "read_file",
+          "resource_class": "finance-reports",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": []
+    },
+    {
+      "case_id": "B16",
+      "category": "Privilege laundering \u2014 delegation chain",
+      "description": "external-requester delegates to analytics, analytics delegates to ops; request_origin is external-requester with no valid delegation path to ops",
+      "is_chain": false,
+      "action": {
+        "actor": "ops-agent",
+        "action_type": "transmit_external",
+        "target": "partner-api-endpoint-v2",
+        "target_resource_class": "partner-api",
+        "scope": "single",
+        "request_origin": "external-requester",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": false,
+        "decision": "DENY",
+        "normalized_action_type": "transmit_external",
+        "normalization_changed": false,
+        "original_action_type": "transmit_external",
+        "has_capability": true,
+        "matching_capability": {
+          "grant": {
+            "actor": "ops-agent",
+            "action_type": "transmit_external",
+            "resource_class": "partner-api",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "checks": {
+            "C1_actor": true,
+            "C2_action_type": true,
+            "C3_resource_class": true,
+            "C4_scope": true,
+            "C5_constraints": true,
+            "C5_detail": {},
+            "C6_fresh": true
+          },
+          "all_passed": true
+        },
+        "needs_delegation": true,
+        "has_delegation": false,
+        "delegation_result": {
+          "found": false,
+          "delegation_grant": null,
+          "fresh": null
+        },
+        "denial_reason": "no_delegation_grant",
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "ops-agent",
+              "action_type": "transmit_external",
+              "resource_class": "partner-api",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": true
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "transmit_external",
+        "normalized": "transmit_external",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "DENY",
+      "actual": "DENY",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "external-requester",
+          "delegate": "analytics-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        },
+        {
+          "delegator": "analytics-agent",
+          "delegate": "ops-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ]
+    },
+    {
+      "case_id": "B17",
+      "category": "Valid multi-agent workflow (3 agents)",
+      "description": "ops reads, analytics generates (delegated by ops), audit logs (delegated by analytics). All grants + delegations.",
+      "is_chain": true,
+      "chain_steps": 3,
+      "step_results": [
+        {
+          "step": 0,
+          "actor": "ops-agent",
+          "action_type": "read_file",
+          "request_origin": "ops-agent",
+          "target": "pipeline-config.yaml",
+          "authorization": {
+            "authorized": true,
+            "decision": "ALLOW",
+            "normalized_action_type": "read_file",
+            "normalization_changed": false,
+            "original_action_type": "read_file",
+            "has_capability": true,
+            "matching_capability": {
+              "grant": {
+                "actor": "ops-agent",
+                "action_type": "read_file",
+                "resource_class": "ops-config",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "checks": {
+                "C1_actor": true,
+                "C2_action_type": true,
+                "C3_resource_class": true,
+                "C4_scope": true,
+                "C5_constraints": true,
+                "C5_detail": {},
+                "C6_fresh": true
+              },
+              "all_passed": true
+            },
+            "needs_delegation": false,
+            "has_delegation": false,
+            "delegation_result": null,
+            "denial_reason": null,
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "ops-config",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": true,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": true
+              },
+              {
+                "grant": {
+                  "actor": "analytics-agent",
+                  "action_type": "generate_report",
+                  "resource_class": "ops-config",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              },
+              {
+                "grant": {
+                  "actor": "audit-agent",
+                  "action_type": "write_file",
+                  "resource_class": "audit-logs",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": false,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "read_file",
+            "normalized": "read_file",
+            "changed": false,
+            "expansion_detected": false
+          }
+        },
+        {
+          "step": 1,
+          "actor": "analytics-agent",
+          "action_type": "generate_report",
+          "request_origin": "ops-agent",
+          "target": "config-change-report.pdf",
+          "authorization": {
+            "authorized": true,
+            "decision": "ALLOW",
+            "normalized_action_type": "generate_report",
+            "normalization_changed": false,
+            "original_action_type": "generate_report",
+            "has_capability": true,
+            "matching_capability": {
+              "grant": {
+                "actor": "analytics-agent",
+                "action_type": "generate_report",
+                "resource_class": "ops-config",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "checks": {
+                "C1_actor": true,
+                "C2_action_type": true,
+                "C3_resource_class": true,
+                "C4_scope": true,
+                "C5_constraints": true,
+                "C5_detail": {},
+                "C6_fresh": true
+              },
+              "all_passed": true
+            },
+            "needs_delegation": true,
+            "has_delegation": true,
+            "delegation_result": {
+              "found": true,
+              "delegation_grant": {
+                "delegator": "ops-agent",
+                "delegate": "analytics-agent",
+                "action_type": "generate_report",
+                "resource_class": "ops-config",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "fresh": true
+            },
+            "denial_reason": null,
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "ops-config",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              },
+              {
+                "grant": {
+                  "actor": "analytics-agent",
+                  "action_type": "generate_report",
+                  "resource_class": "ops-config",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": true,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": true
+              },
+              {
+                "grant": {
+                  "actor": "audit-agent",
+                  "action_type": "write_file",
+                  "resource_class": "audit-logs",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": false,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "generate_report",
+            "normalized": "generate_report",
+            "changed": false,
+            "expansion_detected": false
+          }
+        },
+        {
+          "step": 2,
+          "actor": "audit-agent",
+          "action_type": "write_file",
+          "request_origin": "analytics-agent",
+          "target": "audit-log-aug-2026.jsonl",
+          "authorization": {
+            "authorized": true,
+            "decision": "ALLOW",
+            "normalized_action_type": "write_file",
+            "normalization_changed": false,
+            "original_action_type": "write_file",
+            "has_capability": true,
+            "matching_capability": {
+              "grant": {
+                "actor": "audit-agent",
+                "action_type": "write_file",
+                "resource_class": "audit-logs",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "checks": {
+                "C1_actor": true,
+                "C2_action_type": true,
+                "C3_resource_class": true,
+                "C4_scope": true,
+                "C5_constraints": true,
+                "C5_detail": {},
+                "C6_fresh": true
+              },
+              "all_passed": true
+            },
+            "needs_delegation": true,
+            "has_delegation": true,
+            "delegation_result": {
+              "found": true,
+              "delegation_grant": {
+                "delegator": "analytics-agent",
+                "delegate": "audit-agent",
+                "action_type": "write_file",
+                "resource_class": "audit-logs",
+                "scope": "single",
+                "constraints": {},
+                "issued_at": "",
+                "expires_at": ""
+              },
+              "fresh": true
+            },
+            "denial_reason": null,
+            "capability_audits": [
+              {
+                "grant": {
+                  "actor": "ops-agent",
+                  "action_type": "read_file",
+                  "resource_class": "ops-config",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": false,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              },
+              {
+                "grant": {
+                  "actor": "analytics-agent",
+                  "action_type": "generate_report",
+                  "resource_class": "ops-config",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": false,
+                  "C2_action_type": false,
+                  "C3_resource_class": false,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": false
+              },
+              {
+                "grant": {
+                  "actor": "audit-agent",
+                  "action_type": "write_file",
+                  "resource_class": "audit-logs",
+                  "scope": "single",
+                  "constraints": {},
+                  "issued_at": "",
+                  "expires_at": ""
+                },
+                "checks": {
+                  "C1_actor": true,
+                  "C2_action_type": true,
+                  "C3_resource_class": true,
+                  "C4_scope": true,
+                  "C5_constraints": true,
+                  "C5_detail": {},
+                  "C6_fresh": true
+                },
+                "all_passed": true
+              }
+            ]
+          },
+          "privilege_expansion_audit": {
+            "original": "write_file",
+            "normalized": "write_file",
+            "changed": false,
+            "expansion_detected": false
+          }
+        }
+      ],
+      "chain_decision": "ALLOW",
+      "failed_step": null,
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "ops-agent",
+          "action_type": "read_file",
+          "resource_class": "ops-config",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        },
+        {
+          "actor": "analytics-agent",
+          "action_type": "generate_report",
+          "resource_class": "ops-config",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        },
+        {
+          "actor": "audit-agent",
+          "action_type": "write_file",
+          "resource_class": "audit-logs",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "ops-agent",
+          "delegate": "analytics-agent",
+          "action_type": "generate_report",
+          "resource_class": "ops-config",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        },
+        {
+          "delegator": "analytics-agent",
+          "delegate": "audit-agent",
+          "action_type": "write_file",
+          "resource_class": "audit-logs",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ]
+    },
+    {
+      "case_id": "B18",
+      "category": "Delegation does not transfer \u2014 delegate acts alone",
+      "description": "analytics-agent acts on own behalf (self-originated); holds transmit capability",
+      "is_chain": false,
+      "action": {
+        "actor": "analytics-agent",
+        "action_type": "transmit_external",
+        "target": "partner-api-endpoint-v2",
+        "target_resource_class": "partner-api",
+        "scope": "single",
+        "request_origin": "analytics-agent",
+        "metadata": {}
+      },
+      "authorization": {
+        "authorized": true,
+        "decision": "ALLOW",
+        "normalized_action_type": "transmit_external",
+        "normalization_changed": false,
+        "original_action_type": "transmit_external",
+        "has_capability": true,
+        "matching_capability": {
+          "grant": {
+            "actor": "analytics-agent",
+            "action_type": "transmit_external",
+            "resource_class": "partner-api",
+            "scope": "single",
+            "constraints": {},
+            "issued_at": "",
+            "expires_at": ""
+          },
+          "checks": {
+            "C1_actor": true,
+            "C2_action_type": true,
+            "C3_resource_class": true,
+            "C4_scope": true,
+            "C5_constraints": true,
+            "C5_detail": {},
+            "C6_fresh": true
+          },
+          "all_passed": true
+        },
+        "needs_delegation": false,
+        "has_delegation": false,
+        "delegation_result": null,
+        "denial_reason": null,
+        "capability_audits": [
+          {
+            "grant": {
+              "actor": "analytics-agent",
+              "action_type": "transmit_external",
+              "resource_class": "partner-api",
+              "scope": "single",
+              "constraints": {},
+              "issued_at": "",
+              "expires_at": ""
+            },
+            "checks": {
+              "C1_actor": true,
+              "C2_action_type": true,
+              "C3_resource_class": true,
+              "C4_scope": true,
+              "C5_constraints": true,
+              "C5_detail": {},
+              "C6_fresh": true
+            },
+            "all_passed": true
+          }
+        ]
+      },
+      "privilege_expansion_audit": {
+        "original": "transmit_external",
+        "normalized": "transmit_external",
+        "changed": false,
+        "expansion_detected": false
+      },
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "correct": true,
+      "privilege_expansion_detected": false,
+      "capability_grants": [
+        {
+          "actor": "analytics-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ],
+      "delegation_grants": [
+        {
+          "delegator": "ops-agent",
+          "delegate": "analytics-agent",
+          "action_type": "transmit_external",
+          "resource_class": "partner-api",
+          "scope": "single",
+          "constraints": {},
+          "issued_at": "",
+          "expires_at": ""
+        }
+      ]
+    }
+  ]
+}

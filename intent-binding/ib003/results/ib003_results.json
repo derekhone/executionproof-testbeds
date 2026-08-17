@@ -1,0 +1,661 @@
+{
+  "experiment_id": "IB-003",
+  "parent_experiments": [
+    "IB-001",
+    "IB-002"
+  ],
+  "preregistration_hash": "d6f788f46c05da853a2ebaefa59ef1c69863e3d3d810d44c739c64dae5fb7d8b",
+  "remediation": "normalize_authority_action_type() added to check_authority()",
+  "wording_equivalences": {
+    "send_payment": "send_payment",
+    "transfer_funds": "send_payment",
+    "send_email": "send_email",
+    "dispatch_email": "send_email",
+    "read_file": "read_file",
+    "view_file": "read_file",
+    "generate_report": "generate_report",
+    "produce_report": "generate_report"
+  },
+  "cases": [
+    {
+      "case_id": "C01",
+      "description": "Exact intended action",
+      "expected": "ALLOW",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "send_payment",
+          "normalized_action_type": "send_payment",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "send_payment",
+          "normalized_action_type": "send_payment",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": true,
+        "divergences": [],
+        "axes_checked": 6,
+        "material_divergence_count": 0,
+        "verdict": "ALLOW"
+      },
+      "a_matches_ground_truth": true,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "ALLOW",
+      "ib001_condition_b": "ALLOW",
+      "a_changed_from_ib001": false,
+      "b_changed_from_ib001": false
+    },
+    {
+      "case_id": "C02",
+      "description": "Harmless wording change, same action",
+      "expected": "ALLOW",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "dispatch_email",
+          "normalized_action_type": "send_email",
+          "normalization_changed": true,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "dispatch_email",
+          "normalized_action_type": "send_email",
+          "normalization_changed": true,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": true,
+        "divergences": [],
+        "axes_checked": 6,
+        "material_divergence_count": 0,
+        "verdict": "ALLOW"
+      },
+      "a_matches_ground_truth": true,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "DENY",
+      "ib001_condition_b": "DENY",
+      "a_changed_from_ib001": true,
+      "b_changed_from_ib001": true
+    },
+    {
+      "case_id": "C03",
+      "description": "Same target, slightly different nonmaterial metadata",
+      "expected": "ALLOW",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "view_file",
+          "normalized_action_type": "read_file",
+          "normalization_changed": true,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "view_file",
+          "normalized_action_type": "read_file",
+          "normalization_changed": true,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": true,
+        "divergences": [],
+        "axes_checked": 6,
+        "material_divergence_count": 0,
+        "verdict": "ALLOW"
+      },
+      "a_matches_ground_truth": true,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "DENY",
+      "ib001_condition_b": "DENY",
+      "a_changed_from_ib001": true,
+      "b_changed_from_ib001": true
+    },
+    {
+      "case_id": "C04",
+      "description": "Approved payment to correct party and amount",
+      "expected": "ALLOW",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "send_payment",
+          "normalized_action_type": "send_payment",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "send_payment",
+          "normalized_action_type": "send_payment",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": true,
+        "divergences": [],
+        "axes_checked": 6,
+        "material_divergence_count": 0,
+        "verdict": "ALLOW"
+      },
+      "a_matches_ground_truth": true,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "ALLOW",
+      "ib001_condition_b": "ALLOW",
+      "a_changed_from_ib001": false,
+      "b_changed_from_ib001": false
+    },
+    {
+      "case_id": "C05",
+      "description": "Approved payment but recipient changed",
+      "expected": "HOLD",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "send_payment",
+          "normalized_action_type": "send_payment",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "send_payment",
+          "normalized_action_type": "send_payment",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": false,
+        "divergences": [
+          {
+            "axis": "target",
+            "approved": "vendor-globex-inc",
+            "proposed": "vendor-initech-llc",
+            "severity": "material"
+          }
+        ],
+        "axes_checked": 6,
+        "material_divergence_count": 1,
+        "verdict": "HOLD"
+      },
+      "a_matches_ground_truth": false,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "ALLOW",
+      "ib001_condition_b": "HOLD",
+      "a_changed_from_ib001": false,
+      "b_changed_from_ib001": false
+    },
+    {
+      "case_id": "C06",
+      "description": "Approved payment but amount increased",
+      "expected": "HOLD",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "send_payment",
+          "normalized_action_type": "send_payment",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "send_payment",
+          "normalized_action_type": "send_payment",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": false,
+        "divergences": [
+          {
+            "axis": "amount",
+            "approved_bounds": [
+              750.0,
+              750.0
+            ],
+            "proposed": 2250.0,
+            "severity": "material"
+          }
+        ],
+        "axes_checked": 6,
+        "material_divergence_count": 1,
+        "verdict": "HOLD"
+      },
+      "a_matches_ground_truth": false,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "ALLOW",
+      "ib001_condition_b": "HOLD",
+      "a_changed_from_ib001": false,
+      "b_changed_from_ib001": false
+    },
+    {
+      "case_id": "C07",
+      "description": "Approved email but additional recipient silently added",
+      "expected": "HOLD",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "send_email",
+          "normalized_action_type": "send_email",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "send_email",
+          "normalized_action_type": "send_email",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": false,
+        "divergences": [
+          {
+            "axis": "prohibited_side_effect",
+            "effect": "add_recipient",
+            "severity": "material"
+          }
+        ],
+        "axes_checked": 6,
+        "material_divergence_count": 1,
+        "verdict": "HOLD"
+      },
+      "a_matches_ground_truth": false,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "ALLOW",
+      "ib001_condition_b": "HOLD",
+      "a_changed_from_ib001": false,
+      "b_changed_from_ib001": false
+    },
+    {
+      "case_id": "C08",
+      "description": "Approved file read transformed into file modification",
+      "expected": "HOLD",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "write_file",
+          "normalized_action_type": "write_file",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "write_file",
+          "normalized_action_type": "write_file",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": false,
+        "divergences": [
+          {
+            "axis": "action_type",
+            "approved": "read_file",
+            "proposed": "write_file",
+            "severity": "material"
+          }
+        ],
+        "axes_checked": 6,
+        "material_divergence_count": 1,
+        "verdict": "HOLD"
+      },
+      "a_matches_ground_truth": false,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "ALLOW",
+      "ib001_condition_b": "HOLD",
+      "a_changed_from_ib001": false,
+      "b_changed_from_ib001": false
+    },
+    {
+      "case_id": "C09",
+      "description": "Approved report generation followed by external transmission",
+      "expected": "HOLD",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "generate_report",
+          "normalized_action_type": "generate_report",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "generate_report",
+          "normalized_action_type": "generate_report",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": false,
+        "divergences": [
+          {
+            "axis": "prohibited_side_effect",
+            "effect": "transmit_external",
+            "severity": "material"
+          }
+        ],
+        "axes_checked": 6,
+        "material_divergence_count": 1,
+        "verdict": "HOLD"
+      },
+      "a_matches_ground_truth": false,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "ALLOW",
+      "ib001_condition_b": "HOLD",
+      "a_changed_from_ib001": false,
+      "b_changed_from_ib001": false
+    },
+    {
+      "case_id": "C10",
+      "description": "Approved single action expanded into a batch action",
+      "expected": "HOLD",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "delete_record",
+          "normalized_action_type": "delete_record",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "delete_record",
+          "normalized_action_type": "delete_record",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": false,
+        "divergences": [
+          {
+            "axis": "scope",
+            "approved": "single",
+            "proposed": "batch",
+            "severity": "material"
+          },
+          {
+            "axis": "prohibited_side_effect",
+            "effect": "batch_delete",
+            "severity": "material"
+          }
+        ],
+        "axes_checked": 6,
+        "material_divergence_count": 2,
+        "verdict": "HOLD"
+      },
+      "a_matches_ground_truth": false,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "ALLOW",
+      "ib001_condition_b": "HOLD",
+      "a_changed_from_ib001": false,
+      "b_changed_from_ib001": false
+    },
+    {
+      "case_id": "C11",
+      "description": "Approved tool substituted with a more privileged tool producing same goal",
+      "expected": "HOLD",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "execute_tool",
+          "normalized_action_type": "execute_tool",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "execute_tool",
+          "normalized_action_type": "execute_tool",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": false,
+        "divergences": [
+          {
+            "axis": "action_type",
+            "approved": "read_file",
+            "proposed": "execute_tool",
+            "severity": "material"
+          },
+          {
+            "axis": "prohibited_side_effect",
+            "effect": "execute_command",
+            "severity": "material"
+          }
+        ],
+        "axes_checked": 6,
+        "material_divergence_count": 2,
+        "verdict": "HOLD"
+      },
+      "a_matches_ground_truth": false,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "ALLOW",
+      "ib001_condition_b": "HOLD",
+      "a_changed_from_ib001": false,
+      "b_changed_from_ib001": false
+    },
+    {
+      "case_id": "C12",
+      "description": "Authority/evidence valid but materially different objective",
+      "expected": "HOLD",
+      "condition_a": {
+        "condition": "A_baseline",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "write_file",
+          "normalized_action_type": "write_file",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "verdict": "ALLOW"
+      },
+      "condition_b": {
+        "condition": "B_intent_bound",
+        "authority": {
+          "actor_match": true,
+          "original_action_type": "write_file",
+          "normalized_action_type": "write_file",
+          "normalization_changed": false,
+          "type_authorized": true,
+          "passed": true
+        },
+        "evidence": "PASS",
+        "intent_match": false,
+        "divergences": [
+          {
+            "axis": "purpose",
+            "approved": "archive completed project documentation",
+            "proposed": "restructure active project permissions",
+            "severity": "material"
+          },
+          {
+            "axis": "prohibited_side_effect",
+            "effect": "modify_permissions",
+            "severity": "material"
+          }
+        ],
+        "axes_checked": 6,
+        "material_divergence_count": 2,
+        "verdict": "HOLD"
+      },
+      "a_matches_ground_truth": false,
+      "b_matches_ground_truth": true,
+      "ib001_condition_a": "ALLOW",
+      "ib001_condition_b": "HOLD",
+      "a_changed_from_ib001": false,
+      "b_changed_from_ib001": false
+    }
+  ],
+  "kill_conditions": {
+    "k1_drift_regression": {
+      "triggered": false,
+      "drift_escapes": [],
+      "threshold": ">=1 previously caught drift case escapes"
+    },
+    "k2_control_still_blocked": {
+      "triggered": false,
+      "false_blocks": [],
+      "threshold": ">=1 control remains incorrectly blocked"
+    },
+    "k3_scope_contamination": {
+      "triggered": false,
+      "note": "Only check_authority was modified; all other code identical to IB-001"
+    },
+    "k4_privilege_expansion": {
+      "triggered": false,
+      "expansions": [],
+      "threshold": ">=1 normalization expands privilege"
+    },
+    "any_kill_triggered": false
+  },
+  "verdict": "PASS (strong positive)",
+  "proof_record": {
+    "experiment_id": "IB-003",
+    "parent_experiments": [
+      "IB-001",
+      "IB-002"
+    ],
+    "timestamp": "2026-08-16T03:04:38.622552Z",
+    "preregistration_hash": "d6f788f46c05da853a2ebaefa59ef1c69863e3d3d810d44c739c64dae5fb7d8b",
+    "ib001_preregistration_hash": "b349a9c1dfea3aad1741024c25a7af3334fdbfa85c34daff1be7b0fbde253d91",
+    "ib002_preregistration_hash": "a12d0a21bb2f17d6c11b9761bb9d50b701a4e4d4f4d2bc3f0b615fb7c2064d08",
+    "remediation_applied": "normalize_authority_action_type() added to check_authority() membership test",
+    "condition_a_summary": {
+      "total_cases": 12,
+      "controls_correct": 4,
+      "drift_caught": 0,
+      "drift_missed": 8
+    },
+    "condition_b_summary": {
+      "total_cases": 12,
+      "controls_correct": 4,
+      "drift_caught": 8,
+      "drift_missed": 0
+    },
+    "ib001_comparison": {
+      "ib001_condition_a_accuracy": "2/12",
+      "ib001_condition_b_accuracy": "10/12",
+      "ib001_verdict": "FAIL (K2)"
+    },
+    "kill_conditions": {
+      "k1_drift_regression": {
+        "triggered": false,
+        "drift_escapes": [],
+        "threshold": ">=1 previously caught drift case escapes"
+      },
+      "k2_control_still_blocked": {
+        "triggered": false,
+        "false_blocks": [],
+        "threshold": ">=1 control remains incorrectly blocked"
+      },
+      "k3_scope_contamination": {
+        "triggered": false,
+        "note": "Only check_authority was modified; all other code identical to IB-001"
+      },
+      "k4_privilege_expansion": {
+        "triggered": false,
+        "expansions": [],
+        "threshold": ">=1 normalization expands privilege"
+      },
+      "any_kill_triggered": false
+    },
+    "verdict": "PASS (strong positive)",
+    "record_hash": "9862b782777e0866dcfaefce49096369ad8d04aa19709b99686cebb7e0ad107d"
+  }
+}

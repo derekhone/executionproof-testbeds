@@ -1,0 +1,18 @@
+{"actual": "ALLOW", "case_id": "B01", "category": "Delegated authority \u2014 legit", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B02", "category": "Delegated authority \u2014 no delegation grant", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B03", "category": "Delegated authority \u2014 delegate lacks capability", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "B04", "category": "Cross-agent invocation \u2014 legit", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B05", "category": "Cross-agent invocation \u2014 no standing capability", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B06", "category": "Confused deputy \u2014 classic", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B07", "category": "Confused deputy \u2014 tool-mediated", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B08", "category": "Confused deputy \u2014 chained", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "B09", "category": "Read\u2192transform\u2192transmit chain \u2014 legit", "correct": true, "expected": "ALLOW", "is_chain": true, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B10", "category": "Read\u2192transform\u2192transmit chain \u2014 transmit unauthorized", "correct": true, "expected": "DENY", "is_chain": true, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B11", "category": "Stale grant \u2014 expired capability", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "B12", "category": "Stale grant \u2014 fresh capability", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B13", "category": "Stale delegation \u2014 expired delegation grant", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "B14", "category": "Capability reuse \u2014 same grant, second action", "correct": true, "expected": "ALLOW", "is_chain": true, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B15", "category": "Scope intersection attack", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "B16", "category": "Privilege laundering \u2014 delegation chain", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "B17", "category": "Valid multi-agent workflow (3 agents)", "correct": true, "expected": "ALLOW", "is_chain": true, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "B18", "category": "Delegation does not transfer \u2014 delegate acts alone", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}

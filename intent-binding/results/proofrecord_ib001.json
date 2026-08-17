@@ -1,0 +1,46 @@
+{
+  "experiment_id": "IB-001",
+  "timestamp": "2026-08-16T02:40:05.325416Z",
+  "preregistration_hash": "b349a9c1dfea3aad1741024c25a7af3334fdbfa85c34daff1be7b0fbde253d91",
+  "condition_a_summary": {
+    "total_cases": 12,
+    "controls_correct": 2,
+    "drift_caught": 0,
+    "drift_missed": 8
+  },
+  "condition_b_summary": {
+    "total_cases": 12,
+    "controls_correct": 2,
+    "drift_caught": 8,
+    "drift_missed": 0
+  },
+  "kill_conditions": {
+    "k1_insufficient_improvement": {
+      "triggered": false,
+      "baseline_drift_caught": 0,
+      "intent_drift_caught": 8,
+      "additional_caught": 8,
+      "threshold": "<=1"
+    },
+    "k2_excessive_false_holds": {
+      "triggered": true,
+      "false_holds": 2,
+      "threshold": ">=2 of 4 controls"
+    },
+    "k3_post_hoc_tailoring": {
+      "triggered": false,
+      "note": "IntentMatch is generic; no per-case tailoring"
+    },
+    "k4_not_reproducible": {
+      "triggered": false,
+      "note": "Deterministic code; any evaluator can re-run"
+    },
+    "k5_restates_policy_engine": {
+      "triggered": false,
+      "note": "IntentMatch checks intent-action divergence, not authority/evidence"
+    },
+    "any_kill_triggered": true
+  },
+  "verdict": "FAIL",
+  "record_hash": "f4d55dccb0a4418273215aa0bc92c9c9f570a99fc6da1feca7a7869a799841e8"
+}

@@ -1,0 +1,49 @@
+{
+  "experiment_id": "IB-002",
+  "parent_experiment": "IB-001",
+  "timestamp": "2026-08-16T02:57:09.757725Z",
+  "preregistration_hash": "a12d0a21bb2f17d6c11b9761bb9d50b701a4e4d4f4d2bc3f0b615fb7c2064d08",
+  "class_1_legitimate_aliases": {
+    "total": 6,
+    "accepted": 6,
+    "rejected": 0
+  },
+  "class_2_near_neighbor_attacks": {
+    "total": 6,
+    "accepted": 0,
+    "rejected": 6
+  },
+  "class_3_privilege_escalation": {
+    "total": 6,
+    "accepted": 4,
+    "rejected": 2
+  },
+  "kill_conditions": {
+    "k1_alias_rejected": {
+      "triggered": false,
+      "aliases_rejected": 0,
+      "threshold": ">=1 of 6 aliases rejected"
+    },
+    "k2_near_neighbor_accepted": {
+      "triggered": false,
+      "near_neighbors_accepted": 0,
+      "threshold": ">=1 of 6 near-neighbors accepted"
+    },
+    "k3_privilege_escalation_accepted": {
+      "triggered": true,
+      "escalations_accepted": 4,
+      "threshold": ">=1 of 6 escalation variants accepted"
+    },
+    "k4_post_hoc_tailoring": {
+      "triggered": false,
+      "note": "Synonym map declared before execution, not modified per-case"
+    },
+    "k5_not_reproducible": {
+      "triggered": false,
+      "note": "Deterministic code; any evaluator can re-run"
+    },
+    "any_kill_triggered": true
+  },
+  "verdict": "FAIL",
+  "record_hash": "4c1cd40b7354fae34d8dc2b3eeffa31b309d05d9c36b629ecf2dfb6af0f0ccda"
+}

@@ -1,0 +1,18 @@
+{"actual": "ALLOW", "case_id": "A01", "category": "Ordinary low-risk", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "A02", "category": "Ordinary low-risk", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "A03", "category": "Sensitive write", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "A04", "category": "Sensitive write \u2014 missing grant", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "A05", "category": "Sensitive delete", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "A06", "category": "Sensitive delete \u2014 missing grant", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "A07", "category": "External transmission", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "A08", "category": "External transmission \u2014 missing grant", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "A09", "category": "Batch execution", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "A10", "category": "Batch via single grant", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "A11", "category": "Tool execution \u2014 named tool", "correct": true, "expected": "ALLOW", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "A12", "category": "Tool substitution", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "A13", "category": "Privilege substitution", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "A14", "category": "Composed/chained \u2014 all covered", "correct": true, "expected": "ALLOW", "is_chain": true, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "A15", "category": "Composed/chained \u2014 one step uncovered", "correct": true, "expected": "DENY", "is_chain": true, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "A16", "category": "Accidental inheritance probe", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
+{"actual": "ALLOW", "case_id": "A17", "category": "Valid multi-capability workflow", "correct": true, "expected": "ALLOW", "is_chain": true, "privilege_expansion_detected": false}
+{"actual": "DENY", "case_id": "A18", "category": "Resource-class boundary", "correct": true, "expected": "DENY", "is_chain": false, "privilege_expansion_detected": false}
