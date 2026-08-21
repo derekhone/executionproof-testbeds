@@ -1,7 +1,7 @@
 # Remnant Fieldworks Inc. — Master Summary
 ## Science Research · Patents · Trademarks
 
-**Prepared:** 2026-07-18 · **Maintained by:** Remnant Fieldworks Inc. · **Sole inventor/author:** Derek Adam Hone
+**Prepared:** 2026-07-18 · **Updated:** 2026-08-21 (added program-wide canonical totals — v29) · **Maintained by:** Remnant Fieldworks Inc. · **Sole inventor/author:** Derek Adam Hone
 **Team:** Derek Hone (Founder) + Adith Kadam Ramesh (Systems Engineer)
 **Contact:** derek@ownerremnantfieldworks.com
 
@@ -22,7 +22,66 @@ Three reinforcing pillars govern the whole program:
 
 # PART I — SCIENCE RESEARCH
 
-RF's public scientific corpus spans **five research programs**, all preregistered, executed, and published with raw-data provenance (GitHub + Zenodo DOI, CC BY 4.0).
+## Program-wide canonical totals (as of 2026-08-21)
+
+> **Scope note:** the figures in this box are **program-wide** across **all** RF
+> research families and public repositories (canonical v29). The detailed
+> program-by-program sections that follow in Part I describe a **subset** of these
+> families (ARK, WITNESS, BELLWETHER, CHRONO, and the closed UIP precursor); the
+> remaining canonical families are captured in the per-family table below and are
+> documented in their own repositories. Both scopes are traceable.
+
+**106 design-before-execution experiments** across **12 research families** and
+**16 public GitHub repositories.**
+
+- **Verdicts (experiment-ID tier):** **95 PASS · 8 preserved FAIL · 3 special status.**
+- **4 validated FAIL→PASS remediations** — each a corrected re-test whose passing
+  version is counted among the 95 PASS, while the original honest FAIL remains
+  preserved among the 8. A FAIL is never retconned into a PASS (e.g. ARK-445→445b,
+  ARK-455→455b).
+- **Publication / IP provenance:** **88 published Zenodo depositions · 56 USPTO
+  filings (48 provisional + 8 nonprovisional).** IBM Quantum hardware access operational.
+
+| Family | Range | Experiments |
+|---|---|---|
+| ARK | 441–503 | 65 |
+| WITNESS | 1–4 | 4 |
+| BELLWETHER | 1–3 | 3 |
+| CHRONO | 1 | 1 |
+| OMNI | 1 | 1 |
+| TRINITY | 1–2 | 2 |
+| DARK MATTER (DM) | 001–005 | 5 |
+| QUANTUM GOVERNANCE (QG) | 001–004 | 4 |
+| FIDELITY | IF-01–06 | 6 |
+| EP-SEC | 001–009b | 10 |
+| INHERITANCE MATH (IB) | 001–003 | 3 |
+| AUTH | 001–002 | 2 |
+| **TOTAL** | — | **106** |
+
+**16 public repositories:** bellwether-testbeds · chrono-testbeds ·
+cif-ancient-systems-test-series · cif-phase1-testbeds · dark-matter-quantum-sim ·
+derekhone · executionproof · executionproof-testbeds · inheritance-math ·
+intent-fidelity-testbed · omni-testbeds · quantum-governance-testbed · rf-100 ·
+trinity-testbeds · vaultproof-agent-guard · witness-testbeds.
+
+**Tier distinction (do not conflate).** The **106** is the **experiment-ID tier**
+(one count per preregistered experiment ID). A separate, finer **case-record tier**
+counts individual scored sub-cases and decisions — e.g. ARK-493–498 = 161 scored
+sub-cases; the P01 series (ARK-458–482) = 20,000 authorization decisions; the
+ExecutionProof P01/P02 program = 253 case records. Different granularities; both traceable.
+
+> **Caveat (standing doctrine, unchanged):** this corpus is **internal / founder-led**.
+> Independent third-party validation is the explicit **next phase**. Claims are held
+> narrower than the evidence, and every negative result (honest FAILs and GATE-STOPs)
+> is preserved rather than retconned.
+
+---
+
+RF's public scientific corpus spans **twelve research families** (see the canonical
+table above). The **five programs detailed below** — ARK, WITNESS, BELLWETHER,
+CHRONO, and the closed UIP Phase 1 precursor — are the subset given full narrative
+treatment in this document; all are preregistered, executed, and published with
+raw-data provenance (GitHub + Zenodo DOI, CC BY 4.0).
 
 | Program | Theme | Substrate | Status |
 |---|---|---|---|
@@ -32,7 +91,7 @@ RF's public scientific corpus spans **five research programs**, all preregistere
 | **CHRONO** | Temporal nonclassicality (Leggett–Garg) witness bound into a nonce | IBM quantum hardware (`ibm_fez`) | 1 experiment — complete + published |
 | **UIP Phase 1** | Foundational physics program (precursor) | — | Closed |
 
-**Corpus totals (ARK + WITNESS, reconciled 2026-07-18):** 60 case records across 38 experiment IDs → **57 PASS · 2 honest FAIL · 1 GATE-STOP**, **56/56 Zenodo publications complete (100%)**. P02 Latency/Throughput/Scale (ARK-483–492) complete 10/10. The BELLWETHER (3) and CHRONO (1) quantum-witness experiments are additionally published (4 more DOIs).
+**Documents-detailed subtotal (ARK + WITNESS, reconciled 2026-07-18):** 60 case records across 38 experiment IDs → **57 PASS · 2 honest FAIL · 1 GATE-STOP**, **56/56 Zenodo publications complete (100%)**. P02 Latency/Throughput/Scale (ARK-483–492) complete 10/10. The BELLWETHER (3) and CHRONO (1) quantum-witness experiments are additionally published (4 more DOIs). *This is a narrower, documents-detailed scope — see the program-wide canonical totals box above for the full 106-experiment / 12-family / 16-repository figure.*
 
 ---
 
@@ -249,6 +308,14 @@ Commits are timestamped but **not** GPG/SSH-signed. Provenance = public commit h
 ---
 
 # PART V — CONSOLIDATED SCOREBOARD
+
+> **Scope:** the table below is the **documents-detailed scoreboard** — the families
+> given full narrative treatment in this document (ARK, WITNESS, BELLWETHER, CHRONO).
+> It is a **subset** of the program-wide canonical totals (106 experiments · 12
+> families · 16 repos · 95 PASS / 8 preserved FAIL / 3 special status · 4 validated
+> FAIL→PASS remediations · 88 Zenodo · 56 USPTO) reported in the
+> **Program-wide canonical totals** box in Part I. Both scopes are traceable; the
+> canonical box is authoritative for the program-wide headline as of 2026-08-21.
 
 | Program | Experiments | Records | PASS | FAIL | GATE-STOP | Published |
 |---|---|---|---|---|---|---|

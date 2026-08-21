@@ -1,6 +1,6 @@
 # Remnant Fieldworks Inc. — Master Corpus Scoreboard
 ## ARK Series 441–498 + WITNESS Series
-**Last updated:** 2026-07-20 (P01 + P02 complete; ARK-493–498 Enterprise Agent Boundary Testbed complete — all 6 PASS)
+**Last updated:** 2026-08-21 (program-wide canonical totals reconciled — v29; repository-scoped ARK/WITNESS tallies unchanged)
 
 ---
 
@@ -17,6 +17,69 @@
 > (individual scored cases across all sibling repos) — see this series'
 > `ark-493-498/results/reconciliation_report.md` and `publication_batch.md` for
 > that reconciliation. The two numbers are different scopes, both traceable.
+> For the current program-wide headline, see
+> **[Program-wide canonical totals (as of 2026-08-21)](#program-wide-canonical-totals-as-of-2026-08-21)** below.
+
+---
+
+## Program-wide canonical totals (as of 2026-08-21)
+
+> **Scope:** these are **program-wide** figures spanning **all** Remnant Fieldworks
+> research families and public repositories — a broader scope than the
+> repository-scoped ARK/WITNESS tallies elsewhere in this document. Both scopes are
+> traceable; neither supersedes the other. This section is authoritative for the
+> program-wide headline as of 2026-08-21 (canonical v29).
+
+**106 design-before-execution experiments** across **12 research families** and
+**16 public GitHub repositories.**
+
+**Verdicts (experiment-ID tier):** **95 PASS · 8 preserved FAIL · 3 special status.**
+Separately, **4 validated FAIL→PASS remediations**: each is a corrected re-test whose
+passing version is counted among the 95 PASS, while the original honest FAIL remains
+preserved among the 8 — a FAIL is never retconned into a PASS (e.g. ARK-445→445b,
+ARK-455→455b).
+
+**Publication / IP provenance:** **88 published Zenodo depositions · 56 USPTO filings
+(48 provisional + 8 nonprovisional).** IBM Quantum hardware access operational.
+
+### Per-family experiment counts (experiment-ID tier)
+
+| Family | Range | Experiments |
+|---|---|---|
+| ARK | 441–503 | 65 |
+| WITNESS | 1–4 | 4 |
+| BELLWETHER | 1–3 | 3 |
+| CHRONO | 1 | 1 |
+| OMNI | 1 | 1 |
+| TRINITY | 1–2 | 2 |
+| DARK MATTER (DM) | 001–005 | 5 |
+| QUANTUM GOVERNANCE (QG) | 001–004 | 4 |
+| FIDELITY | IF-01–06 | 6 |
+| EP-SEC | 001–009b | 10 |
+| INHERITANCE MATH (IB) | 001–003 | 3 |
+| AUTH | 001–002 | 2 |
+| **TOTAL** | — | **106** |
+
+**16 public repositories:** bellwether-testbeds · chrono-testbeds ·
+cif-ancient-systems-test-series · cif-phase1-testbeds · dark-matter-quantum-sim ·
+derekhone · executionproof · executionproof-testbeds · inheritance-math ·
+intent-fidelity-testbed · omni-testbeds · quantum-governance-testbed · rf-100 ·
+trinity-testbeds · vaultproof-agent-guard · witness-testbeds.
+
+**Tier distinction (do not conflate).** The **106** above is the **experiment-ID
+tier** — one count per preregistered experiment ID. A separate, finer
+**case-record tier** counts individual scored sub-cases and decisions — e.g.
+ARK-493–498 = 161 scored sub-cases; the P01 series (ARK-458–482) = 20,000
+authorization decisions; the ExecutionProof P01/P02 program = 253 case records.
+These are deliberately different granularities and must not be summed together;
+both are traceable.
+
+> **Caveat (standing doctrine, unchanged):** this corpus is **internal /
+> founder-led**. Independent third-party validation is the explicit **next phase**.
+> Claims are held **narrower than the evidence**, and all negative results (honest
+> FAILs and GATE-STOPs) are preserved rather than retconned.
+
+---
 
 **ARK-493–498 Enterprise Agent Boundary Testbed:** ✅ **COMPLETE** — 6/6 experiments PASS
 - Non-quantum, production-like enforcement series (real software enforcement point; real HTTP/loopback-TCP boundary in ARK-498)
@@ -341,6 +404,6 @@ All 52 case records maintain full compliance:
 
 ---
 
-**Document Version:** 3.1 (2026-07-20)
+**Document Version:** 3.2 (2026-08-21)
 **Maintained by:** Remnant Fieldworks Inc.
-**Last Corpus Update:** ARK-493–498 Enterprise Agent Boundary Testbed complete (6/6 PASS, 161 scored cases, 0 enforcement leaks, GATE-STOP not triggered)
+**Last Corpus Update:** Added program-wide canonical totals (v29, as of 2026-08-21): 106 experiments · 12 families · 16 repos · 95 PASS / 8 preserved FAIL / 3 special status · 4 validated FAIL→PASS remediations · 88 Zenodo · 56 USPTO. Repository-scoped ARK/WITNESS tallies above are unchanged and remain accurate for this repository.

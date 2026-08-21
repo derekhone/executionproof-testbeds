@@ -84,11 +84,44 @@ mandatory ARK-498 performance-characterization caveat.
 
 ---
 
-## Standing corpus (reconciled, all series to date)
+## Standing corpus — program-wide canonical totals (as of 2026-08-21)
 
-**72 preregistered experiments · 232 case records · 229 PASS · 2 FAIL ·
-1 GATE-STOP · 9 repositories.** The 2 FAIL and 1 GATE-STOP records are retained
-unchanged — preserving negative results is part of the methodology.
+**106 design-before-execution experiments · 12 research families · 16 public
+GitHub repositories.** Verdicts (experiment-ID tier): **95 PASS · 8 preserved
+FAIL · 3 special status**, plus **4 validated FAIL→PASS remediations** (each a
+corrected re-test counted among the 95 PASS while its original honest FAIL remains
+preserved among the 8). **88 published Zenodo depositions · 56 USPTO filings (48
+provisional + 8 nonprovisional).** IBM Quantum hardware access operational.
+
+The 8 preserved FAIL and the GATE-STOP records are retained unchanged — a FAIL is
+never retconned into a PASS. **Preserving negative results is part of the methodology.**
+
+| Family | Range | Experiments |
+|---|---|---|
+| ARK | 441–503 | 65 |
+| WITNESS | 1–4 | 4 |
+| BELLWETHER | 1–3 | 3 |
+| CHRONO | 1 | 1 |
+| OMNI | 1 | 1 |
+| TRINITY | 1–2 | 2 |
+| DARK MATTER (DM) | 001–005 | 5 |
+| QUANTUM GOVERNANCE (QG) | 001–004 | 4 |
+| FIDELITY | IF-01–06 | 6 |
+| EP-SEC | 001–009b | 10 |
+| INHERITANCE MATH (IB) | 001–003 | 3 |
+| AUTH | 001–002 | 2 |
+| **TOTAL** | — | **106** |
+
+**Scope note.** The **106** is the **program-wide** figure at the **experiment-ID
+tier** (one count per preregistered experiment ID, across all 16 repositories). It
+is deliberately distinct from **this repository's** scope (the ARK / WITNESS
+scoreboard in `CORPUS_SCOREBOARD.md`) and from the finer **case-record tier** (e.g.
+ARK-493–498 = 161 scored sub-cases; the P01 series = 20,000 authorization decisions;
+the ExecutionProof P01/P02 program = 253 case records). Do not conflate or sum
+across tiers; each is separately traceable.
+
+**Caveat.** This corpus is **internal / founder-led**. Independent third-party
+validation is the explicit **next phase**. Claims are held narrower than the evidence.
 
 ---
 
