@@ -1,0 +1,26 @@
+{
+  "title": "CUDA-EP-001R1 — Real GPU ExecutionProof Boundary: Remediation Retest of CUDA-EP-001",
+  "upload_type": "dataset",
+  "description": "<p>CUDA-EP-001R1 is a preregistered remediation retest of CUDA-EP-001, the first real-GPU (NVIDIA Tesla T4) ExecutionProof pre-execution authorization-boundary experiment by Remnant Fieldworks Inc. CUDA-EP-001 was an honest PARTIAL_FAIL: the exclusive launcher (C8) was confirmed, but three limitations were recorded (C5 control-state could not be induced on a live GPU; C6 no native signature-verification branch; C7 no requested-vs-detected capability comparison). CUDA-EP-001R1 remediates exactly those three and retests only the remediated cases plus two controls on real NVIDIA hardware.</p><p>Result on real Tesla T4 (compute capability 7.5, driver 580.82.07): overall COMPLETED, all preregistered remediations passed. R1-C0 ALLOW (real kernel executed); R1-C5 HOLD while GPU present; R1-C6 native VERIFICATION_FAILURE; R1-C7 DENY on 8.0-vs-7.5 capability mismatch; R1-C8 exclusive launcher confirmed (only the ALLOW case executed). Expected outcomes were SHA-256-frozen before the run and not tuned afterward. The original CUDA-EP-001 record is unchanged.</p><p>RESEARCH ONLY — NOT PRODUCTION. ProofRecords are signed with an ephemeral TEST Dilithium3 key (draft ML-DSA-65-aligned), NOT FIPS 204 / NIST-certified and NOT a production trust anchor. No claim is made that ExecutionProof secures CUDA, guarantees GPU safety, proves kernel correctness, is unbypassable, or carries any independent/NVIDIA validation.</p>",
+  "creators": [
+    {"name": "Hone, Derek", "affiliation": "Remnant Fieldworks Inc."}
+  ],
+  "keywords": [
+    "ExecutionProof",
+    "pre-execution governance",
+    "AI authorization boundary",
+    "GPU",
+    "CUDA",
+    "NVIDIA Tesla T4",
+    "preregistration",
+    "remediation retest",
+    "post-quantum signature",
+    "Dilithium"
+  ],
+  "notes": "Remediates CUDA-EP-001 (frozen PARTIAL_FAIL). DEPOSIT-READY BUT NOT DEPOSITED — held for Derek's review. TEST key, not FIPS 204, not production.",
+  "related_identifiers": [
+    {"relation": "isDerivedFrom", "identifier": "CUDA-EP-001", "scheme": "other"}
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0"
+}
