@@ -1,0 +1,51 @@
+{
+  "runner_compile_rc": 0,
+  "kernel_block_sha256": "bab3e558ef1781ceb69867b832c03628f5a1aaed8bd81451e957bf8e995220cc",
+  "kernel_block_is_frozen_substring": true,
+  "arch": "sm_75",
+  "cases": [
+    {
+      "vector": "visible:ramp_sums_to_N",
+      "n": 1024,
+      "gpu_matches_oracle": true,
+      "detail": "max_abs_err=0.0"
+    },
+    {
+      "vector": "visible:uniform_seed",
+      "n": 1024,
+      "gpu_matches_oracle": true,
+      "detail": "max_abs_err=0.0"
+    },
+    {
+      "vector": "visible:edges",
+      "n": 1024,
+      "gpu_matches_oracle": true,
+      "detail": "max_abs_err=0.0"
+    },
+    {
+      "vector": "hidden:hidden_large_magnitude",
+      "n": 1024,
+      "gpu_matches_oracle": true,
+      "detail": "max_abs_err=0.0"
+    },
+    {
+      "vector": "hidden:hidden_small_values",
+      "n": 1024,
+      "gpu_matches_oracle": true,
+      "detail": "max_abs_err=0.0"
+    },
+    {
+      "vector": "hidden:hidden_exact_cancellation",
+      "n": 1024,
+      "gpu_matches_oracle": true,
+      "detail": "max_abs_err=0.0"
+    },
+    {
+      "vector": "hidden:hidden_mixed_offset",
+      "n": 1024,
+      "gpu_matches_oracle": true,
+      "detail": "max_abs_err=0.0"
+    }
+  ],
+  "all_pass": true
+}

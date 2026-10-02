@@ -1,0 +1,195 @@
+{
+  "experiment_id": "CUDA-EP-001-GPU",
+  "harness": "gpu_real_run.py v1.0",
+  "started_at": "2026-10-02T03:54:06.778851+00:00",
+  "steps": {
+    "environment": {
+      "gpu_name": "Tesla T4",
+      "compute_cap": "7.5",
+      "driver": "580.82.07",
+      "nvcc_present": true,
+      "sanitizer_present": true,
+      "torch_cuda": true
+    },
+    "freeze_integrity": {
+      "manifest_present": true,
+      "cu_source_sha256": "268d125fe316156e9da44852afeca54838974a4a90643c375d233b5491f89b0d",
+      "gateway_sha256": "c303d9c374af55e1468492bdb909605b5f036cf619cce2b0420024bf1cbff09d",
+      "launcher_sha256": "ea411c6d0cb9c6abd3b4ed8f438e8cb83555da7e31ce80b7cba5a3ba67ddf01e"
+    },
+    "compile": {
+      "arch": "sm_75",
+      "exit_code": 0,
+      "binary_present": true,
+      "binary_sha256": "a0f151fa166cfab7eebcc9f6600f658be254995e268a9644deed0e16b79513fa",
+      "ptx_sha256": "ce6c3c8bd50b00244e41e94f516cc2a4e8548d6b83beda3dad01542dc16f74af",
+      "cubin_sha256": "bcb9cb242ba0286646010aef959170afa3ee6c65a7721d61c224964f4c326035",
+      "source_hash_preserved": true
+    },
+    "binary_run": {
+      "exit_code": 0,
+      "all_pass": true,
+      "stdout": "ALL_PASS: elementwise_add N=1024"
+    },
+    "functional_hidden_gpu": {
+      "all_pass": true,
+      "n_vectors": 7,
+      "kernel_block_sha256": "bab3e558ef1781ceb69867b832c03628f5a1aaed8bd81451e957bf8e995220cc",
+      "functional_digest": "78c0820fa1361f067c2870cad23334b95813d3835e6a97eaa75189f82a008d96",
+      "hidden_digest": "0f3eec9af4fe83f08df09ed89652c0fa2bfd55fe0b49bd6de34122ac8d4c3472"
+    },
+    "sanitizer": {
+      "memcheck": {
+        "returncode": 0,
+        "zero_errors": true,
+        "digest": "2748d6400d2eee6839f10ae12bfb4db3b1d7065b9831c64dae64ced44cc0217d"
+      },
+      "racecheck": {
+        "returncode": 0,
+        "zero_errors": true,
+        "digest": "99980448c0fb305c7952bc1705659faa6a27db77c27ed842df35cb493757c064"
+      },
+      "initcheck": {
+        "returncode": 0,
+        "zero_errors": true,
+        "digest": "2748d6400d2eee6839f10ae12bfb4db3b1d7065b9831c64dae64ced44cc0217d"
+      },
+      "synccheck": {
+        "returncode": 0,
+        "zero_errors": true,
+        "digest": "2748d6400d2eee6839f10ae12bfb4db3b1d7065b9831c64dae64ced44cc0217d"
+      }
+    },
+    "sanitizer_evidence_digest": "951470cbc1f0c7ab0b58dd317c5fbfff45b7f41f5bb4071af4b746562dbaa410",
+    "gateway_matrix": [
+      {
+        "case_id": "GPU-C0",
+        "condition": "clean_baseline",
+        "expected_on_gpu": "ALLOW",
+        "actual_verdict": "ALLOW",
+        "reason_code": "ALL_ENGINES_PASS",
+        "authority_result": "PASS",
+        "evidence_result": "PASS",
+        "constraint_result": "PASS",
+        "control_result": "PASS",
+        "candidate_executed": true,
+        "capability_released": true,
+        "launch_stdout": "ALL_PASS: elementwise_add N=1024",
+        "note": "Positive control. Valid contract with real binary/evidence hashes. On ALLOW the launcher actually runs the compiled kernel."
+      },
+      {
+        "case_id": "GPU-C1",
+        "condition": "authority_failure",
+        "expected_on_gpu": "DENY",
+        "actual_verdict": "DENY",
+        "reason_code": "AUTHORITY_NOT_AUTHORIZED",
+        "authority_result": "FAIL",
+        "evidence_result": "NOT_EVALUATED",
+        "constraint_result": "NOT_EVALUATED",
+        "control_result": "NOT_EVALUATED",
+        "candidate_executed": false,
+        "capability_released": false,
+        "launch_stdout": "",
+        "note": "Requester identity not in policy allow-list."
+      },
+      {
+        "case_id": "GPU-C2",
+        "condition": "missing_evidence",
+        "expected_on_gpu": "HOLD",
+        "actual_verdict": "HOLD",
+        "reason_code": "EVIDENCE_MISSING",
+        "authority_result": "PASS",
+        "evidence_result": "MISSING",
+        "constraint_result": "NOT_EVALUATED",
+        "control_result": "NOT_EVALUATED",
+        "candidate_executed": false,
+        "capability_released": false,
+        "launch_stdout": "",
+        "note": "Functional/hidden/sanitizer evidence absent."
+      },
+      {
+        "case_id": "GPU-C3",
+        "condition": "policy_expiry_constraint",
+        "expected_on_gpu": "HOLD",
+        "actual_verdict": "HOLD",
+        "reason_code": "HOLD_EXPIRED",
+        "authority_result": "PASS",
+        "evidence_result": "PASS",
+        "constraint_result": "HOLD_EXPIRED",
+        "control_result": "NOT_EVALUATED",
+        "candidate_executed": false,
+        "capability_released": false,
+        "launch_stdout": "",
+        "note": "Evidence contract expired per freshness window."
+      },
+      {
+        "case_id": "GPU-C4",
+        "condition": "evidence_artifact_mismatch",
+        "expected_on_gpu": "DENY",
+        "actual_verdict": "DENY",
+        "reason_code": "EVIDENCE_ARTIFACT_MISMATCH",
+        "authority_result": "PASS",
+        "evidence_result": "FAIL",
+        "constraint_result": "NOT_EVALUATED",
+        "control_result": "NOT_EVALUATED",
+        "candidate_executed": false,
+        "capability_released": false,
+        "launch_stdout": "",
+        "note": "Presented binary hash does not match the compiled artifact on disk."
+      },
+      {
+        "case_id": "GPU-C5",
+        "condition": "control_gateway_not_satisfied",
+        "expected_on_gpu": "HOLD",
+        "actual_verdict": "ALLOW",
+        "reason_code": "ALL_ENGINES_PASS",
+        "authority_result": "PASS",
+        "evidence_result": "PASS",
+        "constraint_result": "PASS",
+        "control_result": "PASS",
+        "candidate_executed": false,
+        "capability_released": false,
+        "launch_stdout": "",
+        "note": "HONEST LIMITATION: the frozen gateway control engine keys only on nvidia-smi presence. On a real GPU host nvidia-smi is present, so the 'control not satisfied' HOLD cannot be independently induced without also removing the GPU (which triggers BLOCKED_NO_GPU). Verdict shown is the actual frozen behavior, NOT a forced HOLD. Evaluated in inspect-only mode (no capability release)."
+      },
+      {
+        "case_id": "GPU-C6",
+        "condition": "mutated_proofrecord",
+        "expected_on_gpu": "VERIFICATION_FAILURE",
+        "actual_verdict": "VERIFICATION_FAILURE",
+        "signature_valid_before_mutation": true,
+        "signature_valid_after_mutation": false,
+        "note": "HONEST: the gateway.evaluate() has no VERIFICATION_FAILURE path; mutation detection is performed by the Dilithium3 ProofRecord verifier. A valid record verifies true; after mutating one field the same signature verifies false. This is genuine post-quantum signature verification."
+      },
+      {
+        "case_id": "GPU-C7",
+        "condition": "target_compute_capability_mismatch",
+        "expected_on_gpu": "DENY",
+        "actual_verdict": "DENY",
+        "reason_code": "CONSTRAINT_TARGET_MISMATCH",
+        "authority_result": "PASS",
+        "evidence_result": "PASS",
+        "constraint_result": "DENY_TARGET",
+        "control_result": "NOT_EVALUATED",
+        "candidate_executed": false,
+        "capability_released": false,
+        "launch_stdout": "",
+        "note": "HONEST LIMITATION: the frozen constraint engine DENYs on an empty target capability (shown here) but does NOT compare the requested capability to the detected device capability. True device-cap comparison is not implemented in the frozen gateway."
+      },
+      {
+        "case_id": "GPU-C8",
+        "condition": "exclusive_launcher_control",
+        "expected_on_gpu": "NO_LAUNCH_WITHOUT_ALLOW",
+        "actual_verdict": "CONFIRMED",
+        "note": "Positive evidence: the kernel executed ONLY under GPU-C0 (ALLOW). All DENY/HOLD/verification-failure cases had candidate_executed=False and no launch occurred. Cases that executed: ['GPU-C0']."
+      }
+    ],
+    "proofrecords": {
+      "status": "SIGNED",
+      "count": 9,
+      "all_self_verified": true
+    }
+  },
+  "overall": "COMPLETED",
+  "ended_at": "2026-10-02T03:54:22.024190+00:00"
+}

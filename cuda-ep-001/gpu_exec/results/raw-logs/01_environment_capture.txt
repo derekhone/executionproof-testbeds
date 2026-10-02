@@ -1,0 +1,40 @@
+{
+  "nvidia_smi": {
+    "cmd": "nvidia-smi",
+    "returncode": 0,
+    "stdout": "Fri Oct  2 03:54:06 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |\n| N/A   51C    P8             10W /   70W |       0MiB /  15360MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "stderr": ""
+  },
+  "gpu_query": {
+    "cmd": "nvidia-smi --query-gpu=name,compute_cap,driver_version,memory.total --format=csv,noheader",
+    "returncode": 0,
+    "stdout": "Tesla T4, 7.5, 580.82.07, 15360 MiB\n",
+    "stderr": ""
+  },
+  "nvcc_version": {
+    "cmd": "nvcc --version",
+    "returncode": 0,
+    "stdout": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Aug_20_01:58:59_PM_PDT_2025\nCuda compilation tools, release 13.0, V13.0.88\nBuild cuda_13.0.r13.0/compiler.36424714_0\n",
+    "stderr": ""
+  },
+  "sanitizer_version": {
+    "cmd": "compute-sanitizer --version",
+    "returncode": 0,
+    "stdout": "NVIDIA (R) Compute Sanitizer\nCopyright (c) 2020-2025 NVIDIA Corporation\nVersion 2025.3.1.0 (build 36400806) (public-release)\n",
+    "stderr": ""
+  },
+  "uname": {
+    "cmd": "uname -a",
+    "returncode": 0,
+    "stdout": "Linux 185b9370015d 6.6.122+ #1 SMP Thu Apr 30 18:17:14 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n",
+    "stderr": ""
+  },
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "timestamp": "2026-10-02T03:54:07.093973+00:00",
+  "torch_version": "2.11.0+cu130",
+  "torch_cuda_available": true,
+  "torch_device": "Tesla T4",
+  "parsed_name": "Tesla T4",
+  "parsed_compute_cap": "7.5",
+  "parsed_driver": "580.82.07"
+}
