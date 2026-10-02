@@ -1,0 +1,114 @@
+{
+  "manifest_type": "PRE_GPU_FREEZE_MANIFEST",
+  "experiment_id": "CUDA-EP-001",
+  "organization": "Remnant Fieldworks Inc.",
+  "freeze_purpose": "Establish immutable baseline of corrected pre-GPU package before any real GPU hardware is accessed. All preregistered expectations must be recorded here. Do not edit after freeze.",
+  "freeze_timestamp_utc": "2026-10-02T02:30:27Z",
+  "freeze_operator": "Abacus AI Agent -- authorized by Derek Hone, Founder and CEO",
+  "source_package_path": "/home/ubuntu/output/RF_CUDA_Phase_A_Corrected/",
+  "underlying_package_path": "/home/ubuntu/output/RF_CUDA_GPU_Package/",
+
+  "current_verified_state": {
+    "real_gpu_execution": "NOT_EXECUTED",
+    "gpu_cases_status": {
+      "GPU-C0": "NOT_EXECUTED -- BLOCKED_NO_GPU",
+      "GPU-C1": "NOT_EXECUTED -- BLOCKED_NO_GPU",
+      "GPU-C2": "NOT_EXECUTED -- BLOCKED_NO_GPU",
+      "GPU-C3": "NOT_EXECUTED -- BLOCKED_NO_GPU",
+      "GPU-C4": "NOT_EXECUTED -- BLOCKED_NO_GPU",
+      "GPU-C5": "NOT_EXECUTED -- BLOCKED_NO_GPU",
+      "GPU-C6": "NOT_EXECUTED -- BLOCKED_NO_GPU",
+      "GPU-C7": "NOT_EXECUTED -- BLOCKED_NO_GPU",
+      "GPU-C8": "NOT_EXECUTED -- BLOCKED_NO_GPU -- PREREGISTERED ONLY -- MOST IMPORTANT GOVERNANCE-BOUNDARY TEST"
+    },
+    "cuda_source_elementwise_add_cu": "PREPARED -- NOT COMPILED -- NOT EXECUTED",
+    "nvcc_compilation": "NOT_EXECUTED",
+    "compute_sanitizer": "NOT_EXECUTED",
+    "gpu_functional_tests": "NOT_EXECUTED",
+    "gpu_hidden_tests": "NOT_EXECUTED",
+    "cpu_surrogate_gateway_conditions_C0_C7": "EXECUTED_PREVIOUSLY -- 8/8 matched expected verdicts",
+    "cpu_surrogate_unit_tests": "24/24 PASS",
+    "numpy_oracle_visible": "3/3 PASS",
+    "numpy_oracle_hidden": "4/4 PASS",
+    "numpy_oracle_combined": "7/7 PASS",
+    "proofrecord_signing": "EXECUTED -- TEST KEY -- NOT PRODUCTION",
+    "proofrecord_verification": "EXECUTED -- TEST KEY -- NOT PRODUCTION"
+  },
+
+  "preregistered_expectations_frozen_before_execution": {
+    "note": "These expectations are FROZEN. Do not edit after GPU execution begins.",
+    "GPU-C0": {"description": "clean baseline", "expected_verdict": "ALLOW", "expected_kernel_execution": true},
+    "GPU-C1": {"description": "authority failure", "expected_verdict": "DENY", "expected_kernel_execution": false},
+    "GPU-C2": {"description": "missing evidence", "expected_verdict": "HOLD", "expected_kernel_execution": false},
+    "GPU-C3": {"description": "policy / expiry constraint", "expected_verdict": "HOLD", "expected_kernel_execution": false},
+    "GPU-C4": {"description": "evidence / artifact mismatch", "expected_verdict": "DENY", "expected_kernel_execution": false},
+    "GPU-C5": {"description": "control / gateway not satisfied", "expected_verdict": "HOLD", "expected_kernel_execution": false},
+    "GPU-C6": {"description": "mutated ProofRecord", "expected_verdict": "VERIFICATION_FAILURE", "expected_kernel_execution": false},
+    "GPU-C7": {"description": "target compute-capability mismatch", "expected_verdict": "DENY", "expected_kernel_execution": false},
+    "GPU-C8": {"description": "exclusive launcher control -- CRITICAL GOVERNANCE TEST", "expected_verdict": "NO launch through any unauthorized path; exactly one valid launch through sanctioned gateway under ALLOW condition", "expected_kernel_execution": "GATED"}
+  },
+
+  "current_claims_ceiling": {
+    "may_claim": [
+      "CUDA-EP-001 CPU-surrogate framework executed -- 8 cases (C0-C7), 24 unit tests passed, all 8 verdicts matched expected values",
+      "GPU execution gateway correctly detects hardware absence and blocks execution -- BLOCKED_NO_GPU across all 9 GPU-phase cases",
+      "7 oracle tests (T-01 to T-07) confirmed numpy reference layer produces correct expected outputs for all tested case types",
+      "CUDA C source file (elementwise_add.cu) prepared with standard CUDA runtime constructs, ready for compilation when GPU hardware is available",
+      "ExecutionProof framework design, preregistration, and CPU-surrogate verification are complete",
+      "RF is an NVIDIA Inception member",
+      "All claims accompanied by qualifier: GPU execution results pending hardware access"
+    ],
+    "may_not_claim": [
+      "GPU execution occurred",
+      "CUDA kernel compiled, ran, or produced output",
+      "ExecutionProof gateway exercised beyond hardware detection",
+      "Compute Sanitizer was run",
+      "GPU-C8 exclusive launcher control was tested",
+      "elementwise_add.cu is syntactically valid (no compiler has processed it)",
+      "Dilithium ProofRecord signing path exercised for real GPU outputs",
+      "CUDA-EP-002 or any later experiment attempted",
+      "Any claim derived from CIF theory (CIF firewall is absolute)"
+    ]
+  },
+
+  "current_limitations": [
+    "No real GPU execution has occurred",
+    "CUDA source not compiled",
+    "All GPU-phase cases BLOCKED_NO_GPU",
+    "Compute Sanitizer not run",
+    "GPU-C8 not executed in any environment",
+    "ProofRecords use TEST KEY -- NOT PRODUCTION",
+    "No independent validation has occurred",
+    "No formal proof of all bypass paths",
+    "Source-to-binary / JIT / driver attestation not established",
+    "Single CPU-surrogate environment only"
+  ],
+
+  "git_state": {
+    "executionproof_testbeds_repo": "https://github.com/derekhone/executionproof-testbeds",
+    "cuda_ep_001_directory": "NOT YET COMMITTED",
+    "version_control_status": "corrected package prepared locally; not yet under version control"
+  },
+
+  "pre_gpu_file_count": 16,
+  "pre_gpu_file_listing": [
+    "01_CORRECTED_GPU_EXECUTIVE_SUMMARY.md",
+    "02_CORRECTED_GPU_CLAIMS_LEDGER.md",
+    "03_CORRECTED_GPU_LIMITATIONS.md",
+    "04_TEST_EVIDENCE_MAPPING.md",
+    "05_CORRECTED_GPU_CASE_RESULTS.md",
+    "06_CORRECTED_GPU_REPRODUCIBILITY_GUIDE.md",
+    "07_CORRECTED_GPU_EXPERIMENT_REPORT.pdf",
+    "08_CORRECTED_GPU_EXPERIMENT_REPORT.docx",
+    "09_CORRECTED_20_FINAL_DIRECT_ANSWERS.md",
+    "10_CORRECTED_CURRENT_EVENT_ARTICLE.md",
+    "11_CORRECTED_LINKEDIN_POST.md",
+    "12_CORRECTED_NVIDIA_INCEPTION_MEMBER_STRATEGY_MEMO.pdf",
+    "13_CORRECTED_GITHUB_README.md",
+    "14_CORRECTED_ZENODO_METADATA_v0.1.md",
+    "15_CORRECTION_CHANGELOG.md",
+    "SHA256SUMS.txt"
+  ],
+
+  "freeze_integrity": "SHA-256 manifest in PRE_GPU_SHA256SUMS.txt covers all 16 files"
+}

@@ -1,0 +1,113 @@
+{
+  "results": [
+    {
+      "case_id": "GPU-C0",
+      "condition": "clean_baseline",
+      "expected_on_gpu": "ALLOW",
+      "actual_this_env": "BLOCKED_NO_GPU",
+      "environment_verdict": "NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED",
+      "blocker_evidence": [
+        "nvidia-smi: NOT_FOUND",
+        "/dev/nvidia*: NOT_FOUND",
+        "torch.cuda.is_available(): False"
+      ]
+    },
+    {
+      "case_id": "GPU-C1",
+      "condition": "authority_failure",
+      "expected_on_gpu": "DENY",
+      "actual_this_env": "BLOCKED_NO_GPU",
+      "environment_verdict": "NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED",
+      "blocker_evidence": [
+        "nvidia-smi: NOT_FOUND",
+        "/dev/nvidia*: NOT_FOUND",
+        "torch.cuda.is_available(): False"
+      ]
+    },
+    {
+      "case_id": "GPU-C2",
+      "condition": "missing_evidence",
+      "expected_on_gpu": "HOLD",
+      "actual_this_env": "BLOCKED_NO_GPU",
+      "environment_verdict": "NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED",
+      "blocker_evidence": [
+        "nvidia-smi: NOT_FOUND",
+        "/dev/nvidia*: NOT_FOUND",
+        "torch.cuda.is_available(): False"
+      ]
+    },
+    {
+      "case_id": "GPU-C3",
+      "condition": "policy_expiry_constraint",
+      "expected_on_gpu": "HOLD",
+      "actual_this_env": "BLOCKED_NO_GPU",
+      "environment_verdict": "NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED",
+      "blocker_evidence": [
+        "nvidia-smi: NOT_FOUND",
+        "/dev/nvidia*: NOT_FOUND",
+        "torch.cuda.is_available(): False"
+      ]
+    },
+    {
+      "case_id": "GPU-C4",
+      "condition": "evidence_artifact_mismatch",
+      "expected_on_gpu": "DENY",
+      "actual_this_env": "BLOCKED_NO_GPU",
+      "environment_verdict": "NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED",
+      "blocker_evidence": [
+        "nvidia-smi: NOT_FOUND",
+        "/dev/nvidia*: NOT_FOUND",
+        "torch.cuda.is_available(): False"
+      ]
+    },
+    {
+      "case_id": "GPU-C5",
+      "condition": "control_gateway_not_satisfied",
+      "expected_on_gpu": "HOLD",
+      "actual_this_env": "BLOCKED_NO_GPU",
+      "environment_verdict": "NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED",
+      "blocker_evidence": [
+        "nvidia-smi: NOT_FOUND",
+        "/dev/nvidia*: NOT_FOUND",
+        "torch.cuda.is_available(): False"
+      ]
+    },
+    {
+      "case_id": "GPU-C6",
+      "condition": "mutated_proofrecord",
+      "expected_on_gpu": "VERIFICATION_FAILURE",
+      "actual_this_env": "BLOCKED_NO_GPU",
+      "environment_verdict": "NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED",
+      "blocker_evidence": [
+        "nvidia-smi: NOT_FOUND",
+        "/dev/nvidia*: NOT_FOUND",
+        "torch.cuda.is_available(): False"
+      ]
+    },
+    {
+      "case_id": "GPU-C7",
+      "condition": "target_compute_capability_mismatch",
+      "expected_on_gpu": "DENY",
+      "actual_this_env": "BLOCKED_NO_GPU",
+      "environment_verdict": "NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED",
+      "blocker_evidence": [
+        "nvidia-smi: NOT_FOUND",
+        "/dev/nvidia*: NOT_FOUND",
+        "torch.cuda.is_available(): False"
+      ]
+    },
+    {
+      "case_id": "GPU-C8",
+      "condition": "exclusive_launcher_control",
+      "expected_on_gpu": "NO_LAUNCH_WITHOUT_ALLOW",
+      "actual_this_env": "BLOCKED_NO_GPU",
+      "environment_verdict": "NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED",
+      "blocker_evidence": [
+        "nvidia-smi: NOT_FOUND",
+        "/dev/nvidia*: NOT_FOUND",
+        "torch.cuda.is_available(): False"
+      ]
+    }
+  ],
+  "all_blocked": true
+}

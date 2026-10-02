@@ -1,0 +1,30 @@
+CPU SURROGATE REFERENCE - POINTER NOTE
+======================================
+Experiment: CUDA-EP-001-GPU
+Label: NOT_EXECUTED - NO GPU
+
+This GPU package cannot run any GPU case in the current environment (no GPU present).
+The decision-governance logic that the GPU gateway wraps was already exercised in
+CPU-surrogate form in the companion package, where it ran to completion.
+
+WHERE TO LOOK (companion CPU package, DO NOT MODIFY):
+  /home/ubuntu/output/RF_CUDA_Final_Package/
+
+  - 10_TESTS/                 : CPU-surrogate test suite (ran green: 24 passed).
+  - 11_RAW_RESULTS/           : raw captured output from the CPU-surrogate runs.
+  - 07_PROOFRECORDS/          : signed CPU-surrogate ProofRecords (Cases A-H).
+  - 09_POLICIES/              : the policy bundle the engines evaluate.
+
+MAPPING (CPU surrogate case -> GPU case):
+  The CPU surrogate Cases A-H map onto the governance conditions tested by GPU-C0..C8.
+  The governance verdict logic (ALLOW / DENY / HOLD / VERIFICATION_FAILURE) is identical;
+  the only difference is that on GPU an ALLOW additionally releases capability and
+  launches the real compiled CUDA kernel. That launch step is precisely what cannot be
+  exercised here.
+
+WHAT IS GENUINELY NEW AND UNVERIFIED IN THE GPU PHASE:
+  - Real nvcc compilation of kernels/elementwise_add.cu (no binary produced here).
+  - Real kernel launch and device output.
+  - compute-sanitizer memcheck/racecheck/initcheck/synccheck over a running kernel.
+  - GPU functional/hidden test assertions against real device output.
+  These require real GPU hardware. See 11_GPU_REPRODUCIBILITY_GUIDE.md to run them.
