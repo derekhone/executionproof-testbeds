@@ -1,0 +1,30 @@
+{
+  "arch": "sm_75",
+  "logs": {
+    "binary": {
+      "cmd": "nvcc -O2 --generate-code arch=compute_75,code=sm_75 /content/ep/cuda-ep-001/source/kernels/elementwise_add.cu -o /content/ep/cuda-ep-001/source/kernels/elementwise_add",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "ptx": {
+      "cmd": "nvcc -ptx -arch=compute_75 /content/ep/cuda-ep-001/source/kernels/elementwise_add.cu -o /content/ep/cuda-ep-001/source/kernels/elementwise_add.ptx",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "cubin": {
+      "cmd": "nvcc -cubin -arch=sm_75 /content/ep/cuda-ep-001/source/kernels/elementwise_add.cu -o /content/ep/cuda-ep-001/source/kernels/elementwise_add.cubin",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "source_hash_preserved": true,
+  "cu_sha256_before": "268d125fe316156e9da44852afeca54838974a4a90643c375d233b5491f89b0d",
+  "cu_sha256_after": "268d125fe316156e9da44852afeca54838974a4a90643c375d233b5491f89b0d",
+  "binary_sha256": "a0f151fa166cfab7eebcc9f6600f658be254995e268a9644deed0e16b79513fa",
+  "ptx_sha256": "ce6c3c8bd50b00244e41e94f516cc2a4e8548d6b83beda3dad01542dc16f74af",
+  "cubin_sha256": "bcb9cb242ba0286646010aef959170afa3ee6c65a7721d61c224964f4c326035",
+  "binary_present": true
+}

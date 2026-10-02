@@ -1,0 +1,361 @@
+"""
+gpu_gateway_r1.py
+=================
+CUDA-EP-001R1 - REMEDIATION gateway for the three limitations found in
+CUDA-EP-001 (the original Tesla T4 PARTIAL_FAIL result).
+Remnant Fieldworks Inc. | CUDA-EP-001R1 | v1.0 | 2026-10-02
+RESEARCH ONLY - NOT PRODUCTION
+
+This file is a SEPARATE remediation of the frozen cuda-ep-001/source/gpu_gateway.py.
+The original gateway is NOT modified, overwritten, amended, or relabeled. The
+frozen CUDA-EP-001 record stands unchanged:
+  PARTIAL_FAIL | GPU-C8 CONFIRMED; GPU-C5 expected HOLD -> actual ALLOW;
+  C6/C7 scope limitations preserved
+
+R1 remediates exactly three weaknesses and nothing else:
+
+  C5  CONTROL  (original weakness: _control() returned PASS whenever
+      shutil.which("nvidia-smi") was truthy, so on a real GPU host the
+      control-HOLD condition could never be induced without removing the GPU).
+      REMEDIATION: a genuine control-state predicate that resolves PASS or HOLD
+      from an explicit control-state token in the Request Contract compared
+      against the policy-declared required control state. This is INDEPENDENT of
+      nvidia-smi presence, so HOLD is inducible while a real GPU remains present.
+
+  C7  CONSTRAINT  (original weakness: _constraint() DENYd only on an EMPTY
+      target capability and never compared requested capability to the detected
+      physical device capability).
+      REMEDIATION: detect the physical device compute capability and compare it
+      to the contract's required target_compute_capability. Two real, non-empty
+      values that differ -> DENY_CAP_MISMATCH.
+
+  C6  VERIFICATION  (original weakness: gateway.evaluate() had no signature
+      verification path; mutation was only caught by an external ProofRecord
+      verifier, never as a native gateway verdict).
+      REMEDIATION: a native ProofRecord signature-verification engine inside
+      evaluate(). A mutated or invalid ProofRecord yields a native
+      VERIFICATION_FAILURE verdict and NO capability release.
+
+Everything else (authority, evidence, environment short-circuit, the
+exclusive-launcher property that underlies C8) is preserved from the frozen
+gateway so the remediated matrix stays comparable to the original.
+
+Preregistered R1 decision flow (fail-closed at every step):
+  1. ENVIRONMENT GATE   -> BLOCKED_NO_GPU if no GPU (unchanged)
+  2. AUTHORITY          -> DENY if requester not allow-listed (unchanged)
+  3. EVIDENCE           -> HOLD/DENY on missing/mismatched evidence (unchanged)
+  4. CONSTRAINT (C7)    -> DENY on true requested-vs-detected cap mismatch (NEW)
+  5. CONTROL (C5)       -> HOLD on unmet real control-state predicate (NEW)
+  6. VERIFICATION (C6)  -> VERIFICATION_FAILURE on bad ProofRecord (NEW, native)
+  7. ALLOW              -> release capability via the exclusive launcher only here
+
+No em dashes anywhere (hyphens only).
+"""
+
+from __future__ import annotations
+
+import base64
+import datetime as _dt
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional, Tuple
+
+from elementwise_add_launcher import launch_or_block, gpu_available
+
+
+# --------------------------------------------------------------------------- #
+# Helpers
+# --------------------------------------------------------------------------- #
+def _utcnow() -> _dt.datetime:
+    return _dt.datetime.now(_dt.timezone.utc)
+
+
+def sha256_file(path: str) -> Optional[str]:
+    if not os.path.isfile(path):
+        return None
+    h = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for chunk in iter(lambda: fh.read(65536), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def detect_device_compute_capability() -> Optional[str]:
+    """Detect the REAL physical GPU compute capability (e.g. '7.5').
+
+    C7 REMEDIATION helper. Tries nvidia-smi first, then torch. Returns None when
+    no device capability can be read (the environment gate would already have
+    short-circuited in that case on a no-GPU host).
+    """
+    # 1. nvidia-smi
+    try:
+        p = subprocess.run(
+            ["nvidia-smi", "--query-gpu=compute_cap", "--format=csv,noheader"],
+            capture_output=True, text=True, timeout=30, check=False,
+        )
+        if p.returncode == 0:
+            val = p.stdout.strip().splitlines()[0].strip()
+            if val:
+                return val
+    except Exception:  # noqa: BLE001
+        pass
+    # 2. torch fallback
+    try:
+        import torch  # noqa: WPS433
+        if torch.cuda.is_available():
+            major, minor = torch.cuda.get_device_capability(0)
+            return f"{major}.{minor}"
+    except Exception:  # noqa: BLE001
+        pass
+    return None
+
+
+@dataclass
+class GateDecision:
+    verdict: str                       # ALLOW | DENY | HOLD | VERIFICATION_FAILURE | BLOCKED_NO_GPU
+    reason_code: str
+    authority_result: str = "NOT_EVALUATED"
+    evidence_result: str = "NOT_EVALUATED"
+    constraint_result: str = "NOT_EVALUATED"
+    control_result: str = "NOT_EVALUATED"
+    verification_result: str = "NOT_EVALUATED"   # NEW in R1 (C6)
+    candidate_executed: bool = False
+    gateway_capability_released: bool = False
+    environment_verdict: str = "UNKNOWN"
+    detected_compute_capability: Optional[str] = None   # NEW in R1 (C7)
+    required_compute_capability: Optional[str] = None    # NEW in R1 (C7)
+    required_control_state: Optional[str] = None         # NEW in R1 (C5)
+    presented_control_state: Optional[str] = None        # NEW in R1 (C5)
+    blocker_evidence: List[str] = field(default_factory=list)
+    launch_stdout: str = ""
+    notes: str = ""
+
+
+# --------------------------------------------------------------------------- #
+# Gateway (R1 remediated)
+# --------------------------------------------------------------------------- #
+class GpuExecutionGatewayR1:
+    """Pre-execution authorization gate with the three R1 remediations."""
+
+    def __init__(self, policy: Dict, kernels_dir: str,
+                 detected_compute_capability: Optional[str] = "AUTO"):
+        self.policy = policy
+        self.kernels_dir = kernels_dir
+        self.binary_path = os.path.join(kernels_dir, "elementwise_add")
+        # C7: resolve the detected device capability once. "AUTO" -> real detect.
+        # An explicit value can be injected for local, GPU-free validation of the
+        # comparison logic (does not fake a GPU; only supplies the detected value
+        # the real run reads from nvidia-smi).
+        if detected_compute_capability == "AUTO":
+            self.detected_compute_capability = detect_device_compute_capability()
+        else:
+            self.detected_compute_capability = detected_compute_capability
+
+    # -- environment gate (UNCHANGED from frozen) --------------------------- #
+    def _environment_gate(self) -> Optional[GateDecision]:
+        available, failed = gpu_available()
+        if not available:
+            return GateDecision(
+                verdict="BLOCKED_NO_GPU",
+                reason_code="NO_GPU_IN_ENVIRONMENT",
+                environment_verdict="NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED",
+                blocker_evidence=failed,
+                notes="Environment gate short-circuit. No decision engine was "
+                      "consulted and the launcher was never called.",
+            )
+        return None
+
+    # -- authority (UNCHANGED from frozen) ---------------------------------- #
+    def _authority(self, contract: Dict) -> str:
+        allowed = self.policy.get("authorized_requesters", [])
+        return "PASS" if contract.get("authority_identity") in allowed else "FAIL"
+
+    # -- evidence (UNCHANGED from frozen) ----------------------------------- #
+    def _evidence(self, contract: Dict) -> Tuple[str, List[str]]:
+        problems: List[str] = []
+        declared_bin = contract.get("compiled_binary_sha256", "")
+        if declared_bin.startswith("NOT_EXECUTED"):
+            problems.append("compiled_binary_sha256 is NOT_EXECUTED (no build)")
+            return "MISSING", problems
+        actual_bin = sha256_file(self.binary_path)
+        if actual_bin is None:
+            problems.append("compiled binary not present on disk")
+            return "MISSING", problems
+        if actual_bin != declared_bin:
+            problems.append("compiled binary hash != contract hash")
+            return "FAIL", problems
+        for key in ("functional_test_hash", "hidden_test_hash"):
+            if not contract.get(key) or str(contract.get(key)).startswith("NOT_"):
+                problems.append(f"{key} missing")
+        if contract.get("sanitizer_evidence_hash", "").startswith("NOT_EXECUTED"):
+            problems.append("sanitizer evidence NOT_EXECUTED")
+            return "MISSING", problems
+        return ("PASS" if not problems else "MISSING"), problems
+
+    # -- constraint (C7 REMEDIATED) ----------------------------------------- #
+    def _constraint(self, contract: Dict) -> str:
+        """Expiry + policy version (unchanged) PLUS a TRUE requested-vs-detected
+        compute-capability comparison (C7 remediation)."""
+        # expiry (unchanged)
+        try:
+            expiry = _dt.datetime.fromisoformat(contract["expiry_at"])
+            if _utcnow() > expiry:
+                return "HOLD_EXPIRED"
+        except Exception:  # noqa: BLE001
+            return "HOLD_BAD_EXPIRY"
+        # policy version (unchanged)
+        if contract.get("policy_version") not in (None, self.policy.get("version")):
+            return "HOLD_POLICY_DRIFT"
+
+        # C7 REMEDIATION: real requested-vs-detected comparison.
+        required = str(contract.get("target_compute_capability", "")).strip()
+        if not required:
+            return "DENY_TARGET_ABSENT"
+        detected = self.detected_compute_capability
+        if not detected:
+            # On a real GPU host detection succeeds; if it genuinely cannot be
+            # read we HOLD (fail-closed) rather than silently pass.
+            return "HOLD_DEVICE_CAP_UNKNOWN"
+        accepted = [str(x) for x in self.policy.get("accepted_compute_capabilities", [])]
+        if accepted and required not in accepted:
+            return "DENY_CAP_NOT_ACCEPTED"
+        if required != detected:
+            # Two real, non-empty capability values that differ -> DENY.
+            return "DENY_CAP_MISMATCH"
+        return "PASS"
+
+    # -- control (C5 REMEDIATED) -------------------------------------------- #
+    def _control(self, contract: Dict) -> str:
+        """Genuine control-state predicate (C5 remediation).
+
+        Resolves PASS or HOLD from an explicit control-state token in the
+        Request Contract compared against the policy-declared required control
+        state. This does NOT key on nvidia-smi presence, so a control HOLD is
+        inducible while a real GPU is fully present.
+        """
+        required = str(self.policy.get("required_control_state",
+                                       "LAUNCH_WINDOW_OPEN")).strip()
+        token = contract.get("control_state_token")
+        if token is None:
+            return "HOLD_CONTROL_STATE_ABSENT"
+        token = str(token).strip()
+        if token != required:
+            return "HOLD_CONTROL_STATE_NOT_SATISFIED"
+        return "PASS"
+
+    # -- verification (C6 REMEDIATED, native gateway path) ------------------ #
+    def _verify_proofrecord(self, contract: Dict) -> Tuple[str, str]:
+        """Native ProofRecord signature verification (C6 remediation).
+
+        A mutated/invalid ProofRecord returns FAIL here, which the gateway turns
+        into a native VERIFICATION_FAILURE verdict BEFORE any capability release.
+        Returns (result, detail).
+        """
+        pr = contract.get("proofrecord")
+        if not pr:
+            return "MISSING", "no proofrecord presented in contract"
+        body = pr.get("body")
+        sig_b64 = pr.get("dilithium3_signature_b64")
+        pk_b64 = pr.get("public_key_b64")
+        if not (body and sig_b64 and pk_b64):
+            return "MISSING", "proofrecord missing body/signature/public_key"
+        canon = json.dumps(body, sort_keys=True, separators=(",", ":")).encode()
+        try:
+            from dilithium_py.dilithium import Dilithium3
+            ok = Dilithium3.verify(base64.b64decode(pk_b64), canon,
+                                   base64.b64decode(sig_b64))
+        except Exception as exc:  # noqa: BLE001
+            return "DEP_ERROR", f"verifier error: {exc}"
+        if ok:
+            return "PASS", "dilithium3 signature valid over canonical body"
+        return "FAIL", "dilithium3 signature INVALID for presented body (mutated/forged)"
+
+    # -- top-level evaluate ------------------------------------------------- #
+    def evaluate(self, contract: Dict, release_capability: bool = True) -> GateDecision:
+        env_block = self._environment_gate()
+        if env_block is not None:
+            return env_block
+
+        authority = self._authority(contract)
+        if authority == "FAIL":
+            return GateDecision("DENY", "AUTHORITY_NOT_AUTHORIZED",
+                                authority_result="FAIL")
+
+        evidence, ev_problems = self._evidence(contract)
+        if evidence == "FAIL":
+            return GateDecision("DENY", "EVIDENCE_ARTIFACT_MISMATCH",
+                                authority_result=authority, evidence_result="FAIL",
+                                blocker_evidence=ev_problems)
+        if evidence == "MISSING":
+            return GateDecision("HOLD", "EVIDENCE_MISSING",
+                                authority_result=authority, evidence_result="MISSING",
+                                blocker_evidence=ev_problems)
+
+        constraint = self._constraint(contract)
+        if constraint.startswith("DENY"):
+            return GateDecision("DENY", "CONSTRAINT_" + constraint,
+                                authority_result=authority, evidence_result=evidence,
+                                constraint_result=constraint,
+                                detected_compute_capability=self.detected_compute_capability,
+                                required_compute_capability=str(contract.get("target_compute_capability", "")))
+        if constraint.startswith("HOLD"):
+            return GateDecision("HOLD", constraint,
+                                authority_result=authority, evidence_result=evidence,
+                                constraint_result=constraint,
+                                detected_compute_capability=self.detected_compute_capability,
+                                required_compute_capability=str(contract.get("target_compute_capability", "")))
+
+        control = self._control(contract)
+        if control.startswith("HOLD"):
+            return GateDecision("HOLD", control,
+                                authority_result=authority, evidence_result=evidence,
+                                constraint_result=constraint, control_result=control,
+                                required_control_state=str(self.policy.get("required_control_state",
+                                                                           "LAUNCH_WINDOW_OPEN")),
+                                presented_control_state=contract.get("control_state_token"),
+                                detected_compute_capability=self.detected_compute_capability)
+
+        # C6 REMEDIATION: native ProofRecord verification BEFORE release.
+        verification, v_detail = self._verify_proofrecord(contract)
+        if verification != "PASS":
+            return GateDecision("VERIFICATION_FAILURE", "PROOFRECORD_" + verification,
+                                authority_result=authority, evidence_result=evidence,
+                                constraint_result=constraint, control_result=control,
+                                verification_result=verification,
+                                detected_compute_capability=self.detected_compute_capability,
+                                required_control_state=str(self.policy.get("required_control_state",
+                                                                           "LAUNCH_WINDOW_OPEN")),
+                                presented_control_state=contract.get("control_state_token"),
+                                notes="Native gateway VERIFICATION_FAILURE: " + v_detail
+                                      + ". No capability released.")
+
+        # All engines pass -> ALLOW. Release capability via the exclusive launcher.
+        decision = GateDecision(
+            "ALLOW", "ALL_ENGINES_PASS",
+            authority_result=authority, evidence_result=evidence,
+            constraint_result=constraint, control_result=control,
+            verification_result=verification,
+            detected_compute_capability=self.detected_compute_capability,
+            required_compute_capability=str(contract.get("target_compute_capability", "")),
+            required_control_state=str(self.policy.get("required_control_state", "LAUNCH_WINDOW_OPEN")),
+            presented_control_state=contract.get("control_state_token"),
+        )
+        if release_capability:
+            res = launch_or_block(self.binary_path)
+            decision.gateway_capability_released = (res.status == "EXECUTED")
+            decision.candidate_executed = (res.status == "EXECUTED")
+            decision.launch_stdout = res.stdout
+            decision.environment_verdict = res.status
+            if res.status != "EXECUTED":
+                decision.blocker_evidence = res.blocker_evidence
+                decision.notes = res.note
+        return decision
+
+
+def load_policy(path: str) -> Dict:
+    with open(path, "r", encoding="utf-8") as fh:
+        return json.load(fh)
