@@ -1,0 +1,55 @@
+GPU FUNCTIONAL/HIDDEN TEST OUTPUT - CUDA-EP-001-GPU
+Captured: 2026-10-01T20:31:34Z UTC
+These are the CPU numpy-oracle REFERENCE runs (no GPU). The --gpu paths and the
+launcher/orchestrator all report NOT_EXECUTED / BLOCKED_NO_GPU, as shown below.
+============================================================
+$ python3 gpu_functional_tests.py
+[MODE] reference (numpy CPU oracle) - no GPU required
+  [PASS] ramp_sums_to_N: deterministic=True close_to_f64=True dtype=float32 shape=(1024,)
+  [PASS] uniform_seed: deterministic=True close_to_f64=True dtype=float32 shape=(1024,)
+  [PASS] edges: deterministic=True close_to_f64=True dtype=float32 shape=(1024,)
+VISIBLE REFERENCE TESTS: 3/3 passed
+exit=0
+------------------------------------------------------------
+$ python3 gpu_hidden_tests.py
+[MODE] reference (numpy CPU oracle) - no GPU required
+  [PASS] hidden_large_magnitude: close_to_f64=True deterministic=True extra_ok=True
+  [PASS] hidden_small_values: close_to_f64=True deterministic=True extra_ok=True
+  [PASS] hidden_exact_cancellation: close_to_f64=True deterministic=True extra_ok=True
+  [PASS] hidden_mixed_offset: close_to_f64=True deterministic=True extra_ok=True
+HIDDEN REFERENCE TESTS: 4/4 passed
+exit=0
+------------------------------------------------------------
+$ python3 gpu_functional_tests.py --gpu
+[MODE] gpu - compares real CUDA output to numpy oracle
+  NOT_EXECUTED - NO GPU IN ENVIRONMENT
+  On a GPU host this would: compile kernels/elementwise_add.cu, run the binary via the launcher, parse its output, and assert np.allclose(device_out, elementwise_add_reference(a, b)).
+exit=2
+------------------------------------------------------------
+$ python3 elementwise_add_launcher.py
+status=BLOCKED_NO_GPU
+  blocker: nvidia-smi: NOT_FOUND
+  blocker: /dev/nvidia*: NOT_FOUND
+  blocker: torch.cuda.is_available(): False
+note: GPU not present; launcher refused to execute (fail-closed). NOT_EXECUTED - NO GPU IN ENVIRONMENT.
+exit=0
+------------------------------------------------------------
+$ python3 run_gpu_cases.py
+==========================================================================
+CUDA-EP-001 GPU CASE MATRIX (GPU-C0 .. GPU-C8)
+==========================================================================
+GPU-C0   clean_baseline                     expected(GPU)=ALLOW                    actual(this env)=BLOCKED_NO_GPU
+GPU-C1   authority_failure                  expected(GPU)=DENY                     actual(this env)=BLOCKED_NO_GPU
+GPU-C2   missing_evidence                   expected(GPU)=HOLD                     actual(this env)=BLOCKED_NO_GPU
+GPU-C3   policy_expiry_constraint           expected(GPU)=HOLD                     actual(this env)=BLOCKED_NO_GPU
+GPU-C4   evidence_artifact_mismatch         expected(GPU)=DENY                     actual(this env)=BLOCKED_NO_GPU
+GPU-C5   control_gateway_not_satisfied      expected(GPU)=HOLD                     actual(this env)=BLOCKED_NO_GPU
+GPU-C6   mutated_proofrecord                expected(GPU)=VERIFICATION_FAILURE     actual(this env)=BLOCKED_NO_GPU
+GPU-C7   target_compute_capability_mismatch expected(GPU)=DENY                     actual(this env)=BLOCKED_NO_GPU
+GPU-C8   exclusive_launcher_control         expected(GPU)=NO_LAUNCH_WITHOUT_ALLOW  actual(this env)=BLOCKED_NO_GPU
+--------------------------------------------------------------------------
+ALL CASES BLOCKED_NO_GPU IN THIS ENVIRONMENT: True
+NOT_EXECUTED - NO GPU IN ENVIRONMENT
+==========================================================================
+exit=0
+============================================================

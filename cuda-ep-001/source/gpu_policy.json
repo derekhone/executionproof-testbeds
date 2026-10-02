@@ -1,0 +1,24 @@
+{
+  "policy_id": "cuda-ep-001-gpu-policy-v1.0",
+  "version": "1.0",
+  "experiment_id": "CUDA-EP-001-GPU",
+  "description": "Authorization policy for the CUDA-EP-001 GPU phase. Real GPU phase - NOT PRODUCTION. GPU execution is BLOCKED in the current environment (no GPU).",
+  "authorized_requesters": [
+    "spiffe://cuda-ep.experiment/proposer/run-gpu-001"
+  ],
+  "required_evidence_schema": "cuda-ep-gpu-attestation/1.0",
+  "max_artifact_age_seconds": 3600,
+  "required_environment_type": "NVIDIA_GPU",
+  "accepted_compute_capabilities": ["8.0", "7.5", "8.6"],
+  "driver_version_min": "525",
+  "require_sanitizer_evidence": true,
+  "signature_algorithm": "Dilithium3 (draft ML-DSA-65-aligned) - NOT FIPS 204 FINAL",
+  "signing_key_id": "cuda-ep-gpu-test-key-001 - TEST KEY - NOT PRODUCTION",
+  "verdict_semantics": {
+    "ALLOW": "All mandatory engines pass for the exact requested stage; a real GPU is present; the launcher can exclusively release capability; evidence valid and fresh.",
+    "HOLD": "Remediable or requires review: missing attestation, sanitizer evidence absent, expired evidence, policy drift, or gateway cannot exclusively enforce.",
+    "DENY": "Authority absent, artifact/attestation digest mismatch, or evidence bound to a different target compute capability.",
+    "BLOCKED_NO_GPU": "Environment short-circuit: no NVIDIA GPU present. No engine consulted; launcher never called. NOT_EXECUTED - NO GPU IN ENVIRONMENT."
+  },
+  "notes": "This policy governs a bounded non-production research experiment only. In the current environment GPU-dependent conditions are NOT_EXECUTED - NO GPU."
+}

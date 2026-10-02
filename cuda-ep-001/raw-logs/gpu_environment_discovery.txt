@@ -1,0 +1,33 @@
+GPU ENVIRONMENT DISCOVERY - CUDA-EP-001-GPU
+Label: NOT_EXECUTED - NO GPU
+Captured: 2026-10-01T20:31:25Z UTC
+============================================================
+### hostname / kernel
+chatllm-computer-142e1260c4-8485bdccb9-8cv7k
+6.17.0-1019-aws
+### CPU
+CPU(s):                                  32
+Model name:                              Intel(R) Xeon(R) 6975P-C
+### memory
+               total        used        free      shared  buff/cache   available
+Mem:           247Gi       119Gi        26Gi       1.1Gi       105Gi       128Gi
+### python
+Python 3.11.6
+### nvidia-smi
+nvidia-smi: NOT_FOUND
+### nvcc
+nvcc: NOT_FOUND
+### compute-sanitizer
+compute-sanitizer: NOT_FOUND
+### /dev/nvidia*
+ls: cannot access '/dev/nvidia*': No such file or directory
+/dev/nvidia*: NOT_FOUND
+### lspci NVIDIA
+lspci NVIDIA: NONE_FOUND (or lspci unavailable)
+### torch CUDA
+torch 2.14.0+cpu
+cuda_available False
+### dilithium-py import + keygen
+dilithium OK pk 1952 sk 4000
+============================================================
+VERDICT: NO_GPU_PRESENT - GPU_EXECUTION_BLOCKED

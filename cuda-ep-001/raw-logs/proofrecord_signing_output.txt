@@ -1,0 +1,38 @@
+GPU PROOFRECORD SIGNING + VERIFY OUTPUT - CUDA-EP-001-GPU
+Captured: 2026-10-01T20:31:55Z UTC
+Signatures are real (Dilithium3 + HMAC-SHA256). Keys are ephemeral TEST keys.
+============================================================
+$ python3 sign_gpu_proofrecords.py
+GPU ProofRecord signing - CUDA-EP-001-GPU
+Dilithium3 public key length (bytes): 1952
+Secret key length (bytes): 4000
+------------------------------------------------------------
+GPU-C0: verdict=BLOCKED_NO_GPU self_verify_ok=True digest=3e6637b6a79daf1c...
+GPU-C1: verdict=BLOCKED_NO_GPU self_verify_ok=True digest=056c3989360c94ac...
+GPU-C2: verdict=BLOCKED_NO_GPU self_verify_ok=True digest=78a231d814981e9d...
+GPU-C3: verdict=BLOCKED_NO_GPU self_verify_ok=True digest=78c4accb65094b1d...
+GPU-C4: verdict=BLOCKED_NO_GPU self_verify_ok=True digest=ed5fd2b7d044918e...
+GPU-C5: verdict=BLOCKED_NO_GPU self_verify_ok=True digest=9bef0632bc059532...
+GPU-C6: verdict=BLOCKED_NO_GPU self_verify_ok=True digest=5d603aa4edf63737...
+GPU-C7: verdict=BLOCKED_NO_GPU self_verify_ok=True digest=36648faeec61a286...
+GPU-C8: verdict=BLOCKED_NO_GPU self_verify_ok=True digest=fbed62406af44840...
+------------------------------------------------------------
+Records written: 9
+All self-verify OK: True
+Manifest: /home/ubuntu/output/RF_CUDA_GPU_Package/08_GPU_PROOFRECORDS/proofrecord_manifest.json
+exit=0
+------------------------------------------------------------
+$ python3 verify_gpu_proofrecords.py
+proofrecord_GPU-C0.json: digest=True hmac=True dilithium=True -> OK
+proofrecord_GPU-C1.json: digest=True hmac=True dilithium=True -> OK
+proofrecord_GPU-C2.json: digest=True hmac=True dilithium=True -> OK
+proofrecord_GPU-C3.json: digest=True hmac=True dilithium=True -> OK
+proofrecord_GPU-C4.json: digest=True hmac=True dilithium=True -> OK
+proofrecord_GPU-C5.json: digest=True hmac=True dilithium=True -> OK
+proofrecord_GPU-C6.json: digest=True hmac=True dilithium=True -> OK
+proofrecord_GPU-C7.json: digest=True hmac=True dilithium=True -> OK
+proofrecord_GPU-C8.json: digest=True hmac=True dilithium=True -> OK
+------------------------------------------------------------
+ALL RECORDS VERIFIED: True
+exit=0
+============================================================
