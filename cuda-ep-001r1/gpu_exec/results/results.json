@@ -1,0 +1,169 @@
+{
+  "experiment_id": "CUDA-EP-001R1-GPU",
+  "harness": "gpu_real_run_r1.py v1.0",
+  "remediates": "CUDA-EP-001 (frozen PARTIAL_FAIL); C5 control predicate, C6 native verification, C7 device-cap comparison",
+  "started_at": "2026-10-02T04:24:06.561135+00:00",
+  "steps": {
+    "environment": {
+      "gpu_name": "Tesla T4",
+      "compute_cap": "7.5",
+      "driver": "580.82.07",
+      "nvcc_present": true,
+      "sanitizer_present": true
+    },
+    "freeze_integrity": {
+      "cu_source_sha256": "268d125fe316156e9da44852afeca54838974a4a90643c375d233b5491f89b0d",
+      "kernel_byte_identical_to_original": true,
+      "gateway_r1_sha256": "558da59726f7615047c42197b7f2fce597101db2f0830f50ccc733397aec0986",
+      "policy_r1_sha256": "8bfa277dbe9ebc2038d009bac4d9a4360cc841cd6439222cddb4919aedef1f2e"
+    },
+    "compile": {
+      "arch": "sm_75",
+      "exit_code": 0,
+      "binary_present": true,
+      "binary_sha256": "f1a5c669033bd273c016f332068a29e20ffce792a300adb9e8dab9de1bde6e5e",
+      "ptx_sha256": "ce6c3c8bd50b00244e41e94f516cc2a4e8548d6b83beda3dad01542dc16f74af",
+      "cubin_sha256": "bcb9cb242ba0286646010aef959170afa3ee6c65a7721d61c224964f4c326035",
+      "source_hash_preserved": true
+    },
+    "binary_run": {
+      "exit_code": 0,
+      "all_pass": true,
+      "stdout": "ALL_PASS: elementwise_add N=1024"
+    },
+    "functional_hidden_gpu": {
+      "all_pass": true,
+      "n_vectors": 7,
+      "kernel_block_sha256": "bab3e558ef1781ceb69867b832c03628f5a1aaed8bd81451e957bf8e995220cc",
+      "functional_digest": "78c0820fa1361f067c2870cad23334b95813d3835e6a97eaa75189f82a008d96",
+      "hidden_digest": "0f3eec9af4fe83f08df09ed89652c0fa2bfd55fe0b49bd6de34122ac8d4c3472"
+    },
+    "sanitizer": {
+      "memcheck": {
+        "returncode": 0,
+        "zero_errors": true,
+        "digest": "2748d6400d2eee6839f10ae12bfb4db3b1d7065b9831c64dae64ced44cc0217d"
+      },
+      "racecheck": {
+        "returncode": 0,
+        "zero_errors": true,
+        "digest": "99980448c0fb305c7952bc1705659faa6a27db77c27ed842df35cb493757c064"
+      },
+      "initcheck": {
+        "returncode": 0,
+        "zero_errors": true,
+        "digest": "2748d6400d2eee6839f10ae12bfb4db3b1d7065b9831c64dae64ced44cc0217d"
+      },
+      "synccheck": {
+        "returncode": 0,
+        "zero_errors": true,
+        "digest": "2748d6400d2eee6839f10ae12bfb4db3b1d7065b9831c64dae64ced44cc0217d"
+      }
+    },
+    "sanitizer_evidence_digest": "951470cbc1f0c7ab0b58dd317c5fbfff45b7f41f5bb4071af4b746562dbaa410",
+    "gateway_matrix": [
+      {
+        "case_id": "R1-C0",
+        "condition": "clean_allow_control",
+        "expected_on_gpu": "ALLOW",
+        "actual_verdict": "ALLOW",
+        "reason_code": "ALL_ENGINES_PASS",
+        "authority_result": "PASS",
+        "evidence_result": "PASS",
+        "constraint_result": "PASS",
+        "control_result": "PASS",
+        "verification_result": "PASS",
+        "detected_compute_capability": "7.5",
+        "required_compute_capability": "7.5",
+        "required_control_state": "LAUNCH_WINDOW_OPEN",
+        "presented_control_state": "LAUNCH_WINDOW_OPEN",
+        "candidate_executed": true,
+        "capability_released": true,
+        "launch_stdout": "ALL_PASS: elementwise_add N=1024",
+        "match_expected": true,
+        "note": "Positive control: valid contract, control-state satisfied, cap matches detected device, valid ProofRecord. Launcher runs the real kernel."
+      },
+      {
+        "case_id": "R1-C5",
+        "condition": "control_state_not_satisfied",
+        "expected_on_gpu": "HOLD",
+        "actual_verdict": "HOLD",
+        "reason_code": "HOLD_CONTROL_STATE_NOT_SATISFIED",
+        "authority_result": "PASS",
+        "evidence_result": "PASS",
+        "constraint_result": "PASS",
+        "control_result": "HOLD_CONTROL_STATE_NOT_SATISFIED",
+        "verification_result": "NOT_EVALUATED",
+        "detected_compute_capability": "7.5",
+        "required_compute_capability": null,
+        "required_control_state": "LAUNCH_WINDOW_OPEN",
+        "presented_control_state": "LAUNCH_WINDOW_CLOSED",
+        "candidate_executed": false,
+        "capability_released": false,
+        "launch_stdout": "",
+        "match_expected": true,
+        "note": "C5 REMEDIATION: real control-state predicate. Token != required (LAUNCH_WINDOW_CLOSED vs LAUNCH_WINDOW_OPEN) while a real GPU is present. Expect HOLD and NO launch, independent of nvidia-smi."
+      },
+      {
+        "case_id": "R1-C6",
+        "condition": "mutated_proofrecord",
+        "expected_on_gpu": "VERIFICATION_FAILURE",
+        "actual_verdict": "VERIFICATION_FAILURE",
+        "reason_code": "PROOFRECORD_FAIL",
+        "authority_result": "PASS",
+        "evidence_result": "PASS",
+        "constraint_result": "PASS",
+        "control_result": "PASS",
+        "verification_result": "FAIL",
+        "detected_compute_capability": "7.5",
+        "required_compute_capability": null,
+        "required_control_state": "LAUNCH_WINDOW_OPEN",
+        "presented_control_state": "LAUNCH_WINDOW_OPEN",
+        "candidate_executed": false,
+        "capability_released": false,
+        "launch_stdout": "",
+        "match_expected": true,
+        "note": "C6 REMEDIATION: native gateway verification. Body mutated after signing so the Dilithium3 signature no longer verifies. Expect native VERIFICATION_FAILURE from evaluate() and NO launch."
+      },
+      {
+        "case_id": "R1-C7",
+        "condition": "compute_capability_mismatch",
+        "expected_on_gpu": "DENY",
+        "actual_verdict": "DENY",
+        "reason_code": "CONSTRAINT_DENY_CAP_MISMATCH",
+        "authority_result": "PASS",
+        "evidence_result": "PASS",
+        "constraint_result": "DENY_CAP_MISMATCH",
+        "control_result": "NOT_EVALUATED",
+        "verification_result": "NOT_EVALUATED",
+        "detected_compute_capability": "7.5",
+        "required_compute_capability": "8.0",
+        "required_control_state": null,
+        "presented_control_state": null,
+        "candidate_executed": false,
+        "capability_released": false,
+        "launch_stdout": "",
+        "match_expected": true,
+        "note": "C7 REMEDIATION: true requested-vs-detected comparison. Requested=8.0 (accepted) vs detected=7.5. Two real non-empty values that differ. Expect DENY and NO launch."
+      },
+      {
+        "case_id": "R1-C8",
+        "condition": "exclusive_launcher_control",
+        "expected_on_gpu": "NO_LAUNCH_WITHOUT_ALLOW",
+        "actual_verdict": "CONFIRMED",
+        "match_expected": true,
+        "note": "Kernel executed ONLY under R1-C0 (ALLOW). All HOLD/DENY/VERIFICATION_FAILURE cases had candidate_executed=False and no launch. Executed cases: ['R1-C0']."
+      }
+    ],
+    "detected_compute_capability": "7.5",
+    "proofrecords": {
+      "status": "SIGNED",
+      "count": 5,
+      "all_self_verified": true
+    }
+  },
+  "all_preregistered_remediations_passed": true,
+  "overall": "COMPLETED",
+  "unexpected_failures": [],
+  "ended_at": "2026-10-02T04:24:20.713960+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "arch": "sm_75",
+  "logs": {
+    "binary": {
+      "cmd": "nvcc -O2 --generate-code arch=compute_75,code=sm_75 /content/ep/cuda-ep-001r1/source/kernels/elementwise_add.cu -o /content/ep/cuda-ep-001r1/source/kernels/elementwise_add",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "ptx": {
+      "cmd": "nvcc -ptx -arch=compute_75 /content/ep/cuda-ep-001r1/source/kernels/elementwise_add.cu -o /content/ep/cuda-ep-001r1/source/kernels/elementwise_add.ptx",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "cubin": {
+      "cmd": "nvcc -cubin -arch=sm_75 /content/ep/cuda-ep-001r1/source/kernels/elementwise_add.cu -o /content/ep/cuda-ep-001r1/source/kernels/elementwise_add.cubin",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "source_hash_preserved": true,
+  "binary_sha256": "f1a5c669033bd273c016f332068a29e20ffce792a300adb9e8dab9de1bde6e5e",
+  "ptx_sha256": "ce6c3c8bd50b00244e41e94f516cc2a4e8548d6b83beda3dad01542dc16f74af",
+  "cubin_sha256": "bcb9cb242ba0286646010aef959170afa3ee6c65a7721d61c224964f4c326035",
+  "binary_present": true
+}
