@@ -1,0 +1,47 @@
+--- cuda-ep-001/source/gpu_policy.json	2026-10-02 03:09:25.937337469 +0000
++++ cuda-ep-001r1/source/gpu_policy_r1.json	2026-10-02 04:15:25.790255259 +0000
+@@ -1,8 +1,8 @@
+ {
+-  "policy_id": "cuda-ep-001-gpu-policy-v1.0",
++  "policy_id": "cuda-ep-001r1-gpu-policy-v1.0",
+   "version": "1.0",
+-  "experiment_id": "CUDA-EP-001-GPU",
+-  "description": "Authorization policy for the CUDA-EP-001 GPU phase. Real GPU phase - NOT PRODUCTION. GPU execution is BLOCKED in the current environment (no GPU).",
++  "experiment_id": "CUDA-EP-001R1-GPU",
++  "description": "Authorization policy for CUDA-EP-001R1, the remediation retest of CUDA-EP-001. Adds a real control-state predicate (C5) and relies on true requested-vs-detected compute-capability comparison (C7) and native ProofRecord verification (C6) implemented in gpu_gateway_r1.py. Real GPU phase - NOT PRODUCTION.",
+   "authorized_requesters": [
+     "spiffe://cuda-ep.experiment/proposer/run-gpu-001"
+   ],
+@@ -10,15 +10,26 @@
+   "max_artifact_age_seconds": 3600,
+   "required_environment_type": "NVIDIA_GPU",
+   "accepted_compute_capabilities": ["8.0", "7.5", "8.6"],
++  "required_control_state": "LAUNCH_WINDOW_OPEN",
+   "driver_version_min": "525",
+   "require_sanitizer_evidence": true,
++  "require_proofrecord_verification": true,
+   "signature_algorithm": "Dilithium3 (draft ML-DSA-65-aligned) - NOT FIPS 204 FINAL",
+-  "signing_key_id": "cuda-ep-gpu-test-key-001 - TEST KEY - NOT PRODUCTION",
++  "signing_key_id": "cuda-ep-gpu-r1-test-key-001 - TEST KEY - NOT PRODUCTION",
+   "verdict_semantics": {
+-    "ALLOW": "All mandatory engines pass for the exact requested stage; a real GPU is present; the launcher can exclusively release capability; evidence valid and fresh.",
+-    "HOLD": "Remediable or requires review: missing attestation, sanitizer evidence absent, expired evidence, policy drift, or gateway cannot exclusively enforce.",
+-    "DENY": "Authority absent, artifact/attestation digest mismatch, or evidence bound to a different target compute capability.",
+-    "BLOCKED_NO_GPU": "Environment short-circuit: no NVIDIA GPU present. No engine consulted; launcher never called. NOT_EXECUTED - NO GPU IN ENVIRONMENT."
++    "ALLOW": "All engines pass for the exact requested stage, a real GPU is present, the control-state predicate is satisfied, the requested compute capability matches the detected device, the ProofRecord signature verifies, and the launcher can exclusively release capability.",
++    "HOLD": "Remediable or requires review: missing/expired evidence, policy drift, detected capability unreadable, OR the real control-state predicate is not satisfied (C5).",
++    "DENY": "Authority absent, artifact/attestation digest mismatch, target capability absent/not-accepted, OR requested compute capability differs from the detected physical device capability (C7).",
++    "VERIFICATION_FAILURE": "Native gateway outcome (C6): the presented ProofRecord signature does not verify over its canonical body (mutated or forged). No capability is released.",
++    "BLOCKED_NO_GPU": "Environment short-circuit: no NVIDIA GPU present. No engine consulted; launcher never called."
+   },
+-  "notes": "This policy governs a bounded non-production research experiment only. In the current environment GPU-dependent conditions are NOT_EXECUTED - NO GPU."
++  "control_state_semantics": {
++    "field": "control_state_token",
++    "required_value": "LAUNCH_WINDOW_OPEN",
++    "note": "C5 REMEDIATION. The control predicate compares this contract token against required_control_state. It is independent of nvidia-smi presence, so a control HOLD is inducible while a real GPU remains present. Any token != required_control_state (including absent) yields HOLD and no launch."
++  },
++  "compute_capability_semantics": {
++    "note": "C7 REMEDIATION. gpu_gateway_r1.py detects the physical device compute capability (nvidia-smi --query-gpu=compute_cap, torch fallback) and DENYs when the contract's target_compute_capability differs from the detected value. Both values are real and non-empty in the mismatch test."
++  },
++  "notes": "Bounded non-production research experiment only. CUDA-EP-001R1 remediates exactly the three limitations recorded for CUDA-EP-001 (C5 control predicate, C6 native verification path, C7 device-cap comparison). The original CUDA-EP-001 package and record are NOT modified."
+ }

@@ -1,0 +1,56 @@
+{
+  "experiment_id": "CUDA-EP-001R1",
+  "remediates": "CUDA-EP-001",
+  "original_frozen_record": "PARTIAL_FAIL | GPU-C8 CONFIRMED; GPU-C5 expected HOLD -> actual ALLOW; C6/C7 scope limitations preserved",
+  "generated_at": "2026-10-02",
+  "principle": "R1 adds new files only. No original CUDA-EP-001 artifact is modified, overwritten, amended, or relabeled.",
+  "files_unchanged_byte_identical": [
+    {"path": "source/kernels/elementwise_add.cu", "sha256": "268d125fe316156e9da44852afeca54838974a4a90643c375d233b5491f89b0d"},
+    {"path": "source/elementwise_add_launcher.py", "sha256": "ea411c6d0cb9c6abd3b4ed8f438e8cb83555da7e31ce80b7cba5a3ba67ddf01e"},
+    {"path": "source/gpu_functional_tests.py", "note": "carried verbatim from CUDA-EP-001"},
+    {"path": "source/gpu_hidden_tests.py", "note": "carried verbatim from CUDA-EP-001"}
+  ],
+  "files_added_in_r1": [
+    {"path": "source/gpu_gateway_r1.py", "derived_from": "cuda-ep-001/source/gpu_gateway.py (sha256 c303d9c374af55e1468492bdb909605b5f036cf619cce2b0420024bf1cbff09d)"},
+    {"path": "source/gpu_policy_r1.json", "derived_from": "cuda-ep-001/source/gpu_policy.json (sha256 b617823f0a4a38b8d23db73d497b3eee2c399c00aa6258a99d66e3baa9dca6df)"},
+    {"path": "gpu_exec/gpu_real_run_r1.py", "note": "R1 retest harness (C0/C5/C6/C7/C8 only)"}
+  ],
+  "engine_changes": [
+    {
+      "engine": "control",
+      "case": "C5",
+      "original_behavior": "_control() returned PASS iff shutil.which('nvidia-smi') was truthy; HOLD only if nvidia-smi absent. On a real GPU host nvidia-smi is always present, so control-HOLD was not inducible without removing the GPU (BLOCKED_NO_GPU).",
+      "remediated_behavior": "_control(contract) compares contract['control_state_token'] against policy['required_control_state'] ('LAUNCH_WINDOW_OPEN'). PASS iff equal; HOLD if different or absent. Independent of nvidia-smi presence, so HOLD is inducible while a real GPU is present.",
+      "signature_change": "_control(self) -> _control(self, contract)",
+      "new_reason_codes": ["HOLD_CONTROL_STATE_ABSENT", "HOLD_CONTROL_STATE_NOT_SATISFIED"]
+    },
+    {
+      "engine": "constraint",
+      "case": "C7",
+      "original_behavior": "_constraint() checked expiry + policy version, then DENY only if target_compute_capability was EMPTY. It never compared requested capability to the detected device capability (comment acknowledged 'would compare to detected device on GPU').",
+      "remediated_behavior": "Detects the physical device compute capability (detect_device_compute_capability(): nvidia-smi --query-gpu=compute_cap, torch fallback) and compares it to the contract's target_compute_capability. DENY on absent, not-accepted, or (required != detected). PASS only when required == detected and accepted.",
+      "new_helpers": ["detect_device_compute_capability()"],
+      "new_reason_codes": ["DENY_TARGET_ABSENT", "DENY_CAP_NOT_ACCEPTED", "DENY_CAP_MISMATCH", "HOLD_DEVICE_CAP_UNKNOWN"]
+    },
+    {
+      "engine": "verification",
+      "case": "C6",
+      "original_behavior": "gateway.evaluate() had NO verification branch. ProofRecord mutation detection was performed only by an external Dilithium3 verifier (verify_gpu_proofrecords.py), never as a native gateway verdict. CUDA-EP-001 recorded this as a signature-layer result, not a gateway path.",
+      "remediated_behavior": "New _verify_proofrecord(contract) engine inside evaluate(), executed AFTER control PASS and BEFORE capability release. Recomputes the canonical body and verifies the Dilithium3 signature with the embedded public key. On failure/missing, evaluate() returns a native VERIFICATION_FAILURE verdict and releases no capability.",
+      "new_verdict": "VERIFICATION_FAILURE",
+      "new_reason_codes": ["PROOFRECORD_FAIL", "PROOFRECORD_MISSING", "PROOFRECORD_DEP_ERROR"]
+    }
+  ],
+  "decision_flow_original": ["environment", "authority", "evidence", "constraint", "control", "ALLOW/launch"],
+  "decision_flow_r1": ["environment", "authority", "evidence", "constraint(C7)", "control(C5)", "verification(C6)", "ALLOW/launch"],
+  "preserved_properties": [
+    "environment gate short-circuit (BLOCKED_NO_GPU)",
+    "authority allow-list check (unchanged)",
+    "evidence hash/digest checks (unchanged)",
+    "exclusive-launcher property: launch_or_block() invoked only on ALLOW (C8)"
+  ],
+  "machine_readable_diffs": [
+    "diff/gpu_gateway__original_vs_r1.diff",
+    "diff/gpu_policy__original_vs_r1.diff"
+  ]
+}
