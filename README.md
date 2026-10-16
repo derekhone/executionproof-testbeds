@@ -1,5 +1,12 @@
 > **Repository Role:** Preregistered Experiment Series — ExecutionProof Authorization Boundaries · Part of the [Remnant Fieldworks](https://remnantfieldworks.com) research and product ecosystem
 
+### Reference vs. Production
+
+This repository publishes research/reference material or public integration interfaces; its specific scope is below. It does not ship RF's private production backend. Experimental behavior, fixture policies, local/test keys and published results apply only to the identified implementation and stated conditions. Do not use public test keys as production trust roots or treat fixture conformance as proof of production security. This notice does not change existing licenses, results, preregistrations or preserved failures.
+
+This is a collection of experiment-specific reference implementations and evidence. Key types, signing behavior and enforcement models vary by experiment. Neither one unsigned example nor one signed example describes the whole collection.
+
+
 **Where this fits:** [ExecutionProof](https://executionproof.io) is an independent pre-execution governance layer for consequential AI actions — returning ALLOW / HOLD / DENY before Stripe or any downstream system is ever called. Payment authorization is the first production deployment boundary; the same architecture governs infrastructure commands, data release, access changes, and other irreversible actions. This repository records preregistered authorization-boundary experiments that validate the ALLOW/HOLD/DENY enforcement claims.
 
 ---
@@ -117,3 +124,10 @@ Every experiment can be re-run on a free IBM Quantum open-plan account. Requirem
 ## License
 
 Code and data released under the license in [`LICENSE`](LICENSE). Dataset also archived under CC BY 4.0 on Zenodo.
+
+### License scope map
+
+- Root LICENSE: MIT for material within its applicable scope.
+- executionproof-pq-verification-pack/LICENSE: expressly overrides root MIT inside that directory with reviewer-use terms. Its associated Zenodo terms are separately stated as CC BY-NC-ND 4.0. Those notices are unchanged.
+- Experiment-specific document/data and third-party notices retain their stated scope. Do not infer one uniform license across the collection.
+- This map does not license absent private implementations or alter historical grants, experiments, failures or releases.
