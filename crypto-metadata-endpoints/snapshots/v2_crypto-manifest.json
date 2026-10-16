@@ -1,0 +1,64 @@
+{
+  "mode": "aws-kms-native",
+  "hardware_backed": true,
+  "in_process_signing": false,
+  "signature_algorithm": "ML-DSA-65",
+  "hash_algorithm": "SHA-256",
+  "formal_conformance": "pending independent external review",
+  "simulated": true,
+  "source": "documented production contract mirrored by software simulation",
+  "_simulation": {
+    "experimental": true,
+    "simulation": true,
+    "testbed": true,
+    "hardware_present": false,
+    "live_aws_kms": false,
+    "endpoint_kind": "crypto-manifest",
+    "build": "crypto-metadata-endpoints-sim-1.0.0",
+    "notice": "EXPERIMENTAL SOFTWARE SIMULATION / TESTBED. This endpoint does NOT run on AWS KMS, an HSM, a TPM, or any hardware security boundary. Custody fields such as 'aws-kms-native' and 'hardware_backed' reproduce the documented production contract (docs/crypto-api-metadata-contract.md) for routing and schema testing only; they are NOT a claim that this simulation is hardware-backed. No FIPS conformance, validation, or certification is claimed. formal_conformance remains pending independent external review.",
+    "contract_source": "docs/crypto-api-metadata-contract.md (PR #24)",
+    "generated_at": "2026-10-16T21:37:21Z"
+  },
+  "active_public_key_id": "00a69ffbb8a33217",
+  "active_key_version": "00a69ffbb8a33217",
+  "retired_public_keys": [
+    {
+      "public_key_id": "13757ac965b41061",
+      "revoked": false,
+      "role": "RETIRED",
+      "note": "retained for historical ProofRecord verification"
+    }
+  ],
+  "pq_public_key_endpoint": "/v2/crypto/pq-public-key",
+  "signature_metadata_schema": {
+    "algorithm": "ML-DSA-65",
+    "standard": "NIST FIPS 204 (ML-DSA / CRYSTALS-Dilithium), category 3",
+    "signature_encoding": "base64 (raw ML-DSA-65 signature, 3309 bytes)",
+    "public_key_encoding": "base64 / hex (raw ML-DSA-65 public key, 1952 bytes)",
+    "fields": [
+      "algorithm",
+      "public_key_id",
+      "key_version",
+      "signed_message_form",
+      "signature_base64"
+    ]
+  },
+  "canonical_payload_hashing": {
+    "canonicalization": "deterministic canonical JSON of the ProofRecord with signature fields excluded",
+    "digest": "SHA-256 of the canonical payload bytes",
+    "signed_message_form": "aws-kms-native custody signs the SHA-256 digest (KMS RAW ML-DSA message cap); software custody signs the canonical payload bytes directly",
+    "reference": "docs/proofrecord-verification.md"
+  },
+  "rotation_retirement_revocation": {
+    "rotation": "non-destructive; retired keys remain published for historical verification",
+    "retirement": "retired public keys stay discoverable via this manifest and the pq-public-key endpoint",
+    "revocation": "revoked flag exposed per retired key (revoked=true means do not trust for new verification)"
+  },
+  "verification_guidance": "Verify ProofRecords with any FIPS 204 ML-DSA-65 implementation over the deterministic canonical-JSON payload (signature fields excluded). Resolve the public key by public_key_id/key_version; try the SHA-256 digest form first (aws-kms-native) then the raw canonical-payload form. See executionproof-pq-verification-pack/independent_verifier.py.",
+  "references": {
+    "verification_pack": "executionproof-pq-verification-pack/",
+    "pq_public_key_endpoint_json": "executionproof-pq-verification-pack/public_keys/pq-public-key-endpoint.json",
+    "contract": "docs/crypto-api-metadata-contract.md",
+    "proofrecord_verification": "docs/proofrecord-verification.md"
+  }
+}
