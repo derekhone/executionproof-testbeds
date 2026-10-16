@@ -1,0 +1,19 @@
+{
+  "experimental": true,
+  "simulation": true,
+  "notice": "EXPERIMENTAL SOFTWARE SIMULATION / TESTBED. This endpoint does NOT run on AWS KMS, an HSM, a TPM, or any hardware security boundary. Custody fields such as 'aws-kms-native' and 'hardware_backed' reproduce the documented production contract (docs/crypto-api-metadata-contract.md) for routing and schema testing only; they are NOT a claim that this simulation is hardware-backed. No FIPS conformance, validation, or certification is claimed. formal_conformance remains pending independent external review.",
+  "snapshots": {
+    "/v2/version": {
+      "file": "v2_version.json",
+      "content_sha256_stable": "a1e0cfd1a6453c7ad727ac86a183dcf18c1b7ab665ae45e1fd4ec5b8e3844999"
+    },
+    "/v2/crypto-manifest": {
+      "file": "v2_crypto-manifest.json",
+      "content_sha256_stable": "db0366820a77df81da8d785c7048b95cb556ca50c304c14ddff59b147a70c70e"
+    },
+    "/v2/crypto/pq-public-key": {
+      "file": "v2_crypto_pq-public-key.json",
+      "content_sha256_stable": "3fc717832cca4b907f186b133f07855885fca32713f545b09475dbd72e02671c"
+    }
+  }
+}

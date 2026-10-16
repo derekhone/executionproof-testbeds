@@ -1,0 +1,22 @@
+{
+  "_simulation": {
+    "experimental": true,
+    "simulation": true,
+    "testbed": true,
+    "hardware_present": false,
+    "live_aws_kms": false,
+    "endpoint_kind": "version",
+    "build": "crypto-metadata-endpoints-sim-1.0.0",
+    "notice": "EXPERIMENTAL SOFTWARE SIMULATION / TESTBED. This endpoint does NOT run on AWS KMS, an HSM, a TPM, or any hardware security boundary. Custody fields such as 'aws-kms-native' and 'hardware_backed' reproduce the documented production contract (docs/crypto-api-metadata-contract.md) for routing and schema testing only; they are NOT a claim that this simulation is hardware-backed. No FIPS conformance, validation, or certification is claimed. formal_conformance remains pending independent external review.",
+    "contract_source": "docs/crypto-api-metadata-contract.md (PR #24)",
+    "generated_at": "2026-10-16T21:37:21Z"
+  },
+  "api_version": "v2",
+  "service": "ExecutionProof crypto metadata (SIMULATED)",
+  "signature_algorithm": "ML-DSA-65",
+  "hash_algorithm": "SHA-256",
+  "custody_mode": "aws-kms-native",
+  "formal_conformance": "pending independent external review",
+  "contract_document": "docs/crypto-api-metadata-contract.md",
+  "related_issue": "https://github.com/derekhone/executionproof-testbeds/issues/25"
+}
