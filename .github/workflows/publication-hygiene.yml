@@ -1,0 +1,33 @@
+name: Publication hygiene
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: read
+jobs:
+  publication-hygiene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out trusted base (never PR code)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 50
+          persist-credentials: false
+      - name: Inspect new PR blobs with the base-branch guard
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$BASE_SHA" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$HEAD_SHA" =~ ^[0-9a-f]{40}$ ]]
+          if [ ! -f .github/scripts/publication_hygiene.py ]; then
+            echo 'Bootstrap gate: guard absent from base. Owner must review local validation before initial merge; no PR script will be executed.'
+            exit 1
+          fi
+          git fetch --no-tags --depth=50 origin "$HEAD_SHA"
+          DIFF_BASE=$(git merge-base "$BASE_SHA" "$HEAD_SHA")
+          python3 .github/scripts/publication_hygiene.py --base "$DIFF_BASE" --head "$HEAD_SHA"
