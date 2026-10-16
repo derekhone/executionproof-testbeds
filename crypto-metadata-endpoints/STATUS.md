@@ -8,8 +8,8 @@
 
 | Deliverable | Status |
 |---|---|
-| **A. Testbed / schema-simulation implementation** (this directory, PR #33) | ✅ **COMPLETE** |
-| **B. Live production deployment** of the public `/v2` metadata endpoints | �owing **OPEN** |
+| **A. Testbed / schema-simulation implementation** (this directory, PR #33) | COMPLETE |
+| **B. Live production deployment** of the public `/v2` metadata endpoints | OPEN |
 
 ### A. Testbed implementation — COMPLETE
 PR #33 added a self-contained **EXPERIMENTAL software simulation** of the
@@ -34,9 +34,9 @@ public host, i.e. the three `/v2` URLs that were returning `404` from
 
 **Verification as of 2026-10-16 (read-only checks):**
 
-- `https://executionproof.io/v2/version` → **HTTP 404**
-- `https://executionproof.io/v2/crypto-manifest` → **HTTP 404**
-- `https://executionproof.io/v2/crypto/pq-public-key` → **HTTP 404**
+- `https://executionproof.io/v2/version` -> **HTTP 404**
+- `https://executionproof.io/v2/crypto-manifest` -> **HTTP 404**
+- `https://executionproof.io/v2/crypto/pq-public-key` -> **HTTP 404**
 
 (`executionproof.io/` root returns 200 — a Next.js site with no `/v2` API
 routes mounted.)
