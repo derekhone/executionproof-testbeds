@@ -18,12 +18,65 @@ Contract for an adapter:
 The ProofRecord schema is byte-compatible with ARK-493-498 so the same Guard-A /
 Guard-B verify it unchanged.
 """
+import copy
+import json
+import math
 import secrets
 import threading
 
 from gate.core import (now_utc, sha256_hex, canonical_json, SCHEMA_VERSION,
                        PUBLIC_KEY_ID)
 from gate.gate import ExecutionProofGate
+
+
+# ---- execution-identity binding (proposed fix, 2026-10-23) -----------------
+# The gate verifies canonical_json against the approved hash, but the tool is
+# dispatched with action["parameters"]. This check freezes the parameters that
+# will actually be dispatched and requires that, re-serialized WITHOUT any
+# normalization, they are byte-identical to the approved canonical_json.
+_RESERVED_PARAM_KEYS = ("tool_id", "tool_name")
+
+
+def _plain_json(value, depth=0):
+    if depth > 32:
+        return False
+    if value is None or isinstance(value, (bool, str, int)):
+        return True
+    if isinstance(value, float):
+        return math.isfinite(value)
+    if isinstance(value, list):
+        return all(_plain_json(v, depth + 1) for v in value)
+    if isinstance(value, dict):
+        return all(isinstance(k, str) and _plain_json(v, depth + 1)
+                   for k, v in value.items())
+    return False  # tuple, set, bytes, custom objects: not dispatchable
+
+
+def _execution_binding(action, dispatch_tool_id):
+    """Return (ok, reason, frozen_params). Fail-closed on any error."""
+    try:
+        frozen = copy.deepcopy(action.get("parameters", {}))
+        if not isinstance(frozen, dict) or not _plain_json(frozen):
+            return False, "parameters are not plain JSON values", {}
+        reserved = [k for k in _RESERVED_PARAM_KEYS if k in frozen]
+        if reserved:
+            return False, f"reserved key(s) in parameters: {reserved}", {}
+        if dispatch_tool_id != action.get("tool_id"):
+            return False, ("dispatch tool differs from approved tool_id "
+                           f"({dispatch_tool_id} != {action.get('tool_id')})"), {}
+        rebound = dict(frozen)
+        rebound["tool_id"] = action.get("tool_id")
+        rebound["tool_name"] = action.get("tool_name")
+        raw = json.dumps(rebound, sort_keys=True, separators=(",", ":"),
+                         ensure_ascii=False)
+        if raw != action.get("canonical_json"):
+            return False, ("dispatched parameter bytes differ from approved "
+                           "canonical_json (post-approval mutation or "
+                           "non-NFC text)"), {}
+        return True, None, frozen
+    except Exception as exc:  # noqa: BLE001 - fail closed
+        return False, f"binding check error: {exc}", {}
+
 
 
 def _normalize_malformed(action):
@@ -94,6 +147,8 @@ class RealEnforcementPoint:
             return _clone_as_duplicate(self._idem[idem])
 
         canonical_tool = action["tool_id"]
+        binding_ok, binding_reason, frozen_params = _execution_binding(
+            action, canonical_tool)
         gate_req = dict(action)
 
         # ---- frozen gate evaluation (fail-closed on error) ----------------
@@ -156,13 +211,22 @@ class RealEnforcementPoint:
             authority_basis = dict(authority_basis)
             authority_basis["authority_valid_at_execution"] = False
 
+        # ---- execution-identity binding violation -> fail-closed DENY ------
+        if decision == "ALLOW" and not binding_ok:
+            decision = "DENY"
+            gate_eval = dict(gate_eval)
+            gate_eval["exact_action_check"] = "FAIL"
+            decision_reason = ("execution-binding violation: " + binding_reason
+                               + " -> DENY (no execution)")
+
         proofrecord_id = secrets.token_hex(16)
         tool_called = False
         tool_ledger_entry_id = None
         real_effect = None
 
         if decision == "ALLOW":
-            tool_ledger_entry_id, real_effect = self._adapter.perform(action)
+            tool_ledger_entry_id, real_effect = self._adapter.perform(
+                dict(action, parameters=frozen_params))
             tool_called = True
         else:
             tool_ledger_entry_id = self._adapter.record_blocked(action, decision)

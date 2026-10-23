@@ -7,6 +7,8 @@ enterprise backing systems** — a transactional database, a CI/CD release
 boundary, and a federated identity/IAM boundary — plus a bounded operational
 soak and a packaged independent-review target?
 
+> **Advisory (2026-10-23): analogous execution-binding defect.** `enforcement/real_enforcement_point.py` passed `action["parameters"]` to the adapter without binding it to the approved `canonical_json`. **ARK-500 CI/CD — demonstrated (isolated rerun):** an action approved for `staging` and altered after hashing was ALLOWed and deployed to `production`; an altered `artifact_digest` was ALLOWed and the tampered artifact deployed. **ARK-499 PostgreSQL and ARK-502 — suspected, NOT EXECUTED:** the same code path is present but was not run, because PostgreSQL 17 server binaries were unavailable in the review environment. The same binding correction is applied here. Regression: `python3 tests/test_execution_binding_cicd.py` (6 cases, real local git adapter). ARK-500 and ARK-501 outcomes are unchanged with the correction; ARK-499/502 have not been re-run with it. Original published PASS outcomes remain valid only for the scenarios actually tested; preserved evidence is unchanged.
+
 This README is the entry point. **Read the preregistration first**
 (`preregistration/ARK-499-503-PREREGISTRATION-v1.0.md`) — it was written and
 its SHA-256 was locked *before* any experiment in this series was executed.

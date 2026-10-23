@@ -14,12 +14,65 @@ produced an ALLOW+executed returns the cached record with duplicate_prevented
 = true, without re-executing. Exposes submit() (P1/primary) and submit_via_alt()
 (P3/alternate endpoint) — both call the identical internal gate path.
 """
+import copy
+import json
+import math
 import secrets
 import threading
 
 from gate.core import now_utc, sha256_hex, SCHEMA_VERSION, PUBLIC_KEY_ID
 from gate.gate import ExecutionProofGate
 from tools import tools as toolmod
+
+
+# ---- execution-identity binding (proposed fix, 2026-10-23) -----------------
+# The gate verifies canonical_json against the approved hash, but the tool is
+# dispatched with action["parameters"]. This check freezes the parameters that
+# will actually be dispatched and requires that, re-serialized WITHOUT any
+# normalization, they are byte-identical to the approved canonical_json.
+_RESERVED_PARAM_KEYS = ("tool_id", "tool_name")
+
+
+def _plain_json(value, depth=0):
+    if depth > 32:
+        return False
+    if value is None or isinstance(value, (bool, str, int)):
+        return True
+    if isinstance(value, float):
+        return math.isfinite(value)
+    if isinstance(value, list):
+        return all(_plain_json(v, depth + 1) for v in value)
+    if isinstance(value, dict):
+        return all(isinstance(k, str) and _plain_json(v, depth + 1)
+                   for k, v in value.items())
+    return False  # tuple, set, bytes, custom objects: not dispatchable
+
+
+def _execution_binding(action, dispatch_tool_id):
+    """Return (ok, reason, frozen_params). Fail-closed on any error."""
+    try:
+        frozen = copy.deepcopy(action.get("parameters", {}))
+        if not isinstance(frozen, dict) or not _plain_json(frozen):
+            return False, "parameters are not plain JSON values", {}
+        reserved = [k for k in _RESERVED_PARAM_KEYS if k in frozen]
+        if reserved:
+            return False, f"reserved key(s) in parameters: {reserved}", {}
+        if dispatch_tool_id != action.get("tool_id"):
+            return False, ("dispatch tool differs from approved tool_id "
+                           f"({dispatch_tool_id} != {action.get('tool_id')})"), {}
+        rebound = dict(frozen)
+        rebound["tool_id"] = action.get("tool_id")
+        rebound["tool_name"] = action.get("tool_name")
+        raw = json.dumps(rebound, sort_keys=True, separators=(",", ":"),
+                         ensure_ascii=False)
+        if raw != action.get("canonical_json"):
+            return False, ("dispatched parameter bytes differ from approved "
+                           "canonical_json (post-approval mutation or "
+                           "non-NFC text)"), {}
+        return True, None, frozen
+    except Exception as exc:  # noqa: BLE001 - fail closed
+        return False, f"binding check error: {exc}", {}
+
 
 
 class EnforcementPoint:
@@ -96,6 +149,9 @@ class EnforcementPoint:
         canonical_tool = toolmod.ALIASES.get(tool_alias, action["tool_id"]) \
             if tool_alias else action["tool_id"]
 
+        binding_ok, binding_reason, frozen_params = _execution_binding(
+            action, canonical_tool)
+
         gate_req = dict(action)
         gate_req["tool_id"] = canonical_tool
 
@@ -123,6 +179,14 @@ class EnforcementPoint:
                 "required_evidence_fields": [], "evidence_present": False,
                 "evidence_fresh": False, "evidence_snapshot": {}}
 
+        # ---- execution-identity binding violation -> fail-closed DENY ------
+        if decision == "ALLOW" and not binding_ok:
+            decision = "DENY"
+            gate_eval = dict(gate_eval)
+            gate_eval["exact_action_check"] = "FAIL"
+            decision_reason = ("execution-binding violation: " + binding_reason
+                               + " -> DENY (no execution)")
+
         # ---- ProofRecord store dependency failure -> fail-closed DENY -----
         if "proofrecord" in dep_failures and decision == "ALLOW":
             decision = "DENY"
@@ -141,11 +205,11 @@ class EnforcementPoint:
         duplicate_prevented = False
 
         if decision == "ALLOW":
-            self.__dispatch_tool(canonical_tool, action.get("parameters", {}))
+            self.__dispatch_tool(canonical_tool, frozen_params)
             tool_called = True
             entry = toolmod.build_ledger_entry(
                 canonical_tool, case_id, idem, "executed", "ALLOW",
-                action.get("parameters", {}), proofrecord_id)
+                frozen_params, proofrecord_id)
             toolmod.append_ledger(entry)
             tool_ledger_entry_id = entry["ledger_entry_id"]
         elif decision == "DENY":
