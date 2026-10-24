@@ -197,7 +197,8 @@ def _normalize_malformed(action):
 
 class RealEnforcementPoint:
     def __init__(self, gate: ExecutionProofGate, proofstore, adapter, *,
-                 simulate_latency=False, identity_validator=None):
+                 simulate_latency=False, identity_validator=None,
+                 subject_for_actor=None):
         self._gate = gate
         self._store = proofstore
         self._adapter = adapter
@@ -211,6 +212,13 @@ class RealEnforcementPoint:
         # (layered IdP + policy, AND-composed). Defaults to None so ARK-499/500
         # behaviour is byte-for-byte unchanged.
         self._identity_validator = identity_validator
+        # ARK-501 authority-to-identity binding (2026-10-24, responds to the
+        # PR #35 review by M. Visher): callable(actor_id) -> expected external
+        # subject (str) or None. When an identity validator is set, the
+        # validated token `sub` MUST equal the subject expected for the
+        # gate-evaluated actor, else DENY before dispatch. If no mapping is
+        # supplied while a validator is set, every action fails closed.
+        self._subject_for_actor = subject_for_actor
         self._key_locks = {}
         self._key_locks_guard = threading.Lock()
 
@@ -281,15 +289,96 @@ class RealEnforcementPoint:
         # rejection overrides an otherwise-ALLOW decision (AND-composition of
         # external IdP + frozen policy gate). Records the exact rejection cause.
         identity_basis = None
+        presented_token = action.get("access_token")
         if self._identity_validator is not None:
-            ivalid, identity_basis, ireason = self._identity_validator(action)
-            if not ivalid:
+            # ---- INV-01/INV-02 trusted credential representation (ARK-501 R10)
+            # A str SUBCLASS can validate on its underlying value yet emit a
+            # DIFFERENT token through __format__ / custom __eq__ at dispatch
+            # (reported by M. Visher with Claude, PR #36). Accept ONLY an exact
+            # built-in str; no token is handled as a normal DENY below. Every
+            # other representation is rejected BEFORE dispatch and the validator
+            # is never run on the untrusted object.
+            # Never validate an action already flagged at intake (RT6/RT7 class):
+            # its fields are inert copies, and a validation result on a copy
+            # must not appear as identity evidence in the signed record.
+            _untrusted = action.get("_untrusted_representation") or []
+            _ctype = type(presented_token).__name__
+            for _p in _untrusted:
+                if _p.startswith("action.access_token(") and _p.endswith(")"):
+                    _ctype = _p[len("action.access_token("):-1]
+            if presented_token is not None and (
+                    type(presented_token) is not str or _untrusted):
                 decision = "DENY"
                 gate_eval = dict(gate_eval)
                 gate_eval["authority_check"] = "FAIL"
-                decision_reason = f"external identity rejected: {ireason}"
+                gate_eval["actor_check"] = "FAIL"
+                decision_reason = (
+                    "unsupported credential representation: "
+                    f"{_ctype} is not an exact str "
+                    "-> DENY (no execution)") if _ctype != "str" else (
+                    "credential not validated: action carries an untrusted "
+                    "representation -> DENY (no execution)")
+                _aid = action.get("actor_id")
                 authority_basis = dict(authority_basis)
                 authority_basis["authority_valid_at_execution"] = False
+                authority_basis["external_identity"] = {
+                    "subject": None,
+                    "bound_actor_id": _aid if isinstance(_aid, str) else None,
+                    "expected_subject": None,
+                    "subject_matches_actor": False,
+                    "credential_unchanged_after_validation": False,
+                    "credential_type": _ctype,
+                    "jti": None, "kid": None, "token_validated": False}
+                identity_basis = {"rejected": "untrusted credential representation",
+                                  "credential_type": _ctype}
+                presented_token = None  # ensure nothing is ever dispatched
+            else:
+                # Validate a private copy holding the captured credential; the
+                # SAME captured value is the only one ever dispatched.
+                vreq = dict(action, access_token=presented_token)
+                ivalid, identity_basis, ireason = self._identity_validator(vreq)
+                if not ivalid:
+                    decision = "DENY"
+                    gate_eval = dict(gate_eval)
+                    gate_eval["authority_check"] = "FAIL"
+                    decision_reason = f"external identity rejected: {ireason}"
+                    authority_basis = dict(authority_basis)
+                    authority_basis["authority_valid_at_execution"] = False
+                # ---- authority-to-identity binding (ARK-501 remediation) ------
+                info = identity_basis if isinstance(identity_basis, dict) else {}
+                sub = info.get("sub")
+                actor_id = action.get("actor_id")
+                expected = None
+                if self._subject_for_actor is not None and isinstance(actor_id, str):
+                    try:
+                        expected = self._subject_for_actor(actor_id)
+                    except Exception:  # noqa: BLE001 — fail closed
+                        expected = None
+                matches = (type(sub) is str and sub != "" and
+                           type(expected) is str and expected != "" and
+                           sub == expected)
+                substituted = (vreq.get("access_token") != presented_token or
+                               action.get("access_token") != presented_token)
+                authority_basis = dict(authority_basis)
+                authority_basis["external_identity"] = {
+                    "subject": sub if type(sub) is str else None,
+                    "bound_actor_id": actor_id if isinstance(actor_id, str) else None,
+                    "expected_subject": expected if type(expected) is str else None,
+                    "subject_matches_actor": bool(matches),
+                    "credential_unchanged_after_validation": not substituted,
+                    "jti": info.get("jti"), "kid": info.get("kid"),
+                    "token_validated": bool(ivalid)}
+                if ivalid and (not matches or substituted):
+                    decision = "DENY"   # mismatch is DENY, never HOLD
+                    gate_eval = dict(gate_eval)
+                    gate_eval["authority_check"] = "FAIL"
+                    gate_eval["actor_check"] = "FAIL"
+                    decision_reason = (
+                        "presented credential changed after validation -> DENY"
+                        if substituted else
+                        "external identity subject does not match approved actor "
+                        "-> DENY (no execution)")
+                    authority_basis["authority_valid_at_execution"] = False
 
         # ---- execution-time dependency probe -> fail-closed DENY ----------
         # Models "dependency dropped during an otherwise-ALLOW action": if the
@@ -333,7 +422,9 @@ class RealEnforcementPoint:
 
         if decision == "ALLOW":
             tool_ledger_entry_id, real_effect = self._adapter.perform(
-                dict(action, parameters=frozen_params))
+                dict(action, parameters=frozen_params,
+                     **({"access_token": presented_token}
+                        if self._identity_validator is not None else {})))
             tool_called = True
         else:
             tool_ledger_entry_id = self._adapter.record_blocked(action, decision)

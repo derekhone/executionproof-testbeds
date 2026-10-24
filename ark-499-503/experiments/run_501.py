@@ -178,6 +178,14 @@ def run(store, agent, ep, registry, policy, adapter, emit=print):
     return {"decision": decision, "hard": hard, "total_grants": total_grants}
 
 
+def _subject_for_actor(actor_id):
+    """Testbed convention: registry actor "actor:<name>" <-> IdP sub "<name>".
+    Not a verified identity directory."""
+    if isinstance(actor_id, str) and actor_id.startswith("actor:"):
+        return actor_id[len("actor:"):] or None
+    return None
+
+
 def main():
     adapter = OIDCAdapter()
     adapter.setup()
@@ -189,7 +197,8 @@ def main():
         store.load_tail()   # continue the one series-wide chain if present
         ep = RealEnforcementPoint(gate, store, adapter,
                                   identity_validator=lambda a: adapter.validate_token(
-                                      a.get("access_token")))
+                                      a.get("access_token")),
+                                  subject_for_actor=_subject_for_actor)
         agent = ActorAgent(registry)
         print(f"=== {EXP} Real External OIDC/IAM Identity Boundary ===")
         return run(store, agent, ep, registry, policy, adapter)
