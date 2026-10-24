@@ -53,6 +53,90 @@ def _plain_json(value, depth=0):
     return False  # tuple, set, bytes, custom objects: not dispatchable
 
 
+# ---- trusted-representation intake (RT6/RT7 class, 2026-10-24) --------------
+# Every decision-relevant comparison (hash, canonical bytes, credential, policy
+# version, alias/idempotency lookups) is only meaningful if the operands are the
+# exact built-in types. A caller-supplied subclass can override __eq__/__ne__,
+# encode() or __hash__ and win the comparison from either side, so the action is
+# accepted only if it is an exact dict of exact plain-JSON values. Anything else
+# is replaced by an inert plain copy (for the DENY record only) and denied before
+# evaluation is trusted or anything is dispatched.
+_MAX_UNTRUSTED_PATHS = 8
+
+
+def _untrusted_paths(value, path="action", out=None, depth=0):
+    out = [] if out is None else out
+    if len(out) >= _MAX_UNTRUSTED_PATHS:
+        return out
+    t = type(value)
+    if depth > 32:
+        out.append(f"{path}(too deep)")
+    elif value is None or t in (bool, str, int):
+        pass
+    elif t is float:
+        if not math.isfinite(value):
+            out.append(f"{path}(non-finite float)")
+    elif t is list:
+        for i, v in enumerate(list.copy(value)):
+            _untrusted_paths(v, f"{path}[{i}]", out, depth + 1)
+    elif t is dict:
+        for k, v in dict.items(value):
+            if type(k) is not str:
+                out.append(f"{path}.<key:{type(k).__name__[:40]}>")
+            else:
+                _untrusted_paths(v, f"{path}.{k[:64]}", out, depth + 1)
+    else:
+        out.append(f"{path}({t.__name__[:40]})")
+    return out
+
+
+def _inert(value, depth=0):
+    """Plain, exact-type copy built without calling caller-overridable methods."""
+    if depth > 32:
+        return "<untrusted:too-deep>"
+    if value is None or type(value) in (bool, str, int):
+        return value
+    if type(value) is float:
+        return value if math.isfinite(value) else "<untrusted:non-finite>"
+    if isinstance(value, bool):
+        return bool.__bool__(value)
+    if isinstance(value, str):
+        return str.__str__(value)          # exact str copy of the content
+    if isinstance(value, int):
+        return int.__int__(value)
+    if isinstance(value, float):
+        f = float.__float__(value)
+        return f if math.isfinite(f) else "<untrusted:non-finite>"
+    if isinstance(value, (list, tuple)):
+        seq = list.copy(value) if isinstance(value, list) else list(tuple.__iter__(value))
+        return [_inert(v, depth + 1) for v in seq]
+    if isinstance(value, dict):
+        out = {}
+        for k, v in dict.items(value):
+            key = str.__str__(k) if isinstance(k, str) else f"<untrusted-key:{type(k).__name__[:40]}>"
+            out[key] = _inert(v, depth + 1)
+        return out
+    return f"<untrusted:{type(value).__name__[:40]}>"
+
+
+def _trusted_intake(action):
+    """Return (action, untrusted_paths). Exact plain-JSON actions are returned
+    unchanged; anything else is replaced by an inert copy and flagged."""
+    try:
+        paths = _untrusted_paths(action)
+    except Exception as exc:  # noqa: BLE001 - fail closed
+        paths = [f"action(inspection error: {type(exc).__name__})"]
+    if not paths:
+        return action, []
+    try:
+        safe = _inert(action) if isinstance(action, dict) else {}
+    except Exception:  # noqa: BLE001 - fail closed
+        safe = {}
+    if type(safe) is not dict:
+        safe = {}
+    return safe, paths
+
+
 def _execution_binding(action, dispatch_tool_id):
     """Return (ok, reason, frozen_params). Fail-closed on any error."""
     try:
@@ -70,7 +154,9 @@ def _execution_binding(action, dispatch_tool_id):
         rebound["tool_name"] = action.get("tool_name")
         raw = json.dumps(rebound, sort_keys=True, separators=(",", ":"),
                          ensure_ascii=False)
-        if raw != action.get("canonical_json"):
+        approved_cj = action.get("canonical_json")
+        if type(approved_cj) is not str or type(raw) is not str \
+                or not str.__eq__(raw, approved_cj):
             return False, ("dispatched parameter bytes differ from approved "
                            "canonical_json (post-approval mutation or "
                            "non-NFC text)"), {}
@@ -145,7 +231,10 @@ class RealEnforcementPoint:
             return lk
 
     def submit(self, action, case_id, experiment_id, *, dep_failures=None):
+        action, untrusted = _trusted_intake(action)
         action = _normalize_malformed(action)
+        if untrusted:
+            action["_untrusted_representation"] = untrusted
         idem = action["idempotency_key"]
         with self._lock_for(idem):
             return self._process_locked(action, case_id, experiment_id,
@@ -301,6 +390,19 @@ class RealEnforcementPoint:
             gate_eval["exact_action_check"] = "FAIL"
             decision_reason = ("execution-binding violation: " + binding_reason
                                + " -> DENY (no execution)")
+
+        # ---- untrusted representation -> fail-closed DENY (RT6/RT7 class) --
+        if action.get("_untrusted_representation"):
+            decision = "DENY"
+            gate_eval = dict(gate_eval)
+            gate_eval["exact_action_check"] = "FAIL"
+            decision_reason = ("untrusted representation (non-exact built-in "
+                               "type) at: "
+                               + ", ".join(action["_untrusted_representation"])
+                               + " -> DENY before dispatch")
+            if isinstance(authority_basis, dict):
+                authority_basis = dict(authority_basis)
+                authority_basis["authority_valid_at_execution"] = False
 
         proofrecord_id = secrets.token_hex(16)
         tool_called = False
