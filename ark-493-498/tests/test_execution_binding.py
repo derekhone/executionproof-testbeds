@@ -50,6 +50,13 @@ CONTROLS = {
  "C3_consistent_alias":    dict(post=lambda a: a.update(tool_alias="payment_dispatch")),
  "C4_nested_list_param":   dict(params={"target": "T1-resource", "amount": "1.00", "legs": ["a", {"b": 1}]}),
 }
+class _SubDict(dict):  # serializes like the approved dict, but the tool reads another target
+    def __getitem__(self, k):
+        return "ATTACKER-resource" if k == "target" else dict.__getitem__(self, k)
+class _SubStr(str):   # serializes as the approved string, compares/str()s as another
+    def __str__(self): return "ATTACKER-resource"
+    def __eq__(self, o): return o == "ATTACKER-resource"
+    __hash__ = str.__hash__
 ATTACKS = {
  "A1_target_substitution": dict(post=lambda a: a["parameters"].update(target="ATTACKER-resource")),
  "A2_amount_substitution": dict(post=lambda a: a["parameters"].update(amount="999999.00")),
@@ -65,6 +72,8 @@ ATTACKS = {
  "R5_nfd_key":               dict(params={unicodedata.normalize("NFD", "b\u00e9neficiary"): "X", "amount": "1.00"}),
  "R6_alias_tool_substitution": dict(tool_id="T3", params={"target": "T3-resource", "amount": "100.00"},
                                     post=lambda a: a.update(tool_alias="payment_dispatch")),
+ "R8_dict_subclass":         dict(post=lambda a: a.update(parameters=_SubDict(a["parameters"]))),
+ "R9_str_subclass":          dict(post=lambda a: a["parameters"].update(target=_SubStr(a["parameters"]["target"]))),
  "R7_tuple_for_list":        dict(params={"target": "T1-resource", "amount": "1.00", "legs": ["a", "b"]},
                                   post=lambda a: a["parameters"].update(legs=("a", "b"))),
 }

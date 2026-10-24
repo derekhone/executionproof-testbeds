@@ -40,14 +40,15 @@ _RESERVED_PARAM_KEYS = ("tool_id", "tool_name")
 def _plain_json(value, depth=0):
     if depth > 32:
         return False
-    if value is None or isinstance(value, (bool, str, int)):
+    # exact built-in types only: subclasses can serialize one way and behave another
+    if value is None or type(value) in (bool, str, int):
         return True
-    if isinstance(value, float):
+    if type(value) is float:
         return math.isfinite(value)
-    if isinstance(value, list):
+    if type(value) is list:
         return all(_plain_json(v, depth + 1) for v in value)
-    if isinstance(value, dict):
-        return all(isinstance(k, str) and _plain_json(v, depth + 1)
+    if type(value) is dict:
+        return all(type(k) is str and _plain_json(v, depth + 1)
                    for k, v in value.items())
     return False  # tuple, set, bytes, custom objects: not dispatchable
 
@@ -73,6 +74,10 @@ def _execution_binding(action, dispatch_tool_id):
             return False, ("dispatched parameter bytes differ from approved "
                            "canonical_json (post-approval mutation or "
                            "non-NFC text)"), {}
+        # dispatch the decoded approved bytes, not the caller's objects
+        frozen = json.loads(raw)
+        for k in _RESERVED_PARAM_KEYS:
+            frozen.pop(k, None)
         return True, None, frozen
     except Exception as exc:  # noqa: BLE001 - fail closed
         return False, f"binding check error: {exc}", {}

@@ -41,11 +41,17 @@ def run(label, params=None, post=None):
     rec = ep.submit(a, "BIND499-" + label, "BINDING-REGRESSION-499")
     return rec["decision"], deployed("staging"), deployed("production")
 NFD = unicodedata.normalize("NFD", "st\u00e9ging-note")
+class _SubDict(dict):  # serializes as approved, but the adapter reads environment=production
+    def __getitem__(self, k):
+        return "production" if k == "environment" else dict.__getitem__(self, k)
+    def get(self, k, d=None):
+        return "production" if k == "environment" else dict.get(self, k, d)
 cases = [
  ("C1_baseline_staging", {}, "ALLOW", APPR, None),
  ("A1_env_to_production", dict(post=lambda a: a["parameters"].update(environment="production")), "DENY", None, None),
  ("A2_artifact_to_tampered", dict(post=lambda a: a["parameters"].update(artifact_digest=TAMP)), "DENY", None, None),
  ("A3_extra_parameter", dict(post=lambda a: a["parameters"].update(force="true")), "DENY", None, None),
+ ("A4_dict_subclass_after_approval", dict(post=lambda a: a.update(parameters=_SubDict(a["parameters"]))), "DENY", None, None),
  ("R1_param_named_tool_id", dict(params={"artifact_digest": APPR, "environment": "staging", "tool_id": "T4"}), "DENY", None, None),
  ("R4_nfd_note_after_approval", dict(params={"artifact_digest": APPR, "environment": "staging",
       "note": unicodedata.normalize("NFC", NFD)}, post=lambda a: a["parameters"].update(note=NFD)), "DENY", None, None),
