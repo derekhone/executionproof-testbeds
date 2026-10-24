@@ -298,15 +298,26 @@ class RealEnforcementPoint:
             # built-in str; no token is handled as a normal DENY below. Every
             # other representation is rejected BEFORE dispatch and the validator
             # is never run on the untrusted object.
-            if presented_token is not None and type(presented_token) is not str:
+            # Never validate an action already flagged at intake (RT6/RT7 class):
+            # its fields are inert copies, and a validation result on a copy
+            # must not appear as identity evidence in the signed record.
+            _untrusted = action.get("_untrusted_representation") or []
+            _ctype = type(presented_token).__name__
+            for _p in _untrusted:
+                if _p.startswith("action.access_token(") and _p.endswith(")"):
+                    _ctype = _p[len("action.access_token("):-1]
+            if presented_token is not None and (
+                    type(presented_token) is not str or _untrusted):
                 decision = "DENY"
                 gate_eval = dict(gate_eval)
                 gate_eval["authority_check"] = "FAIL"
                 gate_eval["actor_check"] = "FAIL"
                 decision_reason = (
                     "unsupported credential representation: "
-                    f"{type(presented_token).__name__} is not an exact str "
-                    "-> DENY (no execution)")
+                    f"{_ctype} is not an exact str "
+                    "-> DENY (no execution)") if _ctype != "str" else (
+                    "credential not validated: action carries an untrusted "
+                    "representation -> DENY (no execution)")
                 _aid = action.get("actor_id")
                 authority_basis = dict(authority_basis)
                 authority_basis["authority_valid_at_execution"] = False
@@ -316,10 +327,10 @@ class RealEnforcementPoint:
                     "expected_subject": None,
                     "subject_matches_actor": False,
                     "credential_unchanged_after_validation": False,
-                    "credential_type": type(presented_token).__name__,
+                    "credential_type": _ctype,
                     "jti": None, "kid": None, "token_validated": False}
-                identity_basis = {"rejected": "non-str credential representation",
-                                  "credential_type": type(presented_token).__name__}
+                identity_basis = {"rejected": "untrusted credential representation",
+                                  "credential_type": _ctype}
                 presented_token = None  # ensure nothing is ever dispatched
             else:
                 # Validate a private copy holding the captured credential; the
