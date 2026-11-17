@@ -1,4 +1,8 @@
 # Remnant Fieldworks Inc. — Master Corpus Scoreboard
+> **Documentation erratum (2026-11-17, RF-PUB-001 A1).** This erratum fixes documentation only; no experimental result, verdict, metric or Zenodo record is changed.
+> 1. **Aggregate totals in this file conflict and are not reconciled:** Executive Summary = 47 case records / 44 experiment IDs; Comprehensive Tallies = 56 experiments / 60 records; ARK Series Summary = 36 unique IDs / 54 records; Overall RF Corpus = 38 unique IDs / 60 records; `cuda-ep-001/README.md` cites 106 / 95 / 8 / 3 (program-wide). Until a reconciliation is published, cite per-experiment rows and their Zenodo records. Do not cite an aggregate total.
+> 2. **DOI corrections (verified against the Zenodo API on 2026-11-17):** ARK-466 → 10.5281/zenodo.21433076 (the previous 21433077 returns 404). ARK-445b → 10.5281/zenodo.21423742 (the previous 21418404 is the ARK-455b record). ARK-441, ARK-442, ARK-443, ARK-444 and ARK-446 now cite their individual records. The series record 10.5281/zenodo.21404867 covers only ARK-445, ARK-445b, ARK-447 and ARK-448, so ARK-445, ARK-447 and ARK-448 keep that citation.
+> 3. **CUDA-EP-001** was executed on GPU and is recorded as PARTIAL_FAIL (10.5281/zenodo.23094900). See `cuda-ep-001/STATUS_ERRATUM_2026-11-17.md`.
 ## ARK Series 441–498 + WITNESS Series
 **Last updated:** 2026-07-20 (P01 + P02 complete; ARK-493–498 Enterprise Agent Boundary Testbed complete — all 6 PASS)
 
@@ -82,13 +86,13 @@
 
 | ARK | Question | Verdict | Backend | DOI |
 |-----|----------|---------|---------|-----|
-| ARK-441 | VBE authorization boundary baseline | ✅ PASS | ibm_kingston | 10.5281/zenodo.21404867 |
-| ARK-442 | Delay/expiry boundary | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21404867 |
-| ARK-443 | Two-of-three quorum | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21404867 |
-| ARK-444 | Decision-to-execution integrity | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21404867 |
+| ARK-441 | VBE authorization boundary baseline | ✅ PASS | ibm_kingston | 10.5281/zenodo.21403239 |
+| ARK-442 | Delay/expiry boundary | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21423728 |
+| ARK-443 | Two-of-three quorum | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21423730 |
+| ARK-444 | Decision-to-execution integrity | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21423732 |
 | ARK-445 | Tri-state ALLOW/HOLD/DENY | ❌ FAIL (honest) | ibm_marrakesh | 10.5281/zenodo.21404867 |
-| ARK-445b | Reset-free re-test | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21418404 |
-| ARK-446 | Cross-device replication | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21404867 |
+| ARK-445b | Reset-free re-test | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21423742 |
+| ARK-446 | Cross-device replication | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21423744 |
 | ARK-447 | Pauli twirling vs baseline | ✅ PASS | ibm_marrakesh | 10.5281/zenodo.21404867 |
 | ARK-448 | Dynamical decoupling vs baseline | ⛔ GATE-STOP | ibm_marrakesh | 10.5281/zenodo.21404867 |
 
@@ -136,7 +140,7 @@ Testing exact-action binding and 4 critical failure modes in production deployme
 | ARK-463 | Exact-Action Binding | 8×100=800 | ✅ PASS | g_allow=1.0000, g_deny_min=1.0000, g_margin=1.0000 | 800/800 (100%) | 600/600 | 10.5281/zenodo.21433070 |
 | ARK-464 | Revocation At Execution | 8×100=800 | ✅ PASS | g_allow=1.0000, g_deny=1.0000, g_hold=1.0000, g_margin=0.9500 | 800/800 (100%) | 125/125 | 10.5281/zenodo.21433072 |
 | ARK-465 | Dependency Loss | 8×100=800 | ✅ PASS | g_allow=1.0000, g_hold_min=1.0000, g_margin=0.9500 | 800/800 (100%) | 150/150 | 10.5281/zenodo.21433074 |
-| ARK-466 | Cross-Context Replay | 8×100=800 | ✅ PASS | g_allow=1.0000, g_deny_min=1.0000, g_margin=0.9500 | 800/800 (100%) | 150/150 | 10.5281/zenodo.21433077 |
+| ARK-466 | Cross-Context Replay | 8×100=800 | ✅ PASS | g_allow=1.0000, g_deny_min=1.0000, g_margin=0.9500 | 800/800 (100%) | 150/150 | 10.5281/zenodo.21433076 |
 | ARK-467 | Human Escalation | 8×100=800 | ✅ PASS | g_allow_no_esc=1.0000, g_allow_approved=1.0000, g_hold_min=1.0000, g_margin=0.9500 | 800/800 (100%) | 100/100 | 10.5281/zenodo.21433081 |
 
 **Series metrics:** 4,000 decisions, 4,000/4,000 concordance, 1,125 kill-gate wrong-allows detected
