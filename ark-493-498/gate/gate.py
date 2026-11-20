@@ -82,7 +82,9 @@ class ExecutionProofGate:
         # ---- Dimension 1: actor identity --------------------------------
         actor_id = req.get("actor_id")
         token = req.get("credential_token")
-        if self.registry.known_actor(actor_id) and \
+        # exact str only: a subclass can override __eq__ and win from either side
+        if type(actor_id) is str and type(token) is str and \
+                self.registry.known_actor(actor_id) and \
                 self.registry.credential_valid(actor_id, token):
             ev["actor_check"] = "PASS"
         else:
@@ -97,7 +99,9 @@ class ExecutionProofGate:
             ev["policy_version_check"] = "FAIL"
         else:
             active = self.policy.active_version
-            if req.get("policy_version") == active:
+            presented_pv = req.get("policy_version")
+            if type(presented_pv) is str and type(active) is str and \
+                    str.__eq__(presented_pv, active) is True:
                 ev["policy_version_check"] = "PASS"
             else:
                 reasons.append(
@@ -133,10 +137,16 @@ class ExecutionProofGate:
 
         # ---- Dimension 6: exact-action integrity ------------------------
         canonical = req.get("canonical_json", "")
-        recomputed = canonical_hash_of_string(canonical)
         approved = req.get("approved_hash")
         declared = req.get("exact_action_hash")
-        if recomputed == approved and recomputed == declared:
+        # exact str only: a subclass can lie in encode() (hash input) or in
+        # __eq__/__ne__ (which Python prefers when the subclass is the right operand)
+        hash_ok = False
+        if type(canonical) is str and type(approved) is str and type(declared) is str:
+            recomputed = canonical_hash_of_string(canonical)
+            hash_ok = (str.__eq__(recomputed, approved) is True
+                       and str.__eq__(recomputed, declared) is True)
+        if hash_ok:
             ev["exact_action_check"] = "PASS"
         else:
             reasons.append("exact-action hash mismatch (mutation of approved action)")
